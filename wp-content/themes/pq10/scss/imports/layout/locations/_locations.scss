@@ -1,0 +1,175 @@
+.locations {
+  max-width: 310px;
+  padding-bottom: 55px;
+  @include margin_lr;
+  @include mq(small_tablet) {
+    padding-bottom: 48px;
+    max-width: 100%;
+  }
+  @include mq(small_laptop) {
+    padding-bottom: 5px;
+    @include flex(space-between);
+  }
+  @include mq(large_laptop) {
+    padding-bottom: 35px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1510px;
+    @include margin_lr;
+  }
+}
+
+.loc_col {
+  margin-bottom: 70px;
+  span,
+  a {
+    color: $color_lite_one;
+  }
+  &:nth-of-type(1) {
+    order: 2;
+    margin-top: 35px;
+    flex-basis: 324px;
+    span.locations_title {
+      position: relative;
+      top: -2px;
+    }
+  }
+  &:nth-of-type(2) {
+    order: 1;
+  }
+  &:nth-of-type(3) {
+    order: 3;
+    margin-top: 25px;
+  }
+  &:nth-of-type(2),
+  &:nth-of-type(3) {
+    span.locations_title {
+      &:after {
+        content: "";
+        display: block;
+        background: $locations_title_line_bg_color;
+        margin: 25px auto 22px;
+        @include box(74px, 2px);
+      }
+    }
+  }
+  &:last-of-type {
+    margin-bottom: 0px;
+  }
+}
+
+.loc_row {
+  @include mq(small_laptop) {
+    margin-bottom: 34px;
+    @include flex(space-between, flex-end);
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+span.loc_row_divider {
+  display: block;
+  width: 168px;
+  height: 2px;
+  background: $locations_divider_bg_color;
+  margin: 28px auto 31px;
+  @include mq(small_laptop) {
+    width: 100%;
+  }
+}
+
+span.locations_title {
+  display: block;
+  @include type(
+    (
+      size: $locations_title_size,
+      spacing: $locations_title_spacing,
+      family: $secondaryfont,
+      weight: $locations_title_weight,
+      transform: lowercase,
+    )
+  );
+}
+
+a.locations_phone {
+  display: inline-block;
+  margin-top: 8px;
+  transition: all 150ms ease-in-out;
+  @include type(
+    (
+      size: $locations_phone_size,
+      spacing: $locations_phone_spacing,
+      family: $primaryfont,
+      weight: $locations_phone_weight,
+    )
+  );
+  &:hover {
+    color: $locations_phone_hover_color;
+  }
+}
+
+span.locations_address {
+  display: block;
+  @include type(
+    (
+      size: $locations_address_size,
+      spacing: $locations_address_spacing,
+      height: 22px,
+      family: $primaryfont,
+      weight: $locations_address_weight,
+    )
+  );
+  @include mq(large_laptop) {
+    @include quick_type(
+      $locations_address_size_large_laptop,
+      $locations_address_height_large_laptop,
+      $locations_address_spacing_large_laptop
+    );
+  }
+}
+
+a.get_directions {
+  display: inline-block;
+  margin-top: 27px;
+  border-radius: 6px;
+  padding: 10px 13px;
+  border: 2px solid $get_directions_border_color;
+  transition: all 150ms ease-in-out;
+  @include type(
+    (
+      size: $get_directions_size,
+      spacing: $get_directions_spacing,
+      family: $primaryfont,
+      weight: $get_directions_weight,
+      transform: uppercase,
+    )
+  );
+  &:hover {
+    background: $get_directions_hover_color;
+  }
+}
+
+.social_media {
+  margin-top: 35px;
+  a {
+    text-decoration: none;
+    margin: 0 2px;
+    svg {
+      @include mq(small_laptop) {
+        @include box(63px);
+      }
+      path {
+        fill: $color_dark_one;
+      }
+    }
+    &:hover {
+      svg {
+        path {
+          fill: $social_media_bg_hover_color;
+          transition: all 150ms ease-in-out;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+.blog_header {
+  padding-bottom: 30px;
+  @include type(
+    (
+      size: $blog_header_size,
+      height: $blog_header_height,
+      family: $secondaryfont,
+      color: $blog_header_color,
+      weight: $blog_header_weight,
+    )
+  );
+  a {
+    color: $blog_header_link_color;
+    text-decoration: none;
+    transition: all 150ms ease-in-out;
+    &:hover {
+      color: $blog_header_link_hover_color;
+    }
+  }
+}
+
+.blog_post {
+  margin-bottom: 45px;
+  @include mq(small_monitor) {
+    margin-bottom: 91px;
+  }
+}
+
+.blog_meta {
+  border-top: 1px solid $blog_meta_border_bg_color;
+  padding-top: 34px;
+  span,
+  ul,
+  li {
+    display: inline;
+    @include type(
+      (
+        size: $blog_meta_size,
+        family: $primaryfont,
+        height: $blog_meta_height,
+        color: $blog_meta_color,
+        weight: $blog_meta_weight,
+        transform: uppercase,
+      )
+    );
+  }
+  ul {
+    li {
+      padding: 0;
+      &:before {
+        content: "";
+        display: inline-block;
+        background: $blog_meta_diamond_bg_color;
+        margin: 7px 16px 0;
+        border-radius: inherit;
+        transform: rotate(-45deg);
+        vertical-align: top;
+        @include box(7px);
+      }
+      a {
+        color: $blog_meta_color;
+        text-decoration: none;
+        transition: all 150ms ease-in-out;
+        &:hover {
+          color: $color_bright_one;
+        }
+      }
+    }
+  }
+}
+
+.blog_content {
+  margin-top: 7px;
+  padding-bottom: 44px;
+}
+
+body.single {
+  .blog_content {
+    margin-top: 15px;
+    padding-bottom: 0;
+  }
+}
+
+.paged_wrapper {
+  border-top: 2px solid $paged_border_bg_color;
+  padding-top: 35px;
+  padding-bottom: 20px;
+  @include mq(small_monitor) {
+    padding-top: 55px;
+  }
+  ul {
+    list-style: none;
+    @include flex(null, null, null, wrap);
+    li {
+      margin-right: 10px;
+      a {
+        transition: all 150ms ease-in-out;
+        @include type(
+          (
+            size: $paged_size,
+            family: $primaryfont,
+            color: $paged_color,
+            weight: $paged_weight,
+            transform: uppercase,
+          )
+        );
+        &:hover {
+          color: $color_bright_one;
+        }
+      }
+    }
+  }
+}
+
+.widget {
+  margin-bottom: 35px;
+  @include mq(small_laptop) {
+    margin-bottom: 60px;
+  }
+}

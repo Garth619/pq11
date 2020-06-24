@@ -1,0 +1,247 @@
+#section_three {
+  padding: 60px 25px 25px;
+  @include mq(small_tablet) {
+    padding: 72px 60px 25px;
+  }
+  @include mq(small_laptop) {
+    padding: 78px 75px 78px;
+  }
+  @include mq(large_laptop) {
+    padding: 95px 100px 115px;
+  }
+  @include mq(small_monitor) {
+    padding: 165px 100px 115px;
+  }
+}
+
+#sec_three_inner {
+  @include mq(small_laptop) {
+    @include flex();
+  }
+
+  @include mq(small_monitor) {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+#sec_three_left {
+  flex-grow: 1;
+}
+
+#sec_three_left.content {
+  h2 {
+    @include mq(large_laptop) {
+      max-width: 605px;
+    }
+  }
+}
+
+#sec_three_content_inner {
+  @include mq(small_monitor) {
+    padding-right: 75px;
+  }
+}
+
+h1.sec_three_header {
+  padding-bottom: 18px;
+  @include type(
+    (
+      size: $sec_three_header_size,
+      height: $sec_three_header_height,
+      family: $secondaryfont,
+      color: $sec_three_header_color,
+      weight: $sec_three_header_weight,
+    )
+  );
+  @include mq(small_tablet) {
+    padding-bottom: 27px;
+    @include quick_type(
+      $sec_three_header_size_small_tablet,
+      $sec_three_header_height_small_tablet,
+      null
+    );
+  }
+  @include mq(small_laptop) {
+    padding-bottom: 35px;
+  }
+  @include mq(large_laptop) {
+    padding-bottom: 30px;
+  }
+  @include mq(small_monitor) {
+    padding-bottom: 40px;
+    @include quick_type(
+      $sec_three_header_size_small_monitor,
+      $sec_three_header_height_small_monitor,
+      null
+    );
+  }
+  @include mq(small_monitor) {
+    padding-right: 50px;
+  }
+  &:after {
+    content: "";
+    display: block;
+    background: $sec_three_header_line_color;
+    margin-top: 28px;
+    @include box(100%, 2px);
+    @include mq(small_tablet) {
+      margin-top: 42px;
+    }
+    @include mq(small_monitor) {
+      margin-top: 55px;
+    }
+  }
+}
+
+#sec_three_right {
+  display: none;
+  @include mq(small_tablet) {
+    display: block;
+    margin-top: 85px;
+    margin-bottom: 90px;
+  }
+  @include mq(small_laptop) {
+    flex-shrink: 0;
+    flex-basis: 365px;
+    margin-left: 53px;
+    margin-top: 16px;
+  }
+  @include mq(large_laptop) {
+    flex-basis: 405px;
+    margin-left: 80px;
+  }
+  @include mq(small_monitor) {
+    margin-top: 2px;
+    flex-basis: 470px;
+    margin-left: 130px;
+  }
+}
+
+.sec_three_attorney {
+  text-align: center;
+  margin-bottom: 110px;
+  @include mq(small_laptop) {
+    margin-bottom: 80px;
+  }
+  @include mq(small_monitor) {
+    margin-bottom: 100px;
+  }
+  &:last-of-type {
+    margin-bottom: 0px;
+    span.sec_three_att_subtitle {
+      max-width: 520px;
+    }
+  }
+}
+
+span.sec_three_att_title {
+  display: block;
+  margin-top: 40px;
+  @include type(
+    (
+      size: $sec_three_att_title_size,
+      family: $secondaryfont,
+      color: $sec_three_att_title_color,
+      weight: $sec_three_att_title_weight,
+    )
+  );
+  @include mq(small_laptop) {
+    margin-top: 29px;
+  }
+  @include mq(small_monitor) {
+    margin-top: 50px;
+  }
+}
+
+span.sec_three_att_subtitle {
+  max-width: 420px;
+  display: block;
+  margin: 28px auto 0;
+  @include type(
+    (
+      size: $sec_three_att_subtitle_size,
+      spacing: $sec_three_att_subtitle_spacing,
+      height: $sec_three_att_subtitle_height,
+      family: $primaryfont,
+      color: $sec_three_att_subtitle_color,
+      weight: $sec_three_att_subtitle_weight,
+      align: center,
+      transform: uppercase,
+    )
+  );
+  @include mq(small_laptop) {
+    max-width: 350px;
+    @include quick_type(
+      $sec_three_att_subtitle_size_small_laptop,
+      $sec_three_att_subtitle_height_small_laptop,
+      null
+    );
+  }
+  @include mq(small_monitor) {
+    max-width: 410px;
+    @include quick_type(
+      $sec_three_att_title_size_small_laptop,
+      $sec_three_att_title_size_large_laptop,
+      null
+    );
+  }
+  &:after {
+    content: "";
+    display: block;
+    margin: 35px auto 0;
+    background: $sec_three_att_subtitle_line_bg_color;
+    @include box(200px, 1px);
+    @include mq(small_laptop) {
+      margin: 30px auto 0;
+    }
+  }
+}
+
+span.sec_three_att_quote {
+  margin: 25px auto 39px;
+  display: block;
+  max-width: 430px;
+  @include type(
+    (
+      size: $sec_three_att_quote_size,
+      height: $sec_three_att_quote_height,
+      family: $secondaryfont,
+      color: $sec_three_att_quote_color,
+      weight: $sec_three_att_quote_weight,
+    )
+  );
+  @include mq(small_laptop) {
+    max-width: 350px;
+  }
+  @include mq(large_laptop) {
+    max-width: 385px;
+  }
+  @include mq(small_monitor) {
+    max-width: 425px;
+  }
+}
+
+.attorney_image_wrapper {
+  .att_image {
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px #00000029;
+    @include margin_lr;
+    @include box(175px);
+    @include mq(small_laptop) {
+      @include box(155px);
+    }
+    @include mq(large_laptop) {
+      @include box(150px);
+    }
+    @include mq(small_monitor) {
+      @include box(175px);
+    }
+    img {
+      margin: 0 auto;
+      @include image();
+      @include box(100%);
+    }
+  }
+}

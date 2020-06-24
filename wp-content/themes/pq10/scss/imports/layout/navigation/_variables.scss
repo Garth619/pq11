@@ -1,0 +1,87 @@
+////////////////////////////////////////////////////////////////////
+// Navigation
+////////////////////////////////////////////////////////////////////
+
+// nav
+
+$nav_bg_color: $color_gradient_two;
+
+// nav ul li a
+
+$nav_color: $color_lite_one;
+
+// nav ul.menu > li
+
+$nav_ulmenu_size: 15px;
+$nav_ulmenu_size_small_laptop: 12px;
+$nav_ulmenu_size_large_laptop: 14px;
+$nav_ulmenu_size_small_monitor: 15px;
+
+$nav_ulmenu_height: 17px;
+$nav_ulmenu_height_small_laptop: 15px;
+$nav_ulmenu_height_large_laptop: 16px;
+$nav_ulmenu_height_small_monitor: 17px;
+
+$nav_ulmenu_spacing: 1.5px;
+$nav_ulmenu_spacing_small_laptop: 1.2px;
+$nav_ulmenu_spacing_large_laptop: 1.4px;
+$nav_ulmenu_spacing_small_monitor: 1.5px;
+
+$nav_ulmenu_weight: 800;
+
+// nav ul.menu > li > a
+
+$nav_ulmenu_color_small_laptop: $color_dark_three;
+$nav_ulmenu_hover_color_small_laptop: $color_bright_two;
+
+// nav ul.menu > li > a.active
+
+$nav_ulmenu_active_bg_color: $color_bright_two;
+
+// nav ul.menu > li.menu-item-has-children > a:after
+
+$nav_ulmenu_tri_bg_color: $color_lite_one;
+$nav_ulmenu_tri_bg_color_small_laptop: $color_dark_one;
+$nav_ulmenu_tri_bg_hover_color_small_laptop: $color_bright_two;
+
+// nav ul.menu > li.current-menu-ancestor > a
+
+$nav_ulmenu_current_ances_color: $color_bright_two;
+
+// nav ul.menu > li.current-menu-ancestor > a:after
+
+$nav_ulmenu_current_tri_color: $color_lite_one;
+$nav_ulmenu_current_tri_color_small_laptop: $color_bright_two;
+
+// nav ul.menu > li.current-menu-item > a
+
+$nav_ulmenu_current_item_color: $color_bright_two;
+
+// nav ul.sub-menu
+
+$nav_ulsubmenu_bg_color_small_laptop: $color_gradient_two;
+
+// nav ul.sub-menu li
+
+$nav_ulsubmenu_size: 16px;
+$nav_ulsubmenu_size_small_laptop: 14px;
+$nav_ulsubmenu_size_large_laptop: 17px;
+$nav_ulsubmenu_size_small_monitor: 18px;
+
+$nav_ulsubmenu_height: 18px;
+$nav_ulsubmenu_height_small_laptop: 16px;
+$nav_ulsubmenu_height_large_laptop: 19px;
+$nav_ulsubmenu_height_small_monitor: 20px;
+
+$nav_ulsubmenu_weight_small_laptop: 400;
+
+// nav ul.sub-menu li a:hover
+
+$nav_ulsubmenu_hover_color: $color_bright_two;
+
+$nav_ulsubmenu_bg_hover_color_small_laptop: $color_bright_two;
+$nav_ulsubmenu_hover_color_small_laptop: $color_lite_one;
+
+// nav ul.sub-menu li.current-menu-item a:after
+
+$nav_ulsubmenu_currentmenu_item: $color_bright_one;

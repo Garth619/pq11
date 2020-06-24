@@ -1,0 +1,77 @@
+#not_found_wrapper {
+  text-align: center;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  max-width: 910px;
+  @include margin_lr;
+  @include mq(large_laptop) {
+    padding-top: 76px;
+    padding-bottom: 63px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1160px;
+  }
+}
+
+span#error {
+  display: block;
+  @include type(
+    (
+      size: $error_size,
+      spacing: $error_spacing,
+      family: $secondaryfont,
+      color: $error_color,
+      weight: $error_weight,
+    )
+  );
+  @include mq(large_laptop) {
+    @include quick_type(
+      $error_size_large_laptop,
+      $error_size_height_large_laptop,
+      null
+    );
+  }
+}
+
+span#not_found_content {
+  margin-top: 15px;
+  max-width: 500px;
+  margin: 15px auto 0;
+  display: block;
+  @include type(
+    (
+      size: $not_found_content_size,
+      height: $not_found_content_height,
+      family: $primaryfont,
+      color: $not_found_content_color,
+    )
+  );
+  @include mq(large_laptop) {
+    max-width: 679px;
+  }
+  @include mq(small_monitor) {
+    max-width: 100%;
+  }
+  span {
+    @include mq(small_monitor) {
+      display: block;
+    }
+  }
+}
+
+#not_found_button_wrapper {
+  &:before {
+    content: "";
+    display: block;
+    margin: 48px auto 46px;
+    background: $not_found_line_bg_color;
+    @include box(93px, 2px);
+  }
+}
+
+.not_found_button {
+  padding: 17px 20px;
+  width: 153px;
+  margin: 0 13px 15px;
+  cursor: pointer;
+}

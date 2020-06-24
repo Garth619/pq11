@@ -1,0 +1,41 @@
+////////////////////////////////////////////////////////////////////
+// Section One
+////////////////////////////////////////////////////////////////////
+
+// span#sec_one_subtitle
+
+$sec_one_subtitle_size: 13px;
+$sec_one_subtitle_size_small_tablet: 15px;
+$sec_one_subtitle_size_large_laptop: 18px;
+$sec_one_subtitle_size_small_monitor: 20px;
+
+$sec_one_subtitle_spacing: 2.6px;
+$sec_one_subtitle_spacing_small_tablet: 4.5px;
+$sec_one_subtitle_spacing_large_laptop: 5.4px;
+$sec_one_subtitle_spacing_small_monitor: 6px;
+
+$sec_one_subtitle_height: 15px;
+
+$sec_one_subtitle_weight: 800;
+
+// span#sec_one_subtitle:before
+
+$sec_one_subtitle_diamond_bg_color: $color_bright_one;
+
+// span#sec_one_title
+
+$sec_one_title_size: 26px;
+$sec_one_title_size_small_tablet: 35px;
+$sec_one_title_size_small_laptop: 40px;
+$sec_one_title_size_large_laptop: 50px;
+$sec_one_title_size_small_monitor: 60px;
+
+$sec_one_title_height: 36px;
+$sec_one_title_height_small_tablet: 45px;
+$sec_one_title_height_small_laptop: 55px;
+$sec_one_title_height_large_laptop: 60px;
+$sec_one_title_height_small_monitor: 75px;
+
+$sec_one_title_color: $color_dark_one;
+
+$sec_one_title_weight: 700;

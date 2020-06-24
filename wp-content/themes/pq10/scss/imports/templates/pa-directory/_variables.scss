@@ -1,0 +1,33 @@
+////////////////////////////////////////////////////////////////////
+// PA Directory Page
+////////////////////////////////////////////////////////////////////
+
+// #pa_directory_wrapper ul li
+
+$pa_directory_size: 27px;
+
+$pa_directory_weight: 600;
+
+$pa_directory_color: $color_dark_two;
+
+// #pa_directory_wrapper ul li a:before, &:after
+
+$pa_directory_diamond_bg_color: $color_bright_one;
+
+// #pa_directory_wrapper ul li.menu
+
+$pa_directory_ulmenu_size: 17px;
+
+$pa_directory_ulmenu_height: 20px;
+
+$pa_directory_ulmenu_color: $color_dark_one;
+
+$pa_directory_ulmenu_weight: 400;
+
+// #pa_directory_wrapper ul li.menu a:hover
+
+$pa_directory_ulmenu_hover_color: $color_bright_one;
+
+// #pa_directory_wrapper div
+
+$pa_directory_border_bg_color: $color_lite_two;

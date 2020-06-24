@@ -1,0 +1,28 @@
+#section_six {
+  background: $section_six_bg_color;
+}
+
+#sec_six_inner {
+  padding: 40px 25px 34px;
+  @include mq(small_tablet) {
+    padding: 70px 60px 50px;
+  }
+  @include mq(small_laptop) {
+    max-width: 950px;
+    padding: 90px 60px 50px;
+    @include margin_lr;
+  }
+  @include mq(large_laptop) {
+    max-width: 1315px;
+    padding: 105px 60px 70px;
+    @include flex(space-between, null);
+  }
+  @include mq(small_monitor) {
+    max-width: 1565px;
+    padding: 130px 60px 120px;
+  }
+}
+
+.sec_six_col {
+  flex-basis: 45%;
+}

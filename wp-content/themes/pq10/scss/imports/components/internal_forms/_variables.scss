@@ -1,0 +1,37 @@
+////////////////////////////////////////////////////////////////////
+// Internal Forms
+////////////////////////////////////////////////////////////////////
+
+// label required
+
+$internal_form_label_required: $color_bright_one;
+
+// input/textarea
+
+$internal_form_size: 16px;
+
+$internal_form_color: $color_dark_one;
+
+$internal_form_border_bg_color: $color_dark_two;
+
+// .gform_footer submit button
+
+$internal_form_button_bg_color: $color_gradient_one;
+
+$internal_form_button_bg_hover_color: $color_bright_two;
+
+$internal_form_button_size: 17px;
+
+$internal_form_button_spacing: 0.63px;
+
+$internal_form_button_color: $color_lite_one;
+
+$internal_form_button_weight: 700;
+
+// .gfield_description, .validation_message
+
+$internal_form_error_size: 15px;
+
+$internal_form_error_color: $color_bright_one;
+
+$internal_form_error_weight: 500;

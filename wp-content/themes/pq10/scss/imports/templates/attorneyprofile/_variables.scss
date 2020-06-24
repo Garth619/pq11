@@ -1,0 +1,63 @@
+////////////////////////////////////////////////////////////////////
+// Attorney Bio Page
+////////////////////////////////////////////////////////////////////
+
+// h1#att_title
+
+$att_title_size: 36px;
+$att_title_size_small_tablet: 42px;
+$att_title_size_tablet: 50px;
+$att_title_size_small_laptop: 60px;
+$att_title_size_small_monitor: 70px;
+
+$att_title_height: 42px;
+$att_title_height_small_tablet: 60px;
+$att_title_height_tablet: 60px;
+$att_title_height_small_laptop: 70px;
+$att_title_height_small_monitor: 75px;
+
+$att_title_color: $color_lite_one;
+
+$att_title_weight: 700;
+
+// span#att_position
+
+$att_position_size: 14px;
+$att_position_size_small_tablet: 17px;
+$att_position_size_small_laptop: 20px;
+
+$att_position_spacing: 2px;
+
+$att_position_height: 24px;
+
+$att_position_color: $color_lite_one;
+
+$att_position_weight: 800;
+
+// span#att_position:before
+
+$att_position_diamond_bg_color: $color_bright_one;
+
+// #mobile_att_image #att_image_wrapper
+
+$att_image_wrapper: $color_lite_one;
+
+// #sidebar_att_box
+
+$att_box_bg_color: $color_lite_one;
+
+// .placeholder
+
+$att_paceholder_bg_color: $color_dark_one;
+
+$att_paceholder_color: $color_lite_one;
+
+$att_paceholder_size: 17px;
+
+$att_paceholder_height: 21px;
+
+$att_paceholder_spacing: 1.7px;
+
+$att_paceholder_weight: 800;
+
+$att_paceholder_diamond_bg_color: $color_bright_one;

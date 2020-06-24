@@ -1,0 +1,118 @@
+#pa_directory_wrapper {
+  text-align: center;
+  width: 100%;
+  padding: 40px 25px 0;
+  @include mq(tablet) {
+    padding: 56px 25px 14px;
+  }
+  @include mq(small_monitor) {
+    padding: 96px 25px 14px;
+  }
+  ul {
+    list-style: none;
+  }
+  > ul {
+    > li {
+      @include type(
+        (
+          size: $pa_directory_size,
+          weight: $pa_directory_weight,
+          family: $secondaryfont,
+          color: $pa_directory_color,
+        )
+      );
+      @include mq(small_monitor) {
+        margin-bottom: 54px;
+      }
+      > a {
+        display: block;
+        &:before,
+        &:after {
+          content: "";
+          display: inline-block;
+          vertical-align: top;
+          margin-top: 12px;
+          background: $pa_directory_diamond_bg_color;
+          transform: rotate(-45deg);
+          @include box(7px);
+        }
+        &:before {
+          margin-right: 35px;
+        }
+        &:after {
+          margin-left: 35px;
+        }
+      }
+    }
+  }
+}
+
+#pa_directory_wrapper {
+  div {
+    border-top: 2px solid $pa_directory_border_bg_color;
+    margin: 35px auto 0;
+    max-width: 680px;
+    padding: 35px 0 35px;
+    @include mq(tablet) {
+      max-width: 830px;
+    }
+    @include mq(large_laptop) {
+      max-width: 1070px;
+    }
+    @include mq(small_monitor) {
+      margin: 64px auto 0;
+      padding: 50px 0 35px;
+      max-width: 1337px;
+    }
+    ul.menu {
+      @include mq(small_tablet) {
+        @include flex(space-between, null, null, wrap);
+      }
+      &:after {
+        @include mq(small_laptop) {
+          content: "";
+          display: block;
+          flex-basis: 31%;
+        }
+      }
+      li {
+        @include type(
+          (
+            size: $pa_directory_ulmenu_size,
+            height: $pa_directory_ulmenu_height,
+            family: $primaryfont,
+            color: $pa_directory_ulmenu_color,
+            weight: $pa_directory_ulmenu_weight,
+          )
+        );
+        @include mq(small_tablet) {
+          flex-basis: 47%;
+        }
+        @include mq(tablet) {
+          flex-basis: 31%;
+        }
+        @include mq(large_laptop) {
+          margin-bottom: 15px;
+        }
+        a {
+          text-decoration: none;
+          color: $pa_directory_ulmenu_color;
+          display: block;
+          transition: all 150ms ease-in-out;
+          padding-bottom: 15px;
+          @include mq(small_tablet) {
+            height: 52px;
+            @include flex(center, center);
+          }
+          &:before,
+          &:after {
+            display: none;
+          }
+          &:hover {
+            color: $pa_directory_ulmenu_hover_color;
+          }
+        }
+      }
+    }
+  }
+}

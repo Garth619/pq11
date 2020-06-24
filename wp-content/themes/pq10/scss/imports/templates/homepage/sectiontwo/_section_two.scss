@@ -1,0 +1,314 @@
+#section_two {
+  background: $sec_two_bg_color;
+  width: 100%;
+  @include mq(small_tablet) {
+    padding: 0 27px;
+  }
+}
+
+#sec_two_inner {
+  padding: 32px 25px 25px;
+  @include mq(small_tablet) {
+    padding: 25px 0px 31px;
+    margin: 0 auto;
+    max-width: 720px;
+    @include flex(null, center);
+  }
+  @include mq(small_laptop) {
+    max-width: 100%;
+    padding: 36px 0px 41px;
+  }
+  @include mq(large_laptop) {
+    padding: 42px 0px 42px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1920px;
+    @include margin_lr;
+  }
+}
+
+#sec_two_arrow_right {
+  transform: rotate(-180deg);
+}
+
+.sec_two_arrow {
+  cursor: pointer;
+  display: none;
+  @include box(15px, 31px);
+  @include mq(small_tablet) {
+    display: inline-block;
+  }
+  @include mq(small_laptop) {
+    display: none;
+  }
+  svg {
+    path {
+      fill: $arrow_bg_color;
+    }
+  }
+}
+
+#sec_two_slider {
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 0px;
+  @include mq(small_tablet) {
+    max-width: 100%;
+    padding: 0 40px;
+    width: calc(100% - 30px);
+  }
+  @include mq(small_laptop) {
+    padding: 0;
+    width: 100%;
+    @include flex(space-between, null);
+  }
+  .slick-slide {
+    margin: 0 10px;
+    padding: 10px 0;
+  }
+  .slick-list {
+    margin: 0 -10px;
+  }
+  .slick-dots {
+    position: static;
+    margin-top: 20px;
+    li.slick-active {
+      button {
+        &:before {
+          color: $sec_two_dot_active_bg_color;
+        }
+      }
+    }
+    li:hover {
+      button {
+        &:before {
+          color: $sec_two_dot_active_bg_hover_color;
+        }
+      }
+    }
+    li {
+      margin: 0 3px;
+      width: 18px;
+      button {
+        width: 18px;
+        &:before {
+          width: 18px;
+          opacity: 1;
+          color: $sec_two_dot_bg_color;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+.sec_two_single_slide {
+  box-shadow: 0px 1px 9px #030e14cc;
+  background: $sec_two_slide_bg_color;
+  text-align: center;
+  padding: 25px 10px;
+  @include mq(small_tablet) {
+    height: 294px;
+    background: transparent;
+    box-shadow: none;
+    padding: 37px 10px 25px;
+    transition: all 150ms ease-in-out;
+  }
+  @include mq(small_laptop) {
+    flex-basis: 25%;
+    height: auto;
+    padding: 40px 10px 0;
+  }
+  @include mq(large_laptop) {
+    padding: 50px 10px 0;
+  }
+  @include mq(small_monitor) {
+    padding: 60px 10px 0;
+  }
+  &:hover {
+    @include mq(small_tablet) {
+      background: $sec_two_slide_bg_hover_color;
+      box-shadow: 0px 1px 9px #030e14cc;
+      svg {
+        stop {
+          &:first-of-type {
+            stop-color: $sec_two_svg_bg_color_one;
+          }
+          &:last-of-type {
+            stop-color: $sec_two_svg_bg_color_two;
+          }
+        }
+      }
+      span.sec_two_slide_title {
+        &:after {
+          background: $sec_two_slide_diamond_hover_bg_color;
+        }
+      }
+    }
+    @include mq(small_laptop) {
+      box-shadow: 0px 1px 50px #030e14cc;
+    }
+  }
+  // all svgs need different id numbers and different "lineargradient" id numbers otherwise all four svgs hover at the same time... the svgs are pasted in as acf text areas on homepage backend. Here is what Im referencing https://codepen.io/ZachSaucier/pen/QNdYBb?editors=1100 They can also be referenced under "pq10/images"
+  svg,
+  img {
+    fill: url(#SVGID_1_); // bug fix for when slick slider begins theloop again
+    &#sp_1 {
+      path {
+        fill: url(#SVGID_1_);
+      }
+    }
+    &#sp_2 {
+      path {
+        fill: url(#SVGID_2_);
+      }
+    }
+    &#sp_3 {
+      path {
+        fill: url(#SVGID_3_);
+      }
+    }
+    &#sp_4 {
+      path {
+        fill: url(#SVGID_4_);
+      }
+    }
+    @include image();
+    @include margin_lr;
+    @include box(82px);
+    @include mq(small_tablet) {
+      //@include box(80px);
+    }
+    @include mq(small_laptop) {
+      @include box(75px);
+    }
+    @include mq(large_laptop) {
+      @include box(90px);
+    }
+    @include mq(small_monitor) {
+      @include box(107px);
+    }
+  }
+  span.sec_two_slide_title {
+    display: block;
+    max-width: 230px;
+    margin: 10px auto 0;
+    @include type(
+      (
+        size: $sec_two_slide_title_size,
+        height: $sec_two_slide_title_height,
+        family: $secondaryfont,
+        color: $sec_two_slide_title_color,
+      )
+    );
+    @include mq(small_tablet) {
+      margin: 16px auto 0;
+    }
+    @include mq(small_laptop) {
+      max-width: 275px;
+      margin-top: 24px;
+    }
+    @include mq(large_laptop) {
+      margin-top: 19px;
+    }
+    @include mq(small_monitor) {
+      margin-top: 24px;
+      @include quick_type(
+        $sec_two_slide_title_height,
+        $sec_two_slide_title_height_small_monitor,
+        null
+      );
+    }
+    &:after {
+      content: "";
+      display: block;
+      margin: 25px auto 10px;
+      transform: rotate(-45deg);
+      background: $sec_two_slide_diamond_bg_color;
+      @include box(6px);
+      @include mq(small_tablet) {
+        margin: 30px auto 10px;
+        background: $sec_two_slide_diamond_bg_color_small_tablet;
+        transition: all 150ms ease-in-out;
+        @include box(8px);
+      }
+      @include mq(small_laptop) {
+        margin: 21px auto 34px;
+        @include box(6px);
+      }
+      @include mq(large_laptop) {
+        margin: 33px auto 40px;
+        @include box(7px);
+      }
+      @include mq(small_monitor) {
+        margin: 33px auto 65px;
+        @include box(8px);
+      }
+    }
+  }
+}
+
+// hacky code, each box has differnces
+
+.sec_two_single_slide {
+  &.one {
+    span.sec_two_slide_title {
+      max-width: 245px;
+    }
+  }
+  &.two {
+    svg,
+    img {
+      @include box(90px);
+      @include mq(small_tablet) {
+        margin-top: -8px;
+        @include box(100px);
+      }
+      @include mq(small_laptop) {
+        @include box(95px);
+      }
+      @include mq(large_laptop) {
+        @include box(109px);
+      }
+      @include mq(small_monitor) {
+        @include box(125px);
+      }
+    }
+    span.sec_two_slide_title {
+      @include mq(small_tablet) {
+        margin-top: 8px;
+      }
+      @include mq(small_laptop) {
+        max-width: 215px;
+        margin-top: 13px;
+      }
+      @include mq(large_laptop) {
+        margin-top: 10px;
+      }
+      @include mq(small_monitor) {
+        margin-top: 15px;
+        max-width: 245px;
+      }
+    }
+  }
+  &.three {
+    span.sec_two_slide_title {
+      @include mq(small_tablet) {
+        max-width: 245px;
+      }
+      @include mq(small_monitor) {
+        max-width: 295px;
+      }
+    }
+  }
+  &.four {
+    span.sec_two_slide_title {
+      @include mq(small_laptop) {
+        max-width: 215px;
+      }
+      @include mq(small_monitor) {
+        max-width: 235px;
+      }
+    }
+  }
+}

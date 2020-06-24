@@ -1,0 +1,14 @@
+<svg id="stars" data-name="Component 1 – 6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="145.506" height="25" viewBox="0 0 145.506 25">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#bd0011"/>
+      <stop offset="1" stop-color="#e60f25"/>
+    </linearGradient>
+  </defs>
+  <path id="star_5" data-name="Path 161" d="M4559.793,1351.4l-8.381,5.64,2.944-9.468-8.124-5.983,10.2-.212,3.36-9.338,3.36,9.338,10.2.212-8.125,5.983,2.945,9.468Z" transform="translate(-4546.232 -1332.042)" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+  <path id="star_1" data-name="Path 157" d="M4590.544,1351.4l-8.381,5.64,2.944-9.468-8.125-5.983,10.2-.212,3.36-9.338,3.359,9.338,10.2.212-8.125,5.983,2.945,9.468Z" transform="translate(-4547.388 -1332.042)" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+  <path id="star_2" data-name="Path 158" d="M4621.3,1351.4l-8.381,5.64,2.945-9.468-8.125-5.983,10.2-.212,3.36-9.338,3.359,9.338,10.2.212-8.125,5.983,2.945,9.468Z" transform="translate(-4548.543 -1332.042)" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+  <path id="star_3" data-name="Path 159" d="M4652.047,1351.4l-8.381,5.64,2.945-9.468-8.125-5.983,10.2-.212,3.359-9.338,3.36,9.338,10.2.212-8.125,5.983,2.945,9.468Z" transform="translate(-4549.698 -1332.042)" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+  <path id="star_4" data-name="Path 160" d="M4682.8,1351.4l-8.381,5.64,2.945-9.468-8.125-5.983,10.2-.212,3.359-9.338,3.36,9.338,10.2.212-8.125,5.983,2.945,9.468Z" transform="translate(-4550.854 -1332.042)" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+  
+</svg>

@@ -1,0 +1,225 @@
+h1,
+h2,
+h3,
+h4 {
+  font-style: normal;
+  font-weight: 400;
+}
+
+.page_header {
+  @include type(
+    (
+      size: $page_header_size,
+      height: $page_header_height,
+      family: $secondaryfont,
+      color: $page_header_color,
+      weight: $page_header_weight,
+    )
+  );
+  margin-bottom: 25px;
+  @include mq(small_tablet) {
+    margin-bottom: 35px;
+    @include quick_type(
+      $page_header_size_small_tablet,
+      $page_header_height_small_tablet,
+      null
+    );
+  }
+  @include mq(small_laptop) {
+    margin-bottom: 45px;
+  }
+  @include mq(small_monitor) {
+    margin-bottom: 56px;
+  }
+  &:after {
+    content: "";
+    display: block;
+    margin-top: 29px;
+    background: $page_header_line_bg_color;
+    @include box(100%, 2px);
+    @include mq(small_monitor) {
+      margin-top: 47px;
+    }
+  }
+}
+
+.page_header.center {
+  text-align: center;
+  display: inline-block;
+  @include mq(small_monitor) {
+    @include quick_type(
+      $page_header_center_size,
+      $page_header_center_height,
+      null
+    );
+  }
+  &:after {
+    @include mq(small_monitor) {
+      margin-top: 35px;
+    }
+  }
+}
+
+.content {
+  @include type(
+    (
+      size: $content_size,
+      height: $content_height,
+      family: $primaryfont,
+      color: $content_color,
+    )
+  );
+  @include mq(small_monitor) {
+    @include quick_type($content_size_small_monitor, null, null);
+  }
+  a {
+    color: $content_link_color;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  h2 {
+    padding-top: 7px;
+    padding-bottom: 25px;
+    @include type(
+      (
+        size: $content_h2_size,
+        height: $content_h2_height,
+        family: $secondaryfont,
+        color: $content_h2_color,
+        weight: $content_h2_weight,
+      )
+    );
+    @include mq(small_tablet) {
+      padding-top: 10px;
+      @include quick_type($content_h2_size_small_tablet, null, null);
+    }
+    @include mq(small_laptop) {
+      padding-bottom: 13px;
+    }
+    @include mq(large_laptop) {
+      padding-bottom: 30px;
+    }
+  }
+  h3 {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    @include type(
+      (
+        size: $content_h3_size,
+        spacing: $content_h3_spacing,
+        height: $content_h3_height,
+        family: $primaryfont,
+        color: $content_h3_color,
+        weight: $content_h3_weight,
+        transform: uppercase,
+      )
+    );
+  }
+  h4 {
+    @include type(
+      (
+        size: $content_h4_size,
+        height: $content_h4_height,
+        family: $primaryfont,
+        color: $content_h4_color,
+        weight: $content_h4_weight,
+      )
+    );
+  }
+  blockquote {
+    margin-bottom: 40px;
+    @include type(
+      (
+        size: $content_blockquote_size,
+        spacing: $content_blockquote_spacing,
+        height: $content_blockquote_height,
+        family: $secondaryfont,
+        color: $content_blockquote_color,
+        weight: $content_blockquote_weight,
+      )
+    );
+    @include mq(large_laptop) {
+      @include quick_type(
+        $content_h4_size_large_laptop,
+        $content_h4_height_large_laptop,
+        null
+      );
+    }
+    @include mq(small_monitor) {
+      margin: 55px 0 78px;
+      @include quick_type(
+        $content_h4_size_small_monitor,
+        $content_h4_height_small_monitor,
+        null
+      );
+    }
+    &:after {
+      content: "";
+      display: block;
+      margin-top: 25px;
+      background: $content_blockquote_bg_line_color;
+      @include box(150px, 2px);
+      @include mq(small_monitor) {
+        margin-top: 33px;
+        width: 228px;
+      }
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+  strong {
+    color: $content_strong_color;
+    font-weight: $content_strong_weight;
+  }
+  ul,
+  ol {
+    list-style: none;
+    li {
+      margin-bottom: 26px;
+    }
+    &.single_line_list {
+      li {
+        margin-bottom: 0;
+      }
+    }
+  }
+  ul {
+    li {
+      position: relative;
+      padding-left: 20px;
+      &:before {
+        content: "";
+        display: block;
+        border-radius: 50%;
+        background: $content_ul_list_item_color;
+        top: 12px;
+        @include box(7px);
+        @include abs(13px, null, null, 0);
+      }
+    }
+  }
+  p,
+  ul,
+  ol {
+    margin-bottom: 30px;
+  }
+  ol {
+    list-style: none;
+    counter-reset: item;
+    > li {
+      counter-increment: item;
+      position: relative;
+      padding-left: 30px;
+    }
+    > li:before {
+      content: counter(item) ".";
+      font-family: $primaryfont;
+      color: $content_ol_list_item_color;
+      font-weight: $content_ol_list_item_weight;
+      @include abs(0, null, null, 0);
+    }
+  }
+}

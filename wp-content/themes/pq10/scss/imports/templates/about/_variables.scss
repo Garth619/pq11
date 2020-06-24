@@ -1,0 +1,38 @@
+////////////////////////////////////////////////////////////////////
+// About Page
+////////////////////////////////////////////////////////////////////
+
+// #about_banner_content
+
+$about_banner_content_size: 24px;
+$about_banner_content_size_small_tablet: 27px;
+
+$about_banner_content_height: 35px;
+
+$about_banner_content_color: $color_dark_two;
+$about_banner_content_color_small_laptop: $color_lite_one;
+
+$about_banner_content_weight: 700;
+
+// #about_banner_content a
+
+$about_banner_content_link_color: $color_bright_one;
+
+// h1#about_title
+
+$about_title_size: 36px;
+$about_title_size_small_tablet: 60px;
+$about_title_size_small_monitor: 80px;
+
+$about_title_height: 42px;
+$about_title_height_small_tablet: 70px;
+$about_title_height_small_monitor: 80px;
+
+$about_title_color: $color_dark_one;
+$about_title_color_small_laptop: $color_lite_one;
+
+$about_title_weight: 700;
+
+// h1#about_title:after
+
+$about_title_line_bg_color: $color_bright_one;

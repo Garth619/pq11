@@ -1,0 +1,136 @@
+#internal_main {
+  margin: 119px 0 0 0;
+  @include mq(small_tablet) {
+    margin: 77px 0 0 0;
+  }
+  @include mq(small_laptop) {
+    margin-top: 0;
+  }
+}
+
+.page_container {
+  padding: 40px 25px 60px;
+  position: relative;
+  z-index: 1;
+  @include flex(null, null, column);
+  @include mq(small_tablet) {
+    padding: 60px 60px 50px;
+  }
+  @include mq(small_laptop) {
+    padding: 60px 75px 90px;
+    flex-direction: row;
+  }
+  @include mq(large_laptop) {
+    padding: 60px 100px 90px;
+  }
+  @include mq(small_monitor) {
+    padding: 120px 150px 150px;
+    max-width: 1920px;
+    @include margin_lr;
+  }
+}
+
+.page_container.one_col {
+  display: block;
+  text-align: center;
+  @include mq(small_monitor) {
+    padding-top: 90px;
+  }
+}
+
+.page_content {
+  @include mq(small_laptop) {
+    flex-grow: 1;
+    padding: 0 80px 0 0;
+  }
+  @include mq(large_laptop) {
+    padding: 0 110px 0 0;
+  }
+  @include mq(small_monitor) {
+    padding: 0 110px 0 76px;
+  }
+}
+
+.box_wrapper {
+  box-shadow: 0px 1px 40px #00000040;
+  background: $box_wrapper_bg_color;
+  width: 100%;
+  min-height: 100px;
+  padding-left: 25px;
+  padding-right: 25px;
+  @include mq(small_laptop) {
+    margin-top: -120px;
+  }
+  @include mq(small_monitor) {
+    margin-top: -257px;
+  }
+}
+
+.alignleft,
+img.alignleft {
+  display: block;
+  float: left;
+  margin-right: 24px;
+  margin-top: 4px;
+  @include mq(xlarge_mobile) {
+    margin: 20px auto 30px;
+    float: none;
+    max-width: 100%;
+    height: auto;
+  }
+}
+.alignright,
+img.alignright {
+  display: block;
+  float: right;
+  margin-left: 24px;
+  margin-top: 4px;
+  @include mq(xlarge_mobile) {
+    margin: 20px auto 30px;
+    float: none;
+    max-width: 100%;
+    height: auto;
+  }
+}
+.aligncenter,
+img.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  @include mq(xlarge_mobile) {
+    margin: 20px auto 30px;
+    float: none;
+    max-width: 100%;
+    height: auto;
+  }
+}
+img.alignleft,
+img.alignright,
+img.aligncenter {
+  margin-bottom: 12px;
+  max-width: 100%;
+  height: auto;
+  @include mq(xlarge_mobile) {
+    margin: 20px auto 30px;
+    float: none;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.gform_wrapper ul li ::-webkit-input-placeholder {
+  color: $gform_placeholder;
+}
+.gform_wrapper ul li ::-moz-placeholder {
+  color: $gform_placeholder;
+}
+.gform_wrapper ul li :-moz-placeholder {
+  color: $gform_placeholder;
+}
+.gform_wrapper ul li :-ms-input-placeholder {
+  color: $gform_placeholder;
+}
+.gform_wrapper ul li ::-moz-placeholder {
+  opacity: 1;
+}

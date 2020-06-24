@@ -1,0 +1,143 @@
+#video_wrapper {
+  margin: 20px auto 0;
+  max-width: 470px;
+  @include mq(small_tablet) {
+    max-width: 100%;
+    margin: 40px auto 0px;
+    @include flex(space-between, null, null, wrap);
+  }
+  @include mq(large_laptop) {
+    margin: 50px auto 0;
+  }
+  @include mq(small_monitor) {
+    max-width: 1460px;
+    margin: 50px auto -65px;
+  }
+  &:after {
+    @include mq(large_laptop) {
+      content: "";
+      display: block;
+      flex-basis: 31%;
+    }
+  }
+}
+
+.single_video {
+  box-shadow: 0px 1px 40px #00000040;
+  margin-bottom: 40px;
+  cursor: pointer;
+  &:hover {
+    .video_thumb {
+      .video_overlay {
+        background: $video_overlay_bg_hover_color;
+        span.play_button {
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+  @include mq(small_tablet) {
+    flex-basis: 48%;
+  }
+  @include mq(large_laptop) {
+    flex-basis: 30%;
+    margin-bottom: 65px;
+  }
+  @include mq(small_monitor) {
+    flex-basis: 29%;
+  }
+  a {
+    text-decoration: none;
+  }
+  &:last-of-type {
+    margin-bottom: 0;
+    @include mq(small_tablet) {
+      margin-bottom: 40px;
+    }
+    @include mq(small_monitor) {
+      margin-bottom: 65px;
+    }
+  }
+  .video_thumb {
+    position: relative;
+    height: 250px;
+    @include mq(tablet) {
+      height: 300px;
+    }
+    @include mq(large_laptop) {
+      height: 233px;
+    }
+    img.youtube {
+      object-fit: cover;
+      @include box(100%);
+      @include abs(0, null, null, 0);
+    }
+    .mywisita {
+      @include abs(0, null, null, 0);
+      @include box(100%);
+    }
+    .video_overlay {
+      pointer-events: none;
+      background: $video_overlay_bg_color;
+      transition: background 300ms ease-in-out;
+      @include abs(0, null, null, 0);
+      @include box(100%);
+      @include flex(center, center);
+    }
+  }
+}
+
+span.play_button {
+  display: block;
+  border-radius: 50%;
+  background: $play_button_bg_color;
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
+  @include box(95px);
+  @include flex(center, center);
+  @include mq(small_monitor) {
+    @include box(109px);
+  }
+  &:before {
+    position: relative;
+    top: 0px;
+    left: 2px;
+    @include tri(right, 13px, 17px, $play_button_triangle_bg_color);
+  }
+}
+
+.video_title_wrapper {
+  padding: 20px 20px;
+  background: $color_bright_two;
+  @include mq(small_tablet) {
+    padding: 30px 20px;
+  }
+  @include mq(small_monitor) {
+    padding: 44px 20px;
+  }
+  span.video_title {
+    display: block;
+    @include type(
+      (
+        size: $video_title_size,
+        spacing: $video_title_spacing,
+        height: $video_title_height,
+        family: $primaryfont,
+        color: $video_title_color,
+        weight: $video_title_weight,
+        transform: uppercase,
+      )
+    );
+    @include mq(small_tablet) {
+      max-width: 335px;
+      @include margin_lr;
+    }
+    @include mq(large_laptop) {
+      @include quick_type(
+        $video_title_size_large_laptop,
+        $video_title_height_large_laptop,
+        null
+      );
+    }
+  }
+}
