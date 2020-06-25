@@ -2,40 +2,15 @@
 // Colors
 ////////////////////////////////////////////////////////////////////
 
-// Primary
 
-$color_dark_one: #0f3447;
-$color_dark_two: #016171;
-$color_dark_three: #08161e;
+$color_bright_one:  #D82629;
+$color_bright_two: #A50605;
 
-$color_dark_rgba: rgba(1, 97, 113, 0.7);
-$color_dark_rgba_two: rgba(0, 0, 0, 0.55);
-$color_dark_rgba_three: rgba(0, 0, 0, 0.3);
+$color_grad_one: linear-gradient(to bottom, $color_bright_one 0%,#9d0200 100%);
 
-// Secondary
+$color_light_one: #fff;
+$color_lite_two: #F5F5F5;
 
-$color_bright_one: #e11022;
-$color_bright_two: #04b1b4;
-
-$color_bright_three: rgba(4, 177, 180, 0.7);
-
-// Light
-
-$color_lite_one: #fff;
-$color_lite_two: #f3f4f6;
-$color_lite_three: #b7b7b7;
-$color_lite_four: #074758;
-
-// Gradients
-
-$color_gradient_one: linear-gradient(to bottom, #e60f25 0%, #bd0011 100%);
-
-$color_gradient_two: linear-gradient(
-  to bottom,
-  #006170 0%,
-  #0b384a 50%,
-  #0c3446 100%
-);
-$color_gradient_three: linear-gradient(to bottom, #b0fff9 0%, #00fbff 100%);
-$color_gradient_first_color: #b0fff9; //used on svgs section two
-$color_gradient_second_color: #00fbff; //used on svgs section two
+$color_dark_one: #E0E0E0;
+$color_dark_two:#696A71;
+$color_dark_three: #090D0E;

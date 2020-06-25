@@ -75,80 +75,39 @@
 
 <header>
 
-<div id='header_inner'>
-
-	<div id='header_left'>
-
-		<a class='logo' href='<?php bloginfo('url');?>'>
-
-		<?php $logo = get_field( 'logo','option'); ?>
-			
-			<?php if ( $logo ) { ?>
-			
-				<img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
-			
-			<?php } ?>
+	<div id='header_inner'>
 	
-		</a><!-- logo -->
-
-	</div><!-- header_left -->
-
-	<div id='header_middle'>
-
-		<div class='menu_wrapper'>
-	
-			<div class='menu_bars'>
+		<div id='header_left'>
 		
-				<div class='menu_bars_inner'>
-			
-					<span></span>
-					<span></span>
-			
-				</div><!-- menu_bars_inner -->
+			<span class='header_title_sml'>Your Fight is Our Right</span><!-- header_title_sml -->
 
-				<span class="menu_verbiage">Menu</span><!-- menu_verbiage -->
+			<span class='header_title_lrg'>We Accept Calls 24/7</span><!-- header_title_sml -->
 		
-			</div><!-- menu_bars -->
+		</div><!-- header_left -->
 
-			<div class='menu_close close'>
+		<div id='header_middle'>
 		
-				<span class='menu_close_x'></span><!-- menu_close_x -->
-
-				<span class="menu_verbiage">Menu</span><!-- menu_verbiage -->
-		
-			</div><!-- menu_close -->
-	
-		</div><!-- menu_wrapper -->
-
-	</div><!-- header_middle -->
-
-	<div id='header_right'>
-
-		<div id='header_right_inner'>
-	
-			<div class='consult_cta'>
-
-				<?php if ( have_rows( 'header_text','option') ) : ?>
+			<a id="logo" href="<?php bloginfo('url');?>">
 				
-					<?php while ( have_rows( 'header_text','option') ) : the_row(); ?>
-					
-						<span class='consult_verbiage'><?php the_sub_field( 'header_text_line' ); ?></span><!-- consult_verbiage -->
+				<?php echo file_get_contents( get_template_directory() . '/images/logo.svg' ); ?>
 
-					<?php endwhile; ?>
+			</a><!-- logo -->
+		
+		</div><!-- header_middle -->
 
-				<?php endif; ?>
+		<div id='header_right'>
+		
+			<span class='header_title_sml'>Free Consultation</span><!-- header_title_sml -->
+
+			<span class='header_title_lrg'><span>Local</span> (517) 316-1995</span><!-- header_title_sml -->
+
+			<nav><?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?></nav>
+		
+		</div><!-- header_right -->
 	
-			</div><!-- consult_cta -->
+	</div><!-- header_inner -->		
 
-			<a id='header_phone' href='tel:<?php echo str_replace(['-', '(', ')', ' '], '', get_field('main_phone', 'option')); ?>'><?php the_field( 'main_phone','option'); ?></a><!-- header_phone -->
 
-		</div><!-- header_right_inner -->
-
-		<nav id="top_nav"><?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?></nav>
-
-	</div><!-- header_right -->
-
-</div><!-- header_inner -->
 
 </header>
 	
