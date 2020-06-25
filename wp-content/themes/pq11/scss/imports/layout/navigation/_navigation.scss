@@ -1,50 +1,99 @@
 // navigation - refer to the resize functions in js->custom-min.js
 
 nav {
-  display:none;
-}
-
-
-#menu_wrapper {
-  background: $color_bright_two;
-  flex-basis:61px;
-  flex-shrink:0;
-  height:100%;
-  @include flex(center,center,column);
-  &.open {
-    span {
-      &:nth-of-type(1) {
-        transform:rotate(45deg);
-        top: -3px;
-        left: 5px;
-      }
-      &:nth-of-type(2) {
-        opacity: 0;
-        visibility: hidden;
-      }
-      &:nth-of-type(3) {
-        transform:rotate(-45deg);
-        top:3px;
-        left: 5px;
+  //display:none;
+  background: $color_lite_two;
+  text-align: center;
+  @include box(100%);
+  @include fixed(127px, null, null, 0);
+  .menu-header {
+    margin-top: 20px;
+  }
+  ul {
+    list-style: none;
+    li {
+      a {
+        text-decoration: none;
       }
     }
   }
-  span {
-    display: block;
-    max-width:35px;
-    width:100%;
-    height:3px;
-    background:$color_light_one;
-    margin:0 auto 6px;
-    opacity: 1;
-    visibility: visible;
-    transition: all 200ms ease-in-out;
-    position:relative;
-    top:0;
-    left:0;
-    transform-origin: left center;
-    &:last-of-type {
-      margin-bottom:0px;
+}
+
+nav {
+  ul.menu {
+    li {
+      padding: 15px 20px;
+      @include type(
+        (
+          size: 12px,
+          spacing: 0.6px,
+          height: 15px,
+          family: $primaryfont,
+          weight: 300,
+          transform: uppercase,
+        )
+      );
+      a {
+        color: $color_dark_three;
+      }
+    }
+    li.menu-item-has-children {
+      background: transparent;
+      box-shadow: none;
+      transition:all 200ms ease-in-out;
+      &.active {
+        margin-bottom:15px;
+        background: $color_light_one;
+        box-shadow: 0px 3px 10px #0000001a;
+      }
+      > a {
+        position: relative;
+        &:after {
+          vertical-align: top;
+          //margin:6px 0 0 7px;
+          @include abs(6px, -15px, null, null);
+          @include tri(down, 3px, 3px, $color_dark_three);
+        }
+      }
+    }
+  }
+}
+
+nav {
+  ul.sub-menu {
+    display: none;
+    padding-top:5px;
+    padding-bottom:15px;
+    li {
+      margin:0;
+      padding:0;
+      @include type (
+        (
+          spacing: 0,
+          weight:300,
+          height:normal,
+          transform: capitalize
+        )
+      );
+      &:last-of-type {
+        a {
+          &:after {
+            display: none;
+          }
+        }
+      }
+      a {
+        padding:15px 0 0;
+        display:block;
+        &:after {
+          content: "";
+          display: block;
+          width: 122px;
+          height: 1px;
+          margin: 15px auto 0;
+          background: $color_dark_four;
+        }
+      }
     }
   }
 }

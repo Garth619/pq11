@@ -335,7 +335,9 @@ var pgurl = window.location.href;
 
 	$('#menu_wrapper').on('click', function(e) {
 	  
-	  $(this).toggleClass('open');
+    $("#header_right").toggleClass('open');
+    
+    $('nav').slideToggle(400);
 	  
 	});
 
@@ -362,7 +364,9 @@ var pgurl = window.location.href;
 	
 	function tabletClick() {
 		
-		$(this).next('ul.sub-menu').slideToggle(300);
+    $(this).next('ul.sub-menu').slideToggle(350);
+    
+    $(this).parent().toggleClass('active');
 		
 		$(this).toggleClass('active');
 		
