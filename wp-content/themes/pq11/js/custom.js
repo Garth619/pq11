@@ -331,7 +331,7 @@ var pgurl = window.location.href;
 
 // nav	
 
-	$('nav ul.menu > li.current-menu-ancestor > a').addClass('active');
+	//$('nav ul.menu > li.current-menu-ancestor > a').addClass('active');
 
 	$('#menu_wrapper').on('click', function(e) {
 	  

@@ -1,5 +1,6 @@
 header {
   width:100%;
+  background:$color_light_one;
   @include fixed(0,null,null,0,10);
 }
 
@@ -46,9 +47,15 @@ header {
   }
   &.open {
     background:$color_dark_three;
+    @include mq(small_tablet) {
+      background:transparent;
+    }
     .header_title_wrapper {
       span,a {
         color:$color_light_one;
+        @include mq(small_tablet) {
+          color:$color_dark_three;
+        }
       }
     }
     #menu_wrapper {

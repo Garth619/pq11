@@ -1,11 +1,14 @@
 // navigation - refer to the resize functions in js->custom-min.js
 
 nav {
-  //display:none;
+  display:none;
   background: $color_lite_two;
   text-align: center;
   @include box(100%);
   @include fixed(127px, null, null, 0);
+  @include mq(small_tablet) {
+    top: 65px;
+  }
   .menu-header {
     margin-top: 20px;
   }
@@ -33,6 +36,10 @@ nav {
           transform: uppercase,
         )
       );
+      @include mq(small_tablet) {
+        padding: 18px 20px;
+        @include quick_type(14px,16px,0.7px);
+      }
       a {
         color: $color_dark_three;
       }
@@ -45,14 +52,33 @@ nav {
         margin-bottom:15px;
         background: $color_light_one;
         box-shadow: 0px 3px 10px #0000001a;
+        @include mq(small_tablet) {
+          margin-bottom:8px;
+        }
       }
       > a {
         position: relative;
+        &.active {
+          color:$color_bright_two;
+          &:after {
+            @include tri(down, 3px, 3px, $color_bright_two);
+          }
+        }
         &:after {
           vertical-align: top;
-          //margin:6px 0 0 7px;
           @include abs(6px, -15px, null, null);
           @include tri(down, 3px, 3px, $color_dark_three);
+          @include mq(small_tablet) {
+            @include abs(7px, -15px, null, null);
+          }
+        }
+      }
+    }
+    li.current-menu-ancestor {
+      >a {
+        color:$color_bright_two;
+        &:after {
+          @include tri(down, 3px, 3px, $color_bright_two);
         }
       }
     }
@@ -64,6 +90,9 @@ nav {
     display: none;
     padding-top:5px;
     padding-bottom:15px;
+    @include mq(small_tablet) {
+      padding-bottom: 8px;
+    }
     li {
       margin:0;
       padding:0;
@@ -75,6 +104,9 @@ nav {
           transform: capitalize
         )
       );
+      @include mq(small_tablet) {
+        @include quick_type(14px,16px,null);
+      }
       &:last-of-type {
         a {
           &:after {
@@ -85,6 +117,10 @@ nav {
       a {
         padding:15px 0 0;
         display:block;
+        transition:all 150ms ease-in-out;
+        &:hover {
+          color:$color_bright_two;
+        }
         &:after {
           content: "";
           display: block;
@@ -92,7 +128,19 @@ nav {
           height: 1px;
           margin: 15px auto 0;
           background: $color_dark_four;
+          transition:all 150ms ease-in-out;
+          @include mq(small_tablet) {
+            width:255px;
+          }
         }
+        @include mq(small_tablet) {
+          padding: 12px 0 0;
+        }
+      }
+    }
+    li.current-menu-item {
+      a {
+        color:$color_bright_two;
       }
     }
   }
