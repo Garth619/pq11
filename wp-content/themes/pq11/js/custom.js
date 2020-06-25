@@ -104,10 +104,10 @@ jQuery(document).ready(function($){
       }
     }
     
-        createWaypoint('section_three', '#section_three', 'visible', 550, null, true);
-        createWaypoint('section_four', '#section_four', 'visible', 600, null, true);
-        createWaypoint('section_seven', '#section_seven', 'visible', 400, null, true);
-        createWaypoint('consultation', 'footer', 'visible', 400, null, true);
+        // createWaypoint('section_three', '#section_three', 'visible', 550, null, true);
+        // createWaypoint('section_four', '#section_four', 'visible', 600, null, true);
+        // createWaypoint('section_seven', '#section_seven', 'visible', 400, null, true);
+        // createWaypoint('consultation', 'footer', 'visible', 400, null, true);
    
 
 
@@ -116,152 +116,152 @@ jQuery(document).ready(function($){
 
 
 
-$('#sec_two_slider').slick({
-  infinite: true,
-  slidesToShow: 1,
-	slidesToScroll: 1,
-	mobileFirst:true,
-	adaptiveHeight:true,
-	arrows:false,
-	dots:true,
-	responsive: [
-    {
-      breakpoint: 767,
-      settings: {
-      slidesToShow: 2,
-			slidesToScroll: 2,
-			dots:false,
-			adaptiveHeight:false,
-			arrows:true,
-			prevArrow:"#sec_two_arrow_left",
-			nextArrow:"#sec_two_arrow_right",
-     }
-   },
-   {
-      breakpoint: 1170,
-      settings: "unslick"
-   }
-	]
- });
+// $('#sec_two_slider').slick({
+//   infinite: true,
+//   slidesToShow: 1,
+// 	slidesToScroll: 1,
+// 	mobileFirst:true,
+// 	adaptiveHeight:true,
+// 	arrows:false,
+// 	dots:true,
+// 	responsive: [
+//     {
+//       breakpoint: 767,
+//       settings: {
+//       slidesToShow: 2,
+// 			slidesToScroll: 2,
+// 			dots:false,
+// 			adaptiveHeight:false,
+// 			arrows:true,
+// 			prevArrow:"#sec_two_arrow_left",
+// 			nextArrow:"#sec_two_arrow_right",
+//      }
+//    },
+//    {
+//       breakpoint: 1170,
+//       settings: "unslick"
+//    }
+// 	]
+//  });
 
 
 
- $('#sec_four_slider').slick({
-  infinite: true,
-  slidesToShow: 1,
-	slidesToScroll: 1,
-	mobileFirst:true,
-	//adaptiveHeight:true,
-	arrows:false,
-	dots:true,
-	responsive: [
-    {
-      breakpoint: 675,
-      settings: {
-      slidesToShow: 2,
-			slidesToScroll: 2,
-			dots:true,
-			adaptiveHeight:false,
-     }
-   },
-   {
-      breakpoint: 1066,
-      settings: "unslick"
-   }
-	]
- });
+//  $('#sec_four_slider').slick({
+//   infinite: true,
+//   slidesToShow: 1,
+// 	slidesToScroll: 1,
+// 	mobileFirst:true,
+// 	//adaptiveHeight:true,
+// 	arrows:false,
+// 	dots:true,
+// 	responsive: [
+//     {
+//       breakpoint: 675,
+//       settings: {
+//       slidesToShow: 2,
+// 			slidesToScroll: 2,
+// 			dots:true,
+// 			adaptiveHeight:false,
+//      }
+//    },
+//    {
+//       breakpoint: 1066,
+//       settings: "unslick"
+//    }
+// 	]
+//  });
 
 
 
- $('#sec_five_slider').slick({
-  infinite: true,
-  slidesToShow: 1,
-	slidesToScroll: 1,
-	mobileFirst:true,
-	arrows:true,
-	dots:false,
-	prevArrow:"#sec_five_arrow_left",
-	nextArrow:"#sec_five_arrow_right",
-	responsive: [
-    {
-      breakpoint: 530,
-      settings: {
-      slidesToShow: 2,
-			slidesToScroll: 2
-     }
-	 },
-	 {
-		breakpoint: 767,
-		settings: {
-		slidesToShow: 3,
-		slidesToScroll: 3
-	 }
- },
- {
-	breakpoint: 1020,
-	settings: {
-	slidesToShow: 4,
-	slidesToScroll: 4
- }
-},
-   {
-      breakpoint: 1170,
-      settings: "unslick"
-   }
-	]
- });
+//  $('#sec_five_slider').slick({
+//   infinite: true,
+//   slidesToShow: 1,
+// 	slidesToScroll: 1,
+// 	mobileFirst:true,
+// 	arrows:true,
+// 	dots:false,
+// 	prevArrow:"#sec_five_arrow_left",
+// 	nextArrow:"#sec_five_arrow_right",
+// 	responsive: [
+//     {
+//       breakpoint: 530,
+//       settings: {
+//       slidesToShow: 2,
+// 			slidesToScroll: 2
+//      }
+// 	 },
+// 	 {
+// 		breakpoint: 767,
+// 		settings: {
+// 		slidesToShow: 3,
+// 		slidesToScroll: 3
+// 	 }
+//  },
+//  {
+// 	breakpoint: 1020,
+// 	settings: {
+// 	slidesToShow: 4,
+// 	slidesToScroll: 4
+//  }
+// },
+//    {
+//       breakpoint: 1170,
+//       settings: "unslick"
+//    }
+// 	]
+//  });
 
 
 
 
 
- $('#sec_seven_slider').slick({
-  infinite: true,
-  slidesToShow: 1,
-	slidesToScroll: 1,
-	adaptiveHeight:true,
-	arrows:false,
-	dots:true
- });
+//  $('#sec_seven_slider').slick({
+//   infinite: true,
+//   slidesToShow: 1,
+// 	slidesToScroll: 1,
+// 	adaptiveHeight:true,
+// 	arrows:false,
+// 	dots:true
+//  });
  
 
- // case results
+//  // case results
 
- if($('#case_results_wrapper').length >0 ){
+//  if($('#case_results_wrapper').length >0 ){
 
 
- var macyInstance = Macy({
-  container: '#case_results_wrapper',
-	columns: 3,
-	margin: {
-    x: 100,
-    y: 109,
-  },
-	breakAt: {
-    1695: {
-      margin: {
-        x: 35,
-        y: 40,
-      },
-      columns: 3
-    },
-        1275: 2,
-        767: {
-          margin: {
-            x: 0,
-            y: 40,
-          },
-          columns: 1
-        }
+//  var macyInstance = Macy({
+//   container: '#case_results_wrapper',
+// 	columns: 3,
+// 	margin: {
+//     x: 100,
+//     y: 109,
+//   },
+// 	breakAt: {
+//     1695: {
+//       margin: {
+//         x: 35,
+//         y: 40,
+//       },
+//       columns: 3
+//     },
+//         1275: 2,
+//         767: {
+//           margin: {
+//             x: 0,
+//             y: 40,
+//           },
+//           columns: 1
+//         }
         
-  }
-});
+//   }
+// });
 
 	
 
 
   
-}
+// }
 	
 	
 
@@ -307,23 +307,23 @@ var pgurl = window.location.href;
 
 
 
-$('h3.widget-title').on('click', function(e) {
+// $('h3.widget-title').on('click', function(e) {
 	
-	$(this).next('ul').slideToggle();
+// 	$(this).next('ul').slideToggle();
 
-	$(this).toggleClass('close');
+// 	$(this).toggleClass('close');
 
-});
+// });
 
 
 
-$('.sidebar_box ul.menu > li.menu-item-has-children > a').on('click', function(e) {
+// $('.sidebar_box ul.menu > li.menu-item-has-children > a').on('click', function(e) {
   
-   $(this).next('ul.sub-menu').slideToggle(300);
+//    $(this).next('ul.sub-menu').slideToggle(300);
   
-   $(this).parent().toggleClass('active');
+//    $(this).parent().toggleClass('active');
   
- });
+//  });
 
 
 // resize - tablet and desktop top navigatons behave differently. These turn off click functions at certain window widths without reloading the page
@@ -333,13 +333,9 @@ $('.sidebar_box ul.menu > li.menu-item-has-children > a').on('click', function(e
 
 	$('nav ul.menu > li.current-menu-ancestor > a').addClass('active');
 
-	$('.menu_wrapper').on('click', function(e) {
+	$('#menu_wrapper').on('click', function(e) {
 	  
-	  $('.menu_bars').toggleClass('close');
-	  
-	  $('.menu_close').toggleClass('close');
-	  
-	  $('header nav').slideToggle(400);
+	  $(this).toggleClass('open');
 	  
 	});
 
