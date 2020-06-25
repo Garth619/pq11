@@ -78,10 +78,14 @@
 	<div id='header_inner'>
 	
 		<div id='header_left'>
-		
-			<span class='header_title_sml'>Your Fight is Our Right</span><!-- header_title_sml -->
 
-			<span class='header_title_lrg'>We Accept Calls 24/7</span><!-- header_title_sml -->
+			<div class='header_title_wrapper'>
+		
+				<span class='header_title_sml'>Your Fight is Our Right</span><!-- header_title_sml -->
+
+				<span class='header_title_lrg'>We Accept Calls 24/7</span><!-- header_title_sml -->
+
+			</div><!-- header_title_wrapper -->
 		
 		</div><!-- header_left -->
 
@@ -96,13 +100,25 @@
 		</div><!-- header_middle -->
 
 		<div id='header_right'>
-		
-			<span class='header_title_sml'>Free Consultation</span><!-- header_title_sml -->
+			
+			<div class='header_title_wrapper'>
+			
+				<span class='header_title_sml'>Free Consultation</span><!-- header_title_sml -->
 
-			<span class='header_title_lrg'><span>Local</span> (517) 316-1995</span><!-- header_title_sml -->
+				<span class='header_title_lrg'><span>Local</span> <a href="tel:5173161995">(517) 316-1995</a></span><!-- header_title_sml -->
+			
+			</div><!-- header_title_wrapper -->
 
 			<nav><?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?></nav>
-		
+			
+			<div id='menu_wrapper'>
+			
+				<span></span>
+				<span></span>
+				<span></span>
+			
+			</div><!-- menu_wrapper -->
+
 		</div><!-- header_right -->
 	
 	</div><!-- header_inner -->		

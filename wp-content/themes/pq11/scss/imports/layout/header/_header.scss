@@ -25,6 +25,14 @@
 }
 
 
+#menu_wrapper {
+  background: $color_bright_one;
+  span {
+    display: block;
+  }
+}
+
+
 span.header_title_sml {
   display:block;
   margin-bottom:7px;
@@ -34,12 +42,13 @@ span.header_title_sml {
       spacing: 1.2px,
       family: $primaryfont,
       color: $color_dark_three,
+      weight:300,
       transform: uppercase
     )
   );
 }
 
-span.header_title_lrg {
+.header_title_lrg {
   display:block;
   @include type (
     (
@@ -51,7 +60,13 @@ span.header_title_lrg {
       transform: uppercase
     )
   );
-  > span {
+  span {
     display: none;
   }
+  a {
+    text-decoration: none;
+    color:$color_dark_three;
+  }
 }
+
+
