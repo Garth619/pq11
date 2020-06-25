@@ -364,7 +364,9 @@ var pgurl = window.location.href;
 	
 	function tabletClick() {
 		
-    $(this).next('ul.sub-menu').slideToggle(350);
+    //$(this).next('ul.sub-menu').slideToggle(350);
+
+    $(this).next('ul.sub-menu').toggleClass('active');
     
     $(this).parent().toggleClass('active');
 		
@@ -376,14 +378,14 @@ var pgurl = window.location.href;
 	// nav
 	
 	
-	if ($(window).width() > 1170) {
+	if ($(window).width() >= 1066) {
 			
 		navDesktop();
 		
 	}	
 	
 	
-	if ($(window).width() <= 1170) {
+	if ($(window).width() < 1066) {
 			
 		navTablet();
 		
@@ -397,7 +399,7 @@ var pgurl = window.location.href;
 	
 	$(window).resize(_.debounce(function() {
 		
-		if ($(window).width() > 1170) {
+		if ($(window).width() >= 1066) {
 			
 			navDesktop();
 			
@@ -407,7 +409,7 @@ var pgurl = window.location.href;
 		
 		}	
 		
-		if ($(window).width() <= 1170) {
+		if ($(window).width() < 1066) {
 			
 			navTablet();
 			

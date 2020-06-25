@@ -1,7 +1,7 @@
 // navigation - refer to the resize functions in js->custom-min.js
 
 nav {
-  display:none;
+  display: none;
   background: $color_lite_two;
   text-align: center;
   @include box(100%);
@@ -10,16 +10,17 @@ nav {
     top: 65px;
   }
   @include mq(tablet) {
-    display:block;
+    display: flex !important;
     height: 40px;
     border-bottom: 3px solid $color_bright_two;
-    @include abs(87px,null,null,0);
+    @include abs(87px, null, null, 0);
+    @include flex(null, center);
   }
   .menu-header {
     margin-top: 20px;
     @include mq(tablet) {
-      margin-top:0;
-      width:100%;
+      margin-top: 0;
+      width: 100%;
     }
   }
   ul {
@@ -34,10 +35,9 @@ nav {
 }
 
 nav {
-  @include flex(null,center);
   ul.menu {
     @include mq(tablet) {
-      max-width:1050px;
+      max-width: 1050px;
       @include margin_lr;
       @include flex(space-between);
     }
@@ -55,32 +55,44 @@ nav {
       );
       @include mq(small_tablet) {
         padding: 18px 20px;
-        @include quick_type(14px,16px,0.7px);
+        @include quick_type(14px, 16px, 0.7px);
       }
       @include mq(tablet) {
-        padding:0;
-        @include quick_type(10px,12px,0.5px);
+        padding: 0;
+        @include quick_type(10px, 12px, 0.5px);
       }
       a {
         color: $color_dark_three;
+        @include mq(tablet) {
+          padding-bottom: 20px;
+        }
       }
     }
     li.menu-item-has-children {
       background: transparent;
       box-shadow: none;
-      transition:all 200ms ease-in-out;
+      transition: all 200ms ease-in-out;
+      position: relative;
+      &:hover {
+        @include mq(tablet) {
+          ul.sub-menu {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
       &.active {
-        margin-bottom:15px;
+        margin-bottom: 15px;
         background: $color_light_one;
         box-shadow: 0px 3px 10px #0000001a;
         @include mq(small_tablet) {
-          margin-bottom:8px;
+          margin-bottom: 8px;
         }
       }
       > a {
         position: relative;
         &.active {
-          color:$color_bright_two;
+          color: $color_bright_two;
           &:after {
             @include tri(down, 3px, 3px, $color_bright_two);
           }
@@ -99,8 +111,8 @@ nav {
       }
     }
     li.current-menu-ancestor {
-      >a {
-        color:$color_bright_two;
+      > a {
+        color: $color_bright_two;
         &:after {
           @include tri(down, 3px, 3px, $color_bright_two);
         }
@@ -111,25 +123,51 @@ nav {
 
 nav {
   ul.sub-menu {
-    display: none;
-    padding-top:5px;
-    padding-bottom:15px;
+    //display: none;
+    padding-top:0px;
+    padding-bottom:0px;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms ease-in-out;
+    &.active {
+      max-height: 3000px;
+      opacity: 1;
+      visibility: visible;
+      padding-top:5px;
+      padding-bottom:15px;
+    }
     @include mq(small_tablet) {
       padding-bottom: 8px;
     }
+    @include mq(tablet) {
+      display: block !important;
+      background: $color_light_one;
+      width: 184px;
+      box-shadow: 0px 3px 10px #0000001a;
+      padding-top: 5px;
+      padding-bottom: 20px;
+      opacity: 0;
+      max-height:none;
+      visibility: visible;
+      @include abs(27px, null, null, -15px);
+    }
     li {
-      margin:0;
-      padding:0;
-      @include type (
+      margin: 0;
+      padding: 0;
+      @include type(
         (
           spacing: 0,
-          weight:300,
-          height:normal,
-          transform: capitalize
+          weight: 300,
+          height: normal,
+          transform: capitalize,
         )
       );
       @include mq(small_tablet) {
-        @include quick_type(14px,16px,null);
+        @include quick_type(14px, 16px, null);
+      }
+      @include mq(tablet) {
+        @include quick_type(10px, 13px, null);
       }
       &:last-of-type {
         a {
@@ -139,11 +177,11 @@ nav {
         }
       }
       a {
-        padding:15px 0 0;
-        display:block;
-        transition:all 150ms ease-in-out;
+        padding: 15px 0 0;
+        display: block;
+        transition: all 150ms ease-in-out;
         &:hover {
-          color:$color_bright_two;
+          color: $color_bright_two;
         }
         &:after {
           content: "";
@@ -152,9 +190,13 @@ nav {
           height: 1px;
           margin: 15px auto 0;
           background: $color_dark_four;
-          transition:all 150ms ease-in-out;
+          transition: all 150ms ease-in-out;
           @include mq(small_tablet) {
-            width:255px;
+            width: 255px;
+          }
+          @include mq(tablet) {
+            width: 150px;
+            background: $color_lite_two;
           }
         }
         @include mq(small_tablet) {
@@ -164,7 +206,7 @@ nav {
     }
     li.current-menu-item {
       a {
-        color:$color_bright_two;
+        color: $color_bright_two;
       }
     }
   }
