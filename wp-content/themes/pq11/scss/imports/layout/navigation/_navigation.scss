@@ -9,21 +9,38 @@ nav {
   @include mq(small_tablet) {
     top: 65px;
   }
+  @include mq(tablet) {
+    display:block;
+    height: 40px;
+    border-bottom: 3px solid $color_bright_two;
+    @include abs(87px,null,null,0);
+  }
   .menu-header {
     margin-top: 20px;
+    @include mq(tablet) {
+      margin-top:0;
+      width:100%;
+    }
   }
   ul {
     list-style: none;
     li {
       a {
         text-decoration: none;
+        cursor: pointer;
       }
     }
   }
 }
 
 nav {
+  @include flex(null,center);
   ul.menu {
+    @include mq(tablet) {
+      max-width:1050px;
+      @include margin_lr;
+      @include flex(space-between);
+    }
     li {
       padding: 15px 20px;
       @include type(
@@ -39,6 +56,10 @@ nav {
       @include mq(small_tablet) {
         padding: 18px 20px;
         @include quick_type(14px,16px,0.7px);
+      }
+      @include mq(tablet) {
+        padding:0;
+        @include quick_type(10px,12px,0.5px);
       }
       a {
         color: $color_dark_three;
@@ -70,6 +91,9 @@ nav {
           @include tri(down, 3px, 3px, $color_dark_three);
           @include mq(small_tablet) {
             @include abs(7px, -15px, null, null);
+          }
+          @include mq(tablet) {
+            top: 5px;
           }
         }
       }

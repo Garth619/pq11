@@ -2,16 +2,29 @@ header {
   width:100%;
   background:$color_light_one;
   @include fixed(0,null,null,0,10);
+  @include mq(tablet) {
+    height: 123px;
+    background:red;
+  }
 }
 
 #header_inner {
   @include mq(small_tablet) {
     @include flex(space-between);
   }
+  @include mq(tablet) {
+    max-width:875px;
+    margin-top: 10px;
+    @include flex(center, center);
+    @include margin_lr;
+  }
 }
 
 #header_left {
   display: none;
+  @include mq(tablet) {
+    display: block;
+  }
 }
 
 #header_middle {
@@ -23,9 +36,20 @@ header {
     justify-content: flex-start;
     padding-left: 25px;
   }
+  @include mq(tablet) {
+    justify-content: center;
+    margin: 0 100px;
+    padding:0;
+
+  }
   a#logo {
     display: block;
-    max-width: 230px;
+    flex-shrink:0;
+    max-width:100%;
+    width: 230px;
+    @include mq(tablet) {
+      max-width:250px;
+    }
     svg,
     img {
       @include image();
@@ -44,6 +68,11 @@ header {
     flex-grow: 1;
     background: $color_light_one;
     @include flex(flex-end);
+  }
+  @include mq(tablet) {
+    flex-grow:0;
+    padding:0;
+    background:transparent;
   }
   &.open {
     background:$color_dark_three;
@@ -83,6 +112,9 @@ header {
     flex-shrink: 0;
     height: 100%;
     @include flex(center, center, column);
+    @include mq(tablet) {
+      display:none;
+    }
     span {
       display: block;
       max-width: 35px;
@@ -104,15 +136,23 @@ header {
   }
 }
 
+
+
 .header_title_wrapper {
   @include mq(small_tablet) {
     text-align: right;
     padding-right: 15px;
   }
+  @include mq(tablet) {
+    text-align: center;;
+  }
   span,a {
     display: block;
     color:$color_dark_three;
     transition:all 200ms ease-in-out;
+    @include mq(tablet) {
+      display:inline-block;
+    }
   }
 }
 
@@ -130,6 +170,9 @@ span.header_title_sml {
   @include mq(small_tablet) {
     margin-bottom: 4px;
   }
+  @include mq(tablet) {
+    @include quick_type(11px,13px,null);
+  }
 }
 
 span.header_title_lrg {
@@ -142,8 +185,14 @@ span.header_title_lrg {
       transform: uppercase,
     )
   );
+  @include mq(tablet) {
+    @include quick_type(15px,17px,null);
+  }
   span {
     display: none;
+    @include mq(tablet) {
+      display:inline-block;
+    }
   }
   a {
     text-decoration: none;
