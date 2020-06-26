@@ -1,83 +1,21 @@
-.button {
-  text-decoration: none;
+
+
+.play_button {
+  border-radius: 50%;
   position: relative;
-  width: 100%;
-  max-width: 309px;
-  display: inline-block;
-  z-index: 1;
-  &:hover {
-    &:after {
-      opacity: 1;
-    }
-  }
-  @include mq(small_tablet) {
-    width: auto;
-    max-width: 100%;
-  }
-  &:before,
-  &:after {
-    content: "";
-    display: block;
-    border-radius: 5px;
-    z-index: -1;
-    @include box(100%);
-    @include abs(0, null, null, 0);
+  border:2px solid rgba(255,255,255,0.5);
+  @include flex(center,center);
+  @include box(52px);
+  &:before, &:after {
+    @include contentdisplay();
   }
   &:before {
-    background: $button_bg_color;
+    border-radius: 50%;
+    background:$color_light_two;
+    @include box(42px);
   }
   &:after {
-    background: $button_bg_color_hover;
-    opacity: 0;
-    transition: all 150ms ease-in-out;
-  }
-  span {
-    display: block;
-    z-index: 1;
-    text-align: center;
-    padding: 24px 20px;
-    @include type(
-      (
-        size: $button_size,
-        spacing: $button_spacing,
-        family: $primaryfont,
-        color: $button_color,
-        weight: $button_weight,
-        transform: uppercase,
-      )
-    );
-    @include mq(small_tablet) {
-      padding: 24px 27px;
-    }
-    @include mq(small_laptop) {
-      padding: 24px 30px;
-    }
-    @include mq(small_monitor) {
-      font-size: $button_size_small_monitor;
-      padding: 27px 50px;
-    }
-  }
-}
-
-.button_two {
-  display: inline-block;
-  border-radius: 6px;
-  padding: 18px 20px;
-  border: 3px solid $color_dark_two;
-  transition: all 150ms ease-in-out;
-  @include type(
-    (
-      size: 16px,
-      spacing: 2.4px,
-      family: $primaryfont,
-      color: $color_dark_two,
-      weight: 800,
-      align: center,
-      transform: uppercase,
-    )
-  );
-  &:hover {
-    color: $color_lite_one;
-    background: $color-dark_two;
+    @include abs(16px,null,null,20px);
+    @include tri(right,8px,12px,$color_bright_one);
   }
 }

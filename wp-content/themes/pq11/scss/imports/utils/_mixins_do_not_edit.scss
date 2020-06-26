@@ -152,8 +152,6 @@
 ////////////////////////////////////////////////////////////////////
 
 @mixin tri($direction, $size1, $size2, $color) {
-  content: "";
-  display: inline-block;
   width: 0;
   height: 0;
 
@@ -213,4 +211,13 @@
   @if $flex_wrap != null {
     flex-wrap: $flex_wrap;
   }
+}
+
+////////////////////////////////////////////////////////////////////
+// Pseudo Selector Display
+////////////////////////////////////////////////////////////////////
+
+@mixin contentdisplay($display:block,$content:"") {
+  content:$content;
+  display: $display;
 }

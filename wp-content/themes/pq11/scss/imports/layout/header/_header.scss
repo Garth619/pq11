@@ -7,7 +7,7 @@ header {
   }
   @include mq(large_laptop) {
     height: 147px;
-    position: relative;
+    position: static;
   }
   @include mq(small_monitor) {
     height: 183px;
@@ -83,7 +83,7 @@ header {
 }
 
 #header_right {
-  background: $color_lite_two;
+  background: $color_light_two;
   height: 65px;
   padding-left: 20px;
   transition:all 200ms ease-in-out;

@@ -2,7 +2,7 @@
 
 nav {
   display: none;
-  background: $color_lite_two;
+  background: $color_light_two;
   text-align: center;
   @include box(100%);
   @include fixed(127px, null, null, 0);
@@ -141,6 +141,7 @@ nav {
         &:after {
           vertical-align: top;
           transition:all 200ms ease-in-out;
+          @include contentdisplay(inline-block);
           @include abs(6px, -15px, null, null);
           @include tri(down, 3px, 3px, $color_dark_three);
           @include mq(small_tablet) {
@@ -277,7 +278,7 @@ nav {
         }
         @include mq(tablet) {
           padding: 12px 10px;
-          border-bottom: 1px solid $color_lite_two;
+          border-bottom: 1px solid $color_light_two;
         }
         @include mq(large_laptop) {
           padding: 12px 0px;
@@ -286,8 +287,7 @@ nav {
           color: $color_bright_two;
         }
         &:after {
-          content: "";
-          display: block;
+          @include contentdisplay();
           width: 122px;
           height: 1px;
           margin: 15px auto 0;
