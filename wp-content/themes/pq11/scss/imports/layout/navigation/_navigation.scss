@@ -16,6 +16,14 @@ nav {
     @include abs(87px, null, null, 0);
     @include flex(null, center);
   }
+  @include mq(large_laptop) {
+    height: 55px;
+    top: 92px;
+    border-bottom: 4px solid $color_bright_two;
+  }
+  @include mq(small_monitor) {
+    top: 128px;
+  }
   .menu-header {
     margin-top: 20px;
     @include mq(tablet) {
@@ -41,6 +49,12 @@ nav {
       @include margin_lr;
       @include flex(space-between);
     }
+    @include mq(large_laptop) {
+      max-width: 1225px;
+    }
+    @include mq(small_monitor) {
+      max-width: 1500px;
+    }
     li {
       padding: 15px 20px;
       @include type(
@@ -61,10 +75,19 @@ nav {
         padding: 0;
         @include quick_type(10px, 12px, 0.5px);
       }
+      @include mq(large_laptop) {
+        @include quick_type(12px, 14px, 0.6px);
+      }
+      @include mq(small_monitor) {
+        @include quick_type(15px, 16px, 0.75px);
+      }
       a {
         color: $color_dark_three;
         @include mq(tablet) {
           padding-bottom: 20px;
+        }
+        @include mq(large_laptop) {
+          padding-bottom: 25px;
         }
       }
     }
@@ -107,6 +130,15 @@ nav {
           @include mq(tablet) {
             top: 5px;
           }
+          @include mq(large_laptop) {
+            right:-12px;
+            @include tri(down, 4px, 5px, $color_dark_three);
+          }
+          @include mq(small_monitor) {
+            top: 7px;
+            right:-15px;
+            @include tri(down, 5px, 6px, $color_dark_three);
+          }
         }
       }
     }
@@ -123,7 +155,6 @@ nav {
 
 nav {
   ul.sub-menu {
-    //display: none;
     padding-top:0px;
     padding-bottom:0px;
     max-height: 0;
@@ -145,12 +176,21 @@ nav {
       background: $color_light_one;
       width: 184px;
       box-shadow: 0px 3px 10px #0000001a;
-      padding-top: 5px;
-      padding-bottom: 20px;
-      opacity: 0;
+      padding:5px 17px 8px;
       max-height:none;
+      opacity: 1;
       visibility: visible;
-      @include abs(27px, null, null, -15px);
+      text-align: left;
+      @include abs(36px, null, null, -15px);
+    }
+    @include mq(large_laptop) {
+      width:219px;
+      padding:8px 30px 8px;
+      left:0;
+    }
+    @include mq(small_monitor) {
+      width:256px;
+      top: 37px;
     }
     li {
       margin: 0;
@@ -169,8 +209,15 @@ nav {
       @include mq(tablet) {
         @include quick_type(10px, 13px, null);
       }
+      @include mq(large_laptop) {
+        @include quick_type(12px, 14px, null);
+      }
+      @include mq(small_monitor) {
+        @include quick_type(15px, 18px, null);
+      }
       &:last-of-type {
         a {
+          border:none;
           &:after {
             display: none;
           }
@@ -180,6 +227,16 @@ nav {
         padding: 15px 0 0;
         display: block;
         transition: all 150ms ease-in-out;
+        @include mq(small_tablet) {
+          padding: 12px 0 0;
+        }
+        @include mq(tablet) {
+          padding:12px 10px;
+          border-bottom: 1px solid $color_lite_two;
+        }
+        @include mq(large_laptop) {
+          padding:12px 0px;
+        }
         &:hover {
           color: $color_bright_two;
         }
@@ -195,12 +252,8 @@ nav {
             width: 255px;
           }
           @include mq(tablet) {
-            width: 150px;
-            background: $color_lite_two;
+            display: none;
           }
-        }
-        @include mq(small_tablet) {
-          padding: 12px 0 0;
         }
       }
     }
