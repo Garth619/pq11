@@ -83,8 +83,12 @@ nav {
       }
       a {
         color: $color_dark_three;
+        transition: all 200ms ease-in-out;
         @include mq(tablet) {
           padding-bottom: 20px;
+          &:hover {
+            color: $color_bright_two;
+          }
         }
         @include mq(large_laptop) {
           padding-bottom: 25px;
@@ -98,6 +102,20 @@ nav {
       position: relative;
       &:hover {
         @include mq(tablet) {
+          > a {
+              color:$color_bright_two;
+              &:after {
+                @include mq(tablet) {
+                  @include tri(down, 3px, 3px, $color_bright_two);
+                }
+                @include mq(large_laptop) {
+                  @include tri(down, 4px, 5px, $color_bright_two);
+                }
+                @include mq(small_monitor) {
+                  @include tri(down, 5px, 6px, $color_bright_two);
+                }
+              }
+          }
           ul.sub-menu {
             opacity: 1;
             visibility: visible;
@@ -122,6 +140,7 @@ nav {
         }
         &:after {
           vertical-align: top;
+          transition:all 200ms ease-in-out;
           @include abs(6px, -15px, null, null);
           @include tri(down, 3px, 3px, $color_dark_three);
           @include mq(small_tablet) {
@@ -131,13 +150,26 @@ nav {
             top: 5px;
           }
           @include mq(large_laptop) {
-            right:-12px;
+            right: -12px;
             @include tri(down, 4px, 5px, $color_dark_three);
           }
           @include mq(small_monitor) {
             top: 7px;
-            right:-15px;
+            right: -15px;
             @include tri(down, 5px, 6px, $color_dark_three);
+          }
+        }
+        &:hover {
+          &:after {
+            @include mq(tablet) {
+              @include tri(down, 3px, 3px, $color_bright_two);
+            }
+            @include mq(large_laptop) {
+              @include tri(down, 4px, 5px, $color_bright_two);
+            }
+            @include mq(small_monitor) {
+              @include tri(down, 5px, 6px, $color_bright_two);
+            }
           }
         }
       }
@@ -147,7 +179,19 @@ nav {
         color: $color_bright_two;
         &:after {
           @include tri(down, 3px, 3px, $color_bright_two);
+        
+        @include mq(large_laptop) {
+          @include tri(down, 4px, 5px, $color_bright_two);
         }
+        @include mq(small_monitor) {
+          @include tri(down, 5px, 6px, $color_bright_two);
+        }
+      }
+      }
+    }
+    li.current-menu-item {
+      > a {
+        color:$color_bright_two;
       }
     }
   }
@@ -155,8 +199,8 @@ nav {
 
 nav {
   ul.sub-menu {
-    padding-top:0px;
-    padding-bottom:0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     max-height: 0;
     opacity: 0;
     visibility: hidden;
@@ -165,8 +209,8 @@ nav {
       max-height: 3000px;
       opacity: 1;
       visibility: visible;
-      padding-top:5px;
-      padding-bottom:15px;
+      padding-top: 5px;
+      padding-bottom: 15px;
     }
     @include mq(small_tablet) {
       padding-bottom: 8px;
@@ -176,20 +220,21 @@ nav {
       background: $color_light_one;
       width: 184px;
       box-shadow: 0px 3px 10px #0000001a;
-      padding:5px 17px 8px;
-      max-height:none;
-      opacity: 1;
-      visibility: visible;
+      padding: 5px 17px 8px;
+      max-height: none;
+      opacity: 0;
+      visibility: hidden;
       text-align: left;
-      @include abs(36px, null, null, -15px);
+      @include abs(27px, null, null, -15px);
     }
     @include mq(large_laptop) {
-      width:219px;
-      padding:8px 30px 8px;
-      left:0;
+      width: 219px;
+      padding: 8px 30px 8px;
+      top:36px;
+      left: 0;
     }
     @include mq(small_monitor) {
-      width:256px;
+      width: 256px;
       top: 37px;
     }
     li {
@@ -217,7 +262,7 @@ nav {
       }
       &:last-of-type {
         a {
-          border:none;
+          border: none;
           &:after {
             display: none;
           }
@@ -231,11 +276,11 @@ nav {
           padding: 12px 0 0;
         }
         @include mq(tablet) {
-          padding:12px 10px;
+          padding: 12px 10px;
           border-bottom: 1px solid $color_lite_two;
         }
         @include mq(large_laptop) {
-          padding:12px 0px;
+          padding: 12px 0px;
         }
         &:hover {
           color: $color_bright_two;
