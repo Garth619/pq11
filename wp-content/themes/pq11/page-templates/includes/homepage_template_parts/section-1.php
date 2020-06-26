@@ -12,7 +12,7 @@
 
             <a href="">
           
-              <img src='<?php bloginfo('template_directory');?>/images/vid.jpg' /><!-- name -->
+              <img src='<?php bloginfo('template_directory');?>/images/vid.jpg' />
 
             </a>
 
@@ -37,6 +37,12 @@
             <li>10K+ CLIENTS SERVED</li>
           
           </ul><!-- sec_one_selling_points -->
+          
+          <div>
+            
+            <a class='button free_consult_button' href='#consultation'><span>Request a free consultation</span></a><!-- button free_consult_button -->
+          
+          </div>
             
         </div><!-- sec_one_content -->
       
@@ -44,7 +50,45 @@
 
       <div id='sec_left_bottom'>
       
+        <div id='sec_one_logos'>
         
+          <span id='sec_one_logo_title'>NaTIONAL MEDIA RECOGNITION</span><!-- sec_one_logo_title -->
+
+          <div id='sec_one_slider'>
+          
+            <div class='sec_one_slide'>
+
+              <div class='sec_one_slide_inner'>
+              
+                <img src='<?php bloginfo('template_directory');?>/images/news-cnn.svg' />
+              
+              </div><!-- sec_one_slide_inner -->
+            
+            </div><!-- sec_one_slide -->
+
+            <div class='sec_one_slide'>
+
+              <div class='sec_one_slide_inner'>
+              
+                <img src='<?php bloginfo('template_directory');?>/images/test.png' />
+              
+              </div><!-- sec_one_slide_inner -->
+            
+            </div><!-- sec_one_slide -->
+
+            <div class='sec_one_slide'>
+
+              <div class='sec_one_slide_inner'>
+              
+                <img src='<?php bloginfo('template_directory');?>/images/news-cnn.svg' />
+              
+              </div><!-- sec_one_slide_inner -->
+            
+            </div><!-- sec_one_slide -->
+
+           </div><!-- sec_one_slider -->
+        
+        </div><!-- sec_one_logos -->
       
       </div><!-- sec_left_bottom -->
     

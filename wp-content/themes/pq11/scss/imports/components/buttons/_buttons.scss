@@ -19,3 +19,51 @@
     @include tri(right,8px,12px,$color_bright_one);
   }
 }
+
+
+.button {
+  text-decoration: none;
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  z-index: 1;
+  &:hover {
+    span {
+      color:$color_bright_one;
+    }
+    &:after {
+      opacity: 1;
+    }
+  }
+  &:before,
+  &:after {
+    border-radius: 50px;
+    z-index: -1;
+    @include contentdisplay();
+    @include box(100%);
+    @include abs(0, null, null, 0);
+  }
+  &:before {
+    background: $color_grad_one;
+  }
+  &:after {
+    background: $color_light_one;
+    opacity: 0;
+    transition: all 150ms ease-in-out;
+  }
+  span {
+    display: block;
+    z-index: 1;
+    text-align: center;
+    padding: 15px;
+    @include type (
+      (
+        size: 18px,
+        family: $secondaryfont,
+        color: $color_light_one,
+        weight: 400,
+        transform: lowercase 
+      )
+    );
+  }
+}

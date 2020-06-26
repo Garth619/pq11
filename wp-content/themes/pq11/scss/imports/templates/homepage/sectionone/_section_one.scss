@@ -99,3 +99,43 @@ img#hero {
   @include abs(0,null,null,0);
   @include flex(center,center);
 }
+
+a.free_consult_button {
+  max-width: 265px;
+  margin-top:20px;
+}
+
+
+span#sec_one_logo_title {
+  display: inline-block;
+  color:$color_bright_one;
+  background:$color_light_one;
+  padding:11px 25px;
+  margin-top:50px;
+  @include type (
+    (
+      size: 12px,
+      spacing: 1.5px,
+      family: $primaryfont,
+      color: $color_bright_one,
+      weight:300,
+      transform: uppercase
+    )
+  );
+}
+
+
+
+.sec_one_slide {
+  height:55px;
+  .sec_one_slide_inner {
+    height:100%;
+    @include flex(center,center);
+    svg, img {
+      margin:auto;
+    }
+    img {
+      @include image();
+    }
+  }
+}

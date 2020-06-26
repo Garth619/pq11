@@ -116,33 +116,32 @@ jQuery(document).ready(function($){
 
 
 
-// $('#sec_two_slider').slick({
-//   infinite: true,
-//   slidesToShow: 1,
-// 	slidesToScroll: 1,
-// 	mobileFirst:true,
-// 	adaptiveHeight:true,
-// 	arrows:false,
-// 	dots:true,
-// 	responsive: [
-//     {
-//       breakpoint: 767,
-//       settings: {
-//       slidesToShow: 2,
-// 			slidesToScroll: 2,
-// 			dots:false,
-// 			adaptiveHeight:false,
-// 			arrows:true,
-// 			prevArrow:"#sec_two_arrow_left",
-// 			nextArrow:"#sec_two_arrow_right",
-//      }
-//    },
-//    {
-//       breakpoint: 1170,
-//       settings: "unslick"
-//    }
-// 	]
-//  });
+$('#sec_one_slider').slick({
+  infinite: true,
+  slidesToShow: 2,
+	slidesToScroll: 2,
+	mobileFirst:true,
+	arrows:false,
+	dots:false,
+	responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+      slidesToShow: 2,
+			slidesToScroll: 2,
+			dots:false,
+			adaptiveHeight:false,
+			arrows:true,
+			prevArrow:"#sec_two_arrow_left",
+			nextArrow:"#sec_two_arrow_right",
+     }
+   },
+   {
+      breakpoint: 1170,
+      settings: "unslick"
+   }
+	]
+ });
 
 
 
