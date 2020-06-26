@@ -137,5 +137,10 @@ span#sec_one_logo_title {
     img {
       @include image();
     }
+    svg {
+      path, polygon, circle {
+        fill:$color_dark_seven;
+      }
+    }
   }
 }

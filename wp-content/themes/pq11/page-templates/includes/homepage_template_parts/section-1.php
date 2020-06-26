@@ -60,7 +60,7 @@
 
               <div class='sec_one_slide_inner'>
               
-                <img src='<?php bloginfo('template_directory');?>/images/news-cnn.svg' />
+                <?php echo file_get_contents( get_template_directory() . '/images/news-cnn.svg' ); ?>
               
               </div><!-- sec_one_slide_inner -->
             
@@ -70,7 +70,27 @@
 
               <div class='sec_one_slide_inner'>
               
-                <img src='<?php bloginfo('template_directory');?>/images/test.png' />
+                <?php echo file_get_contents( get_template_directory() . '/images/news-time.svg' ); ?>
+              
+              </div><!-- sec_one_slide_inner -->
+            
+            </div><!-- sec_one_slide -->
+
+            <div class='sec_one_slide'>
+
+              <div class='sec_one_slide_inner'>
+
+                <?php echo file_get_contents( get_template_directory() . '/images/news-today.svg' ); ?>
+
+              </div><!-- sec_one_slide_inner -->
+
+            </div><!-- sec_one_slide -->
+
+            <div class='sec_one_slide'>
+
+              <div class='sec_one_slide_inner'>
+              
+              <?php echo file_get_contents( get_template_directory() . '/images/news-espn.svg' ); ?>
               
               </div><!-- sec_one_slide_inner -->
             
@@ -80,13 +100,13 @@
 
               <div class='sec_one_slide_inner'>
               
-                <img src='<?php bloginfo('template_directory');?>/images/news-cnn.svg' />
+              <?php echo file_get_contents( get_template_directory() . '/images/news-usa.svg' ); ?>
               
               </div><!-- sec_one_slide_inner -->
             
             </div><!-- sec_one_slide -->
 
-           </div><!-- sec_one_slider -->
+        </div><!-- sec_one_slider -->
         
         </div><!-- sec_one_logos -->
       

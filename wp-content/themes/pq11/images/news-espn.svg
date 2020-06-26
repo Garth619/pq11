@@ -3,14 +3,9 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="206.7px" height="40px" viewBox="0 0 206.7 40" style="enable-background:new 0 0 206.7 40;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#008ECE;}
-	.st1{fill-rule:evenodd;clip-rule:evenodd;}
-	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#CC2031;}
-	.st3{fill:#CC0000;}
-	.st4{fill:#000105;}
-	.st5{fill:#F27123;}
+	.st3-news{fill:#CC0000;}
 </style>
-<path class="st3" d="M81.6,4.6c-4.7,0-7.7,2.4-8.2,6.1c-0.1,0.8-0.2,1.7-0.3,2.5h60.5c0,0,0.1-0.9,0.2-1.6c0.5-3.7-1.1-7-6.8-7v0
+<path class="st3-news" d="M81.6,4.6c-4.7,0-7.7,2.4-8.2,6.1c-0.1,0.8-0.2,1.7-0.3,2.5h60.5c0,0,0.1-0.9,0.2-1.6c0.5-3.7-1.1-7-6.8-7v0
 	C127,4.6,84.1,4.6,81.6,4.6z M44.7,4.6l-1.1,8.7H71l1.1-8.7L44.7,4.6L44.7,4.6L44.7,4.6z M136.8,4.6l-1.1,8.7h29.8
 	c0,0,0-0.3,0.2-1.3c0.7-5.7-2.9-7.3-6.5-7.3H136.8z M135.3,16.5L133,35.4l10.3,0l2.3-18.9L135.3,16.5L135.3,16.5L135.3,16.5z
 	 M154.9,16.5l-2.3,18.9l10.3,0l2.3-18.9L154.9,16.5L154.9,16.5L154.9,16.5z M43.2,16.5l-2.3,18.9h27.5l1-8.2l-17.2,0l0.4-3.5h17.2

@@ -2,7 +2,7 @@
 
 nav {
   display: none;
-  background: $color_light_two;
+  background: $color_dark_six;
   text-align: center;
   @include box(100%);
   @include fixed(127px, null, null, 0);
@@ -278,7 +278,7 @@ nav {
         }
         @include mq(tablet) {
           padding: 12px 10px;
-          border-bottom: 1px solid $color_light_two;
+          border-bottom: 1px solid $color_dark_six;
         }
         @include mq(large_laptop) {
           padding: 12px 0px;
