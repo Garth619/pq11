@@ -119,7 +119,7 @@ jQuery(document).ready(function($){
 $('#sec_one_slider').slick({
   infinite: true,
   slidesToShow: 2,
-	slidesToScroll: 2,
+  slidesToScroll: 2,
 	mobileFirst:true,
 	arrows:false,
 	dots:false,
@@ -127,19 +127,14 @@ $('#sec_one_slider').slick({
     {
       breakpoint: 767,
       settings: {
-      slidesToShow: 2,
-			slidesToScroll: 2,
-			dots:false,
-			adaptiveHeight:false,
-			arrows:true,
-			prevArrow:"#sec_two_arrow_left",
-			nextArrow:"#sec_two_arrow_right",
+      slidesToShow: 4,
+			slidesToScroll: 4
      }
    },
-   {
-      breakpoint: 1170,
-      settings: "unslick"
-   }
+  //  {
+  //     breakpoint: 1170,
+  //     settings: "unslick"
+  //  }
 	]
  });
 
