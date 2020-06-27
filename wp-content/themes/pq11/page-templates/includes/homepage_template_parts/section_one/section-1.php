@@ -46,7 +46,7 @@
 
               <div class='sec_one_slide_inner'>
               
-                <?php echo file_get_contents( get_template_directory() . '/images/news-cnn.svg' ); ?>
+                <?php echo file_get_contents( get_template_directory() . '/images/cnn-new.svg' ); ?>
               
               </div><!-- sec_one_slide_inner -->
             
@@ -56,7 +56,7 @@
 
               <div class='sec_one_slide_inner'>
               
-                <?php echo file_get_contents( get_template_directory() . '/images/news-time.svg' ); ?>
+                <?php echo file_get_contents( get_template_directory() . '/images/time-new.svg' ); ?>
               
               </div><!-- sec_one_slide_inner -->
             
@@ -66,7 +66,7 @@
 
               <div class='sec_one_slide_inner'>
 
-                <?php echo file_get_contents( get_template_directory() . '/images/news-cnn.svg' ); ?>
+                <?php echo file_get_contents( get_template_directory() . '/images/cnn-new.svg' ); ?>
 
               </div><!-- sec_one_slide_inner -->
 
@@ -76,7 +76,7 @@
 
               <div class='sec_one_slide_inner'>
               
-                <?php echo file_get_contents( get_template_directory() . '/images/news-espn.svg' ); ?>
+                <?php echo file_get_contents( get_template_directory() . '/images/espn-new.svg' ); ?>
               
               </div><!-- sec_one_slide_inner -->
             
@@ -97,6 +97,8 @@
   
 
   <div id='sec_one_right'>
+
+  what
   
   </div><!-- sec_one_right -->
 

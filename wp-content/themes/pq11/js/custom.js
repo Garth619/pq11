@@ -131,10 +131,10 @@ $('#sec_one_slider').slick({
 			slidesToScroll: 4
      }
    },
-  //  {
-  //     breakpoint: 1170,
-  //     settings: "unslick"
-  //  }
+   {
+      breakpoint: 1170,
+      settings: "unslick"
+   }
 	]
  });
 

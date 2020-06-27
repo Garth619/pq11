@@ -1,34 +1,6 @@
 
 
-.play_button {
-  border-radius: 50%;
-  position: relative;
-  border:2px solid rgba(255,255,255,0.5);
-  @include flex(center,center);
-  @include box(52px);
-  @include mq(small_tablet) {
-    @include box(68px);
-  }
-  &:before, &:after {
-    @include contentdisplay();
-  }
-  &:before {
-    border-radius: 50%;
-    background:$color_dark_six;
-    @include box(42px);
-    @include mq(small_tablet) {
-      @include box(55px);
-    }
-  }
-  &:after {
-    @include abs(16px,null,null,20px);
-    @include tri(right,8px,12px,$color_bright_one);
-    @include mq(small_tablet) {
-      @include abs(19px,null,null,26px);
-      @include tri(right,12px,16px,$color_bright_one);
-    }
-  }
-}
+
 
 
 .button {
