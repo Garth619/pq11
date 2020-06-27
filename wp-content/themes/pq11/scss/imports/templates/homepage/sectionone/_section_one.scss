@@ -314,5 +314,54 @@ span#sec_one_logo_title {
     background:$color_dark_three;
     flex-shrink:0;
     flex-basis:436px;
+    padding:48px 0 0 0;
   }
+  .gform_wrapper {
+    padding: 23px 0 0 0;
+    ul {
+      list-style: none;
+      li {
+        label {
+          display: none;
+        }
+        input,textarea {
+          @include type (
+            (
+              size: 12px,
+              spacing: 0.6px,
+              family: $primaryfont,
+              color: $color_dark_two,
+              weight: 300 
+            )
+          );
+        }
+      }
+    }
+  }
+}
+
+
+#sec_one_right_inner {
+  max-width:313px;
+  @include margin_lr;
+  .double_line {
+    max-width:85px;
+    @include margin_lr;
+  }
+}
+
+
+span#sec_one_form_title {
+  display:block;
+  text-align: center;
+  margin-bottom: 16px;
+  @include type (
+    (
+      size: 24px,
+      height: 25px,
+      family: $secondaryfont,
+      color: $color_light_one,
+      weight: 500
+    )
+  );
 }

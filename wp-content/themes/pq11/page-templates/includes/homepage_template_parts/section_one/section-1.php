@@ -92,7 +92,7 @@
 
     <picture>
 
-    <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-new.jpg'>
+      <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-new.jpg'>
     
       <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-tablet-new.jpg'>
 
@@ -104,7 +104,15 @@
 
   <div id='sec_one_right'>
 
-    <?php gravity_form(1, false, false, false, '', true, 1234); ?>
+    <div id='sec_one_right_inner'>
+    
+      <span id='sec_one_form_title'>Request Free Consultation</span><!-- sec_one_form_title -->
+
+      <span class='double_line'></span><!-- double_line -->
+
+      <?php gravity_form(1, false, false, false, '', true, 1234); ?>
+
+    </div><!-- sec_one_right_inner -->
   
   </div><!-- sec_one_right -->
 
