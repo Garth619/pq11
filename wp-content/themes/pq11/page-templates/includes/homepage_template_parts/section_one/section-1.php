@@ -90,15 +90,21 @@
     
     </div><!-- sec_one_left_inner -->
 
-    <img id='hero' src='<?php bloginfo('template_directory');?>/images/hero-mobile-new.jpg' /><!-- hero -->
-  
-  </div><!-- sec_one_left -->
+    <picture>
 
-  
+    <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-new.jpg'>
+    
+      <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-tablet-new.jpg'>
+
+      <img id='hero' src='<?php bloginfo('template_directory');?>/images/hero-mobile-new.jpg' /><!-- hero -->
+    
+    </picture>
+
+  </div><!-- sec_one_left -->
 
   <div id='sec_one_right'>
 
-  what
+    <?php gravity_form(1, false, false, false, '', true, 1234); ?>
   
   </div><!-- sec_one_right -->
 

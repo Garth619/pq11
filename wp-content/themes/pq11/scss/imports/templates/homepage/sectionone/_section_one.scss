@@ -4,6 +4,7 @@
   margin: 127px 0 0;
   @include mq(small_tablet) {
     margin: 65px 0 0;
+    padding-bottom: 62px;
   }
   @include mq(small_laptop) {
     margin: 127px 0 0;
@@ -28,9 +29,10 @@
 #sec_one_left {
   position: relative;
   text-align: center;
-  padding-bottom:57px;
+  padding-bottom: 67px;
   @include mq(small_laptop) {
     flex-grow: 1;
+    padding-bottom: 54px;
     text-align: left;
   }
 }
@@ -256,19 +258,22 @@ span#sec_one_logo_title {
 }
 
 #sec_one_slider {
-  max-width:325px;
-  margin: 21px auto 0px;
+  max-width:245px;
+  margin: 40px auto 0px;
   @include mq(small_tablet) {
-    margin: 25px auto 0px;
+    margin: 40px auto 0px;
     max-width:630px;
   }
   @include mq(small_laptop) {
+    margin: 30px auto 0px;
     @include flex();
   }
 }
 
 .sec_one_slide {
-  height:55px;
+  @include mq(small_laptop) {
+    margin-right:55px;
+  }
   .sec_one_slide_inner {
     height:100%;
     @include flex(center,center);
@@ -286,7 +291,13 @@ span#sec_one_logo_title {
      
     }
     svg {
-      height:55px;
+      height: 25px;
+      @include mq(small_tablet) {
+        height: 27px;
+      }
+      @include mq(small_laptop) {
+        height: 30px;
+      }
       path, polygon, circle {
         fill:$color_dark_seven;
       }
