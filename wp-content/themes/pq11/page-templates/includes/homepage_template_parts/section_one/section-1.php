@@ -112,6 +112,8 @@
 
       <?php gravity_form(1, false, false, false, '', true, 1234); ?>
 
+      <span class='required'>Required Field</span><!-- required -->
+
     </div><!-- sec_one_right_inner -->
   
   </div><!-- sec_one_right -->
