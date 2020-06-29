@@ -1,5 +1,7 @@
 
-
+body {
+  color:$color_dark_three;
+}
 
 .double_line {
   display: block;
@@ -10,6 +12,65 @@
     @include contentdisplay();
   }
   &:after {
-    margin-top:4px;
+    margin-top:3px;
+    @include mq(small_laptop) {
+      margin-top:4px;
+    }
+  }
+}
+
+
+
+.content {
+  @include type (
+    (
+      size: 13px,
+      spacing: 0.33px,
+      height: 22px,
+      family: $primaryfont,
+      weight: 300
+    )
+  );
+  h2 {
+    padding-top:5px;
+    padding-bottom:10px;
+    @include type (
+      (
+        size: 18px,
+        height: 22px,
+        family: $secondaryfont,
+        color: $color_bright_two,
+        weight: 500 
+      )
+    );
+  }
+  a {
+    color:$color-bright_two;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  ul,ol {
+    margin-bottom:21px;
+  }
+  ul {
+    list-style: none;
+    li {
+      position: relative;
+      font-weight:600;
+      padding-left:15px;
+      margin-bottom:6px;
+      &:before {
+        border-radius: 50%;
+        background:$color_bright_two;
+        @include abs(9px,null,null,0);
+        @include box(6px);
+        @include contentdisplay();
+      }
+    }
+  }
+  p {
+    margin-bottom:17px;
   }
 }
