@@ -8,7 +8,7 @@
 
 		<div id='sec_three_intro' class="content">
 		
-			<p>At White Law PLLC, we use a team approach to solve our clients’ legal issues, an approach that combines decades of shared insight with the use of advanced technology in the office and the courtroom. We know how to get our clients the results they need in the toughest legal arenas. We put our clients first and you will always work directly with your attorney throughout your case. Our innovative management system further streamlines our process and reduces the amount of natural resources we consume. We offer the cutting-edge services and solutions you deserve.</p>
+			<p>At White Law PLLC, we use a team approach to solve our clients’ legal issues, an approach that combines decades of shared insight with the use of advanced technology in the office and the courtroom. We know how to get our clients the results they need in the toughest legal arenas. We put our clients first and you will always work directly with your attorney throughout your case.</p>
 		
 		</div><!-- sec_three_intro -->
 		

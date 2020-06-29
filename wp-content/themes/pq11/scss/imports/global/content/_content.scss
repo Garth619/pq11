@@ -13,9 +13,6 @@ body {
   }
   &:after {
     margin-top:3px;
-    @include mq(small_laptop) {
-      margin-top:4px;
-    }
   }
 }
 
