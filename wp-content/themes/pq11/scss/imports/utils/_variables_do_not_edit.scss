@@ -62,6 +62,9 @@ $media_queries: (
   small_monitor: (
     breakpoint: "(min-width: #{$small_monitor})",
   ),
+  monitor: (
+    breakpoint: "(min-width: #{$monitor})",
+  ),
 );
 
 // see _mixins.scss for media query mixin

@@ -4,13 +4,15 @@ header {
   @include fixed(0,null,null,0,10);
   @include mq(tablet) {
     height: 123px;
+    padding-top:10px
   }
   @include mq(large_laptop) {
     height: 147px;
-    position: static;
+    position: relative;
   }
   @include mq(small_monitor) {
-    height: 183px;
+    height: 194px;
+    padding-top:32px;
   }
 }
 
@@ -19,12 +21,11 @@ header {
     @include flex(space-between);
   }
   @include mq(tablet) {
-    margin-top: 10px;
     @include flex(center, center);
     @include margin_lr;
   }
   @include mq(small_monitor) {
-    margin-top: 32px;
+    
   }
 }
 
