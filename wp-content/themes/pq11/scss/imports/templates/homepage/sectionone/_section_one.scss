@@ -447,6 +447,11 @@ span#sec_one_logo_title {
               weight: 400,
             )
           );
+          @include mq(small_monitor) {
+            font-size:30px;
+            @include abs(22px, 15px, null, null);
+
+          }
         }
         label {
           display: none;
@@ -467,12 +472,15 @@ span#sec_one_logo_title {
               weight: 300,
             )
           );
+          @include mq(small_laptop) {
+            padding: 12px 22px 12px 10px;
+          }
           @include mq(large_laptop) {
             font-size:13px;
-            padding: 15px 10px;
+            padding: 15px 25px 15px 10px;
           }
           @include mq(small_monitor) {
-            padding: 21px 10px;
+            padding: 21px 28px 21px 21px;
             font-size: 15px;
           }
         }

@@ -139,6 +139,29 @@ $('#sec_one_slider').slick({
  });
 
 
+ $('#sec_two_slider').slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+	mobileFirst:true,
+	arrows:false,
+	dots:true,
+	responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+      slidesToShow: 2,
+			slidesToScroll: 2
+     }
+   },
+   {
+      breakpoint: 1170,
+      settings: "unslick"
+   }
+	]
+ });
+
+
 
 //  $('#sec_four_slider').slick({
 //   infinite: true,
