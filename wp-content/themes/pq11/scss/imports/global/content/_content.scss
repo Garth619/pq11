@@ -31,6 +31,9 @@ body {
   @include mq(large_laptop) {
     @include quick_type(15px,28px,null);
   }
+  @include mq(small_monitor) {
+    @include quick_type(16px,30px,null);
+  }
   h2 {
     padding-top:5px;
     padding-bottom:10px;
@@ -45,6 +48,9 @@ body {
     );
     @include mq(large_laptop) {
       @include quick_type(22px,25px,null);
+    }
+    @include mq(small_monitor) {
+      @include quick_type(26px,30px,null);
     }
   }
   a {
@@ -68,6 +74,9 @@ body {
         line-height: 20px;
         margin-bottom:20px;
       }
+      @include mq(small_monitor) {
+        line-height: 30px;
+      }
       &:before {
         border-radius: 50%;
         background:$color_bright_one;
@@ -77,6 +86,9 @@ body {
         @include mq(large_laptop) {
           @include abs(7px,null,null,0);
         }
+        @include mq(small_monitor) {
+          @include abs(11px,null,null,0);
+        }
       }
     }
   }
@@ -84,6 +96,9 @@ body {
     margin-bottom:17px;
     @include mq(large_laptop) {
       margin-bottom: 20px;
+    }
+    @include mq(small_monitor) {
+      margin-bottom:25px;
     }
   }
 }
