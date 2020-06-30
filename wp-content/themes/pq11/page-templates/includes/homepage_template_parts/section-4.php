@@ -1,91 +1,134 @@
-<section id="section_four">
-	
+<section id='section_four'>
+
 	<div id='sec_four_inner'>
-	
-		<div id='sec_four_left'>
 
-			<div id='sec_four_left_inner'>
-			
-				<span id='sec_four_left_title'><?php the_field( 'section_four_title' ); ?></span><!-- sec_four_left_title -->
+		<?php echo file_get_contents( get_template_directory() . '/images/stars.svg' ); ?>
 
-				<div id='sec_four_left_content'>
-			
-					<?php the_field( 'section_four_description' ); ?>
-
-					<a class='cr_button' href='<?php the_field( 'section_four_button_link' ); ?>'><?php the_field( 'section_four_button_verbiage' ); ?></a><!-- button_two -->
-			
-				</div><!-- sec_four_left_content -->
-
-			</div><!-- sec_four_left_inner -->
-		
-			</div><!-- sec_four_left -->
-
-		<div id='sec_four_right'>
+		<div id='sec_four_slider_wrapper'>
 		
 			<div id='sec_four_slider'>
-
-			<?php if ( have_rows( 'case_results_sec_four' ) ) : ?>
-				
-				<?php while ( have_rows( 'case_results_sec_four' ) ) : the_row(); ?>
 		
-					<div class='sec_four_single_slide <?php the_sub_field( 'class' ); ?>'>
+				<div class='sec_four_slide'>
 
-						<div class='svg_wrapper'>
-
-						<?php $svg = get_sub_field( 'svg' ); ?>
-						
-						<?php if ( $svg ) { ?>
-						
-							<img class="lazyload" data-src="<?php echo $svg['url']; ?>" alt="<?php echo $svg['alt']; ?>" />
-						
-						<?php } ?>
-
-						</div><!-- svg_wrapper -->
-
-						<div class='sec_four_content_wrapper'>
-
-							<div class='sec_four_type_wrapper'>
-	
-								<span class='sec_four_title type'><?php the_sub_field( 'case_verbiage' ); ?></span><!-- sec_four_type -->
-
-								<span class='sec_four_description'><?php the_sub_field( 'case_description' ); ?></span><!-- sec_four_description -->
-
-							</div><!-- sec_four_type_wrapper -->
-
-							<div class='sec_four_result_wrapper'>
-
-								<span class='sec_four_title result'><?php the_sub_field( 'result_verbiage' ); ?></span><!-- sec_four_type -->
-
-								<span class='sec_four_amount'><?php the_sub_field( 'amount' ); ?></span><!-- sec_four_amount -->
-
-							</div><!-- sec_four_type_wrapper -->
-
-						</div><!-- sec_four_content_wrapper -->
-
-				</div><!-- sec_four_single_slide -->				
+					<div class='intro_wrapper'>
 				
-				<?php endwhile; ?>
+						<p>“This law firm does an outstanding job keeping those values and did an amazing job on my case.”</p>
+
+						<p>“This law firm does an outstanding job keeping those values and did an amazing job on my case.”</p>
+				
+				</div><!-- intro_wrapper -->
+
+				<div class='descrip_wrapper'>
+				
+					<p>Let me start by saying that compassion, dignity, and respect, hold the most value for me. It’s not everyday that you would need an attorney, but when you do it’s important to find one that believes in the same values as you do.</p>
+
+					<p>Let me start by saying that compassion, dignity, and respect, hold the most value for me. It’s not everyday that you would need an attorney, but when you do it’s important to find one that believes in the same values as you do.</p>
+					
+				</div><!-- descrip_wrapper -->
+
+				<span class='double_line'></span><!-- double_line -->
+
+				<span class='name'>HoLLY S. - PERSONAL INJURY CLIENT</span><!-- name -->
 			
-			<?php endif; ?>
+			</div><!-- sec_four_slide -->
+
+			<div class='sec_four_slide'>
+
+				<div class='intro_wrapper'>
+				
+					<p>“This law firm does an outstanding job keeping those values and did an amazing job on my case.”</p>
+
+					<p>“This law firm does an outstanding job keeping those values and did an amazing job on my case.”</p>
+				
+				</div><!-- intro_wrapper -->
+
+				<div class='descrip_wrapper'>
+				
+					<p>Let me start by saying that compassion, dignity, and respect, hold the most value for me. It’s not everyday that you would need an attorney, but when you do it’s important to find one that believes in the same values as you do.</p>
+
+					<p>Let me start by saying that compassion, dignity, and respect, hold the most value for me. It’s not everyday that you would need an attorney, but when you do it’s important to find one that believes in the same values as you do.</p>
+					
+				</div><!-- descrip_wrapper -->
+
+				<span class='double_line'></span><!-- double_line -->
+
+				<span class='name'>HoLLY S. - PERSONAL INJURY CLIENT</span><!-- name -->
 			
-			</div><!-- sec_four_slider -->
+			</div><!-- sec_four_slide -->
+
+			<div class='sec_four_slide'>
+
+				<div class='intro_wrapper'>
+				
+					<p>“This law firm does an outstanding job keeping those values and did an amazing job on my case.”</p>
+
+					<p>“This law firm does an outstanding job keeping those values and did an amazing job on my case.”</p>
+				
+				</div><!-- intro_wrapper -->
+
+				<div class='descrip_wrapper'>
+				
+					<p>Let me start by saying that compassion, dignity, and respect, hold the most value for me. It’s not everyday that you would need an attorney, but when you do it’s important to find one that believes in the same values as you do.</p>
+
+					<p>Let me start by saying that compassion, dignity, and respect, hold the most value for me. It’s not everyday that you would need an attorney, but when you do it’s important to find one that believes in the same values as you do.</p>
+					
+				</div><!-- descrip_wrapper -->
+
+				<span class='double_line'></span><!-- double_line -->
+
+				<span class='name'>HoLLY S. - PERSONAL INJURY CLIENT</span><!-- name -->
+			
+			</div><!-- sec_four_slide -->
+
+			<div class='sec_four_slide'>
+
+				<div class='intro_wrapper'>
+				
+					<p>“This law firm does an outstanding job keeping those values and did an amazing job on my case.”</p>
+
+					<p>“This law firm does an outstanding job keeping those values and did an amazing job on my case.”</p>
+				
+				</div><!-- intro_wrapper -->
+
+				<div class='descrip_wrapper'>
+				
+					<p>Let me start by saying that compassion, dignity, and respect, hold the most value for me. It’s not everyday that you would need an attorney, but when you do it’s important to find one that believes in the same values as you do.</p>
+
+					<p>Let me start by saying that compassion, dignity, and respect, hold the most value for me. It’s not everyday that you would need an attorney, but when you do it’s important to find one that believes in the same values as you do.</p>
+					
+				</div><!-- descrip_wrapper -->
+
+				<span class='double_line'></span><!-- double_line -->
+
+				<span class='name'>HoLLY S. - PERSONAL INJURY CLIENT</span><!-- name -->
+			
+			</div><!-- sec_four_slide -->
 		
-		</div><!-- sec_four_right -->
+		</div><!-- sec_four_slider -->
+
+		<div id="sec_four_left_arrow" class='sec_four_arrow'>
+		
+			<?php echo file_get_contents( get_template_directory() . '/images/ico-arrow.svg' ); ?>
+		
+		</div><!-- sec_four_arrow -->
+
+		<div id="sec_four_right_arrow" class='sec_four_arrow'>
+		
+			<?php echo file_get_contents( get_template_directory() . '/images/ico-arrow.svg' ); ?>
+		
+		</div><!-- sec_four_arrow -->
+
+		</div><!-- sec_four_slider_wrapper -->
 	
 	</div><!-- sec_four_inner -->
 
-	<?php $section_four_background = get_field( 'section_four_background' ); ?>
-	
-	<?php if ( $section_four_background ) { ?>
-	
-			<img id='sec_four_bg' class="lazyload" data-src="<?php echo $section_four_background['url']; ?>" alt="<?php echo $section_four_background['alt']; ?>" />
-	
-	<?php } ?>
 
 	<picture>
 	
-		
-	
+		<source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/img-testimonial-new.jpg'>
+
+		<img id='sec_four_img' src='<?php bloginfo('template_directory');?>/images/img-testimonial-tablet-new.jpg' /><!-- sec_four_img -->
+
 	</picture>
-	
+
 </section><!-- section_four -->

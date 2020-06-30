@@ -27,7 +27,9 @@
   }
   span.double_line {
     max-width:223px;
-    @include margin_lr;
+    @include mq(small_tablet) {
+      @include margin_lr;
+    }
   }
 }
 
