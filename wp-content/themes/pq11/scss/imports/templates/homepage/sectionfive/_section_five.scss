@@ -1,106 +1,46 @@
+/////////////////////////////////////////////////////////////////////
+// Section Five
+////////////////////////////////////////////////////////////////////
+
 #section_five {
-  padding: 0px 25px;
-  @include mq(small_tablet) {
-    padding: 0px 33px;
-  }
-  @include mq(small_laptop) {
-    padding: 0;
-  }
+  background: url("images/bkg-pattern.jpg") repeat;
+  padding: 63px 20px 43px;
 }
 
-#sec_five_inner {
-  max-width: 1920px;
-  @include margin_lr;
-  @include flex(center, center);
-}
 
-.sec_five_arrow {
-  @include mq(small_laptop) {
-    display: none !important;
-  }
-  svg#arrow {
-    width: 12px;
-    path {
-      fill: $sec_five_arrow_bg_color;
+#sec_five_left {
+  span.double_line {
+    max-width:76px;
+    &:before, &:after {
+      background:$color_bright_two;
     }
   }
 }
 
-#sec_five_arrow_right {
-  svg#arrow {
-    transform: rotate(180deg);
+
+#sec_five_image_wrapper {
+  overflow:hidden;
+  margin-bottom:30px;
+  img {
+    @include image();
   }
 }
 
-#sec_five_slider {
-  width: calc(100% - 24px);
-  max-width: 300px;
-  padding: 0px 20px;
-  position: relative;
-  @include mq(mobile) {
-    max-width: 100%;
-  }
-  @include mq(small_laptop) {
-    padding: 0;
-    width: 100%;
-    @include flex(space-between, null);
-  }
-  &:before {
-    @include mq(mobile) {
-      content: "";
-      display: block;
-      width: 3px;
-      height: 100%;
-      background: $color_lite_one;
-      position: relative;
-      z-index: 1;
-      @include abs(0, null, null, 19px);
-    }
-    @include mq(small_laptop) {
-      display: none;
-    }
-  }
+#sec_five_intro {
+  display:block;
+  margin:25px 0 18px;
+  @include type (
+    (
+      size: 24px,
+      height: 26px,
+      family: $secondaryfont,
+      color: $color_dark_three,
+      weight: 500 
+    )
+  );
 }
 
-.sec_five_slide {
-  height: 213px;
-  padding: 5px 0;
-  flex-basis: 16.6667%;
-  @include mq(mobile) {
-    height: 175px;
-    border-left: 1px solid #eaeaea;
-  }
-  @include mq(small_laptop) {
-    height: 198px;
-    &:first-of-type {
-      border-left: none;
-    }
-  }
-  @include mq(large_laptop) {
-    height: 223px;
-  }
-  @include mq(small_monitor) {
-    height: 319px;
-  }
-  .sec_five_slide_inner {
-    height: 100%;
-    @include flex(center, center);
-    img {
-      margin: auto;
-      @include image();
-      max-height: 117px;
-      @include mq(small_tablet) {
-        max-height: 102px;
-      }
-      @include mq(small_laptop) {
-        max-height: 89px;
-      }
-      @include mq(large_laptop) {
-        max-height: 104px;
-      }
-      @include mq(small_monitor) {
-        max-height: 126px;
-      }
-    }
-  }
+
+#sec_five_right {
+  margin: 42px 0 0;
 }

@@ -49,3 +49,27 @@
     }
   }
 }
+
+
+.button_two {
+  display:inline-block;
+  text-align: center;
+  border:2px solid $color_bright_two;
+  padding:16px 35px;
+  border-radius: 50px;
+  transition:all 200ms ease-in-out;
+  @include type (
+    (
+      size: 11px,
+      family: $primaryfont,
+      color: $color_bright_two,
+      weight: 700,
+      spacing:1.5px,
+      transform: uppercase 
+    )
+  );
+  &:hover {
+    background: $color_bright_two;
+    color:$color_light_one;
+  }
+}

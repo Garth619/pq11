@@ -16,8 +16,6 @@ body {
   }
 }
 
-
-
 .content {
   @include type (
     (
@@ -53,6 +51,18 @@ body {
       @include quick_type(26px,30px,null);
     }
   }
+  h3 {
+    margin-bottom:10px;
+    @include type (
+      (
+        size: 15px,
+        spacing: 0.38px,
+        height: 19px,
+        family: $primaryfont,
+        weight: 600 
+      )
+    );
+  }
   a {
     color:$color-bright_two;
     text-decoration: none;
@@ -61,7 +71,11 @@ body {
     }
   }
   ul,ol {
-    margin-bottom:37px;
+    margin-bottom:23px;
+    @include mq(large_laptop) {
+      margin-bottom:37px;
+    }
+   
   }
   ul {
     list-style: none;

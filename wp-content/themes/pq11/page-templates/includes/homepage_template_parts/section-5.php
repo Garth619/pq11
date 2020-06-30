@@ -1,51 +1,46 @@
-<section id="section_five">
+<section id='section_five'>
+
+	<div id='sec_five_inner'>
 	
-	<div id="sec_five_inner">
-
-	<div id="sec_five_arrow_left" class='sec_five_arrow'>
+		<div id='sec_five_left'>
 		
-			<?php echo file_get_contents( get_template_directory() . '/images/arrow.svg' ) ?>
-		
-		</div><!-- sec_five_arrow_left -->
-		
-	<div id='sec_five_slider'>
-
-	<?php if ( have_rows( 'section_five_logos' ) ) : ?>
-	
-		<?php while ( have_rows( 'section_five_logos' ) ) : the_row(); ?>
-		
-		<div class='sec_five_slide'>
-		
-			<div class='sec_five_slide_inner'>
-
-				<div class='sec_five_image_wrapper'>
+			<div id='sec_five_image_wrapper'>
 			
-				<?php $logo = get_sub_field( 'logo' ); ?>
-				
-				<?php if ( $logo ) { ?>
-					
-					<img class="lazyload" data-src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
-				
-				<?php } ?>
+				<img src='<?php bloginfo('template_directory');?>/images/img-white-new.jpg' /><!-- name -->
+			
+			</div><!-- sec_five_image_wrapper -->
 
-				</div><!-- sec_five_image_wrapper -->
+			<span class="double_line"></span>
+
+			<span id='sec_five_intro'>We put our clients first and you will always work directly with your attorney throughout your case.</span><!-- sec_five_intro -->
+
+			<a class='button_two' href=''>Meet Our Attorneys</a><!-- button_two -->
 		
-			</div><!-- sec_five_slide_inner -->
+		</div><!-- sec_five_left -->
+
+		<div id='sec_five_right' class="content">
+		
+			<h2>We are prepared to do what it takes to win full justice</h2>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+			
+			<p>Sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+
+			<ul>
+				<li>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut</li>
+				<li>Aut fugit, sed quia consequuntur magni dolores eos qui ratione</li> 
+				<li>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</li>
+				<li>Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</li>
+			</ul>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<h3>Find out more what our team can do for you call today</h3>
+
+			<p>Initial case evaluations are always free, wand we are more than happy to answer any questions you have about our history or legal process.</p>
+		
+		</div><!-- sec_five_right -->
 	
-		</div><!-- sec_five_slide -->
-
-		<?php endwhile; ?>
-
-	<?php endif; ?>
-	
-	</div><!-- sec_five_slider -->
-
-	<div id="sec_five_arrow_right" class='sec_five_arrow'>
-		
-			<?php echo file_get_contents( get_template_directory() . '/images/arrow.svg' ) ?>
-		
-		</div><!-- sec_five_arrow_right -->
-		
 	</div><!-- sec_five_inner -->
-	
+
 </section><!-- section_five -->
