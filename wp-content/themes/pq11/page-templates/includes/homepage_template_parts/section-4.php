@@ -13,15 +13,11 @@
 					<div class='intro_wrapper'>
 				
 						<p>“This law firm does an outstanding job keeping those values and did an amazing job on my case.”</p>
-
-						<p>“This law firm does an outstanding job keeping those values and did an amazing job on my case.”</p>
 				
 				</div><!-- intro_wrapper -->
 
 				<div class='descrip_wrapper'>
 				
-					<p>Let me start by saying that compassion, dignity, and respect, hold the most value for me. It’s not everyday that you would need an attorney, but when you do it’s important to find one that believes in the same values as you do.</p>
-
 					<p>Let me start by saying that compassion, dignity, and respect, hold the most value for me. It’s not everyday that you would need an attorney, but when you do it’s important to find one that believes in the same values as you do.</p>
 					
 				</div><!-- descrip_wrapper -->
@@ -37,15 +33,11 @@
 				<div class='intro_wrapper'>
 				
 					<p>“This law firm does an outstanding job keeping those values and did an amazing job on my case.”</p>
-
-					<p>“This law firm does an outstanding job keeping those values and did an amazing job on my case.”</p>
 				
 				</div><!-- intro_wrapper -->
 
 				<div class='descrip_wrapper'>
 				
-					<p>Let me start by saying that compassion, dignity, and respect, hold the most value for me. It’s not everyday that you would need an attorney, but when you do it’s important to find one that believes in the same values as you do.</p>
-
 					<p>Let me start by saying that compassion, dignity, and respect, hold the most value for me. It’s not everyday that you would need an attorney, but when you do it’s important to find one that believes in the same values as you do.</p>
 					
 				</div><!-- descrip_wrapper -->
@@ -61,15 +53,11 @@
 				<div class='intro_wrapper'>
 				
 					<p>“This law firm does an outstanding job keeping those values and did an amazing job on my case.”</p>
-
-					<p>“This law firm does an outstanding job keeping those values and did an amazing job on my case.”</p>
 				
 				</div><!-- intro_wrapper -->
 
 				<div class='descrip_wrapper'>
 				
-					<p>Let me start by saying that compassion, dignity, and respect, hold the most value for me. It’s not everyday that you would need an attorney, but when you do it’s important to find one that believes in the same values as you do.</p>
-
 					<p>Let me start by saying that compassion, dignity, and respect, hold the most value for me. It’s not everyday that you would need an attorney, but when you do it’s important to find one that believes in the same values as you do.</p>
 					
 				</div><!-- descrip_wrapper -->
@@ -85,15 +73,11 @@
 				<div class='intro_wrapper'>
 				
 					<p>“This law firm does an outstanding job keeping those values and did an amazing job on my case.”</p>
-
-					<p>“This law firm does an outstanding job keeping those values and did an amazing job on my case.”</p>
 				
 				</div><!-- intro_wrapper -->
 
 				<div class='descrip_wrapper'>
 				
-					<p>Let me start by saying that compassion, dignity, and respect, hold the most value for me. It’s not everyday that you would need an attorney, but when you do it’s important to find one that believes in the same values as you do.</p>
-
 					<p>Let me start by saying that compassion, dignity, and respect, hold the most value for me. It’s not everyday that you would need an attorney, but when you do it’s important to find one that believes in the same values as you do.</p>
 					
 				</div><!-- descrip_wrapper -->
