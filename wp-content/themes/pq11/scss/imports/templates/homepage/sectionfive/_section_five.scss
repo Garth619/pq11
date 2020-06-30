@@ -5,6 +5,9 @@
 #section_five {
   background: url("images/bkg-pattern.jpg") repeat;
   padding: 63px 20px 43px;
+  @include mq(small_tablet) {
+    padding: 63px 60px 43px;
+  }
 }
 
 
@@ -15,12 +18,17 @@
     @include margin_lr;
   }
   @include mq(small_tablet) {
+    max-width:100%;
+    text-align: left;
     @include flex(space-between);
   }
   span.double_line {
     max-width:76px;
     @include mq(mobile) {
       @include margin_lr;
+    }
+    @include mq(small_tablet) {
+      margin:0;
     }
     &:before, &:after {
       background:$color_bright_two;
@@ -34,6 +42,7 @@
   margin-bottom:30px;
   @include mq(small_tablet) {
     flex-shrink:0;
+    flex-basis:316px;
   }
   img {
     @include image();
@@ -43,9 +52,17 @@
   }
 }
 
+#sec_five_left_content {
+  @include mq(small_tablet) {
+    flex-grow:1;
+    margin: 26px 0 0 28px;
+  }
+}
+
 #sec_five_intro {
   display:block;
   margin:25px 0 18px;
+  padding-right: 10px;
   @include type (
     (
       size: 24px,
@@ -55,9 +72,15 @@
       weight: 500 
     )
   );
+  @include mq(small_tablet) {
+    max-width:435px;
+  }
 }
 
 
 #sec_five_right {
   margin: 42px 0 0;
+  @include mq(small_tablet) {
+    margin: 13px 0 0;
+  }
 }
