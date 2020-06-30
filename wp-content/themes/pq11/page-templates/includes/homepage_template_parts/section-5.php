@@ -5,8 +5,16 @@
 		<div id='sec_five_left'>
 		
 			<div id='sec_five_image_wrapper'>
-			
-				<img src='<?php bloginfo('template_directory');?>/images/img-white-mobile.jpg' /><!-- name -->
+
+				<picture>
+
+				<source media='(min-width: 1380px)' srcset='<?php bloginfo('template_directory'); ?>/images/img-white-desktop.jpg'>
+
+					<source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/img-white-laptop.jpg'>
+
+					<img src='<?php bloginfo('template_directory');?>/images/img-white-mobile.jpg' /><!-- name -->
+
+				</picture>
 			
 			</div><!-- sec_five_image_wrapper -->
 

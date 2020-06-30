@@ -62,6 +62,10 @@ body {
         weight: 600 
       )
     );
+    @include mq(large_laptop) {
+      margin-bottom:3px;
+      @include quick_type(17px,30px,null);
+    }
   }
   a {
     color:$color-bright_two;
