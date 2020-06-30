@@ -1,6 +1,6 @@
 #section_four {
   @include mq(small_tablet) {
-    padding: 75px 60px;
+    padding: 70px 60px;
     position: relative;
   }
   @include mq(small_laptop) {
@@ -25,7 +25,7 @@
   }
   @include mq(small_laptop) {
     max-width: 920px;
-    padding: 80px 30px 50px;
+    padding: 75px 30px 50px;
     @include margin_lr;
   }
   @include mq(large_laptop) {
@@ -59,9 +59,12 @@
   @include mq(small_tablet) {
     order: 2;
     max-width: 730px;
+    //padding:0 30px;
+    width:calc(100% - 104px);
   }
   @include mq(small_laptop) {
     max-width: 100%;
+    width:auto;
   }
 }
 
@@ -78,16 +81,19 @@
     );
     margin-top: 15px;
     @include mq(small_tablet) {
-      margin-top: 21px;
+      margin: 21px auto 0;
+      max-width:463px;
+      @include quick_type(28px, 30px, null);
     }
     @include mq(small_laptop) {
-      @include quick_type(28px, 30px, null);
+      max-width:585px;
     }
     @include mq(large_laptop) {
       @include quick_type(36px, 36px, null);
     }
     @include mq(small_monitor) {
       margin-top: 31px;
+      max-width:765px;
       @include quick_type(45px, 45px, null);
     }
     p {
@@ -106,18 +112,22 @@
       )
     );
     @include mq(small_tablet) {
-      margin-bottom: 37px;
-    }
-    @include mq(small_laptop) {
+      margin:0 auto 37px;
+      max-width:470px;
       @include quick_type(15px, 28px, null);
     }
+    @include mq(small_laptop) {
+      max-width:622px;
+    }
     @include mq(large_laptop) {
+      max-width:660px;
       margin-bottom: 28px;
       @include quick_type(17px, 28px, null);
     }
     @include mq(small_monitor) {
       padding-top:17px;
       margin-bottom: 30px;
+      max-width:749px;
       @include quick_type(18px, 35px, null);
     }
     p {
@@ -181,6 +191,9 @@
   transform: rotate(-180deg);
   order: 1;
   margin-left: -62px;
+  @include mq(small_tablet) {
+    margin-left: -57px;
+  }
   @include mq(small_laptop) {
     margin-left: -170px;
   }
@@ -195,6 +208,9 @@
 #sec_four_right_arrow {
   order: 3;
   margin-right: -62px;
+  @include mq(small_tablet) {
+    margin-right: -57px;
+  }
   @include mq(small_laptop) {
     margin-right: -170px;
   }

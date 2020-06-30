@@ -9,8 +9,19 @@
 
 
 #sec_five_left {
+  @include mq(mobile) {
+    text-align: center;
+    max-width: 375px;
+    @include margin_lr;
+  }
+  @include mq(small_tablet) {
+    @include flex(space-between);
+  }
   span.double_line {
     max-width:76px;
+    @include mq(mobile) {
+      @include margin_lr;
+    }
     &:before, &:after {
       background:$color_bright_two;
     }
@@ -21,8 +32,14 @@
 #sec_five_image_wrapper {
   overflow:hidden;
   margin-bottom:30px;
+  @include mq(small_tablet) {
+    flex-shrink:0;
+  }
   img {
     @include image();
+    @include mq(mobile) {
+      @include margin_lr;
+    }
   }
 }
 

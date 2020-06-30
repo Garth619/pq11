@@ -6,15 +6,19 @@
 		
 			<div id='sec_five_image_wrapper'>
 			
-				<img src='<?php bloginfo('template_directory');?>/images/img-white-new.jpg' /><!-- name -->
+				<img src='<?php bloginfo('template_directory');?>/images/img-white-mobile.jpg' /><!-- name -->
 			
 			</div><!-- sec_five_image_wrapper -->
 
-			<span class="double_line"></span>
+			<div id='sec_five_left_content'>
+			
+				<span class="double_line"></span>
 
-			<span id='sec_five_intro'>We put our clients first and you will always work directly with your attorney throughout your case.</span><!-- sec_five_intro -->
+				<span id='sec_five_intro'>We put our clients first and you will always work directly with your attorney throughout your case.</span><!-- sec_five_intro -->
 
-			<a class='button_two' href=''>Meet Our Attorneys</a><!-- button_two -->
+				<a class='button_two' href=''>Meet Our Attorneys</a><!-- button_two -->
+
+			</div><!-- sec_five_left_content -->
 		
 		</div><!-- sec_five_left -->
 
