@@ -9,6 +9,9 @@
     @include margin_lr;
     @include flex(space-between);
   }
+  @include mq(small_laptop) {
+    max-width:920px;
+  }
 }
 
 .loc_col {
@@ -42,6 +45,9 @@
       margin-top:18px;
       margin-left:0;
       margin-right:0;
+    }
+    @include mq(small_laptop) {
+      margin-bottom: 12px;
     }
   }
 }
@@ -112,6 +118,9 @@ a.get_directions {
   @include mq(small_tablet) {
     margin-top:30px;
     padding:14px 20px;
+  }
+  @include mq(small_laptop) {
+    margin-top: 20px;
   }
   &:hover {
     background:$color_light_one;

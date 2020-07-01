@@ -14,6 +14,10 @@ footer {
     max-width: 758px;
     @include margin_lr;
   }
+  @include mq(small_laptop) {
+    max-width: 796px;
+    padding: 96px 60px 140px;
+  }
   span.double_line {
     width: 110px;
     @include margin_lr;
@@ -83,6 +87,9 @@ footer {
       }
       textarea {
         height: 125px;
+        @include mq(small_laptop) {
+          height:108px;
+        }
       }
       select {
         -webkit-appearance: none;
@@ -187,6 +194,9 @@ span#footer_from_title {
       align: center,
     )
   );
+  @include mq(small_laptop) {
+    margin-bottom: 20px;
+  }
 }
 
 #copyright_wrapper {
@@ -198,11 +208,18 @@ span#footer_from_title {
 
 #copyright_inner {
   text-align: center;
+  @include mq(small_laptop) {
+    max-width:926px;
+    @include margin_lr;
+    @include flex(space-between);
+  }
   ul {
     max-width: 286px;
     @include margin_lr;
     @include mq(small_tablet) {
       max-width: 100%;
+      margin-left:0;
+      margin-right:0;
     }
     li {
       display: inline-block;
@@ -217,6 +234,9 @@ span#footer_from_title {
           transform: uppercase,
         )
       );
+      @include mq(small_tablet) {
+        font-size:9px;
+      }
       &:after {
         margin: 0 7px 0 11px;
         @include contentdisplay(inline-block, "|");
@@ -250,8 +270,14 @@ span#footer_from_title {
     @include mq(small_tablet) {
       margin-top: 12px;
     }
+    @include mq(small_laptop) {
+      margin-top: 3px;
+    }
     img {
       width: 175px;
+      @include mq(small_laptop) {
+        width:150px;
+      }
     }
   }
 }
