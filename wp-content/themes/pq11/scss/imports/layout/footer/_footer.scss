@@ -18,6 +18,10 @@ footer {
     max-width: 796px;
     padding: 96px 60px 140px;
   }
+  @include mq(large_laptop) {
+    max-width:961px;
+    padding: 119px 60px 162px;
+  }
   span.double_line {
     width: 110px;
     @include margin_lr;
@@ -27,6 +31,9 @@ footer {
     margin-top: 33px;
     @include mq(small_tablet) {
       @include flex(space-between, null, null, wrap);
+    }
+    @include mq(large_laptop) {
+      margin-top: 40px;
     }
     li {
       margin-bottom: 17px;
@@ -84,11 +91,17 @@ footer {
           padding: 16px 40px 16px 20px;
           @include quick_type(13px, null, 0.65px);
         }
+        @include mq(large_laptop) {
+          padding: 19px 40px 19px 20px;
+        }
       }
       textarea {
         height: 125px;
         @include mq(small_laptop) {
           height:108px;
+        }
+        @include mq(large_laptop) {
+          height:121px;
         }
       }
       select {
@@ -103,6 +116,9 @@ footer {
     margin-top: 27px;
     @include mq(small_tablet) {
       margin-top: 11px;
+    }
+    @include mq(large_laptop) {
+      margin-top: 24px;
     }
     &:hover {
       input {
@@ -176,6 +192,9 @@ footer {
     @include mq(small_tablet) {
       margin-top: -60px;
     }
+    @include mq(large_laptop) {
+      margin-top: -66px;
+    }
     &:before {
       font-size: 20px;
     }
@@ -197,12 +216,18 @@ span#footer_from_title {
   @include mq(small_laptop) {
     margin-bottom: 20px;
   }
+  @include mq(large_laptop) {
+    @include quick_type(45px,50px,null);
+  }
 }
 
 #copyright_wrapper {
   padding-bottom: 30px;
   @include mq(small_tablet) {
     margin-top: 55px;
+  }
+  @include mq(large_laptop) {
+    margin-top: 73px;
   }
 }
 
@@ -212,6 +237,9 @@ span#footer_from_title {
     max-width:926px;
     @include margin_lr;
     @include flex(space-between);
+  }
+  @include mq(large_laptop) {
+    max-width: 1250px;
   }
   ul {
     max-width: 286px;
@@ -237,12 +265,18 @@ span#footer_from_title {
       @include mq(small_tablet) {
         font-size:9px;
       }
+      @include mq(large_laptop) {
+        font-size:10px;
+      }
       &:after {
         margin: 0 7px 0 11px;
         @include contentdisplay(inline-block, "|");
         display: none;
         @include mq(small_tablet) {
           display: inline-block;
+        }
+        @include mq(large_laptop) {
+          margin: 0 10px 0 14px;
         }
       }
       &:nth-of-type(2) {
@@ -277,6 +311,9 @@ span#footer_from_title {
       width: 175px;
       @include mq(small_laptop) {
         width:150px;
+      }
+      @include mq(large_laptop) {
+        width:210px;
       }
     }
   }
