@@ -30,8 +30,6 @@
           
           </div>
             
-       
-      
       </div><!-- sec_left_top -->
 
       <div id='sec_left_bottom'>
