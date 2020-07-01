@@ -22,6 +22,10 @@ footer {
     max-width:961px;
     padding: 119px 60px 162px;
   }
+  @include mq(small_monitor) {
+    padding: 141px 60px 177px;
+    max-width: 1430px;
+  }
   span.double_line {
     width: 110px;
     @include margin_lr;
@@ -35,12 +39,15 @@ footer {
     @include mq(large_laptop) {
       margin-top: 40px;
     }
+    @include mq(small_monitor) {
+      margin-top: 55px;
+    }
     li {
       margin-bottom: 17px;
       flex-basis: 100%;
       position: relative;
       @include mq(small_tablet) {
-        margin-bottom: 14px;
+        margin-bottom: 15px;
       }
       &#field_3_1,
       &#field_3_2,
@@ -48,10 +55,16 @@ footer {
         @include mq(small_tablet) {
           flex-basis: 32%;
         }
+        @include mq(small_monitor) {
+          flex-basis: 32.25%;
+        }
       }
       &#field_3_4,
       &#field_3_7 {
         flex-basis: 49%;
+        @include mq(small_monitor) {
+          flex-basis: 49.25%;
+        }
       }
       &:after {
         @include abs(22px, 20px, null, null);
@@ -94,6 +107,10 @@ footer {
         @include mq(large_laptop) {
           padding: 19px 40px 19px 20px;
         }
+        @include mq(small_monitor) {
+          padding: 26px 40px 26px 20px;
+          @include quick_type(15px, null, 0.75px);
+        }
       }
       textarea {
         height: 125px;
@@ -120,6 +137,9 @@ footer {
     @include mq(large_laptop) {
       margin-top: 24px;
     }
+    @include mq(small_monitor) {
+      margin-top: 12px;
+    }
     &:hover {
       input {
         color: $color_bright_one;
@@ -127,9 +147,6 @@ footer {
       &:after {
         opacity: 1;
       }
-    }
-    @include mq(small_monitor) {
-      margin-top: 37px;
     }
     &:before,
     &:after {
@@ -164,6 +181,10 @@ footer {
       @include mq(small_tablet) {
         font-size: 18px;
       }
+      @include mq(small_monitor) {
+        font-size: 24px;
+        padding: 15px 25px;
+      }
     }
   }
   .gfield_description,
@@ -195,8 +216,15 @@ footer {
     @include mq(large_laptop) {
       margin-top: -66px;
     }
+    @include mq(small_monitor) {
+      margin-top: -69px;
+      @include quick_type(15px, null, 1.1px);
+    }
     &:before {
       font-size: 20px;
+      @include mq(small_monitor) {
+        font-size: 30px;
+      }
     }
   }
 }
@@ -219,6 +247,10 @@ span#footer_from_title {
   @include mq(large_laptop) {
     @include quick_type(45px,50px,null);
   }
+  @include mq(small_monitor) {
+    margin-bottom: 30px;
+    @include quick_type(60px,60px,null);
+  }
 }
 
 #copyright_wrapper {
@@ -228,6 +260,9 @@ span#footer_from_title {
   }
   @include mq(large_laptop) {
     margin-top: 73px;
+  }
+  @include mq(small_monitor) {
+    margin-top: 133px;
   }
 }
 
@@ -240,6 +275,9 @@ span#footer_from_title {
   }
   @include mq(large_laptop) {
     max-width: 1250px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1685px;
   }
   ul {
     max-width: 286px;
@@ -268,6 +306,9 @@ span#footer_from_title {
       @include mq(large_laptop) {
         font-size:10px;
       }
+      @include mq(small_monitor) {
+        font-size:13px;
+      }
       &:after {
         margin: 0 7px 0 11px;
         @include contentdisplay(inline-block, "|");
@@ -277,6 +318,9 @@ span#footer_from_title {
         }
         @include mq(large_laptop) {
           margin: 0 10px 0 14px;
+        }
+        @include mq(small_monitor) {
+          margin: 0 14px 0 18px;
         }
       }
       &:nth-of-type(2) {

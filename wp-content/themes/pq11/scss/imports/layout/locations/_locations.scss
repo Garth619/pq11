@@ -14,6 +14,9 @@
   @include mq(large_laptop) {
     max-width: 1340px;
   }
+  @include mq(small_monitor) {
+    max-width: 1485px;
+  }
 }
 
 .loc_col {
@@ -25,6 +28,9 @@
     @include mq(large_laptop) {
       flex-basis:325px;
       margin-left:80px;
+    }
+    @include mq(small_monitor) {
+      margin-left: 152px;
     }
   }
   &:nth-of-type(2) {
@@ -67,6 +73,9 @@
     @include mq(large_laptop) {
       margin-bottom: 20px;
     }
+    @include mq(small_monitor) {
+      margin-bottom: 27px;
+    }
   }
 }
 
@@ -81,10 +90,13 @@ span.loc_title {
     )
   );
   @include mq(small_tablet) {
-    @include quick_type(12px, null, null);
+    font-size: 12px;;
   }
   @include mq(large_laptop) {
-    @include quick_type(15px, null, null);
+    font-size: 15px;
+  }
+  @include mq(small_monitor) {
+    font-size: 16px;
   }
   &.connect_title {
     margin-top: 45px;
@@ -118,6 +130,9 @@ span.loc_cta {
   }
   @include mq(large_laptop) {
     @include quick_type(22px, 25px, null);
+  }
+  @include mq(small_monitor) {
+    @include quick_type(26px, 30px, null);
   }
 }
 
@@ -156,6 +171,11 @@ a.get_directions {
     font-size: 12px;
     border: 2px solid $color_light_one;
   }
+  @include mq(small_monitor) {
+    margin-top: 30px;
+    padding: 17px 29px;
+    font-size: 14px;
+  }
   &:hover {
     background: $color_light_one;
     color: $color_bright_one;
@@ -186,6 +206,9 @@ a.get_directions {
       }
       @include mq(large_laptop) {
         height: 18px;
+      }
+      @include mq(small_monitor) {
+        height: 23px;
       }
       path {
         fill: $color_light_one;
