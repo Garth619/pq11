@@ -1,35 +1,30 @@
 <section id='section_seven'>
 
-<div id='section_seven_inner'>
+<div id='sec_seven_inner'>
 
-    <span class='sec_seven_title'><?php the_field( 'section_seven_title' ); ?></span><!-- sec_seven_title -->
+  <div id='sec_seven_left'>
   
-    <div id='sec_seven_slider'>
+    <span id='sec_seven_title'>Practice Areas</span><!-- sec_seven_title -->
 
-    <?php if ( have_rows( 'section_seven_testimonials' ) ) : ?>
-	    <?php while ( have_rows( 'section_seven_testimonials' ) ) : the_row(); ?>
-      
-        <div class='sec_seven_single_slide'>
-      
-          <?php echo file_get_contents( get_template_directory() . '/images/stars.svg' ) ?>
-
-          <span class='sec_seven_desc'><?php the_sub_field( 'description' ); ?></span><!-- sec_seven_desc -->
-
-          <div class='sec_seven_content'>
-      
-            <?php the_sub_field( 'content' ); ?>
-    
-          </div><!-- sec_seven_content -->
-
-          <span class='sec_seven_name'><?php the_sub_field( 'name' ); ?></span><!-- sec_seven_name -->
-    
-        </div><!-- sec_seven_single_slide -->
-
-	    <?php endwhile; ?>
-    <?php endif; ?>
-
-    </div><!-- sec_seven_slider -->
+    <span class='double_line'></span><!-- double_line -->
   
-  </div><!-- section_seven_inner -->
+  </div><!-- sec_seven_left -->
+
+  <div id='sec_seven_right'>
+  
+    <ul>
+      <li><a href="">Medical Malpractice</a></li>
+      <li><a href="">Burn Accidents</a></li>
+      <li><a href="">Automobile Accidents</a></li>
+      <li><a href="">Bad Faith Insurance</a></li>
+      <li><a href="">Construction Accidents</a></li>
+      <li><a href="">Premises Liability</a></li>
+    </ul>
+
+    <a class='button_two' href=''>View All Practice Areas</a><!-- button_two -->
+  
+  </div><!-- sec_seven_right -->
+
+</div><!-- sec_seven_inner -->
 
 </section><!-- section_seven -->

@@ -1,258 +1,78 @@
+
 #section_seven {
-  background: $sec_seven_bg_color;
-  padding: 60px 25px;
-  @include mq(small_tablet) {
-    padding: 67px 60px;
-  }
-  @include mq(large_laptop) {
-    padding: 94px 160px;
-  }
-  @include mq(small_monitor) {
-    padding: 164px 160px;
+  position: relative;
+  padding:57px 40px;
+  &:after {
+    background: url("/wp-content/themes/pq11/images/bkg-pattern.jpg") repeat;
+    background-size:500px,500px;
+    opacity: 0.6;
+    @include abs(0,null,null,0);
+    @include box(100%);
+    @include contentdisplay();
   }
 }
 
-#section_seven_inner {
+#sec_seven_inner {
+  position: relative;
+  z-index:1;
   text-align: center;
-  background: $sec_seven_inner_bg_color;
-  padding: 45px 20px;
-  max-width: 540px;
-  box-shadow: 0px 1px 40px #00000080;
-  @include margin_lr;
-  @include mq(small_tablet) {
-    padding: 81px 40px;
-    max-width: 730px;
-  }
-  @include mq(small_laptop) {
-    padding: 71px 77px 70px;
-    max-width: 927px;
+}
+
+
+#sec_seven_left {
+  span.double_line {
+    max-width:130px;
     @include margin_lr;
-  }
-  @include mq(large_laptop) {
-    max-width: 1070px;
-  }
-  @include mq(small_monitor) {
-    padding: 92px 137px 93px;
-    max-width: 1350px;
-    @include margin_lr;
-  }
-  svg {
-    width: 100%;
-    max-width: 115px;
-    display: block;
-    @include margin_lr;
-    @include mq(small_tablet) {
-      max-width: 145px;
-    }
-    path {
-      fill: $sec_seven_star_bg_color;
+    &:before, &:after {
+      background:$color_bright_two;
     }
   }
 }
 
-svg#stars {
-  path {
-    fill: $sec_seven_star_bg_color;
-  }
-}
-
-span.sec_seven_title {
-  display: block;
-  margin-bottom: 30px;
-  @include type(
+span#sec_seven_title {
+  display:block;
+  margin-bottom:32px;
+  @include type (
     (
-      size: $sec_seven_title_size,
-      spacing: $sec_seven_title_spacing,
-      family: $primaryfont,
-      color: $sec_seven_title_color,
-      weight: $sec_seven_title_weight,
-      transform: uppercase,
-    )
-  );
-  @include mq(small_tablet) {
-    @include quick_type(
-      $sec_seven_title_size_small_tablet,
-      null,
-      $sec_seven_title_spacing_small_tablet
-    );
-  }
-  @include mq(small_laptop) {
-    margin-bottom: 42px;
-  }
-  @include mq(large_laptop) {
-    @include quick_type(
-      $sec_seven_title_size_large_laptop,
-      null,
-      $sec_seven_title_spacing_large_laptop
-    );
-  }
-}
-
-#sec_seven_slider {
-  max-width: 445px;
-  @include margin_lr;
-  @include mq(small_tablet) {
-    max-width: 100%;
-  }
-  @include mq(small_laptop) {
-    max-width: 760px;
-  }
-  @include mq(small_monitor) {
-    max-width: 1030px;
-  }
-  .slick-dots {
-    bottom: -80px;
-    @include mq(small_tablet) {
-      bottom: -120px;
-    }
-    @include mq(small_laptop) {
-      bottom: -110px;
-    }
-    @include mq(small_monitor) {
-      bottom: -140px;
-    }
-    li.slick-active {
-      button {
-        &:before {
-          color: $sec_seven_dots_active_bg_color;
-        }
-      }
-    }
-    li:hover {
-      button {
-        &:before {
-          color: $sec_seven_dots_hover_bg_color;
-        }
-      }
-    }
-    li {
-      margin: 0 4px;
-      width: 16px;
-      button {
-        width: 16px;
-        &:before {
-          width: 16px;
-          opacity: 1;
-          color: $sec_seven_dots_bg_color;
-          font-size: $sec_seven_dots_font_size;
-        }
-      }
-    }
-  }
-}
-
-span.sec_seven_desc {
-  display: block;
-  margin-top: 16px;
-  @include type(
-    (
-      size: $sec_seven_desc_size,
-      spacing: $sec_seven_desc_spacing,
-      height: $sec_seven_desc_height,
+      size: 30px,
+      height: 30px,
       family: $secondaryfont,
-      color: $sec_seven_desc_color,
-      weight: $sec_seven_desc_weight,
+      weight: 500 
     )
   );
-  @include mq(small_tablet) {
-    max-width: 540px;
-    @include margin_lr;
-    @include quick_type(
-      $sec_seven_desc_size_small_tablet,
-      $sec_seven_desc_height_small_tablet,
-      $sec_seven_desc_spacing_small_tablet
-    );
-  }
-  @include mq(small_laptop) {
-    max-width: 100%;
-    @include quick_type(
-      $sec_seven_desc_size_small_laptop,
-      $sec_seven_desc_height_small_laptop,
-      null
-    );
-  }
-  @include mq(large_laptop) {
-    @include quick_type(
-      $sec_seven_desc_size_large_laptop,
-      $sec_seven_desc_height_large_laptop,
-      null
-    );
-  }
-  @include mq(small_monitor) {
-    margin-top: 29px;
-    @include quick_type(
-      $sec_seven_desc_size_small_monitor,
-      $sec_seven_desc_height_small_monitor,
-      null
-    );
-  }
 }
 
-.sec_seven_content {
-  margin-top: 10px;
-  display: none;
-  @include type(
-    (
-      size: $sec_seven_content_size,
-      height: $sec_seven_content_height,
-      family: $primaryfont,
-      color: $sec_seven_content_color,
-    )
-  );
-  @include mq(small_tablet) {
-    display: block;
-  }
-  @include mq(small_laptop) {
-    margin-top: 22px;
-  }
-  @include mq(large_laptop) {
-    margin-top: 31px;
-    @include quick_type(
-      $sec_seven_content_size_large_laptop,
-      $sec_seven_content_height_large_laptop,
-      null
-    );
-  }
-  @include mq(small_monitor) {
-    margin: 40px auto 0;
-    max-width: 845px;
-  }
-  p {
-    margin-bottom: 20px;
-  }
-}
 
-span.sec_seven_name {
-  display: block;
-  @include type(
-    (
-      size: $sec_seven_name_size,
-      spacing: $sec_seven_name_spacing,
-      family: $primaryfont,
-      color: $sec_seven_name_color,
-      weight: $sec_seven_name_weight,
-      transform: uppercase,
-    )
-  );
-  @include mq(small_tablet) {
-    @include quick_type(
-      $sec_seven_name_size_small_tablet,
-      null,
-      $sec_seven_name_spacing_small_tablet
-    );
-  }
-  @include mq(large_laptop) {
-    @include quick_type(
-      $sec_seven_name_size_large_laptop,
-      null,
-      $sec_seven_name_spacing_large_laptop
-    );
-  }
-  &:before {
-    content: "";
-    display: block;
-    margin: 25px auto 30px;
-    background: $sec_seven_line_bg_color;
-    @include box(54px, 2px);
+#sec_seven_right {
+  margin-top:15px;
+  ul {
+    list-style: none;
+    margin-bottom:25px;
+    li {
+      @include type (
+        (
+          size: 14px,
+          height: 16px,
+          weight:300,
+          family: $primaryfont 
+        )
+      );
+      &:last-of-type {
+        a {
+          border:none;
+        }
+      }
+      a {
+        display: block;
+        padding:17px 0;
+        color:$color_dark_three;
+        text-decoration: none;
+        transition:all 200ms ease-in-out;
+        border-bottom:1px solid $color_dark_eight;
+        &:hover {
+          color:$color_bright_two;
+        }
+      }
+    }
   }
 }

@@ -6,7 +6,7 @@
     padding: 80px 20px;
   }
   @include mq(small_laptop) {
-    padding: 116px 20px;
+    padding: 116px 20px 85px;
   }
   @include mq(small_monitor) {
     padding: 137px 20px;
@@ -131,8 +131,11 @@
 
 
 #sec_six_counter {
-  margin-top: 92px;
+  margin-top: 57px;
   @include flex(center,center);
+  @include mq(large_laptop) {
+    margin-top:90px;
+  }
 }
 
 .sec_six_arrow {
