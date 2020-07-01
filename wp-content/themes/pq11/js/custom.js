@@ -175,6 +175,35 @@ $('#sec_one_slider').slick({
  });
 
 
+
+ $('#sec_six_slider').slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+	mobileFirst:true,
+	arrows:true,
+  dots:false,
+  prevArrow:"#sec_six_left_arrow",
+  nextArrow:"#sec_six_right_arrow",
+	responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+      slidesToShow: 3,
+			slidesToScroll: 3
+     }
+   },
+   {
+    breakpoint: 1170,
+    settings: {
+    slidesToShow: 4,
+    slidesToScroll: 4
+   }
+ },
+	]
+ })
+
+
 //  // case results
 
 //  if($('#case_results_wrapper').length >0 ){
