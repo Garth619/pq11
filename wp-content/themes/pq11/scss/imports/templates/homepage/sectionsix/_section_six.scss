@@ -8,6 +8,9 @@
   @include mq(small_laptop) {
     padding: 116px 20px;
   }
+  @include mq(small_monitor) {
+    padding: 137px 20px;
+  }
 }
 
 
@@ -50,6 +53,10 @@
     margin: 0 auto 38px;
     @include quick_type(45px,45px,null);
   }
+  @include mq(small_monitor) {
+    margin: 0 auto 46px;
+    @include quick_type(60px,55px,null);
+  }
 }
 
 
@@ -73,6 +80,11 @@
     margin: 36px auto 0;
     @include quick_type(17px,35px,null);
   }
+  @include mq(small_monitor) {
+    max-width:998px;
+    margin: 42px auto 0;
+    @include quick_type(19px,35px,null);
+  }
   p {
     margin-bottom:10px;
   }
@@ -80,13 +92,15 @@
 
 
 #sec_six_slider {
-  background:pink;
   @include mq(small_tablet) {
     max-width: 607px;
     @include margin_lr;
   }
   @include mq(small_laptop) {
     max-width: 1020px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1350px;
   }
 }
 
@@ -110,6 +124,9 @@
 
 #sec_six_slider_wrapper {
   margin:48px 0 0 0;
+  @include mq(small_monitor) {
+    margin: 71px 0 0 0;
+  }
 }
 
 
