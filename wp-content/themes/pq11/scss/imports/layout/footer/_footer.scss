@@ -4,7 +4,7 @@ footer {
 
 
 #footer_form_wrapper {
-  padding: 54px 35px 150px;
+  padding: 54px 35px 142px;
   text-align: center;
   span.double_line {
     width:110px;
@@ -152,4 +152,56 @@ span#footer_from_title {
       align: center 
     )
   );
+}
+
+
+#copyright_wrapper {
+  padding-bottom:30px;
+}
+
+
+#copyright_inner {
+  text-align: center;
+  ul {
+    max-width: 286px;
+    @include margin_lr;
+    li {
+      display:inline-block;
+      @include type (
+        (
+          size: 10px,
+          spacing: 1px,
+          height: 20px,
+          family: $primaryfont,
+          color: $color_light_one,
+          weight: 300,
+          transform: uppercase,
+        )
+      );
+      &:after {
+        margin:0 7px 0 11px;
+        @include contentdisplay(inline-block,"|");
+        display:none;
+      }
+      &:nth-of-type(2) {
+        &:after {
+          display:inline-block;
+        }
+      }
+      a {
+        text-decoration: none;
+        color:$color_light_one;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  a#ilawyer {
+    margin-top:20px;
+    display: inline-block;
+    img {
+      width:175px;
+    }
+  }
 }

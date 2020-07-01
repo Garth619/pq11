@@ -1,93 +1,55 @@
-<div class='locations'>
-	
-			<div class='loc_col'>
+<div id='locations'>
+  
+    <div class='loc_col'>
+    
+      <span class='loc_title'>Local Office</span><!-- loc_title -->
 
-				<div class='loc_row'>
-				
-					<span class='locations_title'><?php the_field( 'toll_free_title','option'); ?></span><!-- locations_title -->
+			<span class='double_line'></span><!-- double_line -->
 
-					<a class='locations_phone' href='tel:<?php echo str_replace(['-', '(', ')', ' '], '', get_field('toll_free_phone', 'option')); ?>'><?php the_field( 'toll_free_phone','option'); ?></a><!-- locations_phone -->
-				
-				</div><!-- loc_row -->
-
-				<span class='loc_row_divider'></span><!-- loc_row_divider -->
-
-				<div class='loc_row'>
-				
-					<span class='locations_title'><?php the_field( 'local_title','option'); ?></span><!-- locations_title -->
-					
-					<a class='locations_phone' href='tel:<?php echo str_replace(['-', '(', ')', ' '], '', get_field('local_phone', 'option')); ?>'><?php the_field( 'local_phone','option'); ?></a><!-- locations_phone -->
-				
-				</div><!-- loc_row -->
+			<span class='address'>2549 Jolly Road, Suite 340<br/> Okemos, MI 48864</span><!-- address -->
 			
-			</div><!-- loc_col -->
+			<a class='get_directions' href=''>Get Directions</a><!-- get_directions -->
+    
+    </div><!-- loc_col -->
 
-			<div class='loc_col'>
-			
-			<span class='locations_title'><?php the_field( 'office_title','option'); ?></span><!-- locations_title -->
+		<div class='loc_col'>
+    
+      <span class='loc_title'>A FULL-SERVICE FIRM</span><!-- loc_title -->
 
-			<span class='locations_address'><?php the_field( 'address','option'); ?></span><!-- locations_address -->
+			<span class='double_line'></span><!-- double_line -->
 
-			<a class='get_directions' href='<?php the_field( 'get_directions_link','options'); ?>' target="_blank" rel="noopener"><?php the_field( 'get_directions_verbiage','options'); ?></a><!-- get_directions -->
-			
-			</div><!-- loc_col -->
+			<span class='loc_descrip'>Learn more about our practice and how we can help you, contact our firm to discuss your case today.</span><!-- loc_descrip -->
+    
+    </div><!-- loc_col -->
 
-			<div class='loc_col'>
-			
-			<span class='locations_title'><?php the_field( 'social_title','option'); ?></span><!-- locations_title -->
+		<div class='loc_col'>
+    
+      <span class='loc_title'>Contact Us</span><!-- loc_title -->
+
+			<span class='double_line'></span><!-- double_line -->
+
+			<a class='loc_phone' href=''>(517) 316-1995</a><!-- loc_phone -->
+
+			<span class='loc_title connect_title'>Connect</span><!-- loc_title -->
+
+			<span class='double_line'></span><!-- double_line -->
 
 			<div class='social_media'>
-
-				<?php if ( have_rows( 'social_media','option') ) : ?>
-					
-					<?php while ( have_rows( 'social_media','option') ) : the_row(); ?>
-
-						<?php if(get_sub_field( 'icon' ) == "Twitter" ) { ?>
-
-							<a href='<?php the_sub_field( 'link' ); ?>' target="_blank" rel="noopener">
+			
+				<a class='sm' href='' target="_blank">
 				
-								<?php echo file_get_contents( get_template_directory() . '/images/footer-social-tw.svg' ) ?>
+					<?php echo file_get_contents( get_template_directory() . '/images/fb.svg' ); ?>
+				
+				</a><!-- sm -->
 
-							</a>
-
-						<?php } ?>
-
-						<?php if(get_sub_field( 'icon' ) == "LinkedIn" ) { ?>
-
-							<a href='<?php the_sub_field( 'link' ); ?>' target="_blank" rel="noopener">
-
-								<?php echo file_get_contents( get_template_directory() . '/images/footer-social-li.svg' ) ?>
-
-							</a>
-
-						<?php } ?>
-
-						<?php if(get_sub_field( 'icon' ) == "Yelp" ) { ?>
-
-							<a href='<?php the_sub_field( 'link' ); ?>' target="_blank" rel="noopener">
-
-								<?php echo file_get_contents( get_template_directory() . '/images/footer-social-yelp.svg' ) ?>
-
-							</a>
-
-						<?php } ?>
-
-						<?php if(get_sub_field( 'icon' ) == "Facebook" ) { ?>
-
-							<a href='<?php the_sub_field( 'link' ); ?>' target="_blank" rel="noopener">
-
-								<?php echo file_get_contents( get_template_directory() . '/images/footer-social-fb.svg' ) ?>
-
-							</a>
-
-						<?php } ?>
-		
-					<?php endwhile; ?>
-
-				<?php endif; ?>
+				<a class='sm' href='' target="_blank">
+				
+					<?php echo file_get_contents( get_template_directory() . '/images/linkedin.svg' ); ?>
+				
+				</a><!-- sm -->
 			
 			</div><!-- social_media -->
-			
-			</div><!-- loc_col -->
-
-		</div><!-- locations -->
+    
+    </div><!-- loc_col -->
+  
+  </div><!-- locations -->
