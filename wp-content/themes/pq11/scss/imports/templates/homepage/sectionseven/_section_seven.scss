@@ -10,6 +10,9 @@
   @include mq(large_laptop) {
     padding: 102px 40px 30px
   }
+  @include mq(small_monitor) {
+    padding: 95px 40px 60px;
+  }
   &:after {
     background: url("/wp-content/themes/pq11/images/bkg-pattern.jpg") repeat;
     background-size: 500px, 500px;
@@ -37,14 +40,17 @@
   @include mq(large_laptop) {
     max-width:1165px;
   }
+  @include mq(small_monitor) {
+    max-width:1600px;
+  }
 }
 
 #sec_seven_left {
   @include mq(small_laptop) {
     flex-shrink:0;
   }
-  @include mq(large_laptop) {
-    //flex-basis:293px;
+  @include mq(small_monitor) {
+    margin-top: 30px;
   }
   span.double_line {
     max-width: 130px;
@@ -86,6 +92,10 @@ span#sec_seven_title {
     text-align:left;
     @include quick_type(45px, 45px, null);
   }
+  @include mq(small_monitor) {
+    max-width: 234px;
+    @include quick_type(60px, 55px, null);
+  }
 }
 
 #sec_seven_right {
@@ -123,19 +133,19 @@ span#sec_seven_title {
         @include quick_type(14px, 17px, null);
       }
       @include mq(large_laptop) {
-        @include type (
-          (
-            size: 17px,
-            height: 19px,
-            weight:300,
-            family: $primaryfont 
-          )
-        );
+        @include quick_type(17px, 19px, null);
+      }
+      @include mq(small_monitor) {
+        flex-basis: 30%;
+        @include quick_type(19px, 24px, null);
       }
       &:nth-of-type(-n + 2) {
         a {
           @include mq(large_laptop) {
            border-top: 1px solid $color_dark_eight;
+          }
+          @include mq(small_monitor) {
+            border-top:none;
           }
         }
       }
@@ -148,6 +158,13 @@ span#sec_seven_title {
       &:nth-last-of-type(-n + 2) {
         a {
           @include mq(small_tablet) {
+            border: none;
+          }
+        }
+      }
+      &:nth-last-of-type(-n + 3) {
+        a {
+          @include mq(small_monitor) {
             border: none;
           }
         }
