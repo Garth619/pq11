@@ -1,53 +1,92 @@
 footer {
-  background:$color_dark_three;
+  background: $color_dark_three;
 }
-
 
 #footer_form_wrapper {
   padding: 54px 35px 142px;
   text-align: center;
+  @include mq(small_tablet) {
+    padding: 85px 60px 142px;
+    max-width: 758px;
+    @include margin_lr;
+  }
   span.double_line {
-    width:110px;
+    width: 110px;
     @include margin_lr;
   }
   ul {
     list-style: none;
-    margin-top:33px;
+    margin-top: 33px;
+    @include mq(small_tablet) {
+      @include flex(space-between, null, null, wrap);
+    }
     li {
-      margin-bottom:17px;
+      margin-bottom: 17px;
+      flex-basis: 100%;
       position: relative;
+      @include mq(small_tablet) {
+        margin-bottom: 14px;
+      }
+      &#field_3_1,
+      &#field_3_2,
+      &#field_3_3 {
+        @include mq(small_tablet) {
+          flex-basis: 32%;
+        }
+      }
+      &#field_3_4,
+      &#field_3_7 {
+        flex-basis: 49%;
+      }
+      &#field_3_6 {
+        .gfield_description,
+        .validation_message {
+          // position: relative;
+          // top:7px;
+          // left: 110px;
+        }
+      }
       &:after {
-        @include abs(22px,20px,null,null);
-        @include contentdisplay(block,"*");
-        @include type (
+        @include abs(22px, 20px, null, null);
+        @include contentdisplay(block, "*");
+        @include type(
           (
             size: 23px,
             family: $primaryfont,
             color: $color_bright_one,
-            weight: 300
+            weight: 300,
           )
         );
+        @include mq(small_tablet) {
+          top: 20px;
+        }
       }
       label {
         display: none;
       }
-      input,textarea,select {
-        width:100%;
+      input,
+      textarea,
+      select {
+        width: 100%;
         border-radius: 4px;
-        border:none;
+        border: none;
         padding: 18px 40px 18px 20px;
-        @include type (
+        @include type(
           (
             size: 14px,
             spacing: 0.7px,
-            color:$color_dark_two,
-            weight:300,
-            family: $primaryfont
+            color: $color_dark_two,
+            weight: 300,
+            family: $primaryfont,
           )
         );
+        @include mq(small_tablet) {
+          padding: 16px 40px 16px 20px;
+          @include quick_type(13px, null, 0.65px);
+        }
       }
       textarea {
-        height:125px;
+        height: 125px;
       }
       select {
         -webkit-appearance: none;
@@ -59,6 +98,9 @@ footer {
     z-index: 1;
     display: inline-block;
     margin-top: 27px;
+    @include mq(small_tablet) {
+      margin-top: 11px;
+    }
     &:hover {
       input {
         color: $color_bright_one;
@@ -100,65 +142,60 @@ footer {
           transform: lowercase,
         )
       );
-      @include mq(large_laptop) {
-        padding: 14px 25px;
-        @include quick_type(20px,null,null);
-      }
-      @include mq(small_monitor) {
-        padding: 14px 30px;
-        @include quick_type(24px,null,null);
+      @include mq(small_tablet) {
+        font-size: 18px;
       }
     }
   }
   .gfield_description,
-    .validation_message {
-      margin-top: 3px;
-      @include type(
-        (
-          size: 10px,
-          spacing: 1.8px,
-          height: 12px,
-          family: $primaryfont,
-          color: $color_bright_one,
-          weight: 700,
-          align: left,
-          transform: uppercase,
-        )
-      );
-    }
-    #validation_message_1_3 {
-      display: none; // hide "this field is required on the phone input bc thers is no room. "Phone Format" is left there
-    }
+  .validation_message {
+    margin-top: 3px;
+    @include type(
+      (
+        size: 10px,
+        spacing: 1.8px,
+        height: 12px,
+        family: $primaryfont,
+        color: $color_bright_one,
+        weight: 700,
+        align: left,
+        transform: uppercase,
+      )
+    );
+  }
+  #validation_message_3_3 {
+    display: none; // hide "this field is required on the phone input bc thers is no room. "Phone Format" is left there
+  }
   span.required {
     text-align: left;
     margin-top: -85px;
-    @include quick_type(11px,null,1.1px);
+    @include quick_type(11px, null, 1.1px);
+    @include mq(small_tablet) {
+      margin-top: -60px;
+    }
     &:before {
-      font-size:20px;
+      font-size: 20px;
     }
   }
 }
 
-
 span#footer_from_title {
   display: block;
-  margin-bottom:25px;
-  @include type (
+  margin-bottom: 25px;
+  @include type(
     (
       size: 35px,
       family: $secondaryfont,
       color: $color_light_one,
       weight: 500,
-      align: center 
+      align: center,
     )
   );
 }
 
-
 #copyright_wrapper {
-  padding-bottom:30px;
+  padding-bottom: 30px;
 }
-
 
 #copyright_inner {
   text-align: center;
@@ -166,8 +203,8 @@ span#footer_from_title {
     max-width: 286px;
     @include margin_lr;
     li {
-      display:inline-block;
-      @include type (
+      display: inline-block;
+      @include type(
         (
           size: 10px,
           spacing: 1px,
@@ -179,18 +216,18 @@ span#footer_from_title {
         )
       );
       &:after {
-        margin:0 7px 0 11px;
-        @include contentdisplay(inline-block,"|");
-        display:none;
+        margin: 0 7px 0 11px;
+        @include contentdisplay(inline-block, "|");
+        display: none;
       }
       &:nth-of-type(2) {
         &:after {
-          display:inline-block;
+          display: inline-block;
         }
       }
       a {
         text-decoration: none;
-        color:$color_light_one;
+        color: $color_light_one;
         &:hover {
           text-decoration: underline;
         }
@@ -198,10 +235,10 @@ span#footer_from_title {
     }
   }
   a#ilawyer {
-    margin-top:20px;
+    margin-top: 20px;
     display: inline-block;
     img {
-      width:175px;
+      width: 175px;
     }
   }
 }
