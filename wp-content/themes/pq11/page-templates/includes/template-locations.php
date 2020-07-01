@@ -6,7 +6,7 @@
 
 			<span class='double_line'></span><!-- double_line -->
 
-			<span class='address'>2549 Jolly Road, Suite 340<br/> Okemos, MI 48864</span><!-- address -->
+			<span class='address loc_descrip'>2549 Jolly Road, Suite 340<br/> Okemos, MI 48864</span><!-- address -->
 			
 			<a class='get_directions' href=''>Get Directions</a><!-- get_directions -->
     
@@ -18,7 +18,7 @@
 
 			<span class='double_line'></span><!-- double_line -->
 
-			<span class='loc_descrip'>Learn more about our practice and how we can help you, contact our firm to discuss your case today.</span><!-- loc_descrip -->
+			<span class='loc_descrip loc_cta'>Learn more about our practice and how we can help you, contact our firm to discuss your case today.</span><!-- loc_descrip -->
     
     </div><!-- loc_col -->
 
@@ -28,7 +28,7 @@
 
 			<span class='double_line'></span><!-- double_line -->
 
-			<a class='loc_phone' href=''>(517) 316-1995</a><!-- loc_phone -->
+			<a class='loc_phone loc_descrip' href=''>(517) 316-1995</a><!-- loc_phone -->
 
 			<span class='loc_title connect_title'>Connect</span><!-- loc_title -->
 

@@ -1,12 +1,16 @@
 footer {
   background: $color_dark_three;
+  border-bottom:2px solid $color_bright_two;
+  @include mq(small_tablet) {
+    border-bottom:4px solid $color_bright_two;
+  }
 }
 
 #footer_form_wrapper {
   padding: 54px 35px 142px;
   text-align: center;
   @include mq(small_tablet) {
-    padding: 85px 60px 142px;
+    padding: 85px 60px 163px;
     max-width: 758px;
     @include margin_lr;
   }
@@ -37,14 +41,6 @@ footer {
       &#field_3_4,
       &#field_3_7 {
         flex-basis: 49%;
-      }
-      &#field_3_6 {
-        .gfield_description,
-        .validation_message {
-          // position: relative;
-          // top:7px;
-          // left: 110px;
-        }
       }
       &:after {
         @include abs(22px, 20px, null, null);
@@ -195,6 +191,9 @@ span#footer_from_title {
 
 #copyright_wrapper {
   padding-bottom: 30px;
+  @include mq(small_tablet) {
+    margin-top: 55px;
+  }
 }
 
 #copyright_inner {
@@ -202,6 +201,9 @@ span#footer_from_title {
   ul {
     max-width: 286px;
     @include margin_lr;
+    @include mq(small_tablet) {
+      max-width: 100%;
+    }
     li {
       display: inline-block;
       @include type(
@@ -219,10 +221,18 @@ span#footer_from_title {
         margin: 0 7px 0 11px;
         @include contentdisplay(inline-block, "|");
         display: none;
+        @include mq(small_tablet) {
+          display: inline-block;
+        }
       }
       &:nth-of-type(2) {
         &:after {
           display: inline-block;
+        }
+      }
+      &:last-of-type {
+        &:after {
+          display: none;
         }
       }
       a {
@@ -237,6 +247,9 @@ span#footer_from_title {
   a#ilawyer {
     margin-top: 20px;
     display: inline-block;
+    @include mq(small_tablet) {
+      margin-top: 12px;
+    }
     img {
       width: 175px;
     }
