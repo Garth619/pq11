@@ -167,6 +167,9 @@ span#sec_seven_title {
         text-decoration: none;
         transition: all 200ms ease-in-out;
         border-bottom: 1px solid $color_dark_eight;
+        @include mq(large_laptop) {
+          padding: 29px 0;
+        }
         &:hover {
           color: $color_bright_two;
         }
