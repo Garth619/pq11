@@ -3,7 +3,7 @@
 ////////////////////////////////////////////////////////////////////
 
 #section_five {
-  background: url("/wp-content/themes/pq11/images/bkg-pattern.jpg") repeat;
+  background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
   padding: 63px 20px 43px;
   @include mq(small_tablet) {
     padding: 63px 60px 43px;

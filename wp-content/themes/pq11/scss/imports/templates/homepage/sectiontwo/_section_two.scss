@@ -1,5 +1,5 @@
 #section_two {
-  background: url("/wp-content/themes/pq11/images/bkg-pattern.jpg") repeat;
+  background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
   background-size: (500px, 500px);
   @include box(100%, auto);
 }

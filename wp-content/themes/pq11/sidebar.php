@@ -3,11 +3,11 @@
 
 	<div class='sidebar_form'>
 
-	<span class='sidebar_form_title'>Request a free consultation</span><!-- sidebar_form_title -->
+		<span class='sidebar_form_title'>Request a free consultation</span><!-- sidebar_form_title -->
 	
-	<?php gravity_form(2, false, false, false, '', true, 1233); ?>
+		<?php gravity_form(2, false, false, false, '', true, 1233); ?>
 
-	<span class='sidebar_required'>*Required Fields</span><!-- sidebar_required -->
+		<span class='sidebar_required'>*Required Fields</span><!-- sidebar_required -->
 	
 	</div><!-- sidebar_form -->
 			

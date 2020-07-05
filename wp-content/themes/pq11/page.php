@@ -18,6 +18,8 @@
 			
 			<?php endif;?>
 
+			<span class='double_line'></span><!-- double_line -->
+
 			<div class='page_content_inner content'>
 			
 			<?php get_template_part( 'loop', 'page' ); ?>

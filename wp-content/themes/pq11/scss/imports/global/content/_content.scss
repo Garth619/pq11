@@ -3,6 +3,24 @@ body {
   color:$color_dark_three;
 }
 
+
+.page_header {
+  padding: 31px 0 20px 0;
+  @include type (
+    (
+      size: 25px,
+      height: 25px,
+      family: $secondaryfont,
+      weight: 500 
+    )
+  );
+}
+
+.page_content_inner {
+  padding: 28px 0 0 0;
+}
+
+
 .double_line {
   display: block;
   &:before, &:after {

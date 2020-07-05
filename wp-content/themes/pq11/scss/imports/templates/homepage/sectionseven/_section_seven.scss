@@ -14,7 +14,7 @@
     padding: 95px 40px 60px;
   }
   &:after {
-    background: url("/wp-content/themes/pq11/images/bkg-pattern.jpg") repeat;
+    background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
     background-size: 500px, 500px;
     opacity: 0.6;
     @include abs(0, null, null, 0);

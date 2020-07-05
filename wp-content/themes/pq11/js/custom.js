@@ -266,6 +266,10 @@ $('span.go_back').on('click', function(e) {
 });
 
 
+// sidebar title double_line
+
+$('<span class="double_line"></span>').insertAfter('.widget h3');
+
 
 //  sidebar current class
 
@@ -285,24 +289,13 @@ var pgurl = window.location.href;
 
 
 
-
-// $('h3.widget-title').on('click', function(e) {
-	
-// 	$(this).next('ul').slideToggle();
-
-// 	$(this).toggleClass('close');
-
-// });
-
-
-
-// $('.sidebar_box ul.menu > li.menu-item-has-children > a').on('click', function(e) {
+$('.sidebar_box ul.menu > li.menu-item-has-children > a').on('click', function(e) {
   
-//    $(this).next('ul.sub-menu').slideToggle(300);
+   $(this).next('ul.sub-menu').slideToggle(300);
   
-//    $(this).parent().toggleClass('active');
+   $(this).parent().toggleClass('active');
   
-//  });
+ });
 
 
 // resize - tablet and desktop top navigatons behave differently. These turn off click functions at certain window widths without reloading the page
