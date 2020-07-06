@@ -6,12 +6,18 @@
   @include mq(small_laptop) {
     margin-top: 127px;
   }
+  @include mq(large_laptop) {
+    margin-top:0;
+  }
 }
 
 .page_container {
   padding: 0 111px 60px;
   @include mq(small_laptop) {
     @include flex();
+  }
+  @include mq(large_laptop) {
+    padding: 0px 126px 60px;
   }
 }
 

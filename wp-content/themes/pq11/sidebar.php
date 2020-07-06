@@ -9,7 +9,7 @@
 	
 		<?php gravity_form(4, false, false, false, '', true, 1233); ?>
 
-		<span class='required'>Required</span><!-- sidebar_required -->
+		<span class='required'>Required Field</span><!-- sidebar_required -->
 	
 	</div><!-- sidebar_form -->
 			

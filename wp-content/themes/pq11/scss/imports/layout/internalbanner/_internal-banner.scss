@@ -14,6 +14,9 @@
   @include mq(small_tablet) {
     padding: 55px 0px;
   }
+  @include mq(large_laptop) {
+    padding: 64px 0px;
+  }
 }
 
 
@@ -32,11 +35,14 @@ img#internal_hero {
     (
       size: 35px,
       height: 35px,
-
       family: $secondaryfont,
       color: $color_light_one
     )
   );
+  @include mq(large_laptop) {
+    max-width: 515px;
+    @include quick_type(45px,45px,null);
+  }
 }
 
 
