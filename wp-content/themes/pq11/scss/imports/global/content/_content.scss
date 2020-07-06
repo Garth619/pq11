@@ -24,10 +24,17 @@ body {
     padding: 64px 0 22px 0;
     @include quick_type(30px,30px,null);
   }
+  @include mq(small_monitor) {
+    padding: 98px 0 22px 0;
+    @include quick_type(45px,45px,null);
+  }
 }
 
 .page_content_inner {
   padding: 28px 0 0 0;
+  @include mq(small_monitor) {
+    padding: 38px 0 0 0;
+  }
 }
 
 
@@ -94,6 +101,22 @@ body {
       margin-bottom:3px;
       @include quick_type(17px,30px,null);
     }
+    @include mq(small_monitor) {
+      margin-bottom:14px;
+      @include quick_type(19px,30px,null);
+    }
+  }
+  h4 {
+    padding-bottom:6px;
+    @include type (
+      (
+        size: 16px,
+        spacing: 0.4px,
+        height: 18px,
+        weight: 600,
+        color:$color_bright_two
+      )
+    );
   }
   a {
     color:$color-bright_two;
@@ -107,21 +130,17 @@ body {
     @include mq(large_laptop) {
       margin-bottom:37px;
     }
-   
   }
   ul {
     list-style: none;
     li {
       position: relative;
       font-weight:600;
-      padding-left:15px;
+      padding-left:25px;
       margin-bottom:6px;
       @include mq(large_laptop) {
         line-height: 20px;
-        margin-bottom:20px;
-      }
-      @include mq(small_monitor) {
-        line-height: 30px;
+        margin-bottom:10px;
       }
       &:before {
         border-radius: 50%;
@@ -133,15 +152,41 @@ body {
           @include abs(7px,null,null,0);
         }
         @include mq(small_monitor) {
-          @include abs(11px,null,null,0);
+          @include abs(7px,null,null,0);
         }
       }
+    }
+  }
+  ol {
+    list-style: none;
+    counter-reset: item;
+    > li {
+      counter-increment: item;
+      position: relative;
+      padding-left:30px;
+      font-weight:600;
+      margin-bottom:6px;
+      @include mq(large_laptop) {
+        line-height: 20px;
+        margin-bottom:10px;
+      }
+    }
+    > li:before {
+      content: counter(item)'.';
+      font-weight:600;
+      color:$color_bright_two;
+      @include abs(0,null,null,0);
     }
   }
   span.double_line {
     max-width:76px;
     margin-bottom: 15px;
     margin-top:35px;
+    @include mq(small_monitor) {
+      max-width:284px;
+      margin-top:60px;
+      margin-bottom:27px;
+    }
     &:before, &:after {
       background: $color_bright_two;
     }
@@ -158,6 +203,10 @@ body {
     );
     @include mq(large_laptop) {
       @include quick_type(25px,25px,null);
+    }
+    @include mq(small_monitor) {
+      margin-bottom: 50px;
+      @include quick_type(35px,40px,null);
     }
   }
   p {

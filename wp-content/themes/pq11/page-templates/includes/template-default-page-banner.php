@@ -62,6 +62,8 @@
 		<?php else: ?>
 
 			<picture>
+
+			<source media='(min-width: 1170px)' srcset='<?php echo $global_internal_banner_image['url']; ?>'>
 		
 			<img id="internal_hero" src="<?php echo $global_internal_banner_image_tablet['url']; ?>" alt="<?php echo $global_internal_banner_image_tablet['alt']; ?>"/><!-- internal_hero -->
 

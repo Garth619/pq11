@@ -80,6 +80,13 @@ footer {
         @include mq(small_tablet) {
           top: 20px;
         }
+        @include mq(small_laptop) {
+          top: 22px;
+        }
+        @include mq(small_monitor) {
+          font-size: 23px;
+          top: 31px;
+        }
       }
       label {
         display: none;

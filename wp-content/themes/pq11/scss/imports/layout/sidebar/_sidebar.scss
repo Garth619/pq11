@@ -10,6 +10,10 @@
   @include mq(large_laptop) {
     width: 312px;
   }
+  @include mq(small_monitor) {
+    width: 480px;
+    margin-top:34px;
+  }
 }
 
 .sidebar_form {
@@ -25,6 +29,10 @@
     margin-bottom:30px;
     padding: 37px 33px 121px 33px;
   }
+  @include mq(small_monitor) {
+    margin-bottom:40px;
+    padding: 51px 33px 121px 33px;
+  }
   span.double_line {
     max-width: 85px;
     @include margin_lr;
@@ -33,7 +41,7 @@
     list-style: none;
     margin-top: 23px;
     @include mq(small_monitor) {
-      margin-top: 55px;
+      margin-top: 37px;
     }
     li {
       margin-bottom: 7px;
@@ -54,7 +62,11 @@
           )
         );
         @include mq(large_laptop) {
-          font-size: 20px;;
+          font-size: 20px;
+        }
+        @include mq(small_monitor) {
+          font-size: 30px;
+          top:23px;
         }
       }
       label {
@@ -81,7 +93,7 @@
           font-size:13px;
         }
         @include mq(small_monitor) {
-          padding: 26px 40px 26px 20px;
+          padding: 20px 40px 20px 20px;
           @include quick_type(15px, null, 0.75px);
         }
       }
@@ -107,7 +119,7 @@
       margin-top: 30px;
     }
     @include mq(small_monitor) {
-      margin-top: 12px;
+      margin-top: 40px;
     }
     &:hover {
       input {
@@ -151,8 +163,8 @@
         font-size: 17px;
       }
       @include mq(small_monitor) {
-        // font-size: 24px;
-        // padding: 15px 25px;
+        font-size: 24px;
+        padding: 15px 35px;
       }
     }
   }
@@ -184,8 +196,8 @@
       font-size:11px;
     }
     @include mq(small_monitor) {
-      margin-top: -69px;
-      @include quick_type(15px, null, 1.1px);
+      margin-top: -98px;
+      @include quick_type(13px, null, 1.1px);
     }
     &:before {
       font-size: 15px;
@@ -219,6 +231,10 @@ span.sidebar_form_title {
   @include mq(large_laptop) {
     @include quick_type(25px,25px,null);
   }
+  @include mq(small_monitor) {
+    margin-bottom: 23px;
+    @include quick_type(35px,35px,null);
+  }
 }
 
 .widget {
@@ -229,6 +245,7 @@ span.sidebar_form_title {
   padding: 45px 0 15px 0;
   @include mq(small_tablet) {
     padding: 45px 0 25px 0;
+    margin-left:-60px;
   }
   @include mq(small_laptop) {
     width: auto;
@@ -238,6 +255,9 @@ span.sidebar_form_title {
   }
   @include mq(large_laptop) {
     padding: 45px 0px 10px;
+  }
+  @include mq(small_monitor) {
+    padding: 57px 0px 36px;
   }
   &:before {
     background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
@@ -269,6 +289,28 @@ span.sidebar_form_title {
     @include mq(large_laptop) {
       font-size:20px;
     }
+    @include mq(small_monitor) {
+      font-size:25px;
+      padding-bottom:17px;
+    }
+  }
+  span.double_line {
+    max-width: 73px;
+    @include margin_lr;
+    @include mq(small_laptop) {
+      margin-left:40px;
+      margin-right:0;
+    }
+    @include mq(large_laptop) {
+      max-width:126px;
+    }
+    @include mq(small_monitor) {
+      max-width: 163px;
+    }
+    &:before,
+    &:after {
+      background: $color_bright_two;
+    }
   }
   ul {
     list-style: none;
@@ -286,6 +328,9 @@ span.sidebar_form_title {
       @include mq(large_laptop) {
         font-size:13px;
       }
+      @include mq(small_monitor) {
+        font-size: 16px;
+      }
       a {
         color: $color_dark_three;
         text-decoration: none;
@@ -297,6 +342,9 @@ span.sidebar_form_title {
     @include mq(small_laptop) {
       margin-top: 26px;
     }
+    @include mq(small_monitor) {
+      margin-top: 30px;
+    }
     > li {
       > a {
         display: block;
@@ -304,6 +352,9 @@ span.sidebar_form_title {
         @include mq(small_laptop) {
           margin-bottom: 18px;
           padding:0 40px;
+        }
+        @include mq(small_monitor) {
+          margin-bottom: 34px;
         }
       }
     }
@@ -318,11 +369,17 @@ span.sidebar_form_title {
         position: relative;
         z-index: 1;
         &:after {
-          @include abs(4px, -16px, null, null);
+          @include abs(5px, -16px, null, null);
           @include contentdisplay();
           @include tri(down, 4px, 5px, $color_bright_two);
           @include mq(small_laptop) {
-            top:5px;
+            top:-1px;
+            right:-12px;
+            position:relative;
+            display:inline-block;
+          }
+          @include mq(small_monitor) {
+            @include tri(down, 6px, 6px, $color_bright_two);
           }
         }
       }
@@ -344,11 +401,17 @@ span.sidebar_form_title {
     @include mq(small_laptop) {
       margin: -5px 0 29px 0;
     }
+    @include mq(small_monitor) {
+      margin: -9px 0 23px 0;
+    }
     li {
       margin-bottom: 25px;
       font-weight:300;
       @include mq(small_laptop) {
         margin-bottom: 20px;
+      }
+      @include mq(small_monitor) {
+        font-size:15px;
       }
       a {
         padding:0 40px;
@@ -358,21 +421,6 @@ span.sidebar_form_title {
           color: $color_bright_two;
         }
       }
-    }
-  }
-  span.double_line {
-    max-width: 73px;
-    @include margin_lr;
-    @include mq(small_laptop) {
-      margin-left:40px;
-      margin-right:0;
-    }
-    @include mq(large_laptop) {
-      max-width:126px;
-    }
-    &:before,
-    &:after {
-      background: $color_bright_two;
     }
   }
 }
