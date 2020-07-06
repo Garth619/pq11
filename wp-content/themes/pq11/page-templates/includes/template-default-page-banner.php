@@ -45,15 +45,27 @@
 		</div><!-- internal_banner_content -->
 		
 		<?php $global_internal_banner_image = get_field( 'global_internal_banner_image','option'); ?>
+		<?php $global_internal_banner_image_tablet = get_field( 'global_internal_banner_image_tablet','option'); ?>
+		
 		<?php $banner_image = get_field( 'banner_image' ); ?>
 		
 		<?php if($banner_image) : ?>
+
+			<picture>
+
+			<!-- <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-new.jpg'> -->
 		
 			<img id="internal_hero" src="<?php echo $banner_image['url']; ?>" alt="<?php echo $banner_image['alt']; ?>"/><!-- internal_hero -->
+
+			</picture>
 		
 		<?php else: ?>
+
+			<picture>
 		
-			<img id="internal_hero" src="<?php echo $global_internal_banner_image['url']; ?>" alt="<?php echo $global_internal_banner_image['alt']; ?>"/><!-- internal_hero -->
+			<img id="internal_hero" src="<?php echo $global_internal_banner_image_tablet['url']; ?>" alt="<?php echo $global_internal_banner_image_tablet['alt']; ?>"/><!-- internal_hero -->
+
+			</picture>
 		
 		<?php endif;?>
 		

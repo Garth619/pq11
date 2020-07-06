@@ -1,3 +1,55 @@
 #internal_banner {
   display: none;
+  @include mq(small_tablet) {
+    display:block;
+    position: relative;
+    text-align: center;
+  }
 }
+
+
+#internal_banner_content {
+  position: relative;
+  z-index:1;
+  @include mq(small_tablet) {
+    padding: 55px 0px;
+  }
+}
+
+
+img#internal_hero {
+  object-fit:cover;
+  @include abs(0,null,null,0);
+  @include box(100%);
+}
+
+
+.banner_title {
+  max-width:415px;
+  @include margin_lr;
+  margin-bottom: 15px;
+  @include type (
+    (
+      size: 35px,
+      height: 35px,
+
+      family: $secondaryfont,
+      color: $color_light_one
+    )
+  );
+}
+
+
+.internal_button {
+  display: inline-block;
+  width:auto;
+  @include mq(small_tablet) {
+    display:none;
+  }
+  span {
+    padding: 14px 25px;
+    font-size: 18px;
+  }
+}
+
+

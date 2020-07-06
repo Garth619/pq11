@@ -24,9 +24,7 @@
 		
 	</div><!-- page_container -->
 	
-	
-</div><!-- internal_main -->
-
+	</div><!-- internal_main -->
 
 <?php get_footer(); ?>
 

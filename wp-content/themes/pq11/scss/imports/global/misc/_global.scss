@@ -1,125 +1,25 @@
 #internal_main {
   margin-top: 127px;
+  @include mq(small_tablet) {
+    margin-top: 65px;
+  }
+  @include mq(small_laptop) {
+    margin-top: 127px;
+  }
 }
 
 .page_container {
-  padding: 0 35px;
+  padding: 0 111px;
+  @include mq(small_laptop) {
+    @include flex();
+  }
 }
 
-.sidebar_wrapper {
-  padding: 27px 0 0 0;
+.page_content {
+  flex-grow:1;
+  padding-right:50px;
 }
 
-.widget {
-  position: relative;
-  width: 100vw;
-  margin-left: -35px;
-  text-align: center;
-  padding: 45px 0 15px 0;
-  &:before {
-    background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
-    @include abs(0, null, null, 0);
-    @include box(100%);
-    @include contentdisplay();
-  }
-  h3,
-  span.double_line,
-  ul {
-    position: relative;
-    z-index: 1;
-  }
-  h3 {
-    padding-bottom: 10px;
-    @include type(
-      (
-        size: 20px,
-        height: 22px,
-        family: $secondaryfont,
-        weight: 500,
-      )
-    );
-  }
-  ul {
-    list-style: none;
-    li {
-      @include type(
-        (
-          size: 13px,
-          height: 15px,
-          family: $primaryfont,
-        )
-      );
-      a {
-        color: $color_dark_three;
-        text-decoration: none;
-      }
-    }
-  }
-  ul.menu {
-    margin-top: 31px;
-    > li {
-      > a {
-        display: block;
-        margin-bottom: 22px;
-      }
-    }
-    > li.menu-item-has-children {
-      &.active {
-        > a {
-          color:$color_bright_two;
-        }
-      }
-      > a {
-        display: inline-block;
-        position: relative;
-        z-index: 1;
-        &:after {
-          @include abs(4px, -16px, null, null);
-          @include contentdisplay();
-          @include tri(down, 4px, 5px, $color_bright_two);
-        }
-      }
-    }
-    > li.current-menu-ancestor {
-      > a {
-        color:$color_bright_two;
-      }
-      > ul.sub-menu {
-        display: block;
-      }
-    }
-  }
-  ul.sub-menu {
-    background: $color_light_one;
-    padding: 25px 0 1px 0;
-    margin: -5px 0 35px 0;
-    display: none;
-    li {
-      margin-bottom: 25px;
-      @include type(
-        (
-          size: 13px,
-          height: 15px,
-          weight: 300,
-          family: $primaryfont,
-        )
-      );
-      &.current-menu-item {
-        > a {
-            color:$color_bright_two;
-        }
-      }
-    }
-  }
-  span.double_line {
-    max-width: 73px;
-    @include margin_lr;
-    &:before,
-    &:after {
-      background: $color_bright_two;
-    }
-  }
-}
 
 .alignleft,
 img.alignleft {
