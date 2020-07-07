@@ -64,7 +64,7 @@ img#internal_hero {
 .internal_button {
   display: inline-block;
   width:auto;
-  @include mq(small_tablet) {
+  @include mq(small_laptop) {
     display:none;
   }
   span {
