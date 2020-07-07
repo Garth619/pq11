@@ -5,6 +5,10 @@
     position: relative;
     text-align: center;
   }
+  @include mq(small_monitor) {
+    min-height:289px;
+    @include flex(center,center);
+  }
 }
 
 
@@ -35,6 +39,7 @@ img#internal_hero {
 
 .banner_title {
   max-width:415px;
+  display: block;
   @include margin_lr;
   margin-bottom: 15px;
   @include type (

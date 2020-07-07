@@ -30,10 +30,12 @@
 			<h1 class="blog_header"><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
 		
 		<?php endif;?>
+
+		<span class='double_line'></span><!-- double_line -->
 		
 		<div class="blog_meta">
 		
-			<span class="date">Posted on <?php $pfx_date = get_the_date(); echo $pfx_date ?> in</span>
+			<span class="date"><?php $pfx_date = get_the_date(); echo $pfx_date ?></span>
 			
 			<?php echo get_the_category_list();?>
 		
@@ -59,20 +61,4 @@
 
 <?php wpbeginner_numeric_posts_nav(); ?>
 
-
-
-
-<!--
-<?php if (  $wp_query->max_num_pages > 1 ) : ?>
-	
-	<div id="nav-below" class="navigation">
-		
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts' ) ); ?></div>
-			
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>') ); ?></div>
-	
-	</div>
-
-<?php endif; ?>
--->
 

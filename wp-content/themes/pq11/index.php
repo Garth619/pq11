@@ -71,13 +71,7 @@
 		
 		<div class="page_content">
 
-			<div class='page_content_inner'>
-			
 			<?php get_template_part( 'loop', 'index' ); ?>
-			
-			</div><!-- page_content_inner -->
-			
-		
 			
 		</div><!-- page_content -->
 

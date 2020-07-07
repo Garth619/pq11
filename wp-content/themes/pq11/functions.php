@@ -350,8 +350,8 @@ function wpbeginner_numeric_posts_nav() {
     echo '<div class="paged_wrapper"><div class="navigation"><ul>' . "\n";
  
     /** Previous Post Link */
-    if ( get_previous_posts_link() )
-        printf( '<li class="myprev">%s</li>' . "\n", get_previous_posts_link('prev') );
+    //if ( get_previous_posts_link() )
+        //printf( '<li class="myprev">%s</li>' . "\n", get_previous_posts_link('prev') );
  
     /** Link to first page, plus ellipses if necessary */
     if ( ! in_array( 1, $links ) ) {
@@ -380,8 +380,8 @@ function wpbeginner_numeric_posts_nav() {
     }
  
     /** Next Post Link */
-    if ( get_next_posts_link() )
-        printf( '<li class="mynext">%s</li>' . "\n", get_next_posts_link('next') );
+    //if ( get_next_posts_link() )
+        //printf( '<li class="mynext">%s</li>' . "\n", get_next_posts_link('next') );
  
     echo '</ul></div></div>' . "\n";
  
@@ -427,8 +427,6 @@ function ilaw_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 	return $attr;
 }
 add_filter( 'wp_get_attachment_image_attributes', 'ilaw_post_thumbnail_sizes_attr', 10 , 3 );
-
-
 
 
 

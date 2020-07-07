@@ -4,7 +4,7 @@
 
 	<span class='sidebar_form_title'>Request a free consultation</span><!-- sidebar_form_title -->
 	
-	<?php gravity_form(2, false, false, false, '', true, 1233); ?>
+	<?php gravity_form(4, false, false, false, '', true, 1533); ?>
 
 	<span class='sidebar_required'>*Required Fields</span><!-- sidebar_required -->
 	
