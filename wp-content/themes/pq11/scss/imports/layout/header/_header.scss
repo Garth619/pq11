@@ -2,9 +2,13 @@ header {
   width:100%;
   background:$color_light_one;
   @include fixed(0,null,null,0,10);
+  @include mq(small_tablet) {
+    //border-bottom: 1px solid $color_dark_one;
+  }
   @include mq(tablet) {
     height: 123px;
-    padding-top:10px
+    padding-top:10px;
+    border-bottom:none;
   }
   @include mq(large_laptop) {
     height: 147px;

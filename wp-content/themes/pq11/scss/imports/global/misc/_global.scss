@@ -33,6 +33,22 @@
   }
 }
 
+
+.page_container.one_col {
+  @include flex(null,null,column);
+}
+
+
+.internal_wrapper {
+  span.double_line {
+    max-width:135px;
+    @include margin_lr;
+    @include mq(small_monitor) {
+      max-width:224px;
+    }
+  }
+}
+
 .page_content {
   flex-grow: 1;
   @include mq(small_laptop) {

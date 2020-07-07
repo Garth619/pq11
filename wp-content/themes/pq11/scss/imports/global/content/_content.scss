@@ -30,6 +30,34 @@ body {
   }
 }
 
+#internal_header {
+  padding: 31px 0 20px 0;
+  text-align: center;
+  @include type (
+    (
+      size: 25px,
+      height: 25px,
+      family: $secondaryfont,
+      weight: 500 
+    )
+  );
+  @include mq(small_tablet) {
+    padding: 49px 0 20px 0;
+  }
+  // @include mq(small_laptop) {
+  //   padding: 49px 0 30px 0;
+  // }
+  @include mq(large_laptop) {
+    padding: 64px 0 22px 0;
+    @include quick_type(30px,30px,null);
+  }
+  @include mq(small_monitor) {
+    padding: 77px 0 22px 0;
+    @include quick_type(60px,70px,null);
+  }
+}
+
+
 .page_content_inner {
   padding: 28px 0 0 0;
   @include mq(small_monitor) {
