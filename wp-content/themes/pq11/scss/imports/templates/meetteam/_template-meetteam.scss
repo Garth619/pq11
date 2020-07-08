@@ -70,64 +70,40 @@
       }
       .single_att_overlay {
         opacity: 0;
-        background: $att_overlay_bg_color;
+        //background: $att_overlay_bg_color;
         transition: all 200ms ease-in-out;
         @include box(100%);
         @include abs(0, null, null, 0, 1);
         @include flex(center, center);
         &.placeholder_overlay {
-          background: $placeholder_overlay;
+          //background: $placeholder_overlay;
         }
         span.view_profile {
-          @include type(
-            (
-              size: $view_profile_size,
-              spacing: $view_profile_spacing,
-              family: $primaryfont,
-              color: $view_profile_color,
-              weight: $view_profile_weight,
-              transform: uppercase,
-            )
-          );
+         
           &:after {
             content: "";
             display: block;
             margin: 20px auto 0;
             transform: rotate(-45deg);
-            background: $view_profile_diamond_bg_color;
+           // background: $view_profile_diamond_bg_color;
             @include box(10px);
           }
         }
       }
     }
     .single_att_title_wrapper {
-      background: $single_att_title_bg_color;
+      //background: $single_att_title_bg_color;
       padding: 25px;
       span {
         display: block;
-        color: $single_att_span_color;
+        // color: $single_att_span_color;
       }
       span.single_att_name {
-        @include type(
-          (
-            size: $single_att_name_size,
-            height: $single_att_name_height,
-            weight: $single_att_name_weight,
-            family: $secondaryfont,
-          )
-        );
+        
       }
       span.single_att_position {
         margin-top: 14px;
-        @include type(
-          (
-            size: $single_att_position_size,
-            spacing: $single_att_position_spacing,
-            family: $primaryfont,
-            weight: $single_att_position_weight,
-            transform: uppercase,
-          )
-        );
+        
       }
     }
   }

@@ -4,15 +4,14 @@
 
 get_header(); ?>
 
-<div id="internal_main" class="no_banner">
+<div id="internal_main">
 	
-	<div class="page_container one_col">
+	<div class="page_container">
 
-		<h1 class="page_header center"><?php the_title();?></h1><!-- page_header -->
+		<h1 id='internal_header'><?php the_title();?></h1><!-- internal_header -->
+
+		<div id='meet_team_wrapper' class="internal_wrapper">
 		
-		<div id='meet_team_wrapper'>
-
-
 		<?php $our_team = get_field( 'our_team' ); ?>
 				
 				<?php if ( $our_team ): ?>
@@ -37,8 +36,10 @@ get_header(); ?>
 										<div class="placeholder">
 
 											<div class='placeholder_inner'></div><!-- placeholder_inner -->
+											
+											<img src='<?php bloginfo('template_directory');?>/images/att-alex-new.jpg' /><!-- name -->
 			
-											<img src='<?php bloginfo('template_directory');?>/images/placeholder.jpg' /><!-- name -->
+											<!-- <img src='<?php bloginfo('template_directory');?>/images/placeholder.jpg' /> -->
 
 										</div><!-- placeholder -->
 
@@ -69,7 +70,7 @@ get_header(); ?>
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
 
-		</div><!-- meet_team_wrapper -->
+		</div><!-- video_wrapper -->
 		
 	</div><!-- page_container -->
 	
