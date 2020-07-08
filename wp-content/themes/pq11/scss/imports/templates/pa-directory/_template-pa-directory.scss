@@ -1,118 +1,117 @@
-#pa_directory_wrapper {
+#pa_directory {
   text-align: center;
-  width: 100%;
-  padding: 40px 25px 0;
-  @include mq(tablet) {
-    padding: 56px 25px 14px;
+  max-width:350px;
+  @include margin_lr;
+  @include mq(small_tablet) {
+    max-width:600px;
+    padding-bottom:20px;
   }
-  @include mq(small_monitor) {
-    padding: 96px 25px 14px;
+  @include mq(small_laptop) {
+    max-width:900px;
+    padding-bottom:0;
+    margin-bottom:-30px;
+  }
+  @include mq(large_laptop) {
+    max-width:1205px;
+  }
+  span.double_line {
+    max-width: 100%;
   }
   ul {
     list-style: none;
-  }
-  > ul {
-    > li {
-      @include type(
-        (
-          size: $pa_directory_size,
-          weight: $pa_directory_weight,
-          family: $secondaryfont,
-          color: $pa_directory_color,
-        )
-      );
-      @include mq(small_monitor) {
-        margin-bottom: 54px;
-      }
-      > a {
+    li {
+      a {
         display: block;
-        &:before,
-        &:after {
-          content: "";
-          display: inline-block;
-          vertical-align: top;
-          margin-top: 12px;
-          background: $pa_directory_diamond_bg_color;
-          transform: rotate(-45deg);
-          @include box(7px);
+      }
+    }
+  }
+  ul.pa_directory_top_menu {
+    @include mq(small_tablet) {
+      padding-top:30px;
+    }
+    > li {
+      margin-bottom:40px;
+      @include type(
+          (
+            size: 14px,
+            spacing: 1.8px,
+            height: 25px,
+            weight:600,
+            family: $primaryfont,
+            transform: uppercase,
+          )
+        );
+      > a {
+        margin-bottom: 10px;
+        @include mq(small_tablet) {
+          margin-bottom: 20px;
         }
-        &:before {
-          margin-right: 35px;
+        @include type(
+          (
+            size: 14px,
+            spacing: 1.8px,
+            height: 25px,
+            weight:00,
+            family: $primaryfont,
+            transform: uppercase,
+          )
+        );
+        @include mq(small_tablet) {
+          @include quick_type(16px,16px,null);
         }
-        &:after {
-          margin-left: 35px;
+        @include mq(small_monitor) {
+          @include quick_type(18px,20px,null);
+        }
+      }
+      div {
+        margin-top: 25px;
+        @include mq(small_tablet) {
+          margin-bottom: 55px;
+        }
+        @include mq(small_monitor) {
+          margin-bottom: 80px;
+        }
+        ul {
+          @include mq(small_tablet) {
+            @include flex(space-between,center,null,wrap);
+          }
+          li {
+            @include type(
+              (
+                size: 14px,
+                height: 16px,
+                spacing:0,
+                family: $primaryfont,
+                weight: 600,
+                transform:none
+              )
+            );
+            @include mq(small_tablet) {
+              flex-basis:47%;
+            }
+            @include mq(small_laptop) {
+              flex-basis:30%;
+            }
+            @include mq(small_monitor) {
+              flex-basis:27%;
+              @include quick_type(16px,18px,null);
+            }
+            a {
+              padding: 14px 0;
+              color: $color_dark_three;
+              text-decoration: none;
+              border-bottom: 1px solid $color_dark_one;
+              @include flex(center,center);
+              @include mq(small_tablet) {
+                height:60px;
+                padding:0;
+              }
+            }
+          }
         }
       }
     }
   }
 }
 
-#pa_directory_wrapper {
-  div {
-    border-top: 2px solid $pa_directory_border_bg_color;
-    margin: 35px auto 0;
-    max-width: 680px;
-    padding: 35px 0 35px;
-    @include mq(tablet) {
-      max-width: 830px;
-    }
-    @include mq(large_laptop) {
-      max-width: 1070px;
-    }
-    @include mq(small_monitor) {
-      margin: 64px auto 0;
-      padding: 50px 0 35px;
-      max-width: 1337px;
-    }
-    ul.menu {
-      @include mq(small_tablet) {
-        @include flex(space-between, null, null, wrap);
-      }
-      &:after {
-        @include mq(small_laptop) {
-          content: "";
-          display: block;
-          flex-basis: 31%;
-        }
-      }
-      li {
-        @include type(
-          (
-            size: $pa_directory_ulmenu_size,
-            height: $pa_directory_ulmenu_height,
-            family: $primaryfont,
-            color: $pa_directory_ulmenu_color,
-            weight: $pa_directory_ulmenu_weight,
-          )
-        );
-        @include mq(small_tablet) {
-          flex-basis: 47%;
-        }
-        @include mq(tablet) {
-          flex-basis: 31%;
-        }
-        @include mq(large_laptop) {
-          margin-bottom: 15px;
-        }
-        a {
-          text-decoration: none;
-          color: $pa_directory_ulmenu_color;
-          display: block;
-          transition: all 150ms ease-in-out;
-          padding-bottom: 15px;
-          @include mq(small_tablet) {
-            height: 52px;
-            @include flex(center, center);
-          }
-          &:before,
-          &:after {
-            display: none;
-          }
-          &:hover {
-            color: $pa_directory_ulmenu_hover_color;
-          }
-        }
-      }
-    }
-  }
-}
+

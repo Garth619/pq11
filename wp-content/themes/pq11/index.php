@@ -67,7 +67,7 @@
 
 		<?php } ?>
 	
-	<div class="page_container">
+	<div class="page_container two_col">
 		
 		<div class="page_content">
 

@@ -20,22 +20,29 @@
     padding: 0 60px;
   }
   @include mq(small_laptop) {
-    @include flex();
     padding: 0 111px 60px;
   }
   @include mq(large_laptop) {
-    padding: 0px 95px 60px 160px;
+    padding: 0px 95px 60px;
   }
   @include mq(small_monitor) {
     max-width:1920px;
-    padding: 0px 106px 110px 220px;
+    padding: 0px 106px 110px;
     @include margin_lr;
   }
 }
 
 
-.page_container.one_col {
-  @include flex(null,null,column);
+.page_container.two_col {
+  @include mq(small_laptop) {
+    @include flex();
+  }
+  @include mq(large_laptop) {
+    padding: 0px 95px 60px 160px;
+  }
+  @include mq(small_monitor) {
+    padding: 0px 106px 110px 220px;
+  }
 }
 
 

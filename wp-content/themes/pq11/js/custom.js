@@ -270,8 +270,9 @@ $('span.go_back').on('click', function(e) {
 
 $('<span class="double_line"></span>').insertAfter('.widget h3');
 
-
 $('<span class="double_line"></span>').insertBefore('blockquote');
+
+$('<span class="double_line"></span>').insertAfter('ul.pa_directory_top_menu > li > a');
 
 
 //  sidebar current class

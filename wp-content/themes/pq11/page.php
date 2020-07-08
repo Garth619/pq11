@@ -4,7 +4,7 @@
 
 <?php get_template_part('page-templates/includes/template','default-page-banner'); ?>
 	
-	<div class="page_container">
+	<div class="page_container two_col">
 		
 		<div class="page_content">
 			
