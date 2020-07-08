@@ -4,14 +4,14 @@
 
 get_header(); ?>
 
-<div id="internal_main" class="no_banner">
+<div id="internal_main">
 	
-	<div class="page_container one_col">
+	<div class="page_container">
 
-		<h1 class="page_header center"><?php the_title();?></h1><!-- page_header -->
+		<h1 id='internal_header'><?php the_title();?></h1><!-- internal_header -->
+
+		<div id='video_wrapper' class="internal_wrapper">
 		
-		<div id='video_wrapper'>
-
 		<?php if ( have_rows( 'video_center' ) ) : ?>
 			<?php while ( have_rows( 'video_center' ) ) : the_row(); ?>
 
@@ -74,16 +74,15 @@ get_header(); ?>
 			<?php endwhile; ?>
 		<?php endif; ?>
 
-			
-		
+
+    <?php if(get_field('wistia_or_youtube') == "Wistia") { ?>
+	<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+<?php } ?>
+
 		</div><!-- video_wrapper -->
 		
 	</div><!-- page_container -->
 	
 </div><!-- internal_main -->
-
-<?php if(get_field('wistia_or_youtube') == "Wistia") { ?>
-	<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-<?php } ?>
 
 <?php get_footer(); ?>
