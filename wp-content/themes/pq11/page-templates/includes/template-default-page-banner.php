@@ -29,6 +29,8 @@
 			<?php endif;?>
 			
 			<?php endif;?>
+
+			<span class='double_line'></span><!-- double_line -->
 			
 			<?php if(get_field('turn_off_button') == "Yes") : ?>
 			

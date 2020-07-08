@@ -1,20 +1,25 @@
 #internal_banner {
-  display: none;
+  padding: 30px 35px;
   @include mq(small_tablet) {
-    display:block;
+    display: block;
     position: relative;
     text-align: center;
+    padding:0;
   }
   @include mq(small_monitor) {
-    min-height:289px;
-    @include flex(center,center);
+    min-height: 289px;
+    @include flex(center, center);
+  }
+  span.double_line {
+    @include mq(small_tablet) {
+      display: none;
+    }
   }
 }
 
-
 #internal_banner_content {
   position: relative;
-  z-index:1;
+  z-index: 1;
   @include mq(small_tablet) {
     padding: 55px 0px;
   }
@@ -26,46 +31,59 @@
   }
 }
 
-
 img#internal_hero {
-  object-fit:cover;
-  @include abs(0,null,null,0);
+  object-fit: cover;
+  display: none;
+  @include abs(0, null, null, 0);
   @include box(100%);
+  @include mq(small_tablet) {
+    display: block;
+  }
   @include mq(small_laptop) {
-    object-position:center center;
+    object-position: center center;
   }
 }
 
-
 .banner_title {
-  max-width:415px;
-  display: block;
-  @include margin_lr;
-  margin-bottom: 15px;
-  @include type (
+  margin-bottom:20px;
+  @include type(
     (
-      size: 35px,
-      height: 35px,
+      size: 25px,
+      height: 25px,
+      weight: 500,
       family: $secondaryfont,
-      color: $color_light_one
+      color: $color_dark_three,
     )
   );
+  @include mq(small_tablet) {
+    max-width: 415px;
+    display: block;
+    margin:0 auto 15px;
+    @include type (
+      (
+        size: 35px,
+        height: 35px,
+        family: $secondaryfont,
+        color: $color_light_one,
+        weight: 400
+      )
+    );
+  }
   @include mq(large_laptop) {
     max-width: 515px;
-    @include quick_type(45px,45px,null);
+    @include quick_type(45px, 45px, null);
   }
   @include mq(small_monitor) {
     max-width: 675px;
-    @include quick_type(60px,60px,null);
+    @include quick_type(60px, 60px, null);
   }
 }
 
-
 .internal_button {
-  display: inline-block;
-  width:auto;
-  @include mq(small_laptop) {
-    display:none;
+  display:none;
+  width: auto;
+  @include mq(small_tablet) {
+    display: inline-block;
   }
   span {
     padding: 14px 25px;
@@ -73,4 +91,16 @@ img#internal_hero {
   }
 }
 
-
+#two_col_template_with_banner { // banner doesnt show on mobile and button doesnt show on large devices bc the sidebar form is visible already
+  #internal_banner {
+    display: none;
+    @include mq(small_tablet) {
+      display: block;
+    }
+  }
+  .internal_button {
+    @include mq(small_laptop) {
+      display: none;
+    }
+  }
+}

@@ -85,7 +85,7 @@
         },
         {
             "key": "field_5e7d36be7f8d1",
-            "label": "Turn Off Tablet Button",
+            "label": "Turn Off Button",
             "name": "turn_off_button",
             "type": "select",
             "instructions": "Hide Button on this page's banner",
@@ -161,6 +161,13 @@
                 "operator": "==",
                 "value": "post"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/template-testimonials.php"
+            }
         ]
     ],
     "menu_order": -1,
@@ -171,5 +178,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594146146
+    "modified": 1594232764
 }
