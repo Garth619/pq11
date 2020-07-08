@@ -1,90 +1,16 @@
+
+
 body.page-template-template-contact {
-  span.loc_row_divider {
-    background: $contact_divider;
-  }
-  .locations {
-    max-width: 1200px;
-    @include margin_lr;
-  }
-  .loc_col {
-    @include mq(small_laptop) {
-      margin-bottom: 30px;
-    }
-    &:nth-of-type(2) {
-      span.locations_title {
-        &:after {
-          background: $contact_location_line_bg_color;
-        }
-      }
-    }
-    &:nth-of-type(3) {
-      span.locations_title {
-        &:after {
-          background: $contact_location_line_bg_color;
-        }
-      }
-      @include mq(small_laptop) {
-        margin-top: 0;
-      }
-    }
-    span,
-    a {
-      color: $contact_location_color;
-    }
-  }
-  a.get_directions {
-    border: 2px solid $get_directions_button_border_color;
-    &:hover {
-      color: $get_directions_button_hover_color;
-      border: 2px solid $get_directions_button_border_hover_color;
-    }
-  }
-  .social_media {
-    a {
-      svg {
-        circle {
-          fill: $contact_location_svg_circle_bg_color;
-        }
-        path {
-          fill: $contact_location_svg_path_bg_color;
-        }
-      }
-      &:hover {
-        svg {
-          path {
-            fill: $contact_location_svg_path_bg_hover_color;
-            transition: all 150ms ease-in-out;
-          }
-        }
-      }
-    }
-  }
-  #footer_bottom {
-    padding-top: 0;
-    padding-bottom: 0;
-    .locations {
-      display: none;
-    }
-  }
-  #copyright {
-    margin-top: 0;
-    border-top: none;
-    padding-bottom: 30px;
-  }
+
 }
 
-#contact_wrapper {
-  padding: 20px 25px;
-  max-width: 400px;
+
+span.double_line.contact_header {
+  max-width:75px;
   @include margin_lr;
-  @include mq(small_tablet) {
-    max-width: 675px;
-  }
-  @include mq(small_laptop) {
-    max-width: 100%;
-    padding: 77px 40px 26px;
-  }
-  @include mq(large_laptop) {
-    max-width: 1460px;
-  }
+}
+
+#contact_bottom {
+  background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
+  @include box(100%,400px);
 }

@@ -8,10 +8,10 @@ get_header(); ?>
 	
 	<div class="page_container">
 
+		<h1 id='internal_header'><?php the_title();?></h1><!-- internal_header -->
+
 		<div id='pa_directory' class="internal_wrapper">
 		
-			<h1 id='internal_header'><?php the_title();?></h1><!-- internal_header -->
-
 			<?php if(get_field('practice_area_directory')): ?>
 		
 				<ul class="pa_directory_top_menu">
