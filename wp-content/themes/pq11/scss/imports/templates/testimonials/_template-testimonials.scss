@@ -1,0 +1,48 @@
+#testimonials_wrapper {
+  .single_test {
+    text-align: center;
+    border-bottom:1px solid $color_dark_one;
+    padding-bottom:50px;
+    margin-bottom:20px;
+    svg {
+      width: 123px;
+      path {
+        fill: $color_bright_two;
+      }
+    }
+    span {
+      display: block;
+      &.single_test_descrip {
+        margin-top: 10px;
+        @include type(
+          (
+            size: 21px,
+            height: 23px,
+            family: $secondaryfont,
+            weight: 500,
+          )
+        );
+      }
+      &.double_line {
+        max-width:75px;
+      }
+      &.single_test_name {
+        margin-top:15px;
+        @include type (
+          (
+            size: 13px,
+            spacing: 0.4px,
+            height: 15px,
+            family: $primaryfont,
+            weight: 400,
+            transform: uppercase 
+          )
+        );
+      }
+    }
+    .single_test_content {
+      margin-top:20px;
+      padding-bottom:10px;
+    }
+  }
+}

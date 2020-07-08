@@ -1,8 +1,12 @@
 <?php get_header(); ?>
 
 <div id="internal_main">
+
+	<div id='two_col_template_with_banner'>
 	
-	<?php get_template_part('page-templates/includes/template','default-page-banner'); ?>	
+		<?php get_template_part('page-templates/includes/template','default-page-banner'); ?>	
+
+	</div><!-- two_col_template_with_banner -->
 	
 	<div class="page_container two_col">
 		

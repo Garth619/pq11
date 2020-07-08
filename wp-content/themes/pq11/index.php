@@ -4,6 +4,8 @@
 <div id="internal_main">
 
 <?php if(!get_field('disable_banner_blog_redo','option')) { ?>
+
+	<div id='two_col_template_with_banner'>
 	
 	<div id="internal_banner">
 		
@@ -64,6 +66,8 @@
 		<?php endif;?>
 		
 	</div><!-- internal_banner -->
+
+	</div><!-- two_col_template_with_banner -->
 
 		<?php } ?>
 	

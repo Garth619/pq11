@@ -11,6 +11,8 @@
     @include flex(center, center);
   }
   span.double_line {
+    max-width:100px;
+    @include margin_lr;
     @include mq(small_tablet) {
       display: none;
     }
@@ -46,6 +48,7 @@ img#internal_hero {
 
 .banner_title {
   margin-bottom:20px;
+  text-align: center;
   @include type(
     (
       size: 25px,
