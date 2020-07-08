@@ -53,8 +53,14 @@ span.double_line.contact_header {
       }
     }
     &:nth-of-type(2) {
+      @include mq(small_tablet) {
+        flex-basis: 232px;
+      }
+      @include mq(large_laptop) {
+        flex-basis: 280px;
+      }
       @include mq(small_monitor) {
-        flex-basis:350px;
+        flex-basis: 310px;
       }
       
     }
@@ -83,8 +89,8 @@ span.double_line.contact_header {
   }
   span.loc_cta {
     max-width:255px;
-    @include mq(small_monitor) {
-      max-width: 305px;
+    @include mq(small_tablet) {
+      max-width:100%;
     }
   }
   a.get_directions {
