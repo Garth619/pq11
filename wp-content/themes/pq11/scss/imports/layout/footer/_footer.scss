@@ -9,6 +9,8 @@ footer {
 #footer_form_wrapper {
   padding: 54px 35px 142px;
   text-align: center;
+  max-width:490px;
+  @include margin_lr;
   @include mq(small_tablet) {
     padding: 85px 60px 163px;
     max-width: 758px;

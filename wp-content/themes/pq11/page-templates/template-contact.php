@@ -14,6 +14,11 @@
 
 		<div id='contact_wrapper' class="internal_wrapper">
 		
+		<div id='contact_locations'>
+  
+			<?php get_template_part('page-templates/includes/template','locations');?> 
+
+		</div><!-- contact_locations -->
 
 		</div><!-- contact_wrapper -->
 		

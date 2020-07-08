@@ -36,7 +36,7 @@
   &:nth-of-type(2) {
     @include mq(small_tablet) {
       order: 3;
-      flex-basis: 220px;
+      flex-basis: 214px;
     }
     @include mq(large_laptop) {
       flex-basis: 314px;
@@ -149,6 +149,7 @@ a.get_directions {
   border-radius: 45px;
   display: inline-block;
   padding: 12px 20px;
+  transition:all 200ms ease-in-out;
   margin-top: 24px;
   @include type(
     (
@@ -173,7 +174,7 @@ a.get_directions {
   }
   @include mq(small_monitor) {
     margin-top: 30px;
-    padding: 17px 29px;
+    padding: 16px 29px;
     font-size: 14px;
   }
   &:hover {

@@ -12,8 +12,12 @@
   
   </div><!-- footer_form_wrapper -->
 
-  <?php get_template_part('page-templates/includes/template','locations');?> 
+  <?php if(!is_page_template('page-templates/template-contact.php')) {
 
+    get_template_part('page-templates/includes/template','locations');
+
+  } ?>
+  
   <div id='copyright_wrapper'>
 
     <div id='copyright_inner'>

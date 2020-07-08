@@ -6,7 +6,7 @@
 
 			<span class='double_line'></span><!-- double_line -->
 
-			<span class='address loc_descrip'>2549 Jolly Road, Suite 340<br/> Okemos, MI 48864</span><!-- address -->
+			<span class='address loc_descrip'>2549 Jolly Road, <br/> Suite 340<br/> Okemos, MI 48864</span><!-- address -->
 			
 			<a class='get_directions' href=''>Get Directions</a><!-- get_directions -->
     
