@@ -1,329 +1,398 @@
-body.page-template-template-bio {
-  .page_container {
-    @include flex(null, null, column);
-    @include mq(small_tablet) {
-      @include flex(space-between, null, row);
-    }
-    @include mq(small_monitor) {
-      padding: 65px 150px 150px;
-    }
-  }
-  .page_content {
-    order: 1;
-    @include mq(small_laptop) {
-      order: 2;
-    }
-  }
-}
 
-#internal_att_banner {
-  @include mq(small_tablet) {
-    margin-bottom: 40px;
-  }
-  @include mq(tablet) {
-    margin-bottom: 80px;
-  }
-  @include mq(small_laptop) {
-    padding: 0;
-    margin-bottom: -5px;
-  }
-}
 
-#internal_att_banner_inner {
+
+#att_banner {
   text-align: center;
-  position: relative;
-  padding: 50px 25px 110px;
-  @include mq(small_tablet) {
-    position: static;
-    order: 2;
-    text-align: left;
-    padding: 97px 25px 110px 0;
-  }
-  @include mq(small_laptop) {
-    text-align: center;
-    padding: 100px 75px 86px;
-  }
-  @include mq(large_laptop) {
-    padding: 100px 0px 86px;
-  }
-  @include mq(small_monitor) {
-    padding: 118px 0px 100px;
+  
+  span.double_line {
+    &:before, &:after {
+      background:$color_bright_one;
+    }
   }
 }
 
-#internal_att_tablet {
-  @include mq(small_tablet) {
-    position: relative;
-    height: 280px;
-    padding: 0 60px;
-    @include flex();
-  }
-  @include mq(small_laptop) {
-    display: block;
-    padding: 0;
-    height: 300px;
-    height: auto;
-  }
+#att_banner_inner {
+  background:$color_dark_three;
+  padding-bottom:180px;
 }
 
-#internal_att_banner_content {
-  position: relative;
-  z-index: 1;
-  @include mq(small_laptop) {
-    @include flex();
-  }
-  @include mq(large_laptop) {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-  @include mq(small_monitor) {
-    padding-left: 150px;
-    padding-right: 150px;
-    max-width: 1920px;
-    @include margin_lr;
-  }
+#att_banner_header_wrapper {
+  display: inline-block;
+  padding:0 35px;
 }
 
-#att_banner_spacer {
-  @include mq(small_laptop) {
-    flex-basis: 380px;
-    flex-shrink: 0;
-  }
-  @include mq(small_monitor) {
-    flex-basis: 580px;
-  }
+
+h1#internal_header.att_header {
+  color:$color_light_one;
+  padding-bottom:15px;
+  
 }
 
-#att_banner_right {
-  flex-grow: 1;
-  @include mq(small_laptop) {
-    text-align: left;
-    margin-left: 70px;
-  }
-  @include mq(small_monitor) {
-    margin-left: 105px;
-  }
-}
-
-h1#att_title {
-  @include type(
-    (
-      size: $att_title_size,
-      height: $att_title_height,
-      family: $secondaryfont,
-      color: $att_title_color,
-      weight: $att_title_weight,
-    )
-  );
-  @include mq(small_tablet) {
-    @include quick_type(
-      $att_title_size_small_tablet,
-      $att_title_height_small_tablet,
-      null
-    );
-  }
-  @include mq(tablet) {
-    @include quick_type($att_title_size_tablet, $att_title_height_tablet, null);
-  }
-  @include mq(small_laptop) {
-    @include quick_type(
-      $att_title_size_small_laptop,
-      $att_title_height_small_laptop,
-      null
-    );
-  }
-  @include mq(small_monitor) {
-    @include quick_type(
-      $att_title_size_small_monitor,
-      $att_title_height_small_monitor,
-      null
-    );
-  }
-}
 
 span#att_position {
-  display: block;
-  margin-top: 6px;
-  @include type(
+  display:block;
+  margin-top:12px;
+  @include type (
     (
-      size: $att_position_size,
-      spacing: $att_position_spacing,
-      height: $att_position_height,
+      size: 14px,
+      spacing: 1.4px,
+      height: 16px,
       family: $primaryfont,
-      color: $att_position_color,
-      weight: $att_position_weight,
-      transform: uppercase,
+      color: $color_light_one,
+      weight: 400,
+      transform: uppercase
     )
   );
-  @include mq(small_tablet) {
-    margin-top: 9px;
-    font-size: $att_position_size_small_tablet;
-  }
-  @include mq(small_laptop) {
-    font-size: $att_position_size_small_laptop;
-    margin-top: 16px;
-  }
-  @include mq(small_monitor) {
-    margin-top: 24px;
-  }
-  &:before {
-    content: "";
-    display: inline-block;
-    vertical-align: top;
-    transform: rotate(-45deg);
-    background: $att_position_diamond_bg_color;
-    margin: 7px 8px 0 0px;
-    @include box(8px);
-    @include mq(small_tablet) {
-      margin: 9px 8px 0 0px;
-    }
-    @include mq(small_monitor) {
-      margin: 8px 10px 0 0px;
-      @include box(10px);
-    }
-  }
 }
 
-#mobile_att_image {
-  max-width: 420px;
-  margin: -75px auto 10px;
-  position: relative;
-  z-index: 1;
-  padding: 0 25px;
-  @include mq(small_tablet) {
-    flex-shrink: 0;
-    flex-basis: 250px;
-    order: 1;
-    margin: 62px 30px 10px 0;
-    padding: 0;
-  }
-  @include mq(tablet) {
-    flex-basis: 310px;
-  }
-  @include mq(small_laptop) {
-    display: none;
-  }
+
+.att_image_wrapper {
+  padding:0 35px;
+  margin-top:-132px;
   img {
-    @include image();
-  }
-  #att_image_wrapper {
-    margin-bottom: 0;
-    display: block;
-    box-shadow: 0px 1px 40px #00000080;
-    background: $att_image_wrapper;
-    padding: 20px;
-  }
-}
-
-#att_profile_wrapper {
-  @include flex(null, null, column);
-  @include mq(small_laptop) {
-    @include flex(space-between, null, row);
-  }
-}
-
-#sidebar_bio_wrapper {
-  margin-bottom: -30px;
-  order: 2;
-  @include mq(small_laptop) {
-    max-width: 100%;
-    flex-basis: 380px;
-    flex-shrink: 0;
-    margin-right: 70px;
-    margin-top: -260px;
-    order: 1;
-  }
-  @include mq(small_monitor) {
-    flex-basis: 580px;
-    margin-right: 20px;
-    margin-top: -282px;
-  }
-}
-
-#sidebar_att_box {
-  @include mq(small_laptop) {
-    box-shadow: 0px 1px 40px #00000080;
-    background: $att_box_bg_color;
-    padding: 25px;
-  }
-  @include mq(small_monitor) {
-    padding: 80px 25px 70px;
-  }
-}
-
-#att_image_wrapper {
-  margin-bottom: 20px;
-  position: relative;
-  display: none;
-  @include mq(small_laptop) {
-    display: block;
-    flex-basis: 380px;
-  }
-  @include mq(small_monitor) {
-    margin-bottom: 50px;
-    max-width: 420px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  img {
-    @include image();
-    @include mq(small_monitor) {
-      width: 100%;
-    }
-  }
-}
-
-#att_bio_lists {
-  @include mq(small_laptop) {
-    padding: 0 25px;
-  }
-  @include mq(small_monitor) {
-    max-width: 409px;
-    @include margin_lr;
-  }
-  h3 {
-    @include mq(small_monitor) {
-      padding-bottom: 32px;
-    }
-  }
-}
-
-.placeholder {
-  position: relative;
-  text-align: center;
-  .placeholder_inner {
-    background: $att_paceholder_bg_color;
-    color: $att_paceholder_color;
-    padding: 0 25px;
-    position: relative;
-    @include abs(0, null, null, 0, 1);
-    @include box(100%);
-    @include flex(center, center, column);
-    @include type(
-      (
-        size: $att_paceholder_size,
-        height: $att_paceholder_height,
-        family: $primaryfont,
-        spacing: $att_paceholder_spacing,
-        weight: $att_paceholder_weight,
-        transform: uppercase,
-      )
-    );
-    &:before {
-      content: "Profile Coming Soon";
-      display: block;
-    }
-    &:after {
-      content: "";
-      display: block;
-      margin: 20px auto 0;
-      transform: rotate(-45deg);
-      background: $att_paceholder_diamond_bg_color;
-      @include box(10px);
-    }
-  }
-  img {
-    width: 100%;
+    border-bottom:7px solid $color_bright_two;
     @include image();
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// body.page-template-template-bio {
+//   .page_container {
+//     @include flex(null, null, column);
+//     @include mq(small_tablet) {
+//       @include flex(space-between, null, row);
+//     }
+//     @include mq(small_monitor) {
+//       padding: 65px 150px 150px;
+//     }
+//   }
+//   .page_content {
+//     order: 1;
+//     @include mq(small_laptop) {
+//       order: 2;
+//     }
+//   }
+// }
+
+// #internal_att_banner {
+//   @include mq(small_tablet) {
+//     margin-bottom: 40px;
+//   }
+//   @include mq(tablet) {
+//     margin-bottom: 80px;
+//   }
+//   @include mq(small_laptop) {
+//     padding: 0;
+//     margin-bottom: -5px;
+//   }
+// }
+
+// #internal_att_banner_inner {
+//   text-align: center;
+//   position: relative;
+//   padding: 50px 25px 110px;
+//   @include mq(small_tablet) {
+//     position: static;
+//     order: 2;
+//     text-align: left;
+//     padding: 97px 25px 110px 0;
+//   }
+//   @include mq(small_laptop) {
+//     text-align: center;
+//     padding: 100px 75px 86px;
+//   }
+//   @include mq(large_laptop) {
+//     padding: 100px 0px 86px;
+//   }
+//   @include mq(small_monitor) {
+//     padding: 118px 0px 100px;
+//   }
+// }
+
+// #internal_att_tablet {
+//   @include mq(small_tablet) {
+//     position: relative;
+//     height: 280px;
+//     padding: 0 60px;
+//     @include flex();
+//   }
+//   @include mq(small_laptop) {
+//     display: block;
+//     padding: 0;
+//     height: 300px;
+//     height: auto;
+//   }
+// }
+
+// #internal_att_banner_content {
+//   position: relative;
+//   z-index: 1;
+//   @include mq(small_laptop) {
+//     @include flex();
+//   }
+//   @include mq(large_laptop) {
+//     padding-left: 100px;
+//     padding-right: 100px;
+//   }
+//   @include mq(small_monitor) {
+//     padding-left: 150px;
+//     padding-right: 150px;
+//     max-width: 1920px;
+//     @include margin_lr;
+//   }
+// }
+
+// #att_banner_spacer {
+//   @include mq(small_laptop) {
+//     flex-basis: 380px;
+//     flex-shrink: 0;
+//   }
+//   @include mq(small_monitor) {
+//     flex-basis: 580px;
+//   }
+// }
+
+// #att_banner_right {
+//   flex-grow: 1;
+//   @include mq(small_laptop) {
+//     text-align: left;
+//     margin-left: 70px;
+//   }
+//   @include mq(small_monitor) {
+//     margin-left: 105px;
+//   }
+// }
+
+// h1#att_title {
+//   @include type(
+//     (
+//       size: $att_title_size,
+//       height: $att_title_height,
+//       family: $secondaryfont,
+//       color: $att_title_color,
+//       weight: $att_title_weight,
+//     )
+//   );
+//   @include mq(small_tablet) {
+//     @include quick_type(
+//       $att_title_size_small_tablet,
+//       $att_title_height_small_tablet,
+//       null
+//     );
+//   }
+//   @include mq(tablet) {
+//     @include quick_type($att_title_size_tablet, $att_title_height_tablet, null);
+//   }
+//   @include mq(small_laptop) {
+//     @include quick_type(
+//       $att_title_size_small_laptop,
+//       $att_title_height_small_laptop,
+//       null
+//     );
+//   }
+//   @include mq(small_monitor) {
+//     @include quick_type(
+//       $att_title_size_small_monitor,
+//       $att_title_height_small_monitor,
+//       null
+//     );
+//   }
+// }
+
+// span#att_position {
+//   display: block;
+//   margin-top: 6px;
+//   @include type(
+//     (
+//       size: $att_position_size,
+//       spacing: $att_position_spacing,
+//       height: $att_position_height,
+//       family: $primaryfont,
+//       color: $att_position_color,
+//       weight: $att_position_weight,
+//       transform: uppercase,
+//     )
+//   );
+//   @include mq(small_tablet) {
+//     margin-top: 9px;
+//     font-size: $att_position_size_small_tablet;
+//   }
+//   @include mq(small_laptop) {
+//     font-size: $att_position_size_small_laptop;
+//     margin-top: 16px;
+//   }
+//   @include mq(small_monitor) {
+//     margin-top: 24px;
+//   }
+//   &:before {
+//     content: "";
+//     display: inline-block;
+//     vertical-align: top;
+//     transform: rotate(-45deg);
+//     background: $att_position_diamond_bg_color;
+//     margin: 7px 8px 0 0px;
+//     @include box(8px);
+//     @include mq(small_tablet) {
+//       margin: 9px 8px 0 0px;
+//     }
+//     @include mq(small_monitor) {
+//       margin: 8px 10px 0 0px;
+//       @include box(10px);
+//     }
+//   }
+// }
+
+// #mobile_att_image {
+//   max-width: 420px;
+//   margin: -75px auto 10px;
+//   position: relative;
+//   z-index: 1;
+//   padding: 0 25px;
+//   @include mq(small_tablet) {
+//     flex-shrink: 0;
+//     flex-basis: 250px;
+//     order: 1;
+//     margin: 62px 30px 10px 0;
+//     padding: 0;
+//   }
+//   @include mq(tablet) {
+//     flex-basis: 310px;
+//   }
+//   @include mq(small_laptop) {
+//     display: none;
+//   }
+//   img {
+//     @include image();
+//   }
+//   #att_image_wrapper {
+//     margin-bottom: 0;
+//     display: block;
+//     box-shadow: 0px 1px 40px #00000080;
+//     background: $att_image_wrapper;
+//     padding: 20px;
+//   }
+// }
+
+// #att_profile_wrapper {
+//   @include flex(null, null, column);
+//   @include mq(small_laptop) {
+//     @include flex(space-between, null, row);
+//   }
+// }
+
+// #sidebar_bio_wrapper {
+//   margin-bottom: -30px;
+//   order: 2;
+//   @include mq(small_laptop) {
+//     max-width: 100%;
+//     flex-basis: 380px;
+//     flex-shrink: 0;
+//     margin-right: 70px;
+//     margin-top: -260px;
+//     order: 1;
+//   }
+//   @include mq(small_monitor) {
+//     flex-basis: 580px;
+//     margin-right: 20px;
+//     margin-top: -282px;
+//   }
+// }
+
+// #sidebar_att_box {
+//   @include mq(small_laptop) {
+//     box-shadow: 0px 1px 40px #00000080;
+//     background: $att_box_bg_color;
+//     padding: 25px;
+//   }
+//   @include mq(small_monitor) {
+//     padding: 80px 25px 70px;
+//   }
+// }
+
+// #att_image_wrapper {
+//   margin-bottom: 20px;
+//   position: relative;
+//   display: none;
+//   @include mq(small_laptop) {
+//     display: block;
+//     flex-basis: 380px;
+//   }
+//   @include mq(small_monitor) {
+//     margin-bottom: 50px;
+//     max-width: 420px;
+//     margin-left: auto;
+//     margin-right: auto;
+//   }
+//   img {
+//     @include image();
+//     @include mq(small_monitor) {
+//       width: 100%;
+//     }
+//   }
+// }
+
+// #att_bio_lists {
+//   @include mq(small_laptop) {
+//     padding: 0 25px;
+//   }
+//   @include mq(small_monitor) {
+//     max-width: 409px;
+//     @include margin_lr;
+//   }
+//   h3 {
+//     @include mq(small_monitor) {
+//       padding-bottom: 32px;
+//     }
+//   }
+// }
+
+// .placeholder {
+//   position: relative;
+//   text-align: center;
+//   .placeholder_inner {
+//     background: $att_paceholder_bg_color;
+//     color: $att_paceholder_color;
+//     padding: 0 25px;
+//     position: relative;
+//     @include abs(0, null, null, 0, 1);
+//     @include box(100%);
+//     @include flex(center, center, column);
+//     @include type(
+//       (
+//         size: $att_paceholder_size,
+//         height: $att_paceholder_height,
+//         family: $primaryfont,
+//         spacing: $att_paceholder_spacing,
+//         weight: $att_paceholder_weight,
+//         transform: uppercase,
+//       )
+//     );
+//     &:before {
+//       content: "Profile Coming Soon";
+//       display: block;
+//     }
+//     &:after {
+//       content: "";
+//       display: block;
+//       margin: 20px auto 0;
+//       transform: rotate(-45deg);
+//       background: $att_paceholder_diamond_bg_color;
+//       @include box(10px);
+//     }
+//   }
+//   img {
+//     width: 100%;
+//     @include image();
+//   }
+// }

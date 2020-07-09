@@ -31,7 +31,7 @@
             "label": "Attorney Profile",
             "name": "attorney_profile",
             "type": "image",
-            "instructions": "Image needs to be 420px wide and a jpg",
+            "instructions": "Image needs to be 412px wide by 436px high and a jpg",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -42,11 +42,11 @@
             "return_format": "array",
             "preview_size": "full",
             "library": "all",
-            "min_width": 419,
-            "min_height": "",
+            "min_width": 411,
+            "min_height": 435,
             "min_size": "",
-            "max_width": 421,
-            "max_height": "",
+            "max_width": 413,
+            "max_height": 437,
             "max_size": "0.3",
             "mime_types": "jpg",
             "show_column": 0,
@@ -166,5 +166,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1591898555
+    "modified": 1594256684
 }

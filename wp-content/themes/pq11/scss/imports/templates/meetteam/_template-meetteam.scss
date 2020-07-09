@@ -14,7 +14,6 @@
     max-width: 1322px;
   }
   @include mq(small_monitor) {
-    
   }
   &:after {
     @include mq(small_laptop) {
@@ -30,7 +29,7 @@
 
 .single_att {
   margin-bottom: 49px;
-  background:$color_dark_six;
+  background: $color_dark_six;
   text-align: center;
   @include mq(small_tablet) {
     flex-basis: 47%;
@@ -43,6 +42,11 @@
   }
   &:hover {
     a {
+      .single_att_title_wrapper {
+        span.single_att_name {
+          color: $color_bright_two;
+        }
+      }
       .single_att_img {
         img {
           transform: scale(1.1);
@@ -67,52 +71,55 @@
       }
       .single_att_overlay {
         opacity: 0;
-        //background: $att_overlay_bg_color;
+        background: rgba(0, 0, 0, 0.45);
         transition: all 200ms ease-in-out;
         @include box(100%);
         @include abs(0, null, null, 0, 1);
         @include flex(center, center);
         &.placeholder_overlay {
-          //background: $placeholder_overlay;
+          background: $color_dark_three;
         }
         span.view_profile {
-         &:after {
-            content: "";
-            display: block;
-            margin: 20px auto 0;
-            transform: rotate(-45deg);
-           // background: $view_profile_diamond_bg_color;
-            @include box(10px);
-          }
+          @include type(
+            (
+              size: 14px,
+              spacing: 0.7px,
+              family: $primaryfont,
+              color: $color_light_one,
+              weight: 600,
+              transform: uppercase,
+            )
+          );
         }
       }
     }
     .single_att_title_wrapper {
-      border-top:2px solid $color_bright_two;
+      border-top: 2px solid $color_bright_two;
       padding: 25px;
       span {
         display: block;
       }
       span.single_att_name {
-        @include type (
+        transition: all 200ms ease-in-out;
+        @include type(
           (
             size: 22px,
             height: 22px,
             family: $secondaryfont,
             color: $color_dark_three,
-            weight: 400
+            weight: 400,
           )
         );
         @include mq(small_tablet) {
-          @include quick_type(23px,23px,null);
+          @include quick_type(23px, 23px, null);
         }
         @include mq(large_laptop) {
-          @include quick_type(30px,30px,null);
+          @include quick_type(30px, 30px, null);
         }
       }
       span.single_att_position {
         margin-top: 5px;
-        @include type (
+        @include type(
           (
             size: 13px,
             spacing: 0.7px,
@@ -120,12 +127,45 @@
             family: $primaryfont,
             color: $color_bright_two,
             weight: 400,
-            transform: uppercase
+            transform: uppercase,
           )
-        );@include mq(small_tablet) {
-          @include quick_type(15px,17px,null);
+        );
+        @include mq(small_tablet) {
+          @include quick_type(15px, 17px, null);
         }
       }
     }
+  }
+}
+
+.placeholder {
+  position: relative;
+  text-align: center;
+  .placeholder_inner {
+    background: $color_dark_three;
+    color: $color_light_one;
+    padding: 0 25px;
+    position: relative;
+    @include abs(0, null, null, 0, 1);
+    @include box(100%);
+    @include flex(center, center, column);
+    @include type(
+      (
+        size: 14px,
+        spacing: 0.7px,
+        family: $primaryfont,
+        color: $color_light_one,
+        weight: 600,
+        transform: uppercase,
+      )
+    );
+    &:before {
+      content: "Profile Coming Soon";
+      display: block;
+    }
+  }
+  img {
+    width: 100%;
+    @include image();
   }
 }

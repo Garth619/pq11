@@ -36,10 +36,8 @@ get_header(); ?>
 										<div class="placeholder">
 
 											<div class='placeholder_inner'></div><!-- placeholder_inner -->
-											
-											<img src='<?php bloginfo('template_directory');?>/images/att-alex-new.jpg' /><!-- name -->
 			
-											<!-- <img src='<?php bloginfo('template_directory');?>/images/placeholder.jpg' /> -->
+											<img src='<?php bloginfo('template_directory');?>/images/placeholder.jpg' />
 
 										</div><!-- placeholder -->
 
