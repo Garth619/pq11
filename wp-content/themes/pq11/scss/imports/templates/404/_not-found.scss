@@ -1,43 +1,42 @@
-
 #not_found_wrapper {
-  max-width:460px;
+  max-width: 460px;
   @include margin_lr;
   @include mq(small_monitor) {
-    max-width:100%;
+    max-width: 100%;
   }
 }
 
 #not_found_subtitle {
   display: block;
   text-align: center;
-  margin:40px auto 20px;
-  @include type (
+  margin: 40px auto 20px;
+  @include type(
     (
       size: 14px,
       spacing: 1.9px,
       height: 16px,
-      color:$color_bright_two,
+      color: $color_bright_two,
       family: $primaryfont,
       weight: 600,
-      transform: uppercase 
+      transform: uppercase,
     )
   );
   @include mq(small_monitor) {
-    margin-bottom:0px;
-    @include quick_type(19px,35px,null);
+    margin-bottom: 0px;
+    @include quick_type(19px, 35px, null);
   }
 }
 
-
 #not_found_content {
   text-align: center;
-  padding-bottom:20px;
+  padding-bottom: 20px;
   @include mq(small_monitor) {
-    max-width:695px;
-    padding-bottom:0;
+    max-width: 695px;
+    padding-bottom: 0;
+    @include margin_lr;
   }
   span.go_back {
-    color:$color-bright_two;
+    color: $color-bright_two;
     text-decoration: none;
     &:hover {
       text-decoration: underline;

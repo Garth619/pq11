@@ -6,76 +6,52 @@
 <?php get_template_part('page-templates/includes/att_bio_template_parts/template','profile_image'); ?>
 
 	<div id='att_sidebar_lists'>
-	
-		<div class='att_sidebar_list'>
+
+	<?php if ( have_rows( 'attorney_accolades' ) ) : ?>
+
+		<?php while ( have_rows( 'attorney_accolades' ) ) : the_row(); ?>
 		
-			<span class='att_list_title'>Professional associations</span><!-- att_list_title -->
+			<div class='att_sidebar_list'>
 
-			<span class='double_line'></span><!-- double_line -->
+				<span class='att_list_title'><?php the_sub_field( 'title' ); ?></span><!-- att_list_title -->
 
-			<ul class="att_list_menu">
-			
-				<li>State Bar of Michigan
-					<ul class="att_list_sub_menu">
-						<li>Arts, Communciations, Entertainment, & Sports Section</li> 
-						<li>Criminal Law Section</li> 
-					</ul>
-				</li>
-				<li>Ingham County Bar Association</li>
-				<li>Davis Dunnings Bar Association</li>
-				<li>American Bar Association</li> 
-				<li>The National Trial Lawyers Top 100 Trial Lawyers</li> 
-				<li>Board of Directors for ICBA: Ingham County Bar Association</li> 
-			
-			</ul>
-		
-		</div><!-- att_sidebar_list -->
+				<span class='double_line'></span><!-- double_line -->
 
-		<div class='att_sidebar_list'>
-		
-			<span class='att_list_title'>Bar admission</span><!-- att_list_title -->
+				<ul class="att_list_menu">
 
-			<span class='double_line'></span><!-- double_line -->
+				<?php if ( have_rows( 'list_items' ) ) : ?>
 
-			<ul class="att_list_menu">
-			
-				<li>Nemo enim ipsam voluptatem</li>
-				<li>Aut fugit, sed quia consequuntur</li>
-				<li>Neque porro quisquam est Sed quia non numquam eius</li>
-			
-			</ul>
-		
-		</div><!-- att_sidebar_list -->
+					<?php while ( have_rows( 'list_items' ) ) : the_row(); ?>
 
-		<div class='att_sidebar_list'>
-		
-			<span class='att_list_title'>Education</span><!-- att_list_title -->
+						<li><?php the_sub_field( 'list_item' ); ?>
+				
+							<?php if ( have_rows( 'sub_items' ) ) : ?>
 
-			<span class='double_line'></span><!-- double_line -->
+								<ul class="att_list_sub_menu">
+					
+									<?php while ( have_rows( 'sub_items' ) ) : the_row(); ?>
+					
+										<li><?php the_sub_field( 'sub_item' ); ?></li>
 
-			<ul class="att_list_menu">
-			
-				<li>Michigan State University, 1994</li> 
-			
-			</ul>
-		
-		</div><!-- att_sidebar_list -->
+									<?php endwhile; ?>
 
-		<div class='att_sidebar_list'>
-		
-			<span class='att_list_title'>Licenses</span><!-- att_list_title -->
+								</ul>
+				
+							<?php endif; ?>
 
-			<span class='double_line'></span><!-- double_line -->
+						</li>
 
-			<ul class="att_list_menu">
-			
-				<li>Nemo enim ipsam voluptatem</li>
-				<li>Aut fugit, sed quia consequuntur</li>
-				<li>Neque porro quisquam est Sed quia non numquam eius</li>
-			
-			</ul>
-		
-		</div><!-- att_sidebar_list -->
+					<?php endwhile; ?>
+
+				<?php endif; ?>
+
+				</ul><!-- att_list_menu -->
+
+			</div><!-- att_sidebar_list -->
+
+		<?php endwhile; ?>
+
+	<?php endif; ?>
 	
 	</div><!-- att_sidebar_lists -->
 
