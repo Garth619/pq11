@@ -3,11 +3,7 @@
 
 <div id='att_sidebar_inner'>
 
-	<div id="mobile_image" class='att_image_wrapper'>
-		
-		<img class="att_image" src='<?php bloginfo('template_directory');?>/images/att-alex-new.jpg' alt=''/><!-- name -->
-		
-	</div><!-- att_image_wrapper -->
+<?php get_template_part('page-templates/includes/att_bio_template_parts/template','profile_image'); ?>
 
 	<div id='att_sidebar_lists'>
 	

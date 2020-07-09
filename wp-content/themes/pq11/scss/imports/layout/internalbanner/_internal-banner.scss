@@ -73,7 +73,7 @@ img#internal_hero {
     );
   }
   @include mq(large_laptop) {
-    max-width: 515px;
+    max-width: 625px;
     @include quick_type(55px, 55px, null);
   }
   @include mq(small_monitor) {
