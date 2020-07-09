@@ -62,14 +62,26 @@ span#att_position {
 
 
 #att_sidebar_wrapper {
+  position: relative;
+  width:100vw;
+  margin-left:-35px;
+  margin-bottom:-55px;
+  &:after {
+    background: url(#{$themepath}/images/bkg-pattern.jpg);
+    @include box(100%);
+    @include abs(0,null,null,0);
+    @include contentdisplay();
+  }
   .att_image_wrapper {
     display:none;
   }
 }
 
 
-
-
+#att_sidebar_lists {
+  position: relative;
+  z-index:1;
+}
 
 
 
