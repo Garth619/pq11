@@ -21,11 +21,16 @@
     padding-bottom:53px;
     @include flex(space-between);
   }
+  @include mq(small_laptop) {
+    padding-left:111px;
+    padding-right:111px;
+  }
 }
 
 #att_banner_left {
   @include mq(small_tablet) {
     padding-right:45px;
+    flex-grow:1;
   }
 }
 
@@ -75,11 +80,17 @@ span#att_position {
     margin-top: 0px;
     @include abs(30px,60px,null,null);
   }
+  @include mq(small_laptop) {
+    display:none;
+  }
   img {
     border-bottom: 7px solid $color_bright_two;
     @include image();
     @include mq(small_tablet) {
       border-bottom: 4px solid $color_bright_two;
+    }
+    @include mq(small_laptop) {
+      border-bottom: 5px solid $color_bright_two;
     }
   }
 }
@@ -89,12 +100,18 @@ span#att_position {
 #att_banner_right {
   flex-basis:181px;
   flex-shrink:0;
+  @include mq(small_laptop) {
+    flex-basis: 276px;
+  }
 }
 
 .att_content {
   margin-top: 23px;
   @include mq(small_tablet) {
     margin-top: 68px;
+  }
+  @include mq(small_laptop) {
+    margin-top: 39px;
   }
 }
 
@@ -104,10 +121,18 @@ span#att_position {
   margin-left: -35px;
   margin-bottom: -55px;
   margin-top:50px;
-  padding:50px 35px;
+  padding:50px 0px;
   @include mq(small_tablet) {
     margin-left: -60px;
-    padding:50px 60px;
+    padding:50px 0px;
+  }
+  @include mq(small_laptop) {
+    flex-basis: 276px;
+    flex-shrink:0;
+    width:auto;
+    padding:0;
+    margin-left:0;
+    margin-top: -133px;
   }
   &:after {
     background: url(#{$themepath}/images/bkg-pattern.jpg);
@@ -118,12 +143,28 @@ span#att_position {
   }
   .att_image_wrapper {
     display: none;
+    @include mq(small_laptop) {
+      display:block;
+      position: static;
+      max-width:100%;
+      position: relative;
+      z-index:1;
+      top:0;
+      right:0;
+    }
   }
 }
 
 #att_sidebar_lists {
   position: relative;
   z-index: 1;
+  padding:0 35px;
+  @include mq(small_tablet) {
+    padding:0 60px;
+  }
+  @include mq(small_laptop) {
+    padding:33px 25px;
+  }
 }
 
 .att_sidebar_list {
