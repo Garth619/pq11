@@ -13,6 +13,8 @@
 		
 			<span class='att_list_title'>Professional associations</span><!-- att_list_title -->
 
+			<span class='double_line'></span><!-- double_line -->
+
 			<ul class="att_list_menu">
 			
 				<li>State Bar of Michigan
