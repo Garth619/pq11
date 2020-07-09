@@ -121,10 +121,10 @@ span#att_position {
   margin-left: -35px;
   margin-bottom: -55px;
   margin-top:50px;
-  padding:50px 0px;
+  
   @include mq(small_tablet) {
     margin-left: -60px;
-    padding:50px 0px;
+    margin-bottom: -65px;
   }
   @include mq(small_laptop) {
     flex-basis: 276px;
@@ -133,14 +133,9 @@ span#att_position {
     padding:0;
     margin-left:0;
     margin-top: -133px;
+    margin-bottom:0;
   }
-  &:after {
-    background: url(#{$themepath}/images/bkg-pattern.jpg);
-    opacity: 0.6;
-    @include box(100%);
-    @include abs(0, null, null, 0);
-    @include contentdisplay();
-  }
+  
   .att_image_wrapper {
     display: none;
     @include mq(small_laptop) {
@@ -155,6 +150,22 @@ span#att_position {
   }
 }
 
+
+#att_sidebar_inner {
+  position: relative;
+  padding:50px 0px;
+  @include mq(small_laptop) {
+    padding:0;
+  }
+    &:after {
+      background: url(#{$themepath}/images/bkg-pattern.jpg);
+      opacity: 0.6;
+      @include box(100%);
+      @include abs(0, null, null, 0);
+      @include contentdisplay();
+    }
+}
+
 #att_sidebar_lists {
   position: relative;
   z-index: 1;
@@ -163,7 +174,7 @@ span#att_position {
     padding:0 60px;
   }
   @include mq(small_laptop) {
-    padding:33px 25px;
+    padding:33px 25px 40px;
   }
 }
 
