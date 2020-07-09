@@ -18,7 +18,7 @@ get_header(); ?>
 
 				<span class='double_line'></span><!-- double_line -->
 
-				<span id='att_position'>Attorney</span><!-- att_position -->
+				<span id='att_position'><?php the_field( 'position' ); ?></span><!-- att_position -->
 	
 			</div><!-- att_banner_header_wrapper -->
 
