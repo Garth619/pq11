@@ -1,6 +1,9 @@
 #att_banner {
   text-align: center;
-
+  @include mq(small_tablet) {
+    text-align: left;
+    position: relative;
+  }
   span.double_line {
     &:before,
     &:after {
@@ -12,16 +15,34 @@
 #att_banner_inner {
   background: $color_dark_three;
   padding-bottom: 180px;
+  @include mq(small_tablet) {
+    padding-left:60px;
+    padding-right:60px;
+    padding-bottom:53px;
+    @include flex(space-between);
+  }
+}
+
+#att_banner_left {
+  @include mq(small_tablet) {
+    padding-right:45px;
+  }
 }
 
 #att_banner_header_wrapper {
   display: inline-block;
   padding: 0 35px;
+  @include mq(small_tablet) {
+    padding:0;
+  }
 }
 
 h1#internal_header.att_header {
   color: $color_light_one;
   padding-bottom: 15px;
+  @include mq(small_tablet) {
+    text-align: left;
+  }
 }
 
 span#att_position {
@@ -38,19 +59,43 @@ span#att_position {
       transform: uppercase,
     )
   );
+  @include mq(small_tablet) {
+    margin-top: 17px;
+  }
 }
 
 .att_image_wrapper {
   padding: 0 35px;
   margin-top: -132px;
+  display:inline-block;
+  @include margin_lr;
+  @include mq(small_tablet) {
+    max-width:181px;
+    padding:0;
+    margin-top: 0px;
+    @include abs(30px,60px,null,null);
+  }
   img {
     border-bottom: 7px solid $color_bright_two;
     @include image();
+    @include mq(small_tablet) {
+      border-bottom: 4px solid $color_bright_two;
+    }
   }
+}
+
+
+
+#att_banner_right {
+  flex-basis:181px;
+  flex-shrink:0;
 }
 
 .att_content {
   margin-top: 23px;
+  @include mq(small_tablet) {
+    margin-top: 68px;
+  }
 }
 
 #att_sidebar_wrapper {
@@ -59,7 +104,11 @@ span#att_position {
   margin-left: -35px;
   margin-bottom: -55px;
   margin-top:50px;
-  padding:50px 30px;
+  padding:50px 35px;
+  @include mq(small_tablet) {
+    margin-left: -60px;
+    padding:50px 60px;
+  }
   &:after {
     background: url(#{$themepath}/images/bkg-pattern.jpg);
     opacity: 0.6;
@@ -75,6 +124,13 @@ span#att_position {
 #att_sidebar_lists {
   position: relative;
   z-index: 1;
+}
+
+.att_sidebar_list {
+  margin-bottom:35px;
+  &:last-of-type {
+    margin-bottom:0;
+  }
   span {
     display: block;
     &.att_list_title {
@@ -133,6 +189,8 @@ span#att_position {
     }
   }
 }
+
+
 
 // body.page-template-template-bio {
 //   .page_container {

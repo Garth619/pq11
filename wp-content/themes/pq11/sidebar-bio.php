@@ -32,6 +32,52 @@
 			</ul>
 		
 		</div><!-- att_sidebar_list -->
+
+		<div class='att_sidebar_list'>
+		
+			<span class='att_list_title'>Bar admission</span><!-- att_list_title -->
+
+			<span class='double_line'></span><!-- double_line -->
+
+			<ul class="att_list_menu">
+			
+				<li>Nemo enim ipsam voluptatem</li>
+				<li>Aut fugit, sed quia consequuntur</li>
+				<li>Neque porro quisquam est Sed quia non numquam eius</li>
+			
+			</ul>
+		
+		</div><!-- att_sidebar_list -->
+
+		<div class='att_sidebar_list'>
+		
+			<span class='att_list_title'>Education</span><!-- att_list_title -->
+
+			<span class='double_line'></span><!-- double_line -->
+
+			<ul class="att_list_menu">
+			
+				<li>Michigan State University, 1994</li> 
+			
+			</ul>
+		
+		</div><!-- att_sidebar_list -->
+
+		<div class='att_sidebar_list'>
+		
+			<span class='att_list_title'>Licenses</span><!-- att_list_title -->
+
+			<span class='double_line'></span><!-- double_line -->
+
+			<ul class="att_list_menu">
+			
+				<li>Nemo enim ipsam voluptatem</li>
+				<li>Aut fugit, sed quia consequuntur</li>
+				<li>Neque porro quisquam est Sed quia non numquam eius</li>
+			
+			</ul>
+		
+		</div><!-- att_sidebar_list -->
 	
 	</div><!-- att_sidebar_lists -->
 
