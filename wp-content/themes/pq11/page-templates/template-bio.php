@@ -38,7 +38,7 @@ get_header(); ?>
 
 <div class="page_container two_col">
 		
-		<div class="page_content">
+		<div class="page_content att_content content">
 			
 			<?php get_template_part( 'loop', 'page' ); ?>
 			

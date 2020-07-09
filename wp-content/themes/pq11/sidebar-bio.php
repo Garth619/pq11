@@ -1,59 +1,37 @@
 
-<div id="sidebar_bio_wrapper" class="content">
+<div id='att_sidebar_wrapper'>
 
-	<div id='sidebar_att_box'>
-
-		<?php $attorney_profile = get_field( 'attorney_profile' ); ?>
+	<div id="mobile_image" class='att_image_wrapper'>
 		
-		<?php if ( $attorney_profile ) : ?>
+		<img class="att_image" src='<?php bloginfo('template_directory');?>/images/att-alex-new.jpg' alt=''/><!-- name -->
 		
-		<div id='att_image_wrapper'>
+	</div><!-- att_image_wrapper -->
 
-			<img src="<?php echo $attorney_profile['url']; ?>" alt="<?php echo $attorney_profile['alt']; ?>" />
-
-		</div><!-- att_image_wrapper -->
-		
-		<?php else: ?>
-		
-			<div class="placeholder">
-
-				<div class='placeholder_inner'></div><!-- placeholder_inner -->
-			
-				<img src='<?php bloginfo('template_directory');?>/images/placeholder.jpg' /><!-- name -->
-
-			</div><!-- placeholder -->
-
-		<?php endif;?>
-		
-		<?php if ( have_rows( 'attorney_accolades' ) ) : ?>
-			
-			<?php while ( have_rows( 'attorney_accolades' ) ) : the_row(); ?>
-
-			<div id='att_bio_lists'>
-			
-				<h3><?php the_sub_field( 'title' ); ?></h3>
-			
-				<?php if ( have_rows( 'list_items' ) ) : ?>
-					
-					<ul class="single_line_list">
-				
-						<?php while ( have_rows( 'list_items' ) ) : the_row(); ?>
-					
-							<li><?php the_sub_field( 'list_item' ); ?></li>
-				
-						<?php endwhile; ?>
-
-					</ul>
-		
-			<?php endif; ?>
-
-		</div><!-- att_bio_lists -->
+	<div id='att_sidebar_lists'>
 	
-	<?php endwhile; ?>
-
-	<?php endif; ?>
-
-		</div><!-- sidebar_att_box -->
+		<div class='att_sidebar_list'>
 		
-</div><!-- sidebar_bio_wrapper -->
+			<span class='att_list_title'>Professional associations</span><!-- att_list_title -->
+
+			<ul class="att_list_menu">
+			
+				<li>State Bar of Michigan
+					<ul class="att_list_sub_menu">
+						<li>Arts, Communciations, Entertainment, & Sports Section</li> 
+						<li>Criminal Law Section</li> 
+					</ul>
+				</li>
+				<li>Ingham County Bar Association</li>
+				<li>Davis Dunnings Bar Association</li>
+				<li>American Bar Association</li> 
+				<li>The National Trial Lawyers Top 100 Trial Lawyers</li> 
+				<li>Board of Directors for ICBA: Ingham County Bar Association</li> 
+			
+			</ul>
+		
+		</div><!-- att_sidebar_list -->
+	
+	</div><!-- att_sidebar_lists -->
+
+</div><!-- att_sidebar_wrapper -->
 
