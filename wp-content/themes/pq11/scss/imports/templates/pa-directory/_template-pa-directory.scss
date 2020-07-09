@@ -26,9 +26,6 @@
     }
   }
   ul.pa_directory_top_menu {
-    @include mq(small_tablet) {
-      padding-top:30px;
-    }
     > li {
       margin-bottom:40px;
       @include type(

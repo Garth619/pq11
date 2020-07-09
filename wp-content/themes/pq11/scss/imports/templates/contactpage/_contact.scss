@@ -1,4 +1,14 @@
 
+body.page-template-template-contact {
+  h1#internal_header {
+    br {
+      @include mq(mobile) {
+        display: none;
+      }
+    }
+  }
+}
+
 
 span.double_line.contact_header {
   max-width:75px;
@@ -135,8 +145,8 @@ span.double_line.contact_header {
 
 #contact_bottom {
   background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
-  margin-top:-300px;
-  @include box(100%,360px);
+  margin-top:-450px;
+  @include box(100%,450px);
   @include mq(small_tablet) {
     margin-top: -180px;
     height: 250px;
@@ -173,17 +183,3 @@ body.page-template-template-contact {
 
 
 
-
-
-// @include mq(small_laptop) {
-//   max-width: 796px;
-//   padding: 96px 60px 140px;
-// }
-// @include mq(large_laptop) {
-//   max-width:961px;
-//   padding: 119px 60px 162px;
-// }
-// @include mq(small_monitor) {
-//   padding: 141px 60px 177px;
-//   max-width: 1430px;
-// }

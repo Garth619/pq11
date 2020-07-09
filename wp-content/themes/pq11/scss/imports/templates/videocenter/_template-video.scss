@@ -4,19 +4,19 @@
 
 
 #video_wrapper {
-  margin: 10px auto 0;
+  margin: 0px auto 0;
   max-width: 470px;
   @include mq(small_tablet) {
     max-width: 100%;
-    margin: 40px auto -40px;
+    margin: 0px auto -40px;
     @include flex(space-between, null, null, wrap);
   }
   @include mq(large_laptop) {
-    margin: 50px auto -40px;
+    margin: 0px auto -40px;
   }
   @include mq(small_monitor) {
     max-width: 1322px;
-    margin: 25px auto -56px;
+    margin: 0px auto -56px;
   }
   &:after {
     @include mq(large_laptop) {
