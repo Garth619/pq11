@@ -30,7 +30,6 @@
   }
 }
 
-
 #sec_one_left_inner {
   position: relative;
   z-index: 1;
@@ -56,8 +55,6 @@
   }
 }
 
-
-
 #sec_left_top {
   @include mq(small_laptop) {
     @include flex(space-between);
@@ -66,32 +63,6 @@
     @include flex(flex-start);
   }
 }
-
-#sec_one_video {
-  border: 7px solid $color_light_one;
-  position: relative;
-  @include margin_lr;
-  @include box(141px, 89px);
-  @include mq(small_tablet) {
-    @include box(195px, 121px);
-  }
-  @include mq(small_laptop) {
-    display: none;
-  }
-  @include mq(large_laptop) {
-    @include box(199px,121px);
-  }
-  @include mq(small_monitor) {
-    @include box(250px,150px);
-  }
-  img {
-    object-fit: cover;
-    @include abs(0, null, null, 0);
-    @include image();
-    @include box(100%);
-  }
-}
-
 
 #sec_left_bottom {
   @include mq(large_laptop) {
@@ -153,6 +124,38 @@
   }
 }
 
+#sec_one_video {
+  border: 7px solid $color_light_one;
+  position: relative;
+  @include margin_lr;
+  @include box(141px, 89px);
+  @include mq(small_tablet) {
+    @include box(195px, 121px);
+  }
+  @include mq(small_laptop) {
+    display: none;
+  }
+  @include mq(large_laptop) {
+    @include box(199px, 121px);
+  }
+  @include mq(small_monitor) {
+    @include box(250px, 150px);
+  }
+  img {
+    object-fit: cover;
+    @include abs(0, null, null, 0);
+    @include image();
+    @include box(100%);
+  }
+}
+
+#video_overlay {
+  background: transparent;
+  @include box(100%);
+  @include abs(0, null, null, 0);
+  @include flex(center, center);
+}
+
 span#sec_one_title {
   display: block;
   margin: 23px auto 0;
@@ -178,18 +181,18 @@ span#sec_one_title {
     @include quick_type(49px, 49px, null);
   }
   @include mq(large_laptop) {
-    max-width:425px;
+    max-width: 425px;
     margin: 0px 0 0 33px;
-    @include quick_type(53px,55px,null);
+    @include quick_type(53px, 55px, null);
   }
   @include mq(small_monitor) {
     max-width: 470px;
     margin: 0px 0 0 64px;
-    @include quick_type(63px,67px,null);
+    @include quick_type(63px, 67px, null);
   }
   @include mq(monitor) {
-     max-width: 645px;
-    @include quick_type(82px,85px,null);
+    max-width: 645px;
+    @include quick_type(82px, 85px, null);
   }
 }
 
@@ -273,7 +276,7 @@ ul#sec_one_selling_points {
     display: none;
     @include mq(small_laptop) {
       display: block;
-      margin:0;
+      margin: 0;
     }
   }
 }
@@ -284,13 +287,6 @@ img#hero {
   @include image();
   @include box(100%);
   @include abs(0, null, null, 0);
-}
-
-#video_overlay {
-  background: transparent;
-  @include box(100%);
-  @include abs(0, null, null, 0);
-  @include flex(center, center);
 }
 
 a.free_consult_button {
@@ -348,7 +344,7 @@ span#sec_one_logo_title {
     @include flex();
   }
   @include mq(small_monitor) {
-    margin: 48px 0 0px; 
+    margin: 48px 0 0px;
   }
 }
 
@@ -406,11 +402,11 @@ span#sec_one_logo_title {
     padding: 61px 0 0 0;
   }
   @include mq(small_monitor) {
-    flex-basis:675px;
+    flex-basis: 675px;
     padding: 103px 0 0 0;
   }
   @include mq(monitor) {
-    flex-basis:800px;
+    flex-basis: 800px;
   }
   .gform_wrapper {
     padding: 23px 0 0 0;
@@ -428,7 +424,7 @@ span#sec_one_logo_title {
         position: relative;
         text-align: left;
         @include mq(small_monitor) {
-          margin-bottom:14px;
+          margin-bottom: 14px;
         }
         &:nth-of-type(-n + 4) {
           flex-basis: 49%;
@@ -448,9 +444,8 @@ span#sec_one_logo_title {
             )
           );
           @include mq(small_monitor) {
-            font-size:30px;
+            font-size: 30px;
             @include abs(22px, 15px, null, null);
-
           }
         }
         label {
@@ -476,7 +471,7 @@ span#sec_one_logo_title {
             padding: 12px 22px 12px 10px;
           }
           @include mq(large_laptop) {
-            font-size:13px;
+            font-size: 13px;
             padding: 15px 25px 15px 10px;
           }
           @include mq(small_monitor) {
@@ -487,10 +482,10 @@ span#sec_one_logo_title {
         textarea {
           height: 74px;
           @include mq(large_laptop) {
-            height:121px;
+            height: 121px;
           }
           @include mq(small_monitor) {
-            height:111px;
+            height: 111px;
           }
         }
         select {
@@ -549,11 +544,11 @@ span#sec_one_logo_title {
         );
         @include mq(large_laptop) {
           padding: 14px 25px;
-          @include quick_type(20px,null,null);
+          @include quick_type(20px, null, null);
         }
         @include mq(small_monitor) {
           padding: 14px 30px;
-          @include quick_type(24px,null,null);
+          @include quick_type(24px, null, null);
         }
       }
     }
@@ -594,10 +589,10 @@ span.required {
   );
   @include mq(large_laptop) {
     margin-top: -76px;
-    font-size:11px;
+    font-size: 11px;
   }
   @include mq(small_monitor) {
-    font-size:15px;
+    font-size: 15px;
     margin-top: -96px;
   }
   &:before {
@@ -613,7 +608,7 @@ span.required {
       )
     );
     @include mq(small_monitor) {
-      font-size:30px;
+      font-size: 30px;
       margin-top: 1px;
     }
   }
@@ -652,9 +647,9 @@ span#sec_one_form_title {
     )
   );
   @include mq(large_laptop) {
-    @include quick_type(30px,31px,null);
+    @include quick_type(30px, 31px, null);
   }
   @include mq(small_monitor) {
-    @include quick_type(37px,39px,null);
+    @include quick_type(37px, 39px, null);
   }
 }

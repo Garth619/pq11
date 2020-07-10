@@ -26,16 +26,15 @@
     padding: 0px 95px 120px;
   }
   @include mq(small_monitor) {
-    max-width:1920px;
+    max-width: 1920px;
     padding: 0px 106px 110px;
     @include margin_lr;
   }
 }
 
-
 .page_container.two_col {
   @include mq(small_laptop) {
-    @include flex();
+    @include flex(space-between);
   }
   @include mq(large_laptop) {
     padding: 0px 95px 60px 160px;
@@ -45,13 +44,12 @@
   }
 }
 
-
 .internal_wrapper {
   span.double_line {
-    max-width:135px;
+    max-width: 135px;
     @include margin_lr;
     @include mq(small_monitor) {
-      max-width:224px;
+      max-width: 224px;
     }
   }
 }

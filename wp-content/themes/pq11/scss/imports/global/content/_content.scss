@@ -201,7 +201,7 @@ body {
       @include abs(0, null, null, 0);
     }
   }
-  span.double_line {
+  span.double_line.blockquote {
     max-width: 76px;
     margin-bottom: 15px;
     margin-top: 35px;

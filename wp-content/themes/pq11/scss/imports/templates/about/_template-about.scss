@@ -45,6 +45,9 @@
     max-width: 570px;
     @include margin_lr;
   }
+  @include mq(large_laptop) {
+    max-width: 640px;
+  }
   @include mq(small_monitor) {
     max-width: 836px;
     @include quick_type(19px, 35px, null);
@@ -59,25 +62,110 @@ img#about_banner_image {
   @include box(100%);
 }
 
-.page_container.about_container {
+.page_container.about_container.two_col {
   padding-top: 35px;
   padding-bottom: 35px;
+  @include mq(small_laptop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include mq(large_laptop) {
+    padding: 60px 95px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1635px;
+    padding: 90px 95px;
+  }
 }
 
-// .about_container {
-//   padding: 0 35px 55px;
-//   @include mq(small_tablet) {
-//     padding: 0 60px 65px;
-//   }
-//   @include mq(small_laptop) {
-//     padding: 0 111px 90px;
-//   }
-//   @include mq(large_laptop) {
-//     padding: 0px 95px 120px;
-//   }
-//   @include mq(small_monitor) {
-//     max-width: 1920px;
-//     padding: 0px 106px 110px;
-//     @include margin_lr;
-//   }
-// }
+#about_video_wrapper {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  @include mq(small_laptop) {
+    margin-top: 10px;
+  }
+  @include mq(small_monitor) {
+    margin-bottom: 39px;
+  }
+  ul {
+    margin-top: 25px;
+    @include mq(small_tablet) {
+      margin: 0 0 0 40px;
+    }
+    li {
+      text-transform: uppercase;
+      padding-left: 16px;
+      font-weight: 700;
+      @include mq(small_tablet) {
+        font-size: 15px;
+      }
+      @include mq(small_monitor) {
+        @include type(
+          (
+            size: 16px,
+            spacing: 2.4px,
+            height: 26px,
+            weight: 700,
+          )
+        );
+      }
+      &:before {
+        background: $color_bright_two;
+        @include mq(small_monitor) {
+          top: 12px;
+        }
+      }
+    }
+  }
+}
+
+#about_video_inner {
+  @include mq(small_tablet) {
+    padding-bottom: 35px;
+    @include flex(null, center);
+  }
+  @include mq(small_monitor) {
+    padding-bottom: 49px;
+  }
+}
+
+#about_video {
+  border: 7px solid $color_light_one;
+  position: relative;
+  box-shadow: 0px 3px 6px #0000007c;
+  max-width: 294px;
+  @include box(100%, 180px);
+  @include mq(small_laptop) {
+    @include box(208px, 135px);
+  }
+  @include mq(large_laptop) {
+    @include box(199px, 121px);
+  }
+  @include mq(small_monitor) {
+    border: 9px solid $color_light_one;
+    @include box(271px, 164px);
+  }
+  img {
+    object-fit: cover;
+    @include abs(0, null, null, 0);
+    @include image();
+    @include box(100%);
+  }
+  .play_button {
+    @include box(90px);
+    &:before {
+      @include box(70px);
+    }
+    &:after {
+      @include abs(32px, null, null, 37px);
+      @include tri(right, 11px, 15px, $color_bright_one);
+    }
+  }
+}
+
+.about_col {
+  flex-basis: 47%;
+  @include mq(large_laptop) {
+    flex-basis: 46%;
+  }
+}

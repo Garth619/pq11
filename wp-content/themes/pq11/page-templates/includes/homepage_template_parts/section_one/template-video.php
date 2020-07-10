@@ -4,12 +4,12 @@
 
     <img src='<?php bloginfo('template_directory');?>/images/vid.jpg' />
 
-  </a>
-
-  <div id='video_overlay'>
+    <div id='video_overlay'>
 
     <div class='play_button'></div><!-- play_button -->
 
   </div><!-- video_overlay -->
+
+  </a>
 
 </div><!-- sec_one_video -->

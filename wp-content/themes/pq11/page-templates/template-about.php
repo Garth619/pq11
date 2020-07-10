@@ -48,6 +48,39 @@ get_header(); ?>
 		</div><!-- about_col -->
 
 		<div class='about_col'>
+
+			<div id='about_video_wrapper'>
+
+				<div id='about_video_inner'>
+				
+				<div id='about_video'>
+
+					<a href="">
+
+						<img src='<?php bloginfo('template_directory');?>/images/vid.jpg' />
+
+						<div id='video_overlay'>
+
+							<div class='play_button'></div><!-- play_button -->
+
+						</div><!-- video_overlay -->
+
+					</a>
+
+				</div><!-- about_video -->
+
+				<ul>
+					<li>60+ YeARS EXPERTISE</li>
+					<li>$500M+ IN RESULTS</li>
+					<li>10K+ CLIENTS SERVED</li>
+				</ul>
+
+
+				</div><!-- about_video_inner -->
+
+				<span class='double_line'></span><!-- double_line -->
+			
+			</div><!-- about_video_wrapper -->
 		
 			<h3>The Latest Technology</h3>
 
