@@ -93,6 +93,102 @@ get_header(); ?>
 		</div><!-- page_container -->
 		
 	</div><!-- about_container -->
+
+	<div id='about_bottom_wrapper'>
+	
+		<div id='about_bottom_inner'>
+		
+			<span id='about_bottom_title'>Nationally Recognized</span><!-- about_bottom_title -->
+
+			<span class='double_line'></span><!-- double_line -->
+
+			<div id='about_bottom_slider_wrapper'>
+			
+				<div id='about_bottom_slider'>
+				
+					<div class='about_bottom_slide'>
+				
+						<div class='about_bottom_slide_inner'>
+
+							<img src='<?php bloginfo('template_directory');?>/images/news-cnn.svg' />
+				
+					</div><!-- about_bottom_slide_inner -->
+			
+				</div><!-- about_bottom_slide -->
+
+				<div class='about_bottom_slide'>
+				
+						<div class='about_bottom_slide_inner'>
+
+							<img src='<?php bloginfo('template_directory');?>/images/news-today.svg' />
+				
+					</div><!-- about_bottom_slide_inner -->
+			
+				</div><!-- about_bottom_slide -->
+
+				<div class='about_bottom_slide'>
+				
+						<div class='about_bottom_slide_inner'>
+
+							<img src='<?php bloginfo('template_directory');?>/images/news-time.svg' />
+				
+					</div><!-- about_bottom_slide_inner -->
+			
+				</div><!-- about_bottom_slide -->
+
+				<div class='about_bottom_slide'>
+				
+						<div class='about_bottom_slide_inner'>
+
+							<img src='<?php bloginfo('template_directory');?>/images/news-usa.svg' />
+				
+					</div><!-- about_bottom_slide_inner -->
+			
+				</div><!-- about_bottom_slide -->
+
+				<div class='about_bottom_slide'>
+				
+						<div class='about_bottom_slide_inner'>
+
+							<img src='<?php bloginfo('template_directory');?>/images/news-espn.svg' />
+				
+					</div><!-- about_bottom_slide_inner -->
+			
+				</div><!-- about_bottom_slide -->
+
+				<div class='about_bottom_slide'>
+				
+						<div class='about_bottom_slide_inner'>
+
+							<img src='<?php bloginfo('template_directory');?>/images/news-cnn.svg' />
+				
+					</div><!-- about_bottom_slide_inner -->
+			
+				</div><!-- about_bottom_slide -->
+				
+				</div><!-- about_bottom_slider -->
+
+				<div id='about_bottom_counter'>
+				
+					<div id='about_bottom_left_arrow' class="about_bottom_arrow">
+					
+						<?php echo file_get_contents( get_template_directory() . '/images/news-arrow.svg' ); ?>
+					
+					</div><!-- about_bottom_left_arrow -->
+
+					<div id='about_bottom_right_arrow' class="about_bottom_arrow">
+					
+					<?php echo file_get_contents( get_template_directory() . '/images/news-arrow.svg' ); ?>
+				
+				</div><!-- about_bottom_right_arrow -->
+				
+				</div><!-- about_bottom_counter -->
+			
+			</div><!-- about_bottom_slider_wrapper -->
+		
+		</div><!-- about_bottom_inner -->
+	
+	</div><!-- about_bottom_wrapper -->
 	
 </div><!-- internal_main -->
 		

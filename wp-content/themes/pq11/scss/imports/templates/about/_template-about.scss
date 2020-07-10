@@ -74,7 +74,7 @@ img#about_banner_image {
   }
   @include mq(small_monitor) {
     max-width: 1635px;
-    padding: 90px 95px;
+    padding: 90px 95px 74px;
   }
 }
 
@@ -168,4 +168,106 @@ img#about_banner_image {
   @include mq(large_laptop) {
     flex-basis: 46%;
   }
+}
+
+#about_bottom_wrapper {
+  position: relative;
+  &:after {
+    background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
+    opacity: 0.6;
+    @include box(100%);
+    @include abs(0, null, null, 0);
+    @include contentdisplay();
+  }
+}
+
+#about_bottom_inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 45px 35px;
+  @include mq(small_laptop) {
+    padding: 75px 35px;
+  }
+  span.double_line {
+    max-width: 73px;
+    margin-top: 20px;
+    @include margin_lr;
+  }
+}
+
+span#about_bottom_title {
+  @include type(
+    (
+      size: 12px,
+      spacing: 1.1px,
+      height: 17px,
+      family: $primaryfont,
+      color: $color_dark_three,
+      weight: 600,
+      transform: uppercase,
+    )
+  );
+  @include mq(large_laptop) {
+    font-size: 15px;
+  }
+}
+
+#about_bottom_slider_wrapper {
+  margin-top: 40px;
+  @include mq(large_laptop) {
+    margin-top: 68px;
+  }
+}
+
+#about_bottom_slider {
+  max-width: 765px;
+  @include margin_lr;
+  @include mq(small_laptop) {
+    max-width: 965px;
+  }
+  @include mq(large_laptop) {
+    max-width: 1200px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1400px;
+  }
+}
+
+.about_bottom_slide {
+  .about_bottom_slide_inner {
+    height: 100%;
+    @include flex(center, center);
+    img {
+      @include image();
+      height: 44px;
+      margin: 0;
+      @include mq(small_tablet) {
+        height: 34px;
+      }
+      @include mq(small_laptop) {
+        height: 40px;
+      }
+      @include mq(small_monitor) {
+        height: 48px;
+      }
+    }
+  }
+}
+
+#about_bottom_counter {
+  margin-top: 37px;
+  @include flex(center, center);
+  @include mq(large_laptop) {
+    margin-top: 60px;
+  }
+}
+
+.about_bottom_arrow {
+  margin: 0 33px;
+  @include box(12px, 20px);
+}
+
+#about_bottom_right_arrow {
+  transform: rotate(-180deg);
 }
