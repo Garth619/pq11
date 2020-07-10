@@ -9,9 +9,17 @@ body.page-template-template-caseresults {
   @include mq(small_tablet) {
     padding-top: 40px;
   }
+  @include mq(small_monitor) {
+    padding-top: 55px;
+    max-width: 1422px;
+    @include margin_lr;
+  }
 }
 
 #select_wrapper {
+  @include mq(large_laptop) {
+    text-align: left;
+  }
 }
 
 span#select_category_title {
@@ -35,6 +43,13 @@ span#select_category_title {
   text-align: left;
   max-width: 390px;
   @include margin_lr;
+  @include mq(large_laptop) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @include mq(small_monitor) {
+    max-width: 489px;
+  }
   @include type(
     (
       size: 14px,
@@ -46,10 +61,14 @@ span#select_category_title {
       transform: uppercase,
     )
   );
+  @include mq(small_monitor) {
+    @include quick_type(16px, 19px, null);
+  }
 }
 
 #select_input {
   background: $color_light_one;
+  box-shadow: 0px 1px 20px #0000001a;
 }
 
 span#select_input_title {
@@ -57,10 +76,17 @@ span#select_input_title {
   padding: 17px 45px 17px 20px;
   position: relative;
   border-bottom: 2px solid $color_bright_two;
+  @include mq(small_monitor) {
+    padding: 24px 45px 24px 37px;
+  }
   &:after {
     @include abs(22px, 16px, null, null);
     @include contentdisplay();
     @include tri(down, 5px, 5px, $color_dark_two);
+    @include mq(small_monitor) {
+      top: 31px;
+      @include tri(down, 6px, 6px, $color_dark_two);
+    }
   }
 }
 
@@ -93,7 +119,7 @@ span#select_input_title {
 }
 
 #case_result_boxes {
-  margin: 35px 0 -22px;
+  margin: 55px 0 -22px;
 }
 
 .single_cr {
@@ -102,6 +128,12 @@ span#select_input_title {
   padding: 30px;
   @include mq(small_tablet) {
     padding: 45px 40px;
+  }
+  @include mq(large_laptop) {
+    padding: 60px 40px;
+  }
+  @include mq(small_monitor) {
+    padding: 87px 40px 50px;
   }
   &:last-of-type {
     margin-bottom: 0;
@@ -121,6 +153,12 @@ span#select_input_title {
           weight: 500,
         )
       );
+      @include mq(large_laptop) {
+        @include quick_type(27px, 32px, null);
+      }
+      @include mq(small_monitor) {
+        @include quick_type(30px, 35px, null);
+      }
     }
     &.single_cr_type {
       margin-top: 25px;
@@ -135,9 +173,16 @@ span#select_input_title {
           transform: uppercase,
         )
       );
+      @include mq(large_laptop) {
+        @include quick_type(15px, 19px, null);
+      }
     }
   }
-  .single_cr_type {
+  .single_cr_content {
     margin-top: 10px;
+    @include mq(small_monitor) {
+      max-width: 590px;
+      margin: 15px auto 0;
+    }
   }
 }
