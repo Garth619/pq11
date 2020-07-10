@@ -231,38 +231,26 @@ jQuery(document).ready(function ($) {
     ],
   });
 
-  //  // case results
+  // case results
 
-  //  if($('#case_results_wrapper').length >0 ){
+  var cr_container = "#case_result_boxes";
 
-  //  var macyInstance = Macy({
-  //   container: '#case_results_wrapper',
-  // 	columns: 3,
-  // 	margin: {
-  //     x: 100,
-  //     y: 109,
-  //   },
-  // 	breakAt: {
-  //     1695: {
-  //       margin: {
-  //         x: 35,
-  //         y: 40,
-  //       },
-  //       columns: 3
-  //     },
-  //         1275: 2,
-  //         767: {
-  //           margin: {
-  //             x: 0,
-  //             y: 40,
-  //           },
-  //           columns: 1
-  //         }
-
-  //   }
-  // });
-
-  // }
+  if ($(cr_container).length > 0) {
+    var macyInstance = Macy({
+      container: cr_container,
+      columns: 2,
+      margin: {
+        x: 22,
+        y: 22,
+      },
+      breakAt: {
+        1275: 2,
+        767: {
+          columns: 1,
+        },
+      },
+    });
+  }
 
   /* Remove "#" from menu anchor items to avoid jump to the top of the page
 --------------------------------------------------------------------------------------- */
@@ -308,6 +296,49 @@ jQuery(document).ready(function ($) {
       $(this).parent().toggleClass("active");
     }
   );
+
+  // case results filter
+
+  // mimic select dropdown
+
+  // when you click the top the dropdown part slides down
+
+  $("#select_input").on("click", function (e) {
+    $(this).next("#select_dropdown").toggleClass("open");
+  });
+
+  // when you click on a list item you want, this gets the text() info then traverses to the top and replaces the text with the new text
+
+  $("#select_dropdown_inner ul li").on("click", function (e) {
+    // gets text
+
+    var caseresultstext = $(this).text();
+
+    // takes the text and climbs back up to the top and replaces the text with the new text, there is probably cleaner ways to do this haha
+
+    $(this)
+      .closest("#select_dropdown_inner")
+      .parent()
+      .prev("#select_input")
+      .find("span")
+      .replaceWith(
+        "<span id='select_input_title'>" + caseresultstext + "<span>"
+      );
+
+    // then the dropdown slides back up
+
+    $("#select_dropdown").removeClass("open");
+  });
+
+  // this mimics the way a select dropdown closes when you decide not to choose an option but just click outside of the select, the dropdown slides back up too
+
+  $(document).click(function (e) {
+    var container = $("#select_dropdown_wrapper");
+
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      $("#select_dropdown").removeClass("open");
+    }
+  });
 
   // resize - tablet and desktop top navigatons behave differently. These turn off click functions at certain window widths without reloading the page
 
