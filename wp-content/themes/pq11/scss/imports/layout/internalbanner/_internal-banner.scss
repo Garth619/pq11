@@ -89,8 +89,16 @@ img#internal_hero {
     display: inline-block;
   }
   span {
-    padding: 14px 25px;
+    padding: 14px 28px;
     font-size: 18px;
+    @include mq(large_laptop) {
+      font-size: 22px;
+      padding: 16px 28px;
+    }
+    @include mq(small_monitor) {
+      font-size: 24px;
+      padding: 18px 28px;
+    }
   }
 }
 

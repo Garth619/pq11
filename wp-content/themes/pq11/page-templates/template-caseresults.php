@@ -4,45 +4,50 @@
 
 get_header(); ?>
 
-<div id="internal_main" class="no_banner">
+<div id="internal_main">
+
+	<?php get_template_part('page-templates/includes/template','default-page-banner'); ?>
 	
-	<div class="page_container one_col">
+	<div class="page_container">
 
-		<h1 class="page_header center"><?php the_title();?></h1><!-- page_header -->
-		
-		<div id='case_results_wrapper'>
+		<div id='case_results_wrapper' class="internal_wrapper">
 
-		<?php if ( have_rows( 'case_results_page' ) ) : ?>
-			<?php while ( have_rows( 'case_results_page' ) ) : the_row(); ?>
-
-
-			<div class='single_case_result'>
+			<div id='select_wrapper'>
 			
-			<div class='single_cr_title_wrapper'>
-			
-				<span class='single_cr_title'><?php the_sub_field( 'type' ); ?></span><!-- single_cr_title -->
-			
-			</div><!-- single_cr_title_wrapper -->
+				<span id='select_category_title'>Select Category</span><!-- select_category_title -->
 
-			<div class='single_cr_content'>
-			
-				<span class='single_amount'><?php the_sub_field( 'amount' ); ?></span><!-- single_amount -->
-
-				<div class='single_cr_descr'>
+				<div id='select_dropdown_wrapper'>
 				
-				<?php the_sub_field( 'description' ); ?>
+					<div id='select_input'>
+					
+						<span id='select_input_title'>Test</span><!-- class -->
+					
+					</div><!-- select_input -->
 
-				</div><!-- single_cr_descr -->
+					<div id='select_dropdown'>
+					
+						<div id='select_dropdown_inner'>
+						
+							<ul>
+								<li>Test 1</li>
+								<li>Test 2</li>
+								<li>Test 3</li>
+								<li>Test 4</li>
+								<li>Test 5</li>
+								<li>Test 6</li>
+								<li>Test 7</li>
+								<li>Test 8</li>
+								<li>Test 9</li>
+							</ul>
+						
+						</div><!-- select_dropdown_inner -->
+					
+					</div><!-- select_dropdown -->
+				
+				</div><!-- select_dropdown_wrapper -->
 			
-			</div><!-- single_cr_content -->
-		
-		</div><!-- single_case_result -->
+			</div><!-- select_wrapper -->
 
-		
-			<?php endwhile; ?>
-		<?php endif; ?>
-
-		
 		</div><!-- case_results_wrapper -->
 		
 	</div><!-- page_container -->
