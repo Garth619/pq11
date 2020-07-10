@@ -124,7 +124,7 @@ body {
       @include quick_type(17px, 30px, null);
     }
     @include mq(small_monitor) {
-      margin-bottom: 14px;
+      margin-bottom: 9px;
       @include quick_type(19px, 30px, null);
     }
   }
