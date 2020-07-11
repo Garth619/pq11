@@ -108,24 +108,41 @@ span#select_input_title {
   @include abs(0, null, null, 0);
   ul {
     list-style: none;
-    height: 315px;
+    //height: 269px;
     overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+    // -webkit-overflow-scrolling: touch;
+    @include mq(small_monitor) {
+    }
     li {
       padding: 17px 45px 17px 20px;
       border-bottom: 1px solid $color_dark_one;
+      @include mq(small_monitor) {
+        padding: 24px 45px 24px 37px;
+      }
+      a {
+        text-decoration: none;
+        color: $color_dark_two;
+        transition: all 200ms $color_bright_two;
+      }
     }
   }
 }
 
 #case_result_boxes {
   margin: 55px 0 -22px;
+  @include mq(small_tablet) {
+    column-count: 2;
+    column-gap: 22px;
+  }
 }
 
 .single_cr {
+  width: 100%;
+  display: inline-block;
   background: $color_light_one;
   box-shadow: 0px 1px 20px #0000001a;
   padding: 30px;
+  margin-bottom: 22px;
   @include mq(small_tablet) {
     padding: 45px 40px;
   }
