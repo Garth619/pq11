@@ -29,11 +29,11 @@ get_header(); ?>
 						<div id='select_dropdown_inner'>
 						
 							<ul>
-								<li><a href="">Test 1</a></li>
-								<li><a href="">Test 2</a></li>
-								<li><a href="">Test 3</a></li>
-								<li><a href="">Test 4</a></li>
-								<li><a href="">Test 5</a></li>
+								<li data-filter="test-1">Test 1</li>
+								<li data-filter="test-2">Test 2</li>
+								<li data-filter="test-3">Test 3</li>
+								<li data-filter="test-4">Test 4</li>
+								<li data-filter="test-5">Test 5</li>
 							</ul>
 						
 						</div><!-- select_dropdown_inner -->
@@ -187,6 +187,7 @@ get_header(); ?>
 					</div><!-- single_cr_inner -->
 				
 				</div><!-- single_cr -->
+
 			
 			</div><!-- case_result_boxes -->
 
