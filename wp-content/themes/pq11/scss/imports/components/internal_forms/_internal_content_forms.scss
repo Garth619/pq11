@@ -21,11 +21,11 @@
           text-decoration: underline;
         }
         label {
-          display: block;
+          display: none;
           margin-bottom: 10px;
           span.gfield_required {
             margin-left: 5px;
-            color: $internal_form_label_required;
+            //color: $internal_form_label_required;
           }
         }
         .ginput_container {
@@ -35,17 +35,23 @@
             max-width: 425px;
           }
           input,
-          textarea {
+          textarea,
+          select {
             padding: 12px 15px;
-            background: #fff;
-            border: 1px solid $internal_form_border_bg_color;
+            max-width: 425px;
+            width: 100%;
+            background: $color_light_one;
+            border: 1px solid $color_dark_two;
             @include type(
               (
-                size: $internal_form_size,
+                size: 16px,
                 family: $primaryfont,
-                color: $internal_form_color,
+                color: $color_dark_two,
               )
             );
+          }
+          select {
+            -webkit-appearance: none;
           }
           ul {
             margin-bottom: 0;
@@ -102,10 +108,10 @@
         z-index: -1;
       }
       &:before {
-        background: $internal_form_button_bg_color;
+        background: $color_grad_one;
       }
       &:after {
-        background: $internal_form_button_bg_hover_color;
+        background: $color_bright_two;
         opacity: 0;
         transition: all 200ms ease-in-out;
       }
@@ -121,12 +127,12 @@
         cursor: pointer;
         @include type(
           (
-            size: $internal_form_button_size,
-            spacing: $internal_form_button_spacing,
+            size: 16px,
+            spacing: 1px,
             height: null,
             family: $primaryfont,
-            color: $internal_form_button_color,
-            weight: $internal_form_button_weight,
+            color: $color_light_one,
+            weight: 400,
             align: center,
             transform: uppercase,
             style: normal,
@@ -142,10 +148,9 @@
       text-align: left;
       @include type(
         (
-          size: $internal_form_error_size,
+          size: 14px,
           family: $primaryfont,
-          color: $internal_form_error_color,
-          weight: $internal_form_error_weight,
+          color: $color_bright_two,
         )
       );
     }

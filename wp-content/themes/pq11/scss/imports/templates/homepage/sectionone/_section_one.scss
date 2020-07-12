@@ -367,8 +367,10 @@ span#sec_one_logo_title {
       }
     }
     img {
+      filter: invert(88%) saturate(0%);
     }
-    svg {
+    svg,
+    img {
       height: 25px;
       @include mq(small_tablet) {
         height: 27px;

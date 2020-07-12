@@ -231,11 +231,10 @@ jQuery(document).ready(function ($) {
     ],
   });
 
-  // case results
+  /* Case Rseults Page
+--------------------------------------------------------------------------------------- */
 
-  // mimic select dropdown
-
-  // when you click the top the dropdown part slides down
+  // mimic select dropdown when you click the top the dropdown part slides down
 
   $("#select_input").on("click", function (e) {
     $(this).next("#select_dropdown").toggleClass("open");
@@ -289,7 +288,8 @@ jQuery(document).ready(function ($) {
     goBack();
   });
 
-  // sidebar title double_line
+  /* Red Double Line Styling Insert
+--------------------------------------------------------------------------------------- */
 
   $('<span class="double_line"></span>').insertAfter(".widget h3");
 
@@ -299,7 +299,8 @@ jQuery(document).ready(function ($) {
     "ul.pa_directory_top_menu > li > a"
   );
 
-  //  sidebar current class
+  /* Sidebar Current Class for Blog Sidebars
+--------------------------------------------------------------------------------------- */
 
   // add active to blog widgets that dont show a built in current class
 
@@ -318,6 +319,9 @@ jQuery(document).ready(function ($) {
       $(this).parent().toggleClass("active");
     }
   );
+
+  /* Resize Nav Functions
+--------------------------------------------------------------------------------------- */
 
   // resize - tablet and desktop top navigatons behave differently. These turn off click functions at certain window widths without reloading the page
 

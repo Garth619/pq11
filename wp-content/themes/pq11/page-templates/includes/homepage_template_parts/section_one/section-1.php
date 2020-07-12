@@ -43,18 +43,8 @@
             <div class='sec_one_slide'>
 
               <div class='sec_one_slide_inner'>
-              
-                <?php echo file_get_contents( get_template_directory() . '/images/cnn-new.svg' ); ?>
-              
-              </div><!-- sec_one_slide_inner -->
-            
-            </div><!-- sec_one_slide -->
 
-            <div class='sec_one_slide'>
-
-              <div class='sec_one_slide_inner'>
-              
-                <?php echo file_get_contents( get_template_directory() . '/images/time-new.svg' ); ?>
+                <img src='<?php bloginfo('template_directory');?>/images/cnn-new.svg'/>
               
               </div><!-- sec_one_slide_inner -->
             
@@ -64,7 +54,17 @@
 
               <div class='sec_one_slide_inner'>
 
-                <?php echo file_get_contents( get_template_directory() . '/images/cnn-new.svg' ); ?>
+                <img src='<?php bloginfo('template_directory');?>/images/time-new.svg'/>
+              
+              </div><!-- sec_one_slide_inner -->
+            
+            </div><!-- sec_one_slide -->
+
+            <div class='sec_one_slide'>
+
+              <div class='sec_one_slide_inner'>
+
+                <img src='<?php bloginfo('template_directory');?>/images/cnn-new.svg'/>
 
               </div><!-- sec_one_slide_inner -->
 
@@ -73,8 +73,8 @@
             <div class='sec_one_slide'>
 
               <div class='sec_one_slide_inner'>
-              
-                <?php echo file_get_contents( get_template_directory() . '/images/espn-new.svg' ); ?>
+
+                <img src='<?php bloginfo('template_directory');?>/images/espn-new.svg'/>
               
               </div><!-- sec_one_slide_inner -->
             

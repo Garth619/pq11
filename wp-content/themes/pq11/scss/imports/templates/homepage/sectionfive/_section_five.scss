@@ -3,7 +3,7 @@
 ////////////////////////////////////////////////////////////////////
 
 #section_five {
-  background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
+  position: relative;
   padding: 63px 20px 43px;
   @include mq(small_tablet) {
     padding: 63px 60px 43px;
@@ -17,15 +17,24 @@
   @include mq(small_monitor) {
     padding: 168px 88px 100px;
   }
+  &:after {
+    background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
+    background-size: (500px, 500px);
+    opacity: 0.53;
+    @include abs(0, null, null, 0);
+    @include box(100%, 100%);
+    @include contentdisplay();
+  }
 }
 
-
 #sec_five_inner {
+  position: relative;
+  z-index: 1;
   @include mq(small_laptop) {
     @include flex();
   }
   @include mq(small_monitor) {
-    max-width:1440px;
+    max-width: 1440px;
     @include margin_lr;
   }
 }
@@ -37,42 +46,42 @@
     @include margin_lr;
   }
   @include mq(small_tablet) {
-    max-width:100%;
+    max-width: 100%;
     text-align: left;
     @include flex(space-between);
   }
   @include mq(small_laptop) {
-    display:block;
-    flex-shrink:0;
-    flex-basis:336px;
+    display: block;
+    flex-shrink: 0;
+    flex-basis: 336px;
   }
   @include mq(large_laptop) {
-    flex-basis:490px;
+    flex-basis: 490px;
   }
   @include mq(small_monitor) {
-    flex-basis:576px;
+    flex-basis: 576px;
   }
   span.double_line {
-    max-width:76px;
+    max-width: 76px;
     @include mq(mobile) {
       @include margin_lr;
     }
     @include mq(small_tablet) {
-      margin:0;
+      margin: 0;
     }
-    &:before, &:after {
-      background:$color_bright_two;
+    &:before,
+    &:after {
+      background: $color_bright_two;
     }
   }
 }
 
-
 #sec_five_image_wrapper {
-  overflow:hidden;
-  margin-bottom:30px;
+  overflow: hidden;
+  margin-bottom: 30px;
   @include mq(small_tablet) {
-    flex-shrink:0;
-    flex-basis:316px;
+    flex-shrink: 0;
+    flex-basis: 316px;
   }
   img {
     @include image();
@@ -84,7 +93,7 @@
 
 #sec_five_left_content {
   @include mq(small_tablet) {
-    flex-grow:1;
+    flex-grow: 1;
     margin: 26px 0 0 28px;
   }
   @include mq(small_laptop) {
@@ -96,32 +105,31 @@
 }
 
 #sec_five_intro {
-  display:block;
-  margin:25px 0 18px;
+  display: block;
+  margin: 25px 0 18px;
   padding-right: 10px;
-  @include type (
+  @include type(
     (
       size: 24px,
       height: 26px,
       family: $secondaryfont,
       color: $color_dark_three,
-      weight: 500 
+      weight: 500,
     )
   );
   @include mq(small_tablet) {
-    max-width:435px;
+    max-width: 435px;
   }
   @include mq(small_laptop) {
-    max-width:100%;
+    max-width: 100%;
     margin: 27px 0 37px;
-    @include quick_type(30px,32px,null);
+    @include quick_type(30px, 32px, null);
   }
   @include mq(small_monitor) {
     margin: 27px 0 30px;
-    @include quick_type(45px,45px,null);
+    @include quick_type(45px, 45px, null);
   }
 }
-
 
 #sec_five_right {
   margin: 42px 0 0;
@@ -129,12 +137,12 @@
     margin: 13px 0 0;
   }
   @include mq(small_laptop) {
-    padding-left:53px;
-    padding-right:130px;
-    margin-top:0;
+    padding-left: 53px;
+    padding-right: 130px;
+    margin-top: 0;
   }
   @include mq(large_laptop) {
     padding-left: 103px;
-    padding-right:0;
+    padding-right: 0;
   }
 }
