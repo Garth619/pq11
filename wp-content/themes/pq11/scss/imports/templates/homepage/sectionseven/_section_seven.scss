@@ -8,7 +8,7 @@
     padding: 69px 40px 30px;
   }
   @include mq(large_laptop) {
-    padding: 102px 40px 30px;
+    padding: 73px 40px 15px;
   }
   @include mq(small_monitor) {
     padding: 95px 40px 60px;
@@ -34,6 +34,7 @@
   }
   @include mq(small_laptop) {
     max-width: 922px;
+    text-align: left;
     @include margin_lr;
     @include flex();
   }
@@ -89,6 +90,7 @@ span#sec_seven_title {
   @include mq(large_laptop) {
     max-width: 174px;
     margin-bottom: 21px;
+    padding-top: 31px;
     text-align: left;
     @include quick_type(45px, 45px, null);
   }

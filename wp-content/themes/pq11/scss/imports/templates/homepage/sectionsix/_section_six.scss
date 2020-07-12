@@ -5,7 +5,10 @@
     padding: 80px 20px;
   }
   @include mq(small_laptop) {
-    padding: 116px 20px 85px;
+    padding: 63px 20px;
+  }
+  @include mq(large_laptop) {
+    padding: 106px 20px;
   }
   @include mq(small_monitor) {
     padding: 137px 20px;
@@ -51,7 +54,11 @@
   }
   @include mq(small_laptop) {
     max-width: 100%;
-    margin: 0 auto 38px;
+    margin: 0 auto 24px;
+    @include quick_type(35px, 45px, null);
+  }
+  @include mq(large_laptop) {
+    margin: 0 auto 41px;
     @include quick_type(45px, 45px, null);
   }
   @include mq(small_monitor) {
@@ -76,8 +83,13 @@
     margin: 30px auto 0;
   }
   @include mq(small_laptop) {
+    max-width: 687px;
+    margin: 28px auto 0;
+    @include quick_type(15px, 28px, null);
+  }
+  @include mq(large_laptop) {
+    margin: 38px auto 0;
     max-width: 777px;
-    margin: 36px auto 0;
     @include quick_type(17px, 35px, null);
   }
   @include mq(small_monitor) {
@@ -96,7 +108,10 @@
     @include margin_lr;
   }
   @include mq(small_laptop) {
-    max-width: 1020px;
+    max-width: 785px;
+  }
+  @include mq(large_laptop) {
+    max-width: 1005px;
   }
   @include mq(small_monitor) {
     max-width: 1350px;
@@ -115,7 +130,7 @@
         height: 34px;
       }
       @include mq(small_laptop) {
-        height: 40px;
+        height: 33px;
       }
     }
   }
@@ -133,6 +148,9 @@
   @include flex(center, center);
   @include mq(small_tablet) {
     margin-top: 55px;
+  }
+  @include mq(small_laptop) {
+    margin-top: 64px;
   }
   @include mq(large_laptop) {
     margin-top: 90px;

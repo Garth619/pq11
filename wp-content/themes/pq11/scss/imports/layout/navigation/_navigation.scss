@@ -4,6 +4,8 @@ nav {
   display: none;
   background: $color_dark_six;
   text-align: center;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   @include box(100%);
   @include fixed(127px, null, null, 0);
   @include mq(small_tablet) {
@@ -13,6 +15,7 @@ nav {
     display: flex !important;
     height: 40px;
     border-bottom: 3px solid $color_bright_two;
+    overflow-y: unset;
     @include abs(87px, null, null, 0);
     @include flex(null, center);
   }
@@ -103,18 +106,18 @@ nav {
       &:hover {
         @include mq(tablet) {
           > a {
-              color:$color_bright_two;
-              &:after {
-                @include mq(tablet) {
-                  @include tri(down, 3px, 3px, $color_bright_two);
-                }
-                @include mq(large_laptop) {
-                  @include tri(down, 4px, 5px, $color_bright_two);
-                }
-                @include mq(small_monitor) {
-                  @include tri(down, 5px, 6px, $color_bright_two);
-                }
+            color: $color_bright_two;
+            &:after {
+              @include mq(tablet) {
+                @include tri(down, 3px, 3px, $color_bright_two);
               }
+              @include mq(large_laptop) {
+                @include tri(down, 4px, 5px, $color_bright_two);
+              }
+              @include mq(small_monitor) {
+                @include tri(down, 5px, 6px, $color_bright_two);
+              }
+            }
           }
           ul.sub-menu {
             opacity: 1;
@@ -129,18 +132,23 @@ nav {
         @include mq(small_tablet) {
           margin-bottom: 8px;
         }
+        @include mq(tablet) {
+          background: none;
+          box-shadow: none;
+        }
       }
       > a {
         position: relative;
         &.active {
           color: $color_bright_two;
+
           &:after {
             @include tri(down, 3px, 3px, $color_bright_two);
           }
         }
         &:after {
           vertical-align: top;
-          transition:all 200ms ease-in-out;
+          transition: all 200ms ease-in-out;
           @include contentdisplay(inline-block);
           @include abs(6px, -15px, null, null);
           @include tri(down, 3px, 3px, $color_dark_three);
@@ -180,19 +188,19 @@ nav {
         color: $color_bright_two;
         &:after {
           @include tri(down, 3px, 3px, $color_bright_two);
-        
-        @include mq(large_laptop) {
-          @include tri(down, 4px, 5px, $color_bright_two);
+
+          @include mq(large_laptop) {
+            @include tri(down, 4px, 5px, $color_bright_two);
+          }
+          @include mq(small_monitor) {
+            @include tri(down, 5px, 6px, $color_bright_two);
+          }
         }
-        @include mq(small_monitor) {
-          @include tri(down, 5px, 6px, $color_bright_two);
-        }
-      }
       }
     }
     li.current-menu-item {
       > a {
-        color:$color_bright_two;
+        color: $color_bright_two;
       }
     }
   }
@@ -211,7 +219,7 @@ nav {
       opacity: 1;
       visibility: visible;
       padding-top: 5px;
-      padding-bottom: 15px;
+      padding-bottom: 5px;
     }
     @include mq(small_tablet) {
       padding-bottom: 8px;
@@ -231,7 +239,7 @@ nav {
     @include mq(large_laptop) {
       width: 219px;
       padding: 8px 30px 8px;
-      top:36px;
+      top: 36px;
       left: 0;
     }
     @include mq(small_monitor) {

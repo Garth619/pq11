@@ -9,7 +9,7 @@
     @include flex(space-between);
   }
   @include mq(small_laptop) {
-    max-width: 920px;
+    max-width: 1030px;
   }
   @include mq(large_laptop) {
     max-width: 1340px;

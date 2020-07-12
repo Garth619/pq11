@@ -188,7 +188,7 @@ jQuery(document).ready(function ($) {
         },
       },
       {
-        breakpoint: 1170,
+        breakpoint: 1380,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 4,

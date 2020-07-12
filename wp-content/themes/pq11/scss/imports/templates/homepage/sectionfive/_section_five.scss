@@ -12,7 +12,7 @@
     padding: 82px 88px 53px;
   }
   @include mq(large_laptop) {
-    padding: 82px 88px 100px;
+    padding: 112px 88px 100px;
   }
   @include mq(small_monitor) {
     padding: 168px 88px 100px;
@@ -24,6 +24,9 @@
     @include abs(0, null, null, 0);
     @include box(100%, 100%);
     @include contentdisplay();
+    @include mq(small_laptop) {
+      opacity: 0.54;
+    }
   }
 }
 
@@ -121,8 +124,13 @@
     max-width: 435px;
   }
   @include mq(small_laptop) {
+    max-width: 306px;
+    margin: 17px 0 19px;
+    @include quick_type(24px, 26px, null);
+  }
+  @include mq(large_laptop) {
     max-width: 100%;
-    margin: 27px 0 37px;
+    margin: 22px 0 38px;
     @include quick_type(30px, 32px, null);
   }
   @include mq(small_monitor) {
@@ -145,13 +153,13 @@
     padding-left: 103px;
     padding-right: 0;
   }
-  &.content {
-    ul {
-      li {
-        &:before {
-          background: $color_bright_two;
-        }
-      }
-    }
-  }
+  // &.content {
+  //   ul {
+  //     li {
+  //       &:before {
+  //         background: $color_bright_two;
+  //       }
+  //     }
+  //   }
+  // }
 }
