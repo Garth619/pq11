@@ -135,6 +135,7 @@
   }
   @include mq(small_monitor) {
     margin: 27px 0 30px;
+    max-width: 545px;
     @include quick_type(45px, 45px, null);
   }
 }

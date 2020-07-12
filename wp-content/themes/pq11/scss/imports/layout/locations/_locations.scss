@@ -28,6 +28,13 @@
     @include mq(large_laptop) {
       flex-basis: 325px;
       margin-left: 80px;
+      br {
+        &:first-of-type {
+          @include mq(large_laptop) {
+            display: none;
+          }
+        }
+      }
     }
     @include mq(small_monitor) {
       margin-left: 152px;
