@@ -92,6 +92,9 @@ img#about_banner_image {
     @include mq(small_tablet) {
       margin: 0 0 0 40px;
     }
+    @include mq(large_laptop) {
+      margin: 0 0 0 70px;
+    }
     li {
       text-transform: uppercase;
       padding-left: 16px;
@@ -193,6 +196,10 @@ img#about_banner_image {
     max-width: 73px;
     margin-top: 20px;
     @include margin_lr;
+    &:before,
+    &:after {
+      background: $color_bright_one;
+    }
   }
 }
 
