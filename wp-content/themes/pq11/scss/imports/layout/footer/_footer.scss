@@ -1,15 +1,15 @@
 footer {
   background: $color_dark_three;
-  border-bottom:2px solid $color_bright_two;
+  border-bottom: 2px solid $color_bright_two;
   @include mq(small_tablet) {
-    border-bottom:4px solid $color_bright_two;
+    border-bottom: 4px solid $color_bright_two;
   }
 }
 
 #footer_form_wrapper {
   padding: 54px 35px 142px;
   text-align: center;
-  max-width:490px;
+  max-width: 490px;
   @include margin_lr;
   @include mq(small_tablet) {
     padding: 85px 60px 163px;
@@ -21,7 +21,7 @@ footer {
     padding: 96px 60px 140px;
   }
   @include mq(large_laptop) {
-    max-width:961px;
+    max-width: 961px;
     padding: 119px 60px 162px;
   }
   @include mq(small_monitor) {
@@ -31,6 +31,10 @@ footer {
   span.double_line {
     width: 110px;
     @include margin_lr;
+    &:before,
+    &:after {
+      background: $color_bright_one;
+    }
   }
   ul {
     list-style: none;
@@ -124,10 +128,10 @@ footer {
       textarea {
         height: 125px;
         @include mq(small_laptop) {
-          height:108px;
+          height: 108px;
         }
         @include mq(large_laptop) {
-          height:121px;
+          height: 121px;
         }
       }
       select {
@@ -254,11 +258,11 @@ span#footer_from_title {
     margin-bottom: 20px;
   }
   @include mq(large_laptop) {
-    @include quick_type(45px,50px,null);
+    @include quick_type(45px, 50px, null);
   }
   @include mq(small_monitor) {
     margin-bottom: 30px;
-    @include quick_type(60px,60px,null);
+    @include quick_type(60px, 60px, null);
   }
 }
 
@@ -278,7 +282,7 @@ span#footer_from_title {
 #copyright_inner {
   text-align: center;
   @include mq(small_laptop) {
-    max-width:926px;
+    max-width: 926px;
     @include margin_lr;
     @include flex(space-between);
   }
@@ -293,8 +297,8 @@ span#footer_from_title {
     @include margin_lr;
     @include mq(small_tablet) {
       max-width: 100%;
-      margin-left:0;
-      margin-right:0;
+      margin-left: 0;
+      margin-right: 0;
     }
     li {
       display: inline-block;
@@ -309,14 +313,11 @@ span#footer_from_title {
           transform: uppercase,
         )
       );
-      @include mq(small_tablet) {
-        font-size:9px;
-      }
       @include mq(large_laptop) {
-        font-size:10px;
+        font-size: 10px;
       }
       @include mq(small_monitor) {
-        font-size:13px;
+        font-size: 13px;
       }
       &:after {
         margin: 0 7px 0 11px;
@@ -363,10 +364,10 @@ span#footer_from_title {
     img {
       width: 175px;
       @include mq(small_laptop) {
-        width:150px;
+        width: 150px;
       }
       @include mq(large_laptop) {
-        width:210px;
+        width: 210px;
       }
     }
   }

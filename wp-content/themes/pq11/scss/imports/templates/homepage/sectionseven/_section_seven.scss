@@ -8,7 +8,7 @@
     padding: 69px 40px 30px;
   }
   @include mq(large_laptop) {
-    padding: 102px 40px 30px
+    padding: 102px 40px 30px;
   }
   @include mq(small_monitor) {
     padding: 95px 40px 60px;
@@ -27,27 +27,27 @@
   position: relative;
   z-index: 1;
   text-align: center;
-  max-width:400px;
+  max-width: 400px;
   @include margin_lr;
   @include mq(small_tablet) {
-    max-width:650px;
+    max-width: 650px;
   }
   @include mq(small_laptop) {
-    max-width:922px;
+    max-width: 922px;
     @include margin_lr;
     @include flex();
   }
   @include mq(large_laptop) {
-    max-width:1165px;
+    max-width: 1165px;
   }
   @include mq(small_monitor) {
-    max-width:1600px;
+    max-width: 1600px;
   }
 }
 
 #sec_seven_left {
   @include mq(small_laptop) {
-    flex-shrink:0;
+    flex-shrink: 0;
   }
   @include mq(small_monitor) {
     margin-top: 30px;
@@ -87,9 +87,9 @@ span#sec_seven_title {
     @include quick_type(35px, 40px, null);
   }
   @include mq(large_laptop) {
-    max-width:174px;
-    margin-bottom:21px;
-    text-align:left;
+    max-width: 174px;
+    margin-bottom: 21px;
+    text-align: left;
     @include quick_type(45px, 45px, null);
   }
   @include mq(small_monitor) {
@@ -105,7 +105,7 @@ span#sec_seven_title {
   }
   @include mq(small_laptop) {
     margin-top: -4px;
-    padding-left:105px;
+    padding-left: 105px;
   }
   ul {
     list-style: none;
@@ -142,17 +142,17 @@ span#sec_seven_title {
       &:nth-of-type(-n + 2) {
         a {
           @include mq(large_laptop) {
-           border-top: 1px solid $color_dark_eight;
+            border-top: 1px solid $color_dark_eight;
           }
           @include mq(small_monitor) {
-            border-top:none;
+            border-top: none;
           }
         }
       }
       &:nth-last-of-type(-n + 6) {
-        display:none;
+        display: none;
         @include mq(small_tablet) {
-          display:block;
+          display: block;
         }
       }
       &:nth-last-of-type(-n + 2) {
@@ -194,6 +194,8 @@ span#sec_seven_title {
     }
   }
   a.button_two {
-    display:none;
+    @include mq(small_tablet) {
+      display: none;
+    }
   }
 }

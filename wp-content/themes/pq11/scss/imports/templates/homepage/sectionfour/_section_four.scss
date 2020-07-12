@@ -97,7 +97,7 @@
       @include quick_type(45px, 45px, null);
     }
     p {
-      margin-bottom: 17px;
+      margin-bottom: 13px;
     }
   }
   .descrip_wrapper {
@@ -181,6 +181,7 @@
     @include box(52px);
   }
   svg {
+    height: 20px;
     @include mq(small_tablet) {
       height: 26px;
     }

@@ -4,7 +4,7 @@
 
 #section_five {
   position: relative;
-  padding: 63px 20px 43px;
+  padding: 63px 33px 43px;
   @include mq(small_tablet) {
     padding: 63px 60px 43px;
   }
@@ -20,7 +20,7 @@
   &:after {
     background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
     background-size: (500px, 500px);
-    opacity: 0.53;
+    opacity: 1;
     @include abs(0, null, null, 0);
     @include box(100%, 100%);
     @include contentdisplay();
@@ -144,5 +144,14 @@
   @include mq(large_laptop) {
     padding-left: 103px;
     padding-right: 0;
+  }
+  &.content {
+    ul {
+      li {
+        &:before {
+          background: $color_bright_two;
+        }
+      }
+    }
   }
 }

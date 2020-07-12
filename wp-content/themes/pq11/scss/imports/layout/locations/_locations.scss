@@ -26,8 +26,8 @@
       order: 2;
     }
     @include mq(large_laptop) {
-      flex-basis:325px;
-      margin-left:80px;
+      flex-basis: 325px;
+      margin-left: 80px;
     }
     @include mq(small_monitor) {
       margin-left: 152px;
@@ -76,6 +76,10 @@
     @include mq(small_monitor) {
       margin-bottom: 27px;
     }
+    &:before,
+    &:after {
+      background: $color_bright_one;
+    }
   }
 }
 
@@ -90,7 +94,7 @@ span.loc_title {
     )
   );
   @include mq(small_tablet) {
-    font-size: 12px;;
+    font-size: 12px;
   }
   @include mq(large_laptop) {
     font-size: 15px;
@@ -106,14 +110,14 @@ span.loc_title {
 span.address {
   max-width: 175px;
   @include mq(large_laptop) {
-    max-width:100%;
+    max-width: 100%;
   }
 }
 
 span.loc_cta {
   max-width: 242px;
   @include mq(large_laptop) {
-    max-width:100%;
+    max-width: 100%;
   }
 }
 
@@ -149,7 +153,7 @@ a.get_directions {
   border-radius: 45px;
   display: inline-block;
   padding: 12px 20px;
-  transition:all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
   margin-top: 24px;
   @include type(
     (
