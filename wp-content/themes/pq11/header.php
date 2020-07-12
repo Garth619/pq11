@@ -31,6 +31,21 @@
 
 	<style>
 
+<?php if ( have_rows( 'locally_hosted_google_fonts_repeater','option') ) : ?>
+	<?php while ( have_rows( 'locally_hosted_google_fonts_repeater','option') ) : the_row(); ?>
+		
+	@font-face {
+  	font-family: '<?php the_sub_field( 'font_family','option'); ?>';
+  	font-style: <?php the_sub_field( 'font_style','option'); ?>;
+  	font-weight: <?php the_sub_field( 'font_weight','300'); ?>;
+  	font-display: <?php the_sub_field( 'font_display','option'); ?>;
+  	src: local('<?php the_sub_field( 'src: local','option'); ?>'), local('<?php the_sub_field( 'local','option'); ?>'),
+       url('<?php the_sub_field( 'font_file_woff2','option'); ?>') format('woff2');
+	}
+
+	<?php endwhile; ?>
+<?php endif; ?>
+
 		<?php the_field('locally_hosted_google_fonts','option');?>
 
 	</style>

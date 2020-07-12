@@ -290,29 +290,23 @@ if( function_exists('acf_add_options_page') ) {
 
 
 
-/* ALLOW SVGs IN MEDIA UPLOAD
--------------------------------------------------------------- */
-function cc_mime_types($mimes)
-{
-    $mimes['svg'] = 'image/svg+xml';
-    return $mimes;
-}
 
-add_filter('upload_mimes', 'cc_mime_types');
-
-
-/* ALLOW WEBPs IN MEDIA UPLOAD
+/* Allow Various to Media Upload
 -------------------------------------------------------------- */
 
 
-function webp_upload_mimes( $existing_mimes ) {
-	// add webp to the list of mime types
-	$existing_mimes['webp'] = 'image/webp';
+ add_filter('upload_mimes', 'add_custom_upload_mimes');
+ function add_custom_upload_mimes($existing_mimes) {
+     
+    $existing_mimes['woff2'] = 'application/x-font-woff2';
+    $existing_mimes['webp'] = 'image/webp';
+    $existing_mimes['svg'] = 'image/svg+xml';
 
-	// return the array back to the function with our added mime type
-	return $existing_mimes;
-}
-add_filter( 'mime_types', 'webp_upload_mimes' );
+     return $existing_mimes;
+ }
+
+
+
 
 
 /* Blog Pagination
