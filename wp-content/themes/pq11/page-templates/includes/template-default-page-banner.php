@@ -50,14 +50,15 @@
 		<?php $global_internal_banner_image_tablet = get_field( 'global_internal_banner_image_tablet','option'); ?>
 		
 		<?php $banner_image = get_field( 'banner_image' ); ?>
+		<?php $banner_image_tablet = get_field( 'banner_image_tablet' ); ?>
 		
-		<?php if($banner_image) : ?>
+		<?php if($banner_image || $banner_image_tablet) : ?>
 
 			<picture>
 
-			<!-- <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-new.jpg'> -->
+				<source media='(min-width: 1170px)' srcset='<?php echo $banner_image['url']; ?>'>
 		
-			<img id="internal_hero" src="<?php echo $banner_image['url']; ?>" alt="<?php echo $banner_image['alt']; ?>"/><!-- internal_hero -->
+				<img id="internal_hero" src="<?php echo $banner_image_tablet['url']; ?>" alt="<?php echo $banner_image_tablet['alt']; ?>"/><!-- internal_hero -->
 
 			</picture>
 		
