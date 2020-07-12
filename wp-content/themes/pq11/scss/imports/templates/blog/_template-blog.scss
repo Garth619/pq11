@@ -1,72 +1,72 @@
-
 .blog_post {
-  padding-bottom:40px;
-  margin-bottom:40px;
-  border-bottom:1px solid $color_dark_one;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid $color_dark_one;
   @include mq(large_laptop) {
-    padding-bottom:55px;
+    padding-bottom: 55px;
     margin-bottom: 62px;
   }
   span.double_line {
-    max-width:130px;
+    max-width: 130px;
     @include mq(large_laptop) {
-      max-width:224px;
+      max-width: 224px;
     }
   }
 }
 
-#blog_feed, #single_post {
-  padding:31px 0 0 0;
+#blog_feed,
+#single_post {
+  padding: 31px 0 0 0;
   @include mq(small_tablet) {
-    padding:48px 0 0 0;
+    padding: 48px 0 0 0;
   }
   @include mq(large_laptop) {
-    padding:95px 0 0 0;
+    padding: 95px 0 0 0;
   }
 }
 
 .blog_header {
   padding: 0px 0 20px 0;
-  @include type (
+  @include type(
     (
       size: 25px,
       height: 25px,
       family: $secondaryfont,
-      weight: 500 
+      weight: 500,
     )
   );
   @include mq(large_laptop) {
-    @include quick_type(30px,30px,null);
+    @include quick_type(30px, 30px, null);
   }
   a {
-    color:$color_dark_three;
+    color: $color_dark_three;
     text-decoration: none;
   }
 }
 
-
 .blog_meta {
-  margin-top:25px;
-  margin-bottom:10px;
+  margin-top: 25px;
+  margin-bottom: 10px;
   @include mq(large_laptop) {
-    margin-bottom:25px;
+    margin-bottom: 25px;
   }
-  span,li {
+  span,
+  li {
     display: inline;
-    @include type (
+    @include type(
       (
         size: 14px,
         spacing: 0.42px,
         height: 16px,
         family: $primaryfont,
-        weight: 600 
+        weight: 600,
       )
     );
     &:after {
-      background:$color_bright_two;
+      background: $color_bright_two;
       border-radius: 50%;
-      vertical-align:top;
-      margin:6px 9px 0 9px;
+      vertical-align: top;
+      margin: 6px 9px 0 9px;
       @include box(6px);
       @include contentdisplay(inline-block);
     }
@@ -82,11 +82,11 @@
     }
   }
   a {
-    color:$color_dark_three;
+    color: $color_dark_three;
     text-decoration: none;
-    transition:all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
     &:hover {
-      color:$color_dark_three;
+      color: $color_bright_two;
     }
   }
   ul {
@@ -94,12 +94,11 @@
     display: inline;
   }
   span.date {
-
   }
 }
 
 .blog_content {
-  margin-bottom:30px;
+  margin-bottom: 30px;
 }
 
 a.read_more {
@@ -108,98 +107,96 @@ a.read_more {
   @include mq(large_laptop) {
     font-size: 12px;
     letter-spacing: 1.2px;
-    border:2px solid $color_bright_two;
+    border: 2px solid $color_bright_two;
   }
 }
 
-
 .paged_wrapper {
-  margin-top:-15px;
+  margin-top: -15px;
   @include mq(large_laptop) {
     margin-top: -33px;
   }
   ul {
     list-style: none;
     @include flex();
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     li {
-      margin-right:15px;
-      @include type (
+      margin-right: 15px;
+      @include type(
         (
           size: 15px,
           spacing: 0.42px,
           height: 20px,
           family: $primaryfont,
-          weight: 600
+          weight: 600,
         )
       );
       @include mq(large_laptop) {
-        margin-right:20px;
-        @include quick_type(17px,20px,null);
+        margin-right: 20px;
+        @include quick_type(17px, 20px, null);
       }
       &.active {
         a {
-          color:$color_bright_two;
+          color: $color_bright_two;
         }
       }
       a {
         text-decoration: none;
-        color:$color_dark_three;
-        transition:all 200ms ease-in-out;
+        color: $color_dark_three;
+        transition: all 200ms ease-in-out;
         &:hover {
-          color:$color_bright_two;
+          color: $color_bright_two;
         }
       }
     }
   }
 }
 
-
 .sidebar_blog {
   .widget {
-    padding-top:20px;
-    padding-bottom:1px;
+    padding-top: 20px;
+    padding-bottom: 1px;
     @include mq(small_laptop) {
       margin-bottom: 30px;
-      padding-top:30px;
-      padding-bottom:10px;
+      padding-top: 30px;
+      padding-bottom: 10px;
     }
     @include mq(small_monitor) {
-      padding-top:52px;
-      padding-bottom:50px;
+      padding-top: 52px;
+      padding-bottom: 50px;
       margin-bottom: 40px;
     }
     &:first-of-type {
-      padding-top:40px;
+      padding-top: 40px;
       @include mq(small_laptop) {
-        padding-top:30px;
-        padding-bottom:10px;
+        padding-top: 30px;
+        padding-bottom: 10px;
       }
       @include mq(small_monitor) {
-        padding-top:52px;
-        padding-bottom:50px;
+        padding-top: 52px;
+        padding-bottom: 50px;
       }
     }
     &:last-of-type {
-      padding-bottom:25px;
+      padding-bottom: 25px;
       @include mq(small_laptop) {
-        padding-bottom:10px;
+        padding-bottom: 10px;
       }
       @include mq(small_monitor) {
-        padding-bottom:50px;
+        padding-bottom: 50px;
       }
     }
     h3 {
       @include mq(small_monitor) {
-        padding-left:80px;
-        padding-right:80px;
+        padding-left: 80px;
+        padding-right: 80px;
       }
     }
     span.double_line {
-      max-width:85px;
+      max-width: 85px;
       @include mq(small_monitor) {
-        margin-left:80px;
-        margin-right:80px;
+        margin-left: 80px;
+        margin-right: 80px;
       }
     }
     ul {
@@ -212,7 +209,7 @@ a.read_more {
         }
         &.blog-active {
           a {
-            color:$color_bright_two;
+            color: $color_bright_two;
           }
         }
       }
@@ -220,12 +217,11 @@ a.read_more {
   }
 }
 
-
 #single_post {
   span.double_line {
-    max-width:130px;
+    max-width: 130px;
     @include mq(large_laptop) {
-      max-width:224px;
+      max-width: 224px;
     }
   }
 }

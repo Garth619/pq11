@@ -10,7 +10,7 @@
     max-width: 100%;
   }
   @include mq(large_laptop) {
-    margin: 0px auto 0;
+    margin: 0px auto -49px;
     max-width: 1322px;
   }
   @include mq(small_monitor) {
