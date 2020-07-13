@@ -115,9 +115,11 @@
     flex-basis: 410px;
     padding: 75px 0 0px 0;
   }
-  svg {
+  img {
     height: 60px;
     filter: drop-shadow(0px 7px 1px rgba(0, 0, 0, 0.1));
+    @include margin_lr;
+    @include image();
     @include mq(small_laptop) {
       height: 45px;
     }
@@ -165,7 +167,7 @@
     &.type {
       margin: 20px auto 0;
       padding-bottom: 55px;
-      max-width: 142px;
+      max-width: 147px;
       @include type(
         (
           size: 14px,
@@ -178,17 +180,17 @@
       );
       @include mq(small_laptop) {
         margin: 14px auto 0;
-        max-width: 134px;
+        max-width: 138px;
         padding-bottom: 35px;
         @include quick_type(13px, 17px, null);
       }
       @include mq(large_laptop) {
         margin: 17px auto 0;
-        max-width: 176px;
+        max-width: 179px;
         @include quick_type(17px, 22px, null);
       }
       @include mq(small_monitor) {
-        max-width: 206px;
+        max-width: 201px;
         margin: 35px auto 0;
         padding-bottom: 95px;
         @include quick_type(19px, 25px, null);

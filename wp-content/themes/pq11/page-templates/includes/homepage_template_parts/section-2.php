@@ -5,8 +5,8 @@
 		<div id='sec_two_slider'>
 		
 			<div class='sec_two_slide'>
-			
-				<?php echo file_get_contents( get_template_directory() . '/images/result-heart.svg' ); ?>
+
+				<img src='<?php bloginfo('template_directory');?>/images/result-heart.svg'/>
 
 				<span class="amount">$20m</span>
 
@@ -17,8 +17,8 @@
 			</div><!-- sec_two_slide -->
 
 			<div class='sec_two_slide'>
-			
-				<?php echo file_get_contents( get_template_directory() . '/images/result-wheelchair.svg' ); ?>
+
+				<img src='<?php bloginfo('template_directory');?>/images/result-wheelchair.svg'/>
 
 				<span class="amount">$12m</span>
 
@@ -29,8 +29,8 @@
 			</div><!-- sec_two_slide -->
 
 			<div class='sec_two_slide'>
-			
-				<?php echo file_get_contents( get_template_directory() . '/images/result-moto.svg' ); ?>
+
+				<img src='<?php bloginfo('template_directory');?>/images/result-moto.svg'/>
 
 				<span class="amount">$2m</span>
 
@@ -41,8 +41,8 @@
 			</div><!-- sec_two_slide -->
 
 			<div class='sec_two_slide'>
-			
-				<?php echo file_get_contents( get_template_directory() . '/images/result-car.svg' ); ?>
+
+				<img src='<?php bloginfo('template_directory');?>/images/result-car.svg'/>
 
 				<span class="amount">$750K</span>
 
