@@ -5,90 +5,38 @@
 		<?php echo file_get_contents( get_template_directory() . '/images/stars.svg' ); ?>
 
 		<div id='sec_four_slider_wrapper'>
-		
+
+		<?php if ( have_rows( 'section_four_testimonials' ) ) : ?>
+			
 			<div id='sec_four_slider'>
-		
+			
+			<?php while ( have_rows( 'section_four_testimonials' ) ) : the_row(); ?>
+
 				<div class='sec_four_slide'>
 
 					<div class='intro_wrapper'>
-				
-						<p>“This law firm does an outstanding job keeping those values and did an amazing job on my case.”</p>
-				
-				</div><!-- intro_wrapper -->
 
-				<div class='descrip_wrapper'>
-				
-					<p>Let me start by saying that compassion, dignity, and respect, hold the most value for me. It’s not everyday that you would need an attorney, but when you do it’s important to find one that believes in the same values as you do.</p>
-					
-				</div><!-- descrip_wrapper -->
+						<?php the_sub_field( 'intro' ); ?>
 
-				<span class='double_line'></span><!-- double_line -->
+					</div><!-- intro_wrapper -->
 
-				<span class='name'>HoLLY S. - PERSONAL INJURY CLIENT</span><!-- name -->
-			
-			</div><!-- sec_four_slide -->
+					<div class='descrip_wrapper'>
 
-			<div class='sec_four_slide'>
+							<?php the_sub_field( 'content' ); ?>
 
-				<div class='intro_wrapper'>
-				
-					<p>“This law firm does an outstanding job keeping those values and did an amazing job on my case.”</p>
-				
-				</div><!-- intro_wrapper -->
+					</div><!-- descrip_wrapper -->
 
-				<div class='descrip_wrapper'>
-				
-					<p>Let me start by saying that compassion, dignity, and respect, hold the most value for me. It’s not everyday that you would need an attorney, but when you do it’s important to find one that believes in the same values as you do.</p>
-					
-				</div><!-- descrip_wrapper -->
+					<span class='double_line'></span><!-- double_line -->
 
-				<span class='double_line'></span><!-- double_line -->
+					<span class='name'><?php the_sub_field( 'name' ); ?></span><!-- name -->
 
-				<span class='name'>HoLLY S. - PERSONAL INJURY CLIENT</span><!-- name -->
-			
-			</div><!-- sec_four_slide -->
-
-			<div class='sec_four_slide'>
-
-				<div class='intro_wrapper'>
-				
-					<p>“This law firm does an outstanding job keeping those values and did an amazing job on my case.”</p>
-				
-				</div><!-- intro_wrapper -->
-
-				<div class='descrip_wrapper'>
-				
-					<p>Let me start by saying that compassion, dignity, and respect, hold the most value for me. It’s not everyday that you would need an attorney, but when you do it’s important to find one that believes in the same values as you do.</p>
-					
-				</div><!-- descrip_wrapper -->
-
-				<span class='double_line'></span><!-- double_line -->
-
-				<span class='name'>HoLLY S. - PERSONAL INJURY CLIENT</span><!-- name -->
-			
-			</div><!-- sec_four_slide -->
-
-			<div class='sec_four_slide'>
-
-				<div class='intro_wrapper'>
-				
-					<p>“This law firm does an outstanding job keeping those values and did an amazing job on my case.”</p>
-				
-				</div><!-- intro_wrapper -->
-
-				<div class='descrip_wrapper'>
-				
-					<p>Let me start by saying that compassion, dignity, and respect, hold the most value for me. It’s not everyday that you would need an attorney, but when you do it’s important to find one that believes in the same values as you do.</p>
-					
-				</div><!-- descrip_wrapper -->
-
-				<span class='double_line'></span><!-- double_line -->
-
-				<span class='name'>HoLLY S. - PERSONAL INJURY CLIENT</span><!-- name -->
-			
-			</div><!-- sec_four_slide -->
+				</div><!-- sec_four_slide -->
 		
-		</div><!-- sec_four_slider -->
+			<?php endwhile; ?>
+
+			</div><!-- sec_four_slider -->
+
+		<?php endif; ?>
 
 		<div id="sec_four_left_arrow" class='sec_four_arrow'>
 		
@@ -109,9 +57,17 @@
 
 	<picture>
 	
-		<source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/img-testimonial-new.jpg'>
+		<?php $section_four_background_image_desktop = get_field( 'section_four_background_image_desktop' ); ?>
 
-		<img id='sec_four_img' src='<?php bloginfo('template_directory');?>/images/img-testimonial-tablet-new.jpg' /><!-- sec_four_img -->
+		<?php if ( $section_four_background_image_desktop ) { ?>
+
+			<source media='(min-width: 1170px)' srcset='<?php echo $section_four_background_image_desktop['url']; ?>'>
+			
+		<?php } ?>
+
+		<?php $section_four_background_image_tablet = get_field( 'section_four_background_image_tablet' ); ?>
+
+		<img id='sec_four_img' src='<?php echo $section_four_background_image_desktop['url']; ?>' /><!-- sec_four_img -->
 
 	</picture>
 

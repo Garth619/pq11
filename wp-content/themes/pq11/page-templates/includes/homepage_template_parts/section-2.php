@@ -1,58 +1,36 @@
 <section id='section_two'>
 
 	<div id='sec_two_inner'>
-	
-		<div id='sec_two_slider'>
-		
-			<div class='sec_two_slide'>
 
-				<img src='<?php bloginfo('template_directory');?>/images/result-heart.svg'/>
+		<?php if ( have_rows( 'section_two_selling_points' ) ) : ?>
 
-				<span class="amount">$20m</span>
-
-				<span class='double_line'></span><!-- double_line -->
-
-				<span class='type'>explosion wrongful death accident</span><!-- type -->
+			<div id='sec_two_slider'>
 			
-			</div><!-- sec_two_slide -->
-
-			<div class='sec_two_slide'>
-
-				<img src='<?php bloginfo('template_directory');?>/images/result-wheelchair.svg'/>
-
-				<span class="amount">$12m</span>
-
-				<span class='double_line'></span><!-- double_line -->
-
-				<span class='type'>construction site slip and fall accident</span><!-- type -->
+			<?php while ( have_rows( 'section_two_selling_points' ) ) : the_row(); ?>
 			
-			</div><!-- sec_two_slide -->
+				<div class='sec_two_slide'>
 
-			<div class='sec_two_slide'>
+					<?php $icon = get_sub_field( 'icon' ); ?>
+					
+					<?php if ( $icon ) { ?>
+						
+						<img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" />
+					
+					<?php } ?>
 
-				<img src='<?php bloginfo('template_directory');?>/images/result-moto.svg'/>
+					<span class="amount"><?php the_sub_field( 'amount' ); ?></span>
 
-				<span class="amount">$2m</span>
+					<span class='double_line'></span><!-- double_line -->
 
-				<span class='double_line'></span><!-- double_line -->
+					<span class='type'><?php the_sub_field( 'description' ); ?></span><!-- type -->
 
-				<span class='type'>motorcycle accident brain injury</span><!-- type -->
-			
-			</div><!-- sec_two_slide -->
+				</div><!-- sec_two_slide -->
 
-			<div class='sec_two_slide'>
+			<?php endwhile; ?>
 
-				<img src='<?php bloginfo('template_directory');?>/images/result-car.svg'/>
+			</div><!-- sec_two_slider -->
 
-				<span class="amount">$750K</span>
-
-				<span class='double_line'></span><!-- double_line -->
-
-				<span class='type'>distracted driving car accident</span><!-- type -->
-			
-			</div><!-- sec_two_slide -->
-		
-		</div><!-- sec_two_slider -->
+		<?php endif; ?>
 	
 	</div><!-- sec_two_inner -->
 
