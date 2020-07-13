@@ -8,7 +8,7 @@
 		
 			<h1 id='internal_header'><?php the_field( 'not_found_title','option'); ?></h1><!-- internal_header -->
 
-			<span class='double_line'></span><!-- double_line -->
+			<span class='double_line not_found_header'></span><!-- double_line -->
 
 			<span id='not_found_subtitle'><?php the_field( 'not_found_subtitle','option'); ?></span><!-- not_found_subtitle -->
 

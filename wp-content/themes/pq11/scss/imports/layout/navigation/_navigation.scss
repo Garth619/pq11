@@ -66,8 +66,8 @@ nav {
           spacing: 0.6px,
           height: 15px,
           family: $primaryfont,
-          weight: 300,
-          transform: uppercase,
+          //weight: 300,
+            transform: uppercase,
         )
       );
       @include mq(small_tablet) {

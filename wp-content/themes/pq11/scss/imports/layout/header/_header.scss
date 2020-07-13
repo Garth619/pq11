@@ -1,14 +1,14 @@
 header {
-  width:100%;
-  background:$color_light_one;
-  @include fixed(0,null,null,0,10);
+  width: 100%;
+  background: $color_light_one;
+  @include fixed(0, null, null, 0, 10);
   @include mq(small_tablet) {
-    //border-bottom: 1px solid $color_dark_one;
+    box-shadow: 0px 1px 20px #0000001a;
   }
   @include mq(tablet) {
     height: 123px;
-    padding-top:10px;
-    border-bottom:none;
+    padding-top: 10px;
+    box-shadow: none;
   }
   @include mq(large_laptop) {
     height: 147px;
@@ -16,7 +16,7 @@ header {
   }
   @include mq(small_monitor) {
     height: 194px;
-    padding-top:32px;
+    padding-top: 32px;
   }
 }
 
@@ -29,7 +29,6 @@ header {
     @include margin_lr;
   }
   @include mq(small_monitor) {
-    
   }
 }
 
@@ -52,8 +51,8 @@ header {
   @include mq(tablet) {
     justify-content: center;
     margin: 0 100px;
-    padding:0;
-    flex-shrink:0;
+    padding: 0;
+    flex-shrink: 0;
   }
   @include mq(large_laptop) {
     margin: 0 160px;
@@ -63,21 +62,21 @@ header {
   }
   a#logo {
     display: block;
-    flex-shrink:0;
-    width:100%;
+    flex-shrink: 0;
+    width: 100%;
     max-width: 230px;
     @include mq(small_tablet) {
-      max-width:250px;
+      max-width: 250px;
     }
     @include mq(tablet) {
-      width:250px;
+      width: 250px;
     }
     @include mq(large_laptop) {
-      width:305px;
-      max-width:100%;
+      width: 305px;
+      max-width: 100%;
     }
     @include mq(small_monitor) {
-      width:360px;
+      width: 360px;
     }
     svg,
     img {
@@ -91,7 +90,7 @@ header {
   background: $color_dark_six;
   height: 65px;
   padding-left: 20px;
-  transition:all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
   @include flex(space-between, center);
   @include mq(small_tablet) {
     flex-grow: 1;
@@ -99,20 +98,21 @@ header {
     @include flex(flex-end);
   }
   @include mq(tablet) {
-    flex-grow:0;
-    padding:0;
-    background:transparent;
+    flex-grow: 0;
+    padding: 0;
+    background: transparent;
   }
   &.open {
-    background:$color_dark_three;
+    background: $color_dark_three;
     @include mq(small_tablet) {
-      background:transparent;
+      background: transparent;
     }
     .header_title_wrapper {
-      span,a {
-        color:$color_light_one;
+      span,
+      a {
+        color: $color_light_one;
         @include mq(small_tablet) {
-          color:$color_dark_three;
+          color: $color_dark_three;
         }
       }
     }
@@ -142,7 +142,7 @@ header {
     height: 100%;
     @include flex(center, center, column);
     @include mq(tablet) {
-      display:none;
+      display: none;
     }
     span {
       display: block;
@@ -165,8 +165,6 @@ header {
   }
 }
 
-
-
 .header_title_wrapper {
   @include mq(small_tablet) {
     text-align: right;
@@ -174,15 +172,17 @@ header {
   }
   @include mq(tablet) {
     text-align: center;
-    padding-right:0;
+    padding-right: 0;
   }
-  > span,a {
+  > span,
+  a {
     display: block;
-    color:$color_dark_three;
-    transition:all 200ms ease-in-out;
-    span,a {
+    color: $color_dark_three;
+    transition: all 200ms ease-in-out;
+    span,
+    a {
       @include mq(tablet) {
-        display:inline-block;
+        display: inline-block;
       }
     }
   }
@@ -195,18 +195,18 @@ span.header_title_sml {
       size: 12px,
       spacing: 1.2px,
       family: $primaryfont,
-      weight: 300,
-      transform: uppercase,
+      //weight: 300,
+        transform: uppercase,
     )
   );
   @include mq(small_tablet) {
     margin-bottom: 4px;
   }
   @include mq(tablet) {
-    @include quick_type(11px,13px,null);
+    @include quick_type(11px, 13px, null);
   }
   @include mq(small_monitor) {
-    @include quick_type(15px,17px,null);
+    @include quick_type(15px, 17px, null);
   }
 }
 
@@ -221,18 +221,18 @@ span.header_title_lrg {
     )
   );
   @include mq(tablet) {
-    @include quick_type(15px,17px,null);
+    @include quick_type(15px, 17px, null);
   }
   @include mq(large_alptop) {
-    @include quick_type(16px,17px,null);
+    @include quick_type(16px, 17px, null);
   }
   @include mq(small_monitor) {
-    @include quick_type(23px,30px,null);
+    @include quick_type(23px, 30px, null);
   }
   span {
     display: none;
     @include mq(tablet) {
-      display:inline-block;
+      display: inline-block;
     }
   }
   a {

@@ -122,8 +122,8 @@ span#sec_seven_title {
         (
           size: 14px,
           height: 16px,
-          weight: 300,
-          family: $primaryfont,
+          //weight: 300,
+            family: $primaryfont,
         )
       );
       @include quick_type(15px, 17px, null);

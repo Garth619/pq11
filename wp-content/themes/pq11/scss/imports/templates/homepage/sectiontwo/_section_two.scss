@@ -172,8 +172,8 @@
           family: $primaryfont,
           height: 18px,
           color: $color_dark_three,
-          weight: 300,
-          transform: lowercase,
+          //weight: 300,
+            transform: lowercase,
         )
       );
       @include mq(small_laptop) {
@@ -188,7 +188,7 @@
         @include quick_type(17px, 22px, null);
       }
       @include mq(small_monitor) {
-        max-width: 196px;
+        max-width: 206px;
         margin: 35px auto 0;
         padding-bottom: 95px;
         @include quick_type(19px, 25px, null);

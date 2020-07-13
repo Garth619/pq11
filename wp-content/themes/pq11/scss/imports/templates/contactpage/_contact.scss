@@ -11,6 +11,9 @@ body.page-template-template-contact {
 span.double_line.contact_header {
   max-width: 75px;
   @include margin_lr;
+  @include mq(small_tablet) {
+    margin-top: -15px;
+  }
 }
 
 #contact_wrapper {
@@ -113,6 +116,9 @@ span.double_line.contact_header {
       background: $color_bright_two;
       color: $color_light_one;
       border: 1px solid $color_bright_two;
+      @include mq(small_monitor) {
+        border: 2px solid $color_bright_two;
+      }
     }
   }
   .social_media {
@@ -144,8 +150,8 @@ span.double_line.contact_header {
   margin-top: -450px;
   @include box(100%, 450px);
   @include mq(small_tablet) {
-    margin-top: -180px;
-    height: 180px;
+    margin-top: -230px;
+    height: 240px;
   }
   @include mq(large_laptop) {
     margin-top: -300px;
@@ -171,6 +177,14 @@ body.page-template-template-contact {
     }
     @include mq(small_monitor) {
       padding: 141px 60px 40px;
+    }
+  }
+  #copyright_wrapper {
+    @include mq(large_laptop) {
+      margin-top: 0;
+    }
+    @include mq(small_monitor) {
+      margin-top: 120px;
     }
   }
 }

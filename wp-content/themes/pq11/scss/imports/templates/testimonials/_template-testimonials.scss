@@ -89,10 +89,10 @@
     }
     .single_test_content {
       margin-top: 20px;
-      padding-bottom: 10px;
+      padding-bottom: 30px;
       @include mq(small_monitor) {
         margin: 40px auto 0;
-        padding-bottom: 25px;
+        padding-bottom: 50px;
         max-width: 975px;
       }
     }

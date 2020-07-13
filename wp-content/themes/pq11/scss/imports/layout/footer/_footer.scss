@@ -86,7 +86,7 @@ footer {
             size: 23px,
             family: $primaryfont,
             color: $color_bright_one,
-            weight: 300,
+            //weight: 300,
           )
         );
         @include mq(small_tablet) {
@@ -115,8 +115,8 @@ footer {
             size: 14px,
             spacing: 0.7px,
             color: $color_dark_two,
-            weight: 300,
-            family: $primaryfont,
+            //weight: 300,
+              family: $primaryfont,
           )
         );
         @include mq(small_tablet) {
@@ -315,8 +315,8 @@ span#footer_from_title {
           height: 20px,
           family: $primaryfont,
           color: $color_light_one,
-          weight: 300,
-          transform: uppercase,
+          //weight: 300,
+            transform: uppercase,
         )
       );
       @include mq(large_laptop) {
