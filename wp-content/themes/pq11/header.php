@@ -96,9 +96,9 @@
 
 			<div class='header_title_wrapper'>
 		
-				<span class='header_title_sml'>Your Fight is Our Right</span><!-- header_title_sml -->
+				<span class='header_title_sml'><?php the_field( 'header_left_sub_title','option'); ?></span><!-- header_title_sml -->
 
-				<span class='header_title_lrg'>We Accept Calls 24/7</span><!-- header_title_sml -->
+				<span class='header_title_lrg'><?php the_field( 'header_left_large_title','option'); ?></span><!-- header_title_sml -->
 
 			</div><!-- header_title_wrapper -->
 		
@@ -107,8 +107,16 @@
 		<div id='header_middle'>
 		
 			<a id="logo" href="<?php bloginfo('url');?>">
+
+			<?php $logo = get_field( 'logo','option'); ?>
+			
+			<?php if ( $logo ) { ?>
 				
-				<?php echo file_get_contents( get_template_directory() . '/images/logo.svg' ); ?>
+				<img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
+			
+			<?php } ?>
+				
+				<?php //echo file_get_contents( get_template_directory() . '/images/logo.svg' ); ?>
 
 			</a><!-- logo -->
 		
@@ -118,9 +126,9 @@
 			
 			<div class='header_title_wrapper'>
 			
-				<span class='header_title_sml'>Free Consultation</span><!-- header_title_sml -->
+				<span class='header_title_sml'><?php the_field( 'header_right_sub_title','option'); ?></span><!-- header_title_sml -->
 
-				<span class='header_title_lrg'><span>Local</span> <a href="tel:5173161995">(517) 316-1995</a></span><!-- header_title_sml -->
+				<span class='header_title_lrg'><?php the_field( 'header_right_large_title','option'); ?></span><!-- header_title_sml -->
 			
 			</div><!-- header_title_wrapper -->
 

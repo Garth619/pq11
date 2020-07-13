@@ -47,8 +47,10 @@ nav {
 
 nav {
   ul.menu {
+    padding-bottom: 200px;
     @include mq(tablet) {
       max-width: 1050px;
+      padding-bottom: 0;
       @include margin_lr;
       @include flex(space-between);
     }

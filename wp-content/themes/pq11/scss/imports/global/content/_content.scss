@@ -80,7 +80,7 @@ body {
       spacing: 0.33px,
       height: 22px,
       family: $primaryfont,
-      weight: 300,
+      //weight: 300,
     )
   );
   @include mq(large_laptop) {
