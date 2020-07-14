@@ -194,6 +194,13 @@ jQuery(document).ready(function ($) {
           slidesToScroll: 4,
         },
       },
+      {
+        breakpoint: 1695,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 5,
+        },
+      },
     ],
   });
 
@@ -231,7 +238,7 @@ jQuery(document).ready(function ($) {
     ],
   });
 
-  /* Case Rseults Page
+  /* Case Results Page
 --------------------------------------------------------------------------------------- */
 
   // mimic select dropdown when you click the top the dropdown part slides down

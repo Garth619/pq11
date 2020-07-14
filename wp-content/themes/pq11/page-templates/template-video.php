@@ -21,7 +21,7 @@ get_header(); ?>
 
 				<div class='video_thumb'>
 				
-					<div class='mywisita wistia_embed wistia_async_<?php the_sub_field( 'wistia_id' ); ?> popover=true popoverContent=thumbnail'></div><!-- mywisita -->
+					<div class='mywisita wistia_embed wistia_async_<?php the_sub_field( 'wistia_id' ); ?> popover=true popoverContent=html'></div><!-- mywisita -->
 
 					<div class='video_overlay'>
 					

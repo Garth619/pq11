@@ -4,32 +4,31 @@
 
   <div id='sec_seven_left'>
   
-    <span id='sec_seven_title'>Practice Areas</span><!-- sec_seven_title -->
+    <span id='sec_seven_title'><?php the_field( 'section_seven_title' ); ?></span><!-- sec_seven_title -->
 
     <span class='double_line'></span><!-- double_line -->
 
-    <a class='button_two' href=''>View All Practice Areas</a><!-- button_two -->
+    <a class='button_two' href='<?php the_field( 'section_seven_button_page_link' ); ?>'><?php the_field( 'section_seven_button_verbiage' ); ?></a><!-- button_two -->
   
   </div><!-- sec_seven_left -->
 
   <div id='sec_seven_right'>
-  
-    <ul>
-      <li><a href="">Medical Malpractice</a></li>
-      <li><a href="">Burn Accidents</a></li>
-      <li><a href="">Automobile Accidents</a></li>
-      <li><a href="">Bad Faith Insurance</a></li>
-      <li><a href="">Construction Accidents</a></li>
-      <li><a href="">Premises Liability</a></li>
-      <li><a href="">Dog Bites and Attacks</a></li>
-      <li><a href="">Explosion Accidents</a></li>
-      <li><a href="">Product Liability</a></li>
-      <li><a href="">Roundup Lawsuits</a></li>
-      <li><a href="">Wrongful Death Accidents</a></li>
-      <li><a href="">Slip and Fall Accidnts</a></li>
-    </ul>
 
-    <a class='button_two' href=''>View All Practice Areas</a><!-- button_two -->
+    <?php if ( have_rows( 'section_seven_practice_areas' ) ) : ?>
+	    
+      <ul>
+
+      <?php while ( have_rows( 'section_seven_practice_areas' ) ) : the_row(); ?>
+
+        <li><a href="<?php the_sub_field( 'pa_page_link' ); ?>"><?php the_sub_field( 'pa_title' ); ?></a></li>
+
+	    <?php endwhile; ?>
+
+      </ul>
+    
+    <?php endif; ?>
+
+    <a class='button_two' href='<?php the_field( 'section_seven_button_page_link' ); ?>'><?php the_field( 'section_seven_button_verbiage' ); ?></a><!-- button_two -->
   
   </div><!-- sec_seven_right -->
 

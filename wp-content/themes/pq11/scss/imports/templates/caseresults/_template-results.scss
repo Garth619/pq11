@@ -138,6 +138,8 @@ span#select_input_title {
 
 .single_cr {
   width: 100%;
+  //page-break-inside: avoid;
+  //break-inside: avoid;
   display: inline-block;
   background: $color_light_one;
   box-shadow: 0px 1px 20px #0000001a;

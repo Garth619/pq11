@@ -147,6 +147,10 @@
     @include image();
     @include box(100%);
   }
+  .mywistia {
+    @include box(100%);
+    @include abs(0, null, null, 0, 1);
+  }
 }
 
 #video_overlay {
@@ -357,25 +361,20 @@ span#sec_one_logo_title {
     @include mq(small_laptop) {
       justify-content: flex-start;
     }
-    svg,
-    img {
-      margin: auto;
-      @include image();
-      @include mq(small_laptop) {
-        margin: 0;
-      }
-    }
     img {
       filter: invert(88%) saturate(0%);
     }
     svg,
     img {
       height: 25px;
+      margin: auto;
+      @include image();
       @include mq(small_tablet) {
         height: 27px;
       }
       @include mq(small_laptop) {
         height: 30px;
+        margin: 0;
       }
       @include mq(small_monitor) {
         height: 37px;

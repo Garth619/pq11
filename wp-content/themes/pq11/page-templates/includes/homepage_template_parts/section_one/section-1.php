@@ -46,47 +46,31 @@
 
           <div id='sec_one_slider'>
 
+          <?php if ( have_rows( 'section_one_logo_slider' ) ) : ?>
+	        
+          <?php while ( have_rows( 'section_one_logo_slider' ) ) : the_row(); ?>
+
+          <div class='sec_one_slide'>
+
+            <div class='sec_one_slide_inner'>
+
+              <?php $logos = get_sub_field( 'logo' ); ?>
+            
+              <?php if ( $logos ) { ?>
+              
+                <img src="<?php echo $logos['url']; ?>" alt="<?php echo $logos['alt']; ?>" />
+            
+              <?php } ?>
+
+            </div><!-- sec_one_slide_inner -->
+
+          </div><!-- sec_one_slide -->
+        
+          <?php endwhile; ?>
+
+        <?php endif; ?>
           
-          
-            <div class='sec_one_slide'>
-
-              <div class='sec_one_slide_inner'>
-
-                <img src='<?php bloginfo('template_directory');?>/images/cnn-new.svg'/>
-              
-              </div><!-- sec_one_slide_inner -->
             
-            </div><!-- sec_one_slide -->
-
-            <div class='sec_one_slide'>
-
-              <div class='sec_one_slide_inner'>
-
-                <img src='<?php bloginfo('template_directory');?>/images/time-new.svg'/>
-              
-              </div><!-- sec_one_slide_inner -->
-            
-            </div><!-- sec_one_slide -->
-
-            <div class='sec_one_slide'>
-
-              <div class='sec_one_slide_inner'>
-
-                <img src='<?php bloginfo('template_directory');?>/images/cnn-new.svg'/>
-
-              </div><!-- sec_one_slide_inner -->
-
-            </div><!-- sec_one_slide -->
-
-            <div class='sec_one_slide'>
-
-              <div class='sec_one_slide_inner'>
-
-                <img src='<?php bloginfo('template_directory');?>/images/espn-new.svg'/>
-              
-              </div><!-- sec_one_slide_inner -->
-            
-            </div><!-- sec_one_slide -->
 
         </div><!-- sec_one_slider -->
         

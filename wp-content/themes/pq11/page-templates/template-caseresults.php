@@ -188,7 +188,6 @@ get_header(); ?>
 				
 				</div><!-- single_cr -->
 
-			
 			</div><!-- case_result_boxes -->
 
 		</div><!-- case_results_wrapper -->

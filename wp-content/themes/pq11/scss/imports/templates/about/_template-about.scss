@@ -154,6 +154,10 @@ img#about_banner_image {
     @include image();
     @include box(100%);
   }
+  #mywistia {
+    @include box(100%);
+    @include abs(0, null, null, 0, 1);
+  }
   .play_button {
     @include box(90px);
     &:before {
@@ -230,6 +234,9 @@ span#about_bottom_title {
 #about_bottom_slider {
   max-width: 765px;
   @include margin_lr;
+  @include mq(small_tablet) {
+    max-width: 695px;
+  }
   @include mq(small_laptop) {
     max-width: 965px;
   }
@@ -250,13 +257,16 @@ span#about_bottom_title {
       height: 44px;
       margin: 0;
       @include mq(small_tablet) {
-        height: 34px;
+        height: 29px;
       }
       @include mq(small_laptop) {
-        height: 40px;
+        //height: 40px;
+      }
+      @include mq(large_laptop) {
+        height: 32px;
       }
       @include mq(small_monitor) {
-        height: 48px;
+        height: 37px;
       }
     }
   }
