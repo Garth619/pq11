@@ -1,4 +1,5 @@
-body.page-template-template-caseresults {
+body.page-template-template-caseresults,
+body.tax-case_results_category {
   #internal_main {
     background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
   }
@@ -122,7 +123,10 @@ span#select_input_title {
       a {
         text-decoration: none;
         color: $color_dark_two;
-        transition: all 200ms $color_bright_two;
+        transition: all 200ms ease-in-out;
+        &:hover {
+          color: $color_bright_two;
+        }
       }
     }
   }
@@ -131,19 +135,16 @@ span#select_input_title {
 #case_result_boxes {
   margin: 55px 0 -22px;
   @include mq(small_tablet) {
-    // column-count: 2;
-    // column-gap: 22px;
-    @include flex(space-between);
+    column-count: 2;
+    column-gap: 22px;
   }
-}
-
-.cr_col {
-  flex-basis: 47%;
 }
 
 .single_cr {
   width: 100%;
   display: inline-block;
+  //page-break-inside: avoid;
+  //break-inside: avoid;
   background: $color_light_one;
   box-shadow: 0px 1px 20px #0000001a;
   padding: 30px;
@@ -182,8 +183,13 @@ span#select_input_title {
         @include quick_type(30px, 35px, null);
       }
     }
-    &.single_cr_type {
-      margin-top: 25px;
+  }
+  ul.single_cr_type {
+    margin-top: 25px;
+    list-style: none;
+    li {
+      display: inline-block;
+      margin: 0 7px;
       @include type(
         (
           size: 13px,
@@ -197,6 +203,23 @@ span#select_input_title {
       );
       @include mq(large_laptop) {
         @include quick_type(15px, 19px, null);
+      }
+      &:after {
+        margin-left: 3px;
+        @include contentdisplay(inline-block, ",");
+      }
+      &:last-of-type {
+        &:after {
+          display: none;
+        }
+      }
+      a {
+        color: $color_bright_two;
+        text-decoration: none;
+        transition: all 200ms ease-in-out;
+        &:hover {
+          color: $color_dark_three;
+        }
       }
     }
   }

@@ -1,7 +1,5 @@
 <?php 
 
-/* Template Name: Case Results */
-
 get_header(); ?>
 
 <div id="internal_main">
@@ -20,7 +18,7 @@ get_header(); ?>
 				
 					<div id='select_input'>
 					
-						<span id='select_input_title'>Select</span><!-- class -->
+						<span id='select_input_title'><?php single_term_title();?></span><!-- class -->
 					
 					</div><!-- select_input -->
 
@@ -56,49 +54,51 @@ get_header(); ?>
 
 			<div id='case_result_boxes'>
 
-				<?php $mymain_query = new WP_Query( array( 'post_type' => 'case_results','posts_per_page' => '-1', 'order' => 'DSC' ) ); while($mymain_query->have_posts()) : $mymain_query->the_post(); ?>
+      <?php $term = get_term_by( 'slug', get_query_var('term'), get_query_var('taxonomy') );?>
+
+      <?php $mymain_query = new WP_Query( 
+				array(
+					'post_type' => 'case_results',
+					'posts_per_page' => -1, 
+					'order' => 'ASC',
+					'tax_query' => array(
+						array(
+          		'taxonomy' => 'case_results_category',
+							'field' => 'slug',
+							'terms' => array( $term->slug),
+							'operator' => 'IN'
+						)
+					)
+				) 
+			); 
+      
+      while($mymain_query->have_posts()) : $mymain_query->the_post(); ?>
+                	
+        <div class='single_cr'>
 				
-					<div class='single_cr'>
-				
-						<div class='single_cr_inner'>
-			
-							<span class='single_cr_title'><?php the_title();?></span><!-- single_cr_title -->
-
-							<span class='double_line'></span><!-- double_line -->
-
-							<?php 
-								$myterms = get_the_terms( $post->ID, 'case_results_category' );
-								// $terms_string = join(', ', wp_list_pluck($term_obj_list, 'name'));
-
-								echo "<ul class='single_cr_type'>";
-
-								foreach ( $myterms as $myterm ) {
-
-									$myterm_link = get_term_link( $myterm );
-								
-									echo '<li><a href="'. esc_url( $myterm_link ) .'">' . $myterm->name . '</a></li>';
-								
-								}
-								
-								echo "</ul>";
-
-							?>
-
-							<span class='single_cr_type'><?php echo $terms_string;?></span><!-- single_cr_type -->
-
-						<div class='single_cr_content content'>
-				
-							<?php the_content();?>
-				
-						</div><!-- single_cr_type -->
-			
-					</div><!-- single_cr_inner -->
-		
-				</div><!-- single_cr -->
+          <div class='single_cr_inner'>
         
-					<?php endwhile; ?>
+            <span class='single_cr_title'><?php the_title();?></span><!-- single_cr_title -->
+
+            <span class='double_line'></span><!-- double_line -->
+
+            <ul class='single_cr_type'><li><?php echo $term->name;?></li></ul><!-- single_cr_type -->
+
+            <div class='single_cr_content content'>
+          
+              <?php the_content();?>
+          
+            </div><!-- single_cr_type -->
         
-				<?php wp_reset_postdata(); // reset the query ?>
+          </div><!-- single_cr_inner -->
+      
+          </div><!-- single_cr -->
+          
+          
+      <?php endwhile; ?>
+    <?php wp_reset_postdata(); // reset the query ?>
+
+			
 
 			</div><!-- case_result_boxes -->
 
