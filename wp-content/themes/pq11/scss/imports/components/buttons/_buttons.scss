@@ -1,4 +1,3 @@
-
 .button {
   text-decoration: none;
   position: relative;
@@ -7,7 +6,7 @@
   z-index: 1;
   &:hover {
     span {
-      color:$color_bright_one;
+      color: $color_bright_one;
     }
     &:after {
       opacity: 1;
@@ -34,38 +33,37 @@
     z-index: 1;
     text-align: center;
     padding: 15px;
-    @include type (
+    @include type(
       (
         size: 18px,
         family: $secondaryfont,
         color: $color_light_one,
         weight: 400,
-        transform: lowercase 
+        transform: lowercase,
       )
     );
     @include mq(small_tablet) {
-      font-size:21px;
+      font-size: 21px;
       padding: 17px 19px;
     }
   }
 }
 
-
 .button_two {
-  display:inline-block;
+  display: inline-block;
   text-align: center;
-  border:2px solid $color_bright_two;
+  border: 2px solid $color_bright_two;
   padding: 16px 27px;
   border-radius: 50px;
-  transition:all 200ms ease-in-out;
-  @include type (
+  transition: all 200ms ease-in-out;
+  @include type(
     (
       size: 11px,
       family: $primaryfont,
       color: $color_bright_two,
       weight: 700,
-      spacing:1.5px,
-      transform: uppercase 
+      spacing: 1.5px,
+      transform: uppercase,
     )
   );
   @include mq(large_laptop) {
@@ -73,13 +71,85 @@
     font-size: 12px;
   }
   @include mq(small_monitor) {
-    border:3px solid $color_bright_two;
+    border: 3px solid $color_bright_two;
     font-size: 14px;
     padding: 17px 24px;
     @include quick_type(14px, null, 2px);
   }
   &:hover {
     background: $color_bright_two;
-    color:$color_light_one;
+    color: $color_light_one;
+  }
+}
+
+.play_button {
+  border-radius: 50%;
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  @include flex(center, center);
+  @include box(52px);
+  @include mq(small_tablet) {
+    @include box(68px);
+  }
+  @include mq(small_laptop) {
+    @include box(60px);
+  }
+  @include mq(small_monitor) {
+    @include box(90px);
+  }
+  &:before,
+  &:after {
+    transition: all 200ms ease-in-out;
+    @include contentdisplay();
+  }
+  &:before {
+    border-radius: 50%;
+    background: $color_dark_six;
+    @include box(42px);
+    @include mq(small_tablet) {
+      @include box(55px);
+    }
+    @include mq(small_laptop) {
+      @include box(45px);
+    }
+    @include mq(small_monitor) {
+      @include box(75px);
+    }
+  }
+  &:after {
+    @include abs(16px, null, null, 20px);
+    @include tri(right, 8px, 12px, $color_bright_one);
+    @include mq(small_tablet) {
+      @include abs(19px, null, null, 26px);
+      @include tri(right, 12px, 16px, $color_bright_one);
+    }
+    @include mq(small_laptop) {
+      @include abs(19px, null, null, 24px);
+      @include tri(right, 9px, 12px, $color_bright_one);
+    }
+    @include mq(small_monitor) {
+      @include abs(32px, null, null, 38px);
+      @include tri(right, 12px, 16px, $color_bright_one);
+    }
+  }
+}
+
+.video_hover_styles {
+  overflow: hidden;
+  img {
+    transition: all 900ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+    .play_button {
+      &:before {
+        background: $color_bright_one;
+      }
+      &:after {
+        border-left-color: $color_light_one !important;
+      }
+    }
   }
 }

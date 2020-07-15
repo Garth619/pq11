@@ -42,7 +42,7 @@ get_header(); ?>
 
 				<?php if(get_field('about_video_wistia_or_youtube') == "Wistia") { ?>
 				
-					<div id='about_video'>
+					<div id='about_video' class="video_hover_styles">
 
 							<div id='mywistia' class="wistia_embed wistia_async_<?php the_field( 'about_video_id_wistia' ); ?> popover=true popoverContent=html"></div><!-- mywistia -->
 
@@ -66,7 +66,7 @@ get_header(); ?>
 
 				<?php if(get_field('about_video_wistia_or_youtube') == "Youtube") { ?>
 				
-				<div id='about_video'>
+				<div id='about_video' class="video_hover_styles">
 
 						<a href="https://www.youtube.com/embed/<?php the_field( 'about_video_id_youtube' ); ?>" data-lity>
 

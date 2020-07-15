@@ -159,7 +159,20 @@
 
 .sec_six_arrow {
   margin: 0 33px;
+  cursor: pointer;
   @include box(12px, 20px);
+  svg {
+    polygon {
+      transition: all 200ms ease-in-out;
+    }
+  }
+  &:hover {
+    svg {
+      polygon {
+        fill: $color_dark_three;
+      }
+    }
+  }
 }
 
 #sec_six_right_arrow {

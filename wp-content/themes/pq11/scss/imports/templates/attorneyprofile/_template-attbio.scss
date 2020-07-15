@@ -98,28 +98,25 @@ span#att_position {
   padding: 0 35px;
   margin-top: -132px;
   display: inline-block;
+  overflow: hidden;
   @include margin_lr;
+  border-bottom: 7px solid $color_bright_two;
   @include mq(small_tablet) {
     max-width: 181px;
     padding: 0;
     margin-top: 0px;
+    border-bottom: 4px solid $color_bright_two;
     @include abs(30px, 60px, null, null);
   }
   @include mq(small_laptop) {
     display: none;
+    border-bottom: 5px solid $color_bright_two;
+  }
+  @include mq(small_monitor) {
+    border-bottom: 6px solid $color_bright_two;
   }
   img {
-    border-bottom: 7px solid $color_bright_two;
     @include image();
-    @include mq(small_tablet) {
-      border-bottom: 4px solid $color_bright_two;
-    }
-    @include mq(small_laptop) {
-      border-bottom: 5px solid $color_bright_two;
-    }
-    @include mq(small_monitor) {
-      border-bottom: 6px solid $color_bright_two;
-    }
   }
 }
 

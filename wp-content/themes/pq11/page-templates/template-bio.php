@@ -16,7 +16,7 @@ get_header(); ?>
 	
 				<h1 id="internal_header" class='att_header' ><?php the_title();?></h1><!-- att_header -->
 
-				<span class='double_line'></span><!-- double_line -->
+				<span class='double_line bio_line'></span><!-- double_line -->
 
 				<span id='att_position'><?php the_field( 'position' ); ?></span><!-- att_position -->
 	

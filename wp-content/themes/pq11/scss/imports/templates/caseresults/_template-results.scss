@@ -131,15 +131,18 @@ span#select_input_title {
 #case_result_boxes {
   margin: 55px 0 -22px;
   @include mq(small_tablet) {
-    column-count: 2;
-    column-gap: 22px;
+    // column-count: 2;
+    // column-gap: 22px;
+    @include flex(space-between);
   }
+}
+
+.cr_col {
+  flex-basis: 47%;
 }
 
 .single_cr {
   width: 100%;
-  //page-break-inside: avoid;
-  //break-inside: avoid;
   display: inline-block;
   background: $color_light_one;
   box-shadow: 0px 1px 20px #0000001a;

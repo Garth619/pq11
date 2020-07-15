@@ -41,6 +41,10 @@
   a {
     color: $color_dark_three;
     text-decoration: none;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      color: $color_bright_two;
+    }
   }
 }
 

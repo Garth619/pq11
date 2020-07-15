@@ -1,4 +1,5 @@
 #section_four {
+  overflow: hidden;
   @include mq(small_tablet) {
     padding: 70px 60px;
     position: relative;
@@ -176,12 +177,25 @@
   display: inline-flex !important;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
   @include box(64px, 58px);
   @include mq(small_tablet) {
     @include box(52px);
   }
+  &:hover {
+    background: $color_bright_one;
+    svg {
+      path {
+        fill: $color_light_one;
+      }
+    }
+  }
   svg {
     height: 20px;
+    path {
+      //transition: all 200ms ease-in-out;
+    }
     @include mq(small_tablet) {
       height: 26px;
     }

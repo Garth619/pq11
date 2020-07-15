@@ -31,6 +31,11 @@
         background: rgba(0, 0, 0, 0.5);
       }
     }
+    .video_title_wrapper {
+      span.video_title {
+        color: $color_bright_two;
+      }
+    }
   }
   @include mq(small_tablet) {
     flex-basis: 48%;
@@ -130,6 +135,7 @@
   }
   span.video_title {
     display: block;
+    transition: all 200ms ease-in-out;
     @include type(
       (
         size: 14px,

@@ -1,6 +1,7 @@
 #about_banner {
   position: relative;
   padding: 45px 30px 30px;
+  overflow: hidden;
   @include mq(small_tablet) {
     padding: 73px 30px 79px;
   }
@@ -282,7 +283,20 @@ span#about_bottom_title {
 
 .about_bottom_arrow {
   margin: 0 33px;
+  cursor: pointer;
   @include box(12px, 20px);
+  svg {
+    polygon {
+      transition: all 200ms ease-in-out;
+    }
+  }
+  &:hover {
+    svg {
+      polygon {
+        fill: $color_dark_three;
+      }
+    }
+  }
 }
 
 #about_bottom_right_arrow {

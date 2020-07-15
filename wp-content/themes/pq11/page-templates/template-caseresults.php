@@ -28,13 +28,28 @@ get_header(); ?>
 					
 						<div id='select_dropdown_inner'>
 						
-							<ul>
+						
+							<?php $terms = get_terms( 'case_results_category' );
+						
+						if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+						
+						echo '<ul>';
+							
+							foreach ( $terms as $term ) {
+								
+								echo '<li data-filter="' . $term->slug . '">' . $term->name . '</li>';
+    					}
+    					
+						echo '<li data-filter="view-all">View All +</li></ul>';
+					
+					} ?>
+						<!-- <ul>
 								<li data-filter="test-1">Test 1</li>
 								<li data-filter="test-2">Test 2</li>
 								<li data-filter="test-3">Test 3</li>
 								<li data-filter="test-4">Test 4</li>
 								<li data-filter="test-5">Test 5</li>
-							</ul>
+							</ul> -->
 						
 						</div><!-- select_dropdown_inner -->
 					
@@ -45,6 +60,8 @@ get_header(); ?>
 			</div><!-- select_wrapper -->
 
 			<div id='case_result_boxes'>
+
+			<div class='cr_col'>
 			
 				<div class='single_cr test-1'>
 				
@@ -128,6 +145,12 @@ get_header(); ?>
 				
 				</div><!-- single_cr -->
 
+				</div><!-- cr_col -->
+
+				<div class='cr_col'>
+
+				
+
 				<div class='single_cr test-5'>
 				
 					<div class='single_cr_inner'>
@@ -188,6 +211,8 @@ get_header(); ?>
 				
 				</div><!-- single_cr -->
 
+				</div><!-- cr_col -->
+
 			</div><!-- case_result_boxes -->
 
 		</div><!-- case_results_wrapper -->
@@ -197,3 +222,4 @@ get_header(); ?>
 </div><!-- internal_main -->
 						
 <?php get_footer(); ?>
+

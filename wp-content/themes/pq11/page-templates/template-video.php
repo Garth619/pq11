@@ -17,11 +17,11 @@ get_header(); ?>
 
 			<?php if(get_field('wistia_or_youtube') == "Wistia") { ?>
 	
-			<div class='single_video'>
+			<div class='single_video video_hover_styles'>
 
 				<div class='video_thumb'>
 				
-					<div class='mywisita wistia_embed wistia_async_<?php the_sub_field( 'wistia_id' ); ?> popover=true popoverContent=html'></div><!-- mywisita -->
+					<div class='mywisita wistia_embed wistia_async_<?php the_sub_field( 'wistia_id' ); ?> popover=true popoverContent=thumbnail'></div><!-- mywisita -->
 
 					<div class='video_overlay'>
 					
@@ -43,7 +43,7 @@ get_header(); ?>
 
 			<?php if(get_field('wistia_or_youtube') == "Youtube") { ?>
 
-				<div class='single_video'>
+				<div class='single_video video_hover_styles'>
 
 				<a href="https://www.youtube.com/embed/<?php the_sub_field( 'youtube_id' ); ?>" data-lity>
 
