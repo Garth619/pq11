@@ -289,6 +289,10 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  if ($(".tax-case_results_category").length) {
+    $("li.case_results_item").addClass("current-menu-item");
+  }
+
   /* Remove "#" from menu anchor items to avoid jump to the top of the page
 --------------------------------------------------------------------------------------- */
 
