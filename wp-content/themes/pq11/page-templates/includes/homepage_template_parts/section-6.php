@@ -15,6 +15,12 @@
 		<div id='sec_six_slider_wrapper'>
 
 		<?php if ( have_rows( 'section_six_logos' ) ) : ?>
+
+			<div id='sec_six_left_arrow' class="sec_six_arrow">
+				
+				<?php echo file_get_contents( get_template_directory() . '/images/news-arrow.svg' ); ?>
+				
+			</div><!-- sec_six_left_arrow -->
 			
 			<div id='sec_six_slider'>
 		
@@ -40,25 +46,13 @@
 
 			</div><!-- sec_six_slider -->
 
-		<?php endif; ?>
-
-			<div id='sec_six_counter'>
-			
-				<div id='sec_six_left_arrow' class="sec_six_arrow">
-				
-					<?php echo file_get_contents( get_template_directory() . '/images/news-arrow.svg' ); ?>
-				
-				</div><!-- sec_six_left_arrow -->
-
-				<span class="pagingInfo"></span>
-
-				<div id='sec_six_right_arrow' class="sec_six_arrow">
+			<div id='sec_six_right_arrow' class="sec_six_arrow">
 				
 					<?php echo file_get_contents( get_template_directory() . '/images/news-arrow.svg' ); ?>
 				
 				</div><!-- sec_six_right_arrow -->
-			
-			</div><!-- sec_six_counter -->
+
+		<?php endif; ?>
 		
 		</div><!-- sec_six_slider_wrapper -->
 	

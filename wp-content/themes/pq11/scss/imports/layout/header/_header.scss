@@ -217,7 +217,7 @@ span.header_title_lrg {
       spacing: 0.8px,
       family: $primaryfont,
       weight: 700,
-      transform: uppercase,
+      //transform: uppercase,
     )
   );
   @include mq(tablet) {

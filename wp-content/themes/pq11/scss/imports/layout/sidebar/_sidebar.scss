@@ -322,6 +322,7 @@ span.sidebar_form_title {
           size: 13px,
           height: 15px,
           family: $primaryfont,
+          weight: 600,
         )
       );
       @include mq(small_laptop) {
@@ -336,6 +337,10 @@ span.sidebar_form_title {
       a {
         color: $color_dark_three;
         text-decoration: none;
+        transition: all 200ms ease-in-out;
+        &:hover {
+          color: $color_bright_two;
+        }
       }
     }
   }

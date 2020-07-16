@@ -133,10 +133,12 @@ span#select_input_title {
 }
 
 #case_result_boxes {
-  margin: 55px 0 -22px;
-  @include mq(small_tablet) {
+  margin: 55px auto -22px;
+
+  @include mq(small_laptop) {
     column-count: 2;
     column-gap: 22px;
+    //max-width: 645px;
   }
 }
 

@@ -312,18 +312,18 @@ span#sec_one_logo_title {
       justify-content: flex-start;
     }
     img {
-      filter: invert(88%) saturate(0%);
+      //filter: invert(88%) saturate(0%);
     }
     svg,
     img {
-      height: 25px;
       margin: auto;
       @include image();
+      height: 25px;
       @include mq(small_tablet) {
         height: 27px;
       }
       @include mq(small_laptop) {
-        height: 30px;
+        height: 27px;
         margin: 0;
       }
       @include mq(small_monitor) {

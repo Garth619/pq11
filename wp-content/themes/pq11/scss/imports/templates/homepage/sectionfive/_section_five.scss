@@ -34,7 +34,12 @@
   position: relative;
   z-index: 1;
   @include mq(small_laptop) {
+    max-width: 930px;
+    @include margin_lr;
     @include flex();
+  }
+  @include mq(large_laptop) {
+    max-width: 100%;
   }
   @include mq(small_monitor) {
     max-width: 1440px;
@@ -147,7 +152,7 @@
   }
   @include mq(small_laptop) {
     padding-left: 53px;
-    padding-right: 130px;
+    // padding-right: 130px;
     margin-top: 0;
   }
   @include mq(large_laptop) {
