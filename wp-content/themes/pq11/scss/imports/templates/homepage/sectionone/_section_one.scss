@@ -302,17 +302,25 @@ span#sec_one_logo_title {
 }
 
 .sec_one_slide {
+  height: 40px;
   @include mq(small_laptop) {
     margin-right: 55px;
+  }
+  &.three {
+    .sec_one_slide_inner {
+      img {
+        height: 32px;
+        @include mq(small_monitor) {
+          height: 45px;
+        }
+      }
+    }
   }
   .sec_one_slide_inner {
     height: 100%;
     @include flex(center, center);
     @include mq(small_laptop) {
       justify-content: flex-start;
-    }
-    img {
-      //filter: invert(88%) saturate(0%);
     }
     svg,
     img {

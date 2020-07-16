@@ -180,6 +180,10 @@ img#about_banner_image {
 
 #about_bottom_wrapper {
   position: relative;
+  padding-bottom: 20px;
+  @include mq(small_monitor) {
+    padding-bottom: 50px;
+  }
   &:after {
     background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
     opacity: 0.6;
@@ -223,82 +227,4 @@ span#about_bottom_title {
   @include mq(large_laptop) {
     font-size: 15px;
   }
-}
-
-#about_bottom_slider_wrapper {
-  margin-top: 40px;
-  @include mq(large_laptop) {
-    margin-top: 68px;
-  }
-}
-
-#about_bottom_slider {
-  max-width: 765px;
-  @include margin_lr;
-  @include mq(small_tablet) {
-    max-width: 695px;
-  }
-  @include mq(small_laptop) {
-    max-width: 965px;
-  }
-  @include mq(large_laptop) {
-    max-width: 1200px;
-  }
-  @include mq(small_monitor) {
-    max-width: 1400px;
-  }
-}
-
-.about_bottom_slide {
-  .about_bottom_slide_inner {
-    height: 100%;
-    @include flex(center, center);
-    img {
-      @include image();
-      height: 44px;
-      margin: 0;
-      @include mq(small_tablet) {
-        height: 29px;
-      }
-      @include mq(small_laptop) {
-        //height: 40px;
-      }
-      @include mq(large_laptop) {
-        height: 32px;
-      }
-      @include mq(small_monitor) {
-        height: 37px;
-      }
-    }
-  }
-}
-
-#about_bottom_counter {
-  margin-top: 37px;
-  @include flex(center, center);
-  @include mq(large_laptop) {
-    margin-top: 60px;
-  }
-}
-
-.about_bottom_arrow {
-  margin: 0 33px;
-  cursor: pointer;
-  @include box(12px, 20px);
-  svg {
-    polygon {
-      transition: all 200ms ease-in-out;
-    }
-  }
-  &:hover {
-    svg {
-      polygon {
-        fill: $color_dark_three;
-      }
-    }
-  }
-}
-
-#about_bottom_right_arrow {
-  transform: rotate(-180deg);
 }

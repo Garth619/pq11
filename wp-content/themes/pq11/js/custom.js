@@ -213,40 +213,6 @@ jQuery(document).ready(function ($) {
     ],
   });
 
-  $("#about_bottom_slider").slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    mobileFirst: true,
-    arrows: true,
-    dots: false,
-    prevArrow: "#about_bottom_left_arrow",
-    nextArrow: "#about_bottom_right_arrow",
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        },
-      },
-      {
-        breakpoint: 1170,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
-        },
-      },
-      {
-        breakpoint: 1380,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 3,
-        },
-      },
-    ],
-  });
-
   /* Case Results Page
 --------------------------------------------------------------------------------------- */
 

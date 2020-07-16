@@ -124,49 +124,7 @@ get_header(); ?>
 
 			<span class='double_line'></span><!-- double_line -->
 
-			<div id='about_bottom_slider_wrapper'>
-			
-				<div id='about_bottom_slider'>
-
-				<?php if ( have_rows( 'about_logos' ) ) : ?>
-					
-					<?php while ( have_rows( 'about_logos' ) ) : the_row(); ?>
-					
-						<div class='about_bottom_slide'>
-				
-							<div class='about_bottom_slide_inner'>
-
-								<?php $logo = get_sub_field( 'logo' ); ?>
-			
-								<img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
-		
-							</div><!-- about_bottom_slide_inner -->
-	
-						</div><!-- about_bottom_slide -->
-
-					<?php endwhile; ?>
-
-				<?php endif; ?>
-				
-				</div><!-- about_bottom_slider -->
-
-				<div id='about_bottom_counter'>
-				
-					<div id='about_bottom_left_arrow' class="about_bottom_arrow">
-					
-						<?php echo file_get_contents( get_template_directory() . '/images/news-arrow.svg' ); ?>
-					
-					</div><!-- about_bottom_left_arrow -->
-
-					<div id='about_bottom_right_arrow' class="about_bottom_arrow">
-					
-					<?php echo file_get_contents( get_template_directory() . '/images/news-arrow.svg' ); ?>
-				
-				</div><!-- about_bottom_right_arrow -->
-				
-				</div><!-- about_bottom_counter -->
-			
-			</div><!-- about_bottom_slider_wrapper -->
+			<?php get_template_part('page-templates/includes/template','nationally_recognized_slider'); ?>
 		
 		</div><!-- about_bottom_inner -->
 	

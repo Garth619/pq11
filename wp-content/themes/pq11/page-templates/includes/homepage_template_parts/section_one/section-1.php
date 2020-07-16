@@ -50,7 +50,7 @@
 	        
           <?php while ( have_rows( 'section_one_logo_slider' ) ) : the_row(); ?>
 
-          <div class='sec_one_slide'>
+          <div class='sec_one_slide <?php the_sub_field('class');?>'>
 
             <div class='sec_one_slide_inner'>
 
