@@ -140,7 +140,7 @@
 
       <?php gravity_form(1, false, false, false, '', true, 1234); ?>
 
-      <span class='required'>Required Field</span><!-- required -->
+      <span class='required'>Required Fields</span><!-- required -->
 
     </div><!-- sec_one_right_inner -->
   

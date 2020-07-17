@@ -89,6 +89,9 @@ body {
   @include mq(small_monitor) {
     @include quick_type(16px, 30px, null);
   }
+  img {
+    @include image();
+  }
   h2 {
     padding-top: 5px;
     padding-bottom: 10px;
