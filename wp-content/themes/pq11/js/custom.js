@@ -179,15 +179,15 @@ jQuery(document).ready(function ($) {
     nextArrow: "#sec_four_right_arrow",
   });
 
-  $("#sec_six_slider").slick({
+  $("#logos_slider").slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     mobileFirst: true,
     arrows: true,
     dots: false,
-    prevArrow: "#sec_six_left_arrow",
-    nextArrow: "#sec_six_right_arrow",
+    prevArrow: "#logos_left_arrow",
+    nextArrow: "#logos_right_arrow",
     responsive: [
       {
         breakpoint: 767,

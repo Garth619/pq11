@@ -1,23 +1,23 @@
 
 
-<div id='sec_six_slider_wrapper'>
+<div id='logos_slider_wrapper'>
 
 		<?php if(get_field('section_six_logos',10)): ?>
 
 
-			<div id='sec_six_left_arrow' class="sec_six_arrow">
+			<div id='logos_left_arrow' class="logos_arrow">
 				
 				<?php echo file_get_contents( get_template_directory() . '/images/news-arrow.svg' ); ?>
 				
-			</div><!-- sec_six_left_arrow -->
+			</div><!-- logos_left_arrow -->
 			
-			<div id='sec_six_slider'>
+			<div id='logos_slider'>
 			
 			<?php while(has_sub_field('section_six_logos',10)): ?>
 		
-				<div class='sec_six_slide <?php the_sub_field('class');?>'>
+				<div class='logos_slide <?php the_sub_field('class');?>'>
 				
-					<div class='sec_six_slide_inner'>
+					<div class='logos_slide_inner'>
 
 					<?php $logos = get_sub_field( 'logos'); ?>
 					
@@ -27,20 +27,20 @@
 					
 					<?php } ?>
 				
-					</div><!-- sec_six_slide_inner -->
+					</div><!-- logos_slide_inner -->
 			
-				</div><!-- sec_six_slide -->
+				</div><!-- logos_slide -->
 			
 			<?php endwhile; ?>
 
-			</div><!-- sec_six_slider -->
+			</div><!-- logos_slider -->
 
-			<div id='sec_six_right_arrow' class="sec_six_arrow">
+			<div id='logos_right_arrow' class="logos_arrow">
 				
 					<?php echo file_get_contents( get_template_directory() . '/images/news-arrow.svg' ); ?>
 				
-				</div><!-- sec_six_right_arrow -->
+				</div><!-- logos_right_arrow -->
 
 		<?php endif; ?>
 		
-		</div><!-- sec_six_slider_wrapper -->
+		</div><!-- logos_slider_wrapper -->
