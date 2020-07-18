@@ -2,106 +2,116 @@
 // Global Content
 ////////////////////////////////////////////////////////////////////
 
-// .page_header
+// #page_header
 
-$page_header_size: 36px;
-$page_header_size_small_tablet: 60px;
+$page_header_size: 25px;
+$page_header_size_large_laptop: 30px;
+$page_header_size_small_monitor: 45px;
 
-$page_header_height: 42px;
-$page_header_height_small_tablet: 70px;
+$page_header_height: 25px;
+$page_header_height_large_laptop: 30px;
+$page_header_height_small_monitor: 45px;
 
-$page_header_color: $color_dark_one;
+$page_header_weight: 500;
 
-$page_header_weight: 700;
+// #internal_header
 
-// .page_header:after
+$internal_header_size: 35px;
+$internal_header_size_large_laptop: 55px;
+$internal_header_size_small_monitor: 60px;
 
-$page_header_line_bg_color: $color_bright_one;
+$internal_header_height: 35px;
+$internal_header_height_large_laptop: 55px;
+$internal_header_height_small_monitor: 70px;
 
-// .page_header.center
+$internal_header_weight: 500;
 
-$page_header_center_size: 70px;
+// .double_line:before,&:after
 
-$page_header_center_height: 75px;
+$double_line_bg_color: $color_bright_two;
 
 // .content
 
-$content_size: 16px;
-$content_size_small_monitor: 17px;
+$content_size: 13px;
+$content_size_large_laptop: 15px;
+$content_size_small_monitor: 16px;
 
-$content_height: 30px;
+$content_height: 22px;
+$content_height_large_laptop: 28px;
+$content_height_small_monitor: 30px;
 
-$content_color: $color_dark_three;
-
-// .content a
-
-$content_link_color: $color_dark_two;
+$content_spacing: 0.33px;
 
 // .content h2
 
-$content_h2_size: 24px;
-$content_h2_size_small_tablet: 27px;
+$content_h2_size: 18px;
+$content_h2_size_large_laptop: 22px;
+$content_h2_size_small_monitor: 26px;
 
-$content_h2_height: 35px;
+$content_h2_height: 22px;
+$content_h2_height_large_laptop: 25px;
+$content_h2_height_small_monitor: 30px;
 
-$content_h2_color: $color_dark_two;
+$content_h2_color: $color_bright_two;
 
-$content_h2_weight: 700;
+$content_h2_weight: 500;
 
 // .content h3
 
-$content_h3_size: 18px;
+$content_h3_size: 15px;
+$content_h3_size_large_laptop: 17px;
+$content_h3_size_small_monitor: 19px;
 
-$content_h3_spacing: 1.44px;
+$content_h3_height: 19px;
+$content_h3_height_large_laptop: 30px;
+$content_h3_height_small_monitor: 30px;
 
-$content_h3_height: 25px;
+$content_h3_spacing: 0.38px;
 
-$content_h3_color: $color_bright_one;
-
-$content_h3_weight: 800;
+$content_h3_weight: 600;
 
 // .content h4
 
-$content_h4_size: 17px;
-$content_h4_size_large_laptop: 30px;
-$content_h4_size_small_monitor: 35px;
+$content_h4_size: 16px;
 
-$content_h4_height: 22px;
-$content_h4_height_large_laptop: 40px;
-$content_h4_height_small_monitor: 50px;
+$content_h4_height: 18px;
 
-$content_h4_color: $color_bright_two;
+$content_h4_spacing: 0.4px;
 
-$content_h4_weight: 800;
+$content_h4_weight: 600;
 
-// .content blockquote
+// .content a
 
-$content_blockquote_size: 26px;
+$content_link_color: $color_bright_two;
 
-$content_blockquote_spacing: 0.35px;
+// ul li, ol li
 
-$content_blockquote_height: 35px;
+$content_li_weight: 600;
 
-$content_blockquote_color: $color_dark_two;
+// ul li bullet
 
-$content_blockquote_weight: 700;
+$content_ul_bullet_bg_color: $color_bright_one;
 
-// .content blockquote:after
+// ol li
 
-$content_blockquote_bg_line_color: $color_bright_one;
+$content_ol_height_large_laptop: $color_bright_two;
 
-// .content strong
+// ol li:before
 
-$content_strong_color: $color_dark_two;
+$content_ol_number_color: $color_bright_two;
 
-$content_strong_weight: 800;
+// span.double_line.blockquote:before,&:after
 
-// .content ul li:before
+$blockquote_double_line_bg_color: $color_bright_two;
 
-$content_ul_list_item_color: $color_dark_two;
+// blockquote
 
-// .content ol li:before
+$blockquote_size: 21px;
+$blockquote_size_large_laptop: 25px;
+$blockquote_size_small_monitor: 35px;
 
-$content_ol_list_item_color: $color_dark_two;
+$blockquote_height: 22px;
+$blockquote_height_large_laptop: 25px;
+$blockquote_height_small_monitor: 40px;
 
-$content_ol_list_item_weight: 800;
+$blockquote_weight: 500;

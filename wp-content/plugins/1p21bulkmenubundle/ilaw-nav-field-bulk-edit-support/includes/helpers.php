@@ -13,10 +13,10 @@ function _ilaw_sm_create_admin_error($message,$notice_type = 'error'){
  
 function _ilaw_sm_slug_text($string) {
 
-	$new_id = preg_replace("/[^a-zA-Z_]/","",str_replace(array(' ',), '_', $string)); // Replaces spaces in Sidebar Name to dash
-	$new_id = strtolower( $new_id ); // Transforms edited Sidebar Name to lowercase
+	// $new_id = preg_replace("/[^a-zA-Z_]/","",str_replace(array(' ',), '_', $string)); // Replaces spaces in Sidebar Name to dash
+	// $new_id = strtolower( $new_id ); // Transforms edited Sidebar Name to lowercase
   
-	return $new_id;
+	return sanitize_title($string);
 
 }
 
@@ -50,14 +50,6 @@ function _ilaw_sm_is_descendant_of($an_ancestor = null,$an_id = null){
 	}
 }
 
-
-function _ilaw_sm_id_friendly_text($string) {
-
-	$new_id = preg_replace("/[^a-zA-Z_]/","",str_replace(array(' ',), '_', $string)); // Replaces spaces in Sidebar Name to dash
-	$new_id = strtolower( $new_id ); // Transforms edited Sidebar Name to lowercase
-
-	return $new_id;
-}
 
 /********************************************************************************************
 * open for the pooblic

@@ -12,7 +12,7 @@
 					
 					<?php if ( $section_five_image_desktop ) { ?>
 
-						<source media='(min-width: 1380px)' srcset='<?php echo $section_five_image_desktop['url']; ?>'>
+						<source media='(min-width: 1380px)' data-srcset='<?php echo $section_five_image_desktop['url']; ?>'>
 
 					<?php } ?>
 
@@ -20,13 +20,13 @@
 
 					<?php if ( $section_five_image_laptop ) { ?>
 
-						<source media='(min-width: 1170px)' srcset='<?php echo $section_five_image_laptop['url']; ?>'>
+						<source media='(min-width: 1170px)' data-srcset='<?php echo $section_five_image_laptop['url']; ?>'>
 
 					<?php } ?>
 
 					<?php $section_five_image_mobile = get_field( 'section_five_image_mobile' ); ?>
 
-					<img src='<?php echo $section_five_image_mobile['url']; ?>' /><!-- name -->
+					<img class="lazyload" data-src='<?php echo $section_five_image_mobile['url']; ?>' /><!-- name -->
 
 				</picture>
 			

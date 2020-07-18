@@ -125,6 +125,14 @@ These fields are used to add widget areas to pages and all their descendants. Th
 
 
 # Version Updates
+
+*	2.0.6.2
+	- Shit not right now tho that shit's way more complex than the tiger king documentary 
+*	2.0.6
+	- Shit I forgot CPTs 
+*	2.0.5
+	- I updated it because i did another thing
+	- SANITIZE_TITLE ????? why yes
 *	2.0.4
 	- I updated it because i did a dumb thing
 	- friendly text bug

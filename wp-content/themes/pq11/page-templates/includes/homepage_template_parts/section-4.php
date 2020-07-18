@@ -61,13 +61,13 @@
 
 		<?php if ( $section_four_background_image_desktop ) { ?>
 
-			<source media='(min-width: 1170px)' srcset='<?php echo $section_four_background_image_desktop['url']; ?>'>
+			<source media='(min-width: 1170px)' data-srcset='<?php echo $section_four_background_image_desktop['url']; ?>'>
 			
 		<?php } ?>
 
 		<?php $section_four_background_image_tablet = get_field( 'section_four_background_image_tablet' ); ?>
 
-		<img id='sec_four_img' src='<?php echo $section_four_background_image_desktop['url']; ?>' /><!-- sec_four_img -->
+		<img id='sec_four_img' class="lazyload" data-src='<?php echo $section_four_background_image_desktop['url']; ?>' /><!-- sec_four_img -->
 
 	</picture>
 

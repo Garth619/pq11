@@ -121,16 +121,16 @@ img.aligncenter {
 }
 
 .gform_wrapper ul li ::-webkit-input-placeholder {
-  color: $color_dark_two;
+  color: $gform_placeholder;
 }
 .gform_wrapper ul li ::-moz-placeholder {
-  color: $color_dark_two;
+  color: $gform_placeholder;
 }
 .gform_wrapper ul li :-moz-placeholder {
-  color: $color_dark_two;
+  color: $gform_placeholder;
 }
 .gform_wrapper ul li :-ms-input-placeholder {
-  color: $color_dark_two;
+  color: $gform_placeholder;
 }
 .gform_wrapper ul li ::-moz-placeholder {
   opacity: 1;

@@ -40,7 +40,7 @@ if ( get_field('sm_custom_menu') ){ ?>
 	<?php
 
 //then check for blog and posts
-}else if( is_home() || is_single() || (is_archive() && !is_post_type_archive()) ) { 
+}else if( is_home() || is_singular('post') || (is_archive() && !is_post_type_archive()) ) { 
 
 	if( is_active_sidebar( '_ilaw_sm_blog_sidebar' ) ){
 		echo '<!-- blog sidebar -->';
@@ -57,12 +57,15 @@ if ( get_field('sm_custom_menu') ){ ?>
 
 	foreach( $available_sidebars as $row ):
 
-		$template_sidebar_id = _ilaw_sm_id_friendly_text($row['name']);
+		$template_sidebar_id = _ilaw_sm_slug_text($row['name']);
 
 		if($row['pages']): 
 
 			foreach($row['pages'] as $sub_row):
 				the_row();
+
+				//current post type
+				// $curr_page_pt = get_post_type();
 
 				if( $sub_row['page'] && _ilaw_sm_is_descendant_of($sub_row['page']) &&  $no_sidebar_yet ){
 

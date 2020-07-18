@@ -23,7 +23,7 @@
 					
 					<?php if ( $logos ) { ?>
 						
-						<img src="<?php echo $logos['url']; ?>" alt="<?php echo $logos['alt']; ?>" />
+						<img data-src="<?php echo $logos['url']; ?>" alt="<?php echo $logos['alt']; ?>" />
 					
 					<?php } ?>
 				

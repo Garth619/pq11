@@ -6,10 +6,10 @@ body {
   padding: 31px 0 20px 0;
   @include type(
     (
-      size: 25px,
-      height: 25px,
+      size: $page_header_size,
+      height: $page_header_height,
       family: $secondaryfont,
-      weight: 500,
+      weight: $page_header_weight,
     )
   );
   @include mq(small_tablet) {
@@ -20,11 +20,19 @@ body {
   }
   @include mq(large_laptop) {
     padding: 64px 0 22px 0;
-    @include quick_type(30px, 30px, null);
+    @include quick_type(
+      $page_header_size_large_laptop,
+      $page_header_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
     padding: 98px 0 22px 0;
-    @include quick_type(45px, 45px, null);
+    @include quick_type(
+      $page_header_size_small_monitor,
+      $page_header_height_small_monitor,
+      null
+    );
   }
 }
 
@@ -33,10 +41,10 @@ body {
   text-align: center;
   @include type(
     (
-      size: 35px,
-      height: 35px,
+      size: $internal_header_size,
+      height: $internal_header_height,
       family: $secondaryfont,
-      weight: 500,
+      weight: $internal_header_weight,
     )
   );
   @include mq(small_tablet) {
@@ -44,11 +52,19 @@ body {
   }
   @include mq(large_laptop) {
     padding: 64px 0 60px 0;
-    @include quick_type(55px, 55px, null);
+    @include quick_type(
+      $internal_header_size_large_laptop,
+      $internal_header_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
     padding: 75px 0 54px 0;
-    @include quick_type(60px, 70px, null);
+    @include quick_type(
+      $internal_header_size_small_monitor,
+      $internal_header_height_small_monitor,
+      null
+    );
   }
 }
 
@@ -65,7 +81,7 @@ body {
   &:after {
     width: 100%;
     height: 1px;
-    background: $color_bright_two;
+    background: $double_line_bg_color;
     @include contentdisplay();
   }
   &:after {
@@ -76,18 +92,25 @@ body {
 .content {
   @include type(
     (
-      size: 13px,
-      spacing: 0.33px,
-      height: 22px,
+      size: $content_size,
+      spacing: $content_spacing,
+      height: $content_height,
       family: $primaryfont,
-      //weight: 300,
     )
   );
   @include mq(large_laptop) {
-    @include quick_type(15px, 28px, null);
+    @include quick_type(
+      $content_size_large_laptop,
+      $content_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
-    @include quick_type(16px, 30px, null);
+    @include quick_type(
+      $content_size_small_monitor,
+      $content_height_small_monitor,
+      null
+    );
   }
   img {
     @include image();
@@ -97,54 +120,70 @@ body {
     padding-bottom: 10px;
     @include type(
       (
-        size: 18px,
-        height: 22px,
+        size: $content_h2_size,
+        height: $content_h2_height,
         family: $secondaryfont,
-        color: $color_bright_two,
-        weight: 500,
+        color: $content_h2_color,
+        weight: $content_h2_weight,
       )
     );
     @include mq(large_laptop) {
-      @include quick_type(22px, 25px, null);
+      @include quick_type(
+        $content_h2_size_large_laptop,
+        $content_h2_height_large_laptop,
+        null
+      );
     }
     @include mq(small_monitor) {
-      @include quick_type(26px, 30px, null);
+      @include quick_type(
+        $content_h2_size_small_monitor,
+        $content_h2_height_small_monitor,
+        null
+      );
     }
   }
   h3 {
     margin-bottom: 10px;
     @include type(
       (
-        size: 15px,
-        spacing: 0.38px,
-        height: 19px,
+        size: $content_h3_size,
+        spacing: $content_h3_spacing,
+        height: $content_h3_height,
         family: $primaryfont,
-        weight: 600,
+        weight: $content_h3_weight,
       )
     );
     @include mq(large_laptop) {
       margin-bottom: 3px;
-      @include quick_type(17px, 30px, null);
+      @include quick_type(
+        $content_h3_size_large_laptop,
+        $content_h3_height_large_laptop,
+        null
+      );
     }
     @include mq(small_monitor) {
       margin-bottom: 9px;
-      @include quick_type(19px, 30px, null);
+      @include quick_type(
+        $content_h3_size_small_monitor,
+        $content_h3_height_small_monitor,
+        null
+      );
     }
   }
   h4 {
     padding-bottom: 6px;
     @include type(
       (
-        size: 16px,
-        spacing: 0.4px,
-        height: 18px,
-        weight: 600,
+        size: $content_h4_size,
+        spacing: $content_h4_spacing,
+        height: $content_h4_height,
+        weight: $content_h4_weight,
         color: $color_bright_two,
       )
     );
   }
   a {
-    color: $color-bright_two;
+    color: $content_link_color;
     text-decoration: none;
     &:hover {
       text-decoration: underline;
@@ -161,7 +200,7 @@ body {
     list-style: none;
     li {
       position: relative;
-      font-weight: 600;
+      font-weight: $content_li_weight;
       padding-left: 25px;
       margin-bottom: 6px;
       @include mq(large_laptop) {
@@ -170,7 +209,7 @@ body {
       }
       &:before {
         border-radius: 50%;
-        background: $color_bright_one;
+        background: $content_ul_bullet_bg_color;
         @include abs(9px, null, null, 0);
         @include box(6px);
         @include contentdisplay();
@@ -190,17 +229,17 @@ body {
       counter-increment: item;
       position: relative;
       padding-left: 30px;
-      font-weight: 600;
+      font-weight: $content_li_weight;
       margin-bottom: 6px;
       @include mq(large_laptop) {
-        line-height: 20px;
+        line-height: $content_ol_height_large_laptop;
         margin-bottom: 10px;
       }
     }
     > li:before {
       content: counter(item) ".";
-      font-weight: 600;
-      color: $color_bright_two;
+      font-weight: $content_li_weight;
+      color: $content_ol_number_color;
       @include abs(0, null, null, 0);
     }
   }
@@ -215,25 +254,33 @@ body {
     }
     &:before,
     &:after {
-      background: $color_bright_two;
+      background: $blockquote_double_line_bg_color;
     }
   }
   blockquote {
     margin-bottom: 35px;
     @include type(
       (
-        size: 21px,
-        height: 22px,
-        weight: 500,
+        size: $blockquote_size,
+        height: $blockquote_height,
+        weight: $blockquote_weight,
         family: $secondaryfont,
       )
     );
     @include mq(large_laptop) {
-      @include quick_type(25px, 25px, null);
+      @include quick_type(
+        $blockquote_size_large_laptop,
+        $blockquote_height_large_laptop,
+        null
+      );
     }
     @include mq(small_monitor) {
       margin-bottom: 50px;
-      @include quick_type(35px, 40px, null);
+      @include quick_type(
+        $blockquote_size_small_monitor,
+        $blockquote_height_small_monitor,
+        null
+      );
     }
   }
   p {

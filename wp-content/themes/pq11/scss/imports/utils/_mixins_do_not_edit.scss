@@ -9,8 +9,8 @@
   $opts: map-merge(
     (
       size: null,
-      spacing: null,
       height: null,
+      spacing: null,
       family: null,
       color: null,
       weight: 400,
@@ -217,7 +217,7 @@
 // Pseudo Selector Display
 ////////////////////////////////////////////////////////////////////
 
-@mixin contentdisplay($display:block,$content:"") {
-  content:$content;
+@mixin contentdisplay($display: block, $content: "") {
+  content: $content;
   display: $display;
 }

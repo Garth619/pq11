@@ -34,34 +34,26 @@ function _ilaw_sm_load_acf(){
 		$json_mod = filemtime(_ILAW_SM_PLUGIN_PATH . '/fields/acf-sm-fields.json');
 
 		
-		//update json on changes for ability to edit
+		// update json on changes for ability to edit
 		if(
 			($fields_mod > $json_mod)
 			and function_exists('acf_get_local_fields')
 			and is_admin()
 		){
 
-			$groups = acf_get_local_field_groups(
-				array(
-					$_ilaw_sm_page_fields['key'],
-					$_ilaw_sm_opts_fields['key']
-				)
-			); //taken from files mentioned above
+			$groups = array(
+					$_ilaw_sm_page_fields,
+					$_ilaw_sm_opts_fields
+				); //taken from files mentioned above
 
 			$json = [];
 
-			foreach ($groups as $group) {
-				// Fetch the fields for the given group key
-				$fields = acf_get_local_fields($group['key']);
+			foreach ($groups as $arr) {
+				$to_json = $arr;
+				unset($to_json['ID']);
 
-				// Remove unecessary key value pair with key "ID"
-				unset($group['ID']);
-
-				// Add the fields as an array to the group
-				$group['fields'] = $fields;
-
-				// Add this group to the main array
-				$json[] = $group;
+				// $json[] = $group;
+				$json[] = $to_json;
 			}
 
 			$json = json_encode($json, JSON_PRETTY_PRINT);
