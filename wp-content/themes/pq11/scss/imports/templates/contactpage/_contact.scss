@@ -132,13 +132,13 @@ span.double_line.contact_header {
       &:hover {
         svg {
           path {
-            fill: $color_bright_one;
+            fill: $contact_social_media_bg_color_hover;
           }
         }
       }
       svg {
         path {
-          fill: $color_dark_three;
+          fill: $contact_social_media_bg_color;
         }
       }
     }

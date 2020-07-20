@@ -16,7 +16,7 @@
 }
 
 #sec_four_inner {
-  background: $color_dark_three;
+  background: $sec_four_bg_color;
   text-align: center;
   padding: 65px 30px 0;
   @include mq(small_tablet) {
@@ -60,7 +60,6 @@
   @include mq(small_tablet) {
     order: 2;
     max-width: 730px;
-    //padding:0 30px;
     width: calc(100% - 104px);
   }
   @include mq(small_laptop) {
@@ -73,29 +72,37 @@
   .intro_wrapper {
     @include type(
       (
-        size: 26px,
-        height: 30px,
+        size: $info_wrapper_size,
+        height: $info_wrapper_height,
         family: $secondaryfont,
-        color: $color_light_one,
-        weight: 500,
+        color: $info_wrapper_color,
+        weight: $info_wrapper_weight,
       )
     );
     margin-top: 15px;
     @include mq(small_tablet) {
       margin: 21px auto 0;
       max-width: 463px;
-      @include quick_type(28px, 30px, null);
+      font-size: $info_wrapper_size_small_tablet;
     }
     @include mq(small_laptop) {
       max-width: 585px;
     }
     @include mq(large_laptop) {
-      @include quick_type(36px, 36px, null);
+      @include quick_type(
+        $info_wrapper_size_large_laptop,
+        $info_wrapper_height_large_laptop,
+        null
+      );
     }
     @include mq(small_monitor) {
       margin-top: 31px;
       max-width: 765px;
-      @include quick_type(45px, 45px, null);
+      @include quick_type(
+        $info_wrapper_size_small_monitor,
+        $info_wrapper_height_small_monitor,
+        null
+      );
     }
     p {
       margin-bottom: 13px;
@@ -105,17 +112,20 @@
     margin-bottom: 30px;
     @include type(
       (
-        size: 15px,
-        height: 25px,
+        size: $descrip_wrapper_size,
+        height: $descrip_wrapper_height,
         family: $primaryfont,
-        color: $color_light_one,
-        //weight: 300,
+        color: $descrip_wrapper_color,
       )
     );
     @include mq(small_tablet) {
       margin: 0 auto 37px;
       max-width: 470px;
-      @include quick_type(15px, 28px, null);
+      @include quick_type(
+        $descrip_wrapper_size_small_tablet,
+        $descrip_wrapper_height_small_tablet,
+        null
+      );
     }
     @include mq(small_laptop) {
       max-width: 622px;
@@ -123,13 +133,17 @@
     @include mq(large_laptop) {
       max-width: 660px;
       margin-bottom: 28px;
-      @include quick_type(17px, 28px, null);
+      font-size: $descrip_wrapper_size_large_laptop;
     }
     @include mq(small_monitor) {
       padding-top: 17px;
       margin-bottom: 30px;
       max-width: 749px;
-      @include quick_type(18px, 35px, null);
+      @include quick_type(
+        $descrip_wrapper_size_small_monitor,
+        $descrip_wrapper_height_small_monitor,
+        null
+      );
     }
     p {
       margin-bottom: 15px;
@@ -145,12 +159,11 @@
     margin-bottom: 37px;
     @include type(
       (
-        size: 12px,
-        spacing: 1.2px,
+        size: $sec_four_name_size,
+        spacing: $sec_four_name_spacing,
         family: $primaryfont,
-        color: $color_light_one,
-        //weight: 300,
-          transform: uppercase,
+        color: $sec_four_name_color,
+        transform: uppercase,
       )
     );
     @include mq(small_tablet) {
@@ -162,17 +175,25 @@
     @include mq(large_laptop) {
       margin-top: 29px;
       margin-bottom: 0px;
-      @include quick_type(14px, 22px, null);
+      @include quick_type(
+        $sec_four_name_size_large_laptop,
+        $sec_four_name_height_large_laptop,
+        null
+      );
     }
     @include mq(small_monitor) {
       margin-top: 43px;
-      @include quick_type(15px, 31px, null);
+      @include quick_type(
+        $sec_four_name_size_small_monitor,
+        $sec_four_name_height_small_monitor,
+        null
+      );
     }
   }
 }
 
 .sec_four_arrow {
-  background: $color_light_one;
+  background: $sec_four_arrow_bg_color;
   margin: 0 5px 55px;
   display: inline-flex !important;
   justify-content: center;
@@ -184,18 +205,15 @@
     @include box(52px);
   }
   &:hover {
-    background: $color_bright_one;
+    background: $sec_four_arrow_bg_color_hover;
     svg {
       path {
-        fill: $color_light_one;
+        fill: $sec_four_arrow_svg_bg_color_hover;
       }
     }
   }
   svg {
     height: 20px;
-    path {
-      //transition: all 200ms ease-in-out;
-    }
     @include mq(small_tablet) {
       height: 26px;
     }

@@ -79,7 +79,7 @@
     }
     &:before,
     &:after {
-      background: $color_bright_two;
+      background: $sec_five_double_line_bg_color;
     }
   }
 }
@@ -118,11 +118,11 @@
   padding-right: 10px;
   @include type(
     (
-      size: 24px,
-      height: 26px,
+      size: $sec_five_intro_size,
+      height: $sec_five_intro_height,
       family: $secondaryfont,
-      color: $color_dark_three,
-      weight: 500,
+      color: $sec_five_intro_color,
+      weight: $sec_five_intro_weight,
     )
   );
   @include mq(small_tablet) {
@@ -131,17 +131,24 @@
   @include mq(small_laptop) {
     max-width: 306px;
     margin: 17px 0 19px;
-    @include quick_type(24px, 26px, null);
   }
   @include mq(large_laptop) {
     max-width: 100%;
     margin: 22px 0 38px;
-    @include quick_type(30px, 32px, null);
+    @include quick_type(
+      $sec_five_intro_size_large_laptop,
+      $sec_five_intro_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
     margin: 27px 0 30px;
     max-width: 545px;
-    @include quick_type(45px, 45px, null);
+    @include quick_type(
+      $sec_five_intro_size_small_monitor,
+      $sec_five_intro_height_small_monitor,
+      null
+    );
   }
 }
 
@@ -152,20 +159,10 @@
   }
   @include mq(small_laptop) {
     padding-left: 53px;
-    // padding-right: 130px;
     margin-top: 0;
   }
   @include mq(large_laptop) {
     padding-left: 103px;
     padding-right: 0;
   }
-  // &.content {
-  //   ul {
-  //     li {
-  //       &:before {
-  //         background: $color_bright_two;
-  //       }
-  //     }
-  //   }
-  // }
 }

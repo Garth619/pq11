@@ -75,7 +75,7 @@
 }
 
 #sec_one_video {
-  border: 7px solid $color_light_one;
+  border: 7px solid $sec_one_video_border_bg_color;
   position: relative;
   @include margin_lr;
   @include box(141px, 89px);
@@ -116,37 +116,57 @@ span#sec_one_title {
   max-width: 285px;
   @include type(
     (
-      size: 35px,
-      height: 35px,
+      size: $sec_one_title_size,
+      height: $sec_one_title_height,
       family: $secondaryfont,
-      color: $color_light_one,
-      weight: 500,
+      color: $sec_one_title_color,
+      weight: $sec_one_title_weight,
     )
   );
   @include mq(small_tablet) {
     max-width: 496px;
     margin: 33px auto 0;
-    @include quick_type(52px, 50px, null);
+    @include quick_type(
+      $sec_one_title_size_small_tablet,
+      $sec_one_title_height_small_tablet,
+      null
+    );
   }
   @include mq(small_laptop) {
     order: 2;
     text-align: left;
     margin: 0px 0 0 50px;
-    @include quick_type(49px, 49px, null);
+    @include quick_type(
+      $sec_one_title_size_small_laptop,
+      $sec_one_title_height_small_laptop,
+      null
+    );
   }
   @include mq(large_laptop) {
     max-width: 425px;
     margin: 0px 0 0 33px;
-    @include quick_type(53px, 55px, null);
+    @include quick_type(
+      $sec_one_title_size_large_laptop,
+      $sec_one_title_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
     max-width: 470px;
     margin: 0px 0 0 64px;
-    @include quick_type(63px, 67px, null);
+    @include quick_type(
+      $sec_one_title_size_small_monitor,
+      $sec_one_title_height_small_monitor,
+      null
+    );
   }
   @include mq(monitor) {
     max-width: 645px;
-    @include quick_type(82px, 85px, null);
+    @include quick_type(
+      $sec_one_title_size_monitor,
+      $sec_one_title_height_monitor,
+      null
+    );
   }
 }
 
@@ -168,12 +188,12 @@ ul#sec_one_selling_points {
     padding-left: 13px;
     @include type(
       (
-        size: 12px,
-        spacing: 1.8px,
-        height: 17px,
+        size: $sec_one_selling_points_size,
+        spacing: $sec_one_selling_points_spacing,
+        height: $sec_one_selling_points_height,
         family: $primaryfont,
-        color: $color_light_one,
-        weight: 800,
+        color: $sec_one_selling_points_color,
+        weight: $sec_one_selling_points_weight,
         align: left,
         transform: uppercase,
       )
@@ -187,11 +207,19 @@ ul#sec_one_selling_points {
       margin-bottom: 8px;
     }
     @include mq(large_laptop) {
-      @include quick_type(13px, null, 1.95px);
+      @include quick_type(
+        $sec_one_selling_points_size_large_laptop,
+        null,
+        $sec_one_selling_points_spacing_large_laptop
+      );
     }
     @include mq(small_monitor) {
       margin-bottom: 18px;
-      @include quick_type(16px, null, null);
+      @include quick_type(
+        $sec_one_selling_points_size_small_monitor,
+        null,
+        null
+      );
     }
     &:first-of-type {
       &:before {
@@ -205,7 +233,7 @@ ul#sec_one_selling_points {
     }
     &:before {
       border-radius: 50%;
-      background: $color_bright_one;
+      background: $sec_one_selling_points_bullet_bg_color;
       @include abs(6px, null, null, 0);
       @include box(5px);
       @include contentdisplay();
@@ -256,16 +284,15 @@ a.free_consult_button {
 
 span#sec_one_logo_title {
   display: inline-block;
-  color: $color_bright_one;
-  background: $color_light_one;
+  background: $sec_one_logo_title_bg_color;
   padding: 9px 25px;
   margin-top: 52px;
   @include type(
     (
-      size: 12px,
-      spacing: 1.5px,
+      size: $sec_one_logo_title_size,
+      spacing: $sec_one_logo_title_spacing,
       family: $primaryfont,
-      color: $color_bright_one,
+      color: $sec_one_logo_title_color,
       transform: uppercase,
     )
   );
@@ -274,8 +301,8 @@ span#sec_one_logo_title {
   }
   @include mq(small_laptop) {
     margin-top: 45px;
-    color: $color_light_one;
-    background: $color_bright_two;
+    color: $sec_one_logo_title_color_small_laptop;
+    background: $sec_one_logo_title_bg_color_small_laptop;
   }
   @include mq(large_laptop) {
     margin-top: 67px;
@@ -352,7 +379,7 @@ span#sec_one_logo_title {
   z-index: 1;
   @include mq(small_laptop) {
     display: block;
-    background: $color_dark_three;
+    background: $sec_one_right_bg_color;
     flex-shrink: 0;
     flex-basis: 436px;
     padding: 51px 0 0 0;
@@ -397,14 +424,14 @@ span#sec_one_logo_title {
           @include contentdisplay(block, "*");
           @include type(
             (
-              size: 15px,
+              size: $sec_one_form_required_size,
               family: $secondaryfont,
-              color: $color_bright_one,
-              weight: 400,
+              color: $sec_one_form_required_color,
+              weight: $sec_one_form_required_weight,
             )
           );
           @include mq(small_monitor) {
-            font-size: 30px;
+            font-size: $sec_one_form_required_size_small_monitor;
             @include abs(22px, 15px, null, null);
           }
         }
@@ -421,23 +448,22 @@ span#sec_one_logo_title {
           padding: 12px 10px;
           @include type(
             (
-              size: 12px,
-              spacing: 0.6px,
+              size: $sec_one_form_input_size,
+              spacing: $sec_one_form_input_spacing,
               family: $primaryfont,
-              color: $color_dark_two,
-              // weight: 300,
+              color: $sec_one_form_input_color,
             )
           );
           @include mq(small_laptop) {
             padding: 12px 22px 12px 10px;
           }
           @include mq(large_laptop) {
-            font-size: 13px;
+            font-size: $sec_one_form_input_size_large_laptop;
             padding: 15px 25px 15px 10px;
           }
           @include mq(small_monitor) {
             padding: 21px 28px 21px 21px;
-            font-size: 15px;
+            font-size: $sec_one_form_input_size_small_monitor;
           }
         }
         textarea {
@@ -482,34 +508,41 @@ span#sec_one_logo_title {
         @include abs(0, null, null, 0);
       }
       &:before {
-        background: $color_grad_one;
+        background: $sec_one_form_submit_bg_color;
       }
       &:after {
-        background: $color_light_one;
+        background: $sec_one_form_submit_bg_color_hover;
         opacity: 0;
         transition: all 200ms ease-in-out;
       }
       input {
         background: transparent;
-        color: $color_light_one;
         border: none;
         padding: 10px 25px;
         cursor: pointer;
         @include type(
           (
-            size: 17px,
+            size: $sec_one_form_submit_size,
             family: $secondaryfont,
-            color: $color_light_one,
+            color: $sec_one_form_submit_color,
             transform: lowercase,
           )
         );
         @include mq(large_laptop) {
           padding: 14px 25px;
-          @include quick_type(20px, null, null);
+          @include quick_type(
+            $sec_one_form_submit_size_large_laptop,
+            null,
+            null
+          );
         }
         @include mq(small_monitor) {
           padding: 14px 30px;
-          @include quick_type(24px, null, null);
+          @include quick_type(
+            $sec_one_form_submit_size_small_monitor,
+            null,
+            null
+          );
         }
       }
     }
@@ -518,12 +551,12 @@ span#sec_one_logo_title {
       margin-top: 3px;
       @include type(
         (
-          size: 10px,
-          spacing: 1.8px,
-          height: 12px,
+          size: $sec_one_form_error_size,
+          spacing: $sec_one_form_error_spacing,
+          height: $sec_one_form_error_height,
           family: $primaryfont,
-          color: $color_bright_one,
-          weight: 700,
+          color: $sec_one_form_error_color,
+          weight: $sec_one_form_error_weight,
           align: left,
           transform: uppercase,
         )
@@ -540,20 +573,19 @@ span.required {
   margin-top: -64px;
   @include type(
     (
-      size: 10px,
-      spacing: 0.5px,
-      // weight: 300,
-        family: $primaryfont,
-      color: $color_light_one,
+      size: $sec_one_required_size,
+      spacing: $sec_one_required_spacing,
+      family: $primaryfont,
+      color: $sec_one_required_color,
       transform: lowercase,
     )
   );
   @include mq(large_laptop) {
     margin-top: -76px;
-    font-size: 11px;
+    font-size: $sec_one_required_size_large_laptop;
   }
   @include mq(small_monitor) {
-    font-size: 15px;
+    font-size: $sec_one_required_size_small_monitor;
     margin-top: -96px;
   }
   &:before {
@@ -563,13 +595,13 @@ span.required {
     @include contentdisplay(inline-block, "*");
     @include type(
       (
-        size: 15px,
+        size: $sec_one_required_asterisk_size,
         family: $primaryfont,
-        color: $color_bright_one,
+        color: $sec_one_required_asterisk_color,
       )
     );
     @include mq(small_monitor) {
-      font-size: 30px;
+      font-size: $sec_one_required_asterisk_size_small_monitor;
       margin-top: 1px;
     }
   }
@@ -600,17 +632,25 @@ span#sec_one_form_title {
   margin-bottom: 16px;
   @include type(
     (
-      size: 24px,
-      height: 25px,
+      size: $sec_one_form_title_size,
+      height: $sec_one_form_title_height,
       family: $secondaryfont,
-      color: $color_light_one,
-      weight: 500,
+      color: $sec_one_form_title_color,
+      weight: $sec_one_form_title_weight,
     )
   );
   @include mq(large_laptop) {
-    @include quick_type(30px, 31px, null);
+    @include quick_type(
+      $sec_one_form_title_size_large_Laptop,
+      $sec_one_form_title_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
-    @include quick_type(37px, 39px, null);
+    @include quick_type(
+      $sec_one_form_title_size_small_monitor,
+      $sec_one_form_title_height_small_monitor,
+      null
+    );
   }
 }
