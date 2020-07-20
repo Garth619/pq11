@@ -20,7 +20,7 @@
 
 .sidebar_form {
   display: none;
-  background: $color_dark_three;
+  background: $sidebar_form_bg_color;
   padding: 26px 33px 92px 33px;
   text-align: center;
   margin-bottom: 20px;
@@ -57,17 +57,16 @@
         @include contentdisplay(block, "*");
         @include type(
           (
-            size: 16px,
+            size: $sidebar_form_asterisk_size,
             family: $primaryfont,
-            color: $color_bright_one,
-            //weight: 300,
+            color: $sidebar_form_asterisk_color,
           )
         );
         @include mq(large_laptop) {
-          font-size: 20px;
+          font-size: $sidebar_form_asterisk_size_large_laptop;
         }
         @include mq(small_monitor) {
-          font-size: 30px;
+          font-size: $sidebar_form_asterisk_size_small_monitor;
           top: 23px;
         }
       }
@@ -78,26 +77,29 @@
       textarea,
       select {
         width: 100%;
-        background: $color_light_one;
+        background: $sidebar_form_input_bg_color;
         border-radius: 4px;
         border: none;
         padding: 13px 30px 13px 15px;
         @include type(
           (
-            size: 12px,
-            spacing: 0.7px,
-            color: $color_dark_two,
-            //weight: 300,
-              family: $primaryfont,
+            size: $sidebar_form_input_size,
+            spacing: $sidebar_form_input_spacing,
+            color: $sidebar_form_input_color,
+            family: $primaryfont,
           )
         );
         @include mq(large_laptop) {
           padding: 15px 40px 15px 20px;
-          font-size: 13px;
+          font-size: $sidebar_form_input_size_large_laptop;
         }
         @include mq(small_monitor) {
           padding: 20px 40px 20px 20px;
-          @include quick_type(15px, null, 0.75px);
+          @include quick_type(
+            $sidebar_form_input_size_small_monitor,
+            null,
+            $sidebar_form_input_small_monitor
+          );
         }
       }
       textarea {
@@ -141,32 +143,28 @@
       @include abs(0, null, null, 0);
     }
     &:before {
-      background: $color_grad_one;
+      background: $sidebar_form_submit_bg_color;
     }
     &:after {
-      background: $color_light_one;
+      background: $sidebar_form_submit_bg_color_hover;
       opacity: 0;
       transition: all 200ms ease-in-out;
     }
     input {
       background: transparent;
-      color: $color_light_one;
       border: none;
       padding: 13px 25px;
       cursor: pointer;
       @include type(
         (
-          size: 17px,
+          size: $sidebar_form_submit_size,
           family: $secondaryfont,
-          color: $color_light_one,
+          color: $sidebar_form_submit_color,
           transform: lowercase,
         )
       );
-      @include mq(large_laptop) {
-        font-size: 17px;
-      }
       @include mq(small_monitor) {
-        font-size: 24px;
+        font-size: $sidebar_form_submit_small_monitor;
         padding: 15px 35px;
       }
     }
@@ -176,12 +174,12 @@
     margin-top: 3px;
     @include type(
       (
-        size: 9px,
-        spacing: 1.5px,
-        height: 12px,
+        size: $sidebar_form_error_size,
+        spacing: $sidebar_form_error_spacing,
+        height: $sidebar_form_error_height,
         family: $primaryfont,
-        color: $color_bright_one,
-        weight: 700,
+        color: $sidebar_form_error_color,
+        weight: $sidebar_form_error_weight,
         align: left,
         transform: uppercase,
       )
@@ -193,25 +191,33 @@
   span.required {
     text-align: left;
     margin-top: -75px;
-    @include quick_type(10px, null, 1.1px);
+    @include quick_type(
+      $sidebar_form_required_size,
+      null,
+      $sidebar_form_required_spacing
+    );
     @include mq(large_laptop) {
       margin-top: -77px;
-      font-size: 11px;
+      font-size: $sidebar_form_required_size_large_laptop;
     }
     @include mq(small_monitor) {
       margin-top: -98px;
-      @include quick_type(13px, null, 1.1px);
+      @include quick_type(
+        $sidebar_form_required_size_small_monitor,
+        null,
+        null
+      );
     }
     &:before {
-      font-size: 15px;
+      font-size: $sidebar_form_required_asterisk_size;
       margin-top: 0px;
       margin-right: 2px;
       @include mq(large_laptop) {
         margin-right: 10px;
-        font-size: 20px;
+        font-size: $sidebar_form_required_asterisk_size_large_laptop;
       }
       @include mq(small_monitor) {
-        font-size: 30px;
+        font-size: $sidebar_form_required_asterisk_size_small_monitor;
       }
     }
   }
@@ -222,21 +228,29 @@ span.sidebar_form_title {
   margin-bottom: 13px;
   @include type(
     (
-      size: 22px,
-      height: 22px,
+      size: $sidebar_form_title_size,
+      height: $sidebar_form_title_height,
       family: $secondaryfont,
-      color: $color_light_one,
-      weight: 500,
+      color: $sidebar_form_title_color,
+      weight: $sidebar_form_title_weight,
       align: center,
       transform: capitalize,
     )
   );
   @include mq(large_laptop) {
-    @include quick_type(25px, 25px, null);
+    @include quick_type(
+      $sidebar_form_title_size_large_laptop,
+      $sidebar_form_title_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
     margin-bottom: 23px;
-    @include quick_type(35px, 35px, null);
+    @include quick_type(
+      $sidebar_form_title_size_small_monitor,
+      $sidebar_form_title_height_small_monitor,
+      null
+    );
   }
 }
 
@@ -279,21 +293,21 @@ span.sidebar_form_title {
     padding-bottom: 10px;
     @include type(
       (
-        size: 20px,
-        height: 22px,
+        size: $sidebar_h3_size,
+        height: $sidebar_h3_height,
         family: $secondaryfont,
-        weight: 500,
+        weight: $sidebar_h3_weight,
       )
     );
     @include mq(small_laptop) {
-      font-size: 17px;
+      font-size: $sidebar_h3_size_small_laptop;
       padding: 0 40px 10px;
     }
     @include mq(large_laptop) {
-      font-size: 20px;
+      font-size: $sidebar_h3_size_large_laptop;
     }
     @include mq(small_monitor) {
-      font-size: 25px;
+      font-size: $sidebar_h3_size_small_monitor;
       padding-bottom: 17px;
     }
   }
@@ -312,7 +326,7 @@ span.sidebar_form_title {
     }
     &:before,
     &:after {
-      background: $color_bright_two;
+      background: $sidebar_double_line_bg_color;
     }
   }
   ul {
@@ -320,27 +334,27 @@ span.sidebar_form_title {
     li {
       @include type(
         (
-          size: 13px,
-          height: 15px,
+          size: $sidebar_size,
+          height: $sidebar_height,
           family: $primaryfont,
-          weight: 600,
+          weight: $sidebar_weight,
         )
       );
       @include mq(small_laptop) {
-        font-size: 12px;
+        font-size: $sidebar_size_small_laptop;
       }
       @include mq(large_laptop) {
-        font-size: 13px;
+        font-size: $sidebar_size_large_laptop;
       }
       @include mq(small_monitor) {
-        font-size: 16px;
+        font-size: $sidebar_size_small_monitor;
       }
       a {
-        color: $color_dark_three;
+        color: $sidebar_color;
         text-decoration: none;
         transition: all 200ms ease-in-out;
         &:hover {
-          color: $color_bright_two;
+          color: $sidebar_color_hover;
         }
       }
     }
@@ -369,7 +383,7 @@ span.sidebar_form_title {
     > li.menu-item-has-children {
       &.active {
         > a {
-          color: $color_bright_two;
+          color: $sidebar_active_color;
         }
       }
       > a {
@@ -379,7 +393,7 @@ span.sidebar_form_title {
         &:after {
           @include abs(5px, -16px, null, null);
           @include contentdisplay();
-          @include tri(down, 4px, 5px, $color_bright_two);
+          @include tri(down, 4px, 5px, $sidebar_tri_active_color);
           @include mq(small_laptop) {
             top: -1px;
             right: -12px;
@@ -387,14 +401,14 @@ span.sidebar_form_title {
             display: inline-block;
           }
           @include mq(small_monitor) {
-            @include tri(down, 6px, 6px, $color_bright_two);
+            @include tri(down, 6px, 6px, $sidebar_tri_active_color);
           }
         }
       }
     }
     > li.current-menu-ancestor {
       > a {
-        color: $color_bright_two;
+        color: $sidebar_current_menu_ancestor_color;
       }
       > ul.sub-menu {
         display: block;
@@ -402,7 +416,7 @@ span.sidebar_form_title {
     }
   }
   ul.sub-menu {
-    background: $color_light_one;
+    background: $sidebar_submenu_bg_color;
     padding: 25px 0 1px 0;
     margin: -5px 0 35px 0;
     display: none;
@@ -414,19 +428,19 @@ span.sidebar_form_title {
     }
     li {
       margin-bottom: 25px;
-      font-weight: 300;
+      font-weight: $sidebar_submenu_weight;
       @include mq(small_laptop) {
         margin-bottom: 20px;
       }
       @include mq(small_monitor) {
-        font-size: 15px;
+        font-size: $sidebar_submenu_size_small_monitor;
       }
       a {
         padding: 0 40px;
       }
       &.current-menu-item {
         > a {
-          color: $color_bright_two;
+          color: $sidebar_submenu_current_menu_item_color;
         }
       }
     }

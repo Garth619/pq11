@@ -1,8 +1,8 @@
 footer {
-  background: $color_dark_three;
-  border-bottom: 2px solid $color_bright_two;
+  background: $footer_bg_color;
+  border-bottom: 2px solid $footer_border_bg_color;
   @include mq(small_tablet) {
-    border-bottom: 4px solid $color_bright_two;
+    border-bottom: 4px solid $footer_border_bg_color;
   }
 }
 
@@ -33,7 +33,7 @@ footer {
     @include margin_lr;
     &:before,
     &:after {
-      background: $color_bright_one;
+      background: $footer_double_line_bg_color;
     }
   }
   ul {
@@ -83,10 +83,9 @@ footer {
         @include contentdisplay(block, "*");
         @include type(
           (
-            size: 23px,
+            size: $footer_asterisk_size,
             family: $primaryfont,
-            color: $color_bright_one,
-            //weight: 300,
+            color: $footer_asterisk_bg_color,
           )
         );
         @include mq(small_tablet) {
@@ -113,23 +112,30 @@ footer {
         background: $color_light_one;
         @include type(
           (
-            size: 14px,
-            spacing: 0.7px,
-            color: $color_dark_two,
-            //weight: 300,
-              family: $primaryfont,
+            size: $footer_input_size,
+            spacing: $footer_input_spacing,
+            color: $footer_input_color,
+            family: $primaryfont,
           )
         );
         @include mq(small_tablet) {
           padding: 16px 40px 16px 20px;
-          @include quick_type(13px, null, 0.65px);
+          @include quick_type(
+            $footer_input_size_small_tablet,
+            null,
+            $footer_input_spacing_small_tablet
+          );
         }
         @include mq(large_laptop) {
           padding: 19px 40px 19px 20px;
         }
         @include mq(small_monitor) {
           padding: 26px 40px 26px 20px;
-          @include quick_type(15px, null, 0.75px);
+          @include quick_type(
+            $footer_input_size_small_monitor,
+            null,
+            $footer_input_spacing_small_monitor
+          );
         }
       }
       textarea {
@@ -162,7 +168,7 @@ footer {
     }
     &:hover {
       input {
-        color: $color_bright_one;
+        color: $footer_submit_color_hover;
       }
       &:after {
         opacity: 1;
@@ -177,32 +183,31 @@ footer {
       @include abs(0, null, null, 0);
     }
     &:before {
-      background: $color_grad_one;
+      background: $footer_submit_bg_color;
     }
     &:after {
-      background: $color_light_one;
+      background: $footer_submit_bg_color_hover;
       opacity: 0;
       transition: all 200ms ease-in-out;
     }
     input {
       background: transparent;
-      color: $color_light_one;
       border: none;
       padding: 13px 25px;
       cursor: pointer;
       @include type(
         (
-          size: 20px,
+          size: $footer_submit_size,
           family: $secondaryfont,
-          color: $color_light_one,
+          color: $footer_submit_color,
           transform: lowercase,
         )
       );
       @include mq(small_tablet) {
-        font-size: 18px;
+        font-size: $footer_submit_size_small_tablet;
       }
       @include mq(small_monitor) {
-        font-size: 24px;
+        font-size: $footer_submit_size_small_monitor;
         padding: 15px 25px;
       }
     }
@@ -212,12 +217,12 @@ footer {
     margin-top: 3px;
     @include type(
       (
-        size: 10px,
-        spacing: 1.8px,
-        height: 12px,
+        size: $footer_error_size,
+        spacing: $footer_error_spacing,
+        height: $footer_error_height,
         family: $primaryfont,
-        color: $color_bright_one,
-        weight: 700,
+        color: $footer_error_color,
+        weight: $footer_error_weight,
         align: left,
         transform: uppercase,
       )
@@ -229,7 +234,7 @@ footer {
   span.required {
     text-align: left;
     margin-top: -85px;
-    @include quick_type(11px, null, 1.1px);
+    @include quick_type($footer_required_size, null, $footer_required_spacing);
     @include mq(small_tablet) {
       margin-top: -60px;
     }
@@ -238,12 +243,12 @@ footer {
     }
     @include mq(small_monitor) {
       margin-top: -69px;
-      @include quick_type(15px, null, 1.1px);
+      @include quick_type($footer_required_size_small_monitor, null, null);
     }
     &:before {
-      font-size: 20px;
+      font-size: $footer_required_asterisk_size;
       @include mq(small_monitor) {
-        font-size: 30px;
+        font-size: $footer_required_asterisk_size_small_monitor;
       }
     }
   }
@@ -254,10 +259,10 @@ span#footer_from_title {
   margin-bottom: 25px;
   @include type(
     (
-      size: 35px,
+      size: $footer_from_title_size,
       family: $secondaryfont,
-      color: $color_light_one,
-      weight: 500,
+      color: $footer_from_title_color,
+      weight: $footer_from_title_weight,
       align: center,
     )
   );
@@ -265,11 +270,19 @@ span#footer_from_title {
     margin-bottom: 20px;
   }
   @include mq(large_laptop) {
-    @include quick_type(45px, 50px, null);
+    @include quick_type(
+      $footer_from_title_size_large_laptop,
+      $footer_from_title_height,
+      null
+    );
   }
   @include mq(small_monitor) {
     margin-bottom: 30px;
-    @include quick_type(60px, 60px, null);
+    @include quick_type(
+      $footer_from_title_size_small_monitor,
+      $footer_from_title_height_large_laptop,
+      null
+    );
   }
 }
 
@@ -311,20 +324,16 @@ span#footer_from_title {
       display: inline-block;
       @include type(
         (
-          size: 10px,
-          spacing: 1px,
-          height: 20px,
+          size: $copyright_size,
+          spacing: $copyright_spacing,
+          height: $copyright_height,
           family: $primaryfont,
-          color: $color_light_one,
-          //weight: 300,
-            transform: uppercase,
+          color: $copyright_color,
+          transform: uppercase,
         )
       );
-      @include mq(large_laptop) {
-        font-size: 10px;
-      }
       @include mq(small_monitor) {
-        font-size: 13px;
+        font-size: $copyright_size_small_monitor;
       }
       &:after {
         margin: 0 7px 0 11px;
@@ -352,7 +361,7 @@ span#footer_from_title {
       }
       a {
         text-decoration: none;
-        color: $color_light_one;
+        color: $copyright_color;
         &:hover {
           text-decoration: underline;
         }

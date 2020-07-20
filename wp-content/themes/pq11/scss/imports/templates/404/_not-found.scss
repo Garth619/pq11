@@ -12,18 +12,22 @@
   margin: 40px auto 20px;
   @include type(
     (
-      size: 14px,
-      spacing: 1.9px,
-      height: 16px,
-      color: $color_bright_two,
+      size: $not_found_subtitle_size,
+      spacing: $not_found_subtitle_spacing,
+      height: $not_found_subtitle_height,
+      color: $not_found_subtitle_color,
       family: $primaryfont,
-      weight: 600,
+      weight: $not_found_subtitle_weight,
       transform: uppercase,
     )
   );
   @include mq(small_monitor) {
     margin-bottom: 0px;
-    @include quick_type(19px, 35px, null);
+    @include quick_type(
+      $not_found_subtitle_size_small_monitor,
+      $not_found_subtitle_height_small_monitor,
+      null
+    );
   }
 }
 
@@ -36,7 +40,7 @@
     @include margin_lr;
   }
   span.go_back {
-    color: $color-bright_two;
+    color: $go_back_color;
     text-decoration: none;
     &:hover {
       text-decoration: underline;

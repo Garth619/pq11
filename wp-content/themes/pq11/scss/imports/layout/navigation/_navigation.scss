@@ -2,7 +2,7 @@
 
 nav {
   display: none;
-  background: $color_dark_six;
+  background: $nav_menu_bg_color;
   text-align: center;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
@@ -14,7 +14,7 @@ nav {
   @include mq(tablet) {
     display: flex !important;
     height: 40px;
-    border-bottom: 3px solid $color_bright_two;
+    border-bottom: 3px solid $nav_menu_border_bg_color;
     overflow-y: unset;
     @include abs(87px, null, null, 0);
     @include flex(null, center);
@@ -22,7 +22,7 @@ nav {
   @include mq(large_laptop) {
     height: 55px;
     top: 92px;
-    border-bottom: 4px solid $color_bright_two;
+    border-bottom: 4px solid $nav_menu_border_bg_color;
   }
   @include mq(small_monitor) {
     top: 139px;
@@ -64,35 +64,50 @@ nav {
       padding: 15px 20px;
       @include type(
         (
-          size: 12px,
-          spacing: 0.6px,
-          height: 15px,
+          size: $nav_menu_size,
+          spacing: $nav_menu_spacing,
+          height: $nav_menu_height,
           family: $primaryfont,
-          //weight: 300,
-            transform: uppercase,
+          transform: uppercase,
         )
       );
       @include mq(small_tablet) {
         padding: 18px 20px;
-        @include quick_type(14px, 16px, 0.7px);
+        @include quick_type(
+          $nav_menu_size_small_tablet,
+          $nav_menu_height_small_tablet,
+          $nav_menu_spacing_small_tablet
+        );
       }
       @include mq(tablet) {
         padding: 0;
-        @include quick_type(10px, 12px, 0.5px);
+        @include quick_type(
+          $nav_menu_size_tablet,
+          $nav_menu_height_tablet,
+          $nav_menu_spacing_tablet
+        );
       }
       @include mq(large_laptop) {
-        @include quick_type(12px, 14px, 0.6px);
+        @include quick_type(
+          $nav_menu_size_large_laptop,
+          $nav_menu_height_large_laptop,
+          $nav_menu_spacing_large_laptop
+        );
       }
       @include mq(small_monitor) {
-        @include quick_type(15px, 16px, 0.75px);
+        @include quick_type(
+          $nav_menu_size_small_monitor,
+          $nav_menu_height_small_monitor,
+          $nav_menu_spacing_small_monitor
+        );
       }
       a {
-        color: $color_dark_three;
+        color: $nav_menu_color;
         transition: all 200ms ease-in-out;
         @include mq(tablet) {
           padding-bottom: 20px;
           &:hover {
-            color: $color_bright_two;
+            color: $nav_menu_color_hover_tablet;
           }
         }
         @include mq(large_laptop) {
@@ -108,16 +123,31 @@ nav {
       &:hover {
         @include mq(tablet) {
           > a {
-            color: $color_bright_two;
+            color: $nav_menu_item_has_children_color_hover;
             &:after {
               @include mq(tablet) {
-                @include tri(down, 3px, 3px, $color_bright_two);
+                @include tri(
+                  down,
+                  3px,
+                  3px,
+                  $nav_menu_item_has_children_tri_color_hover
+                );
               }
               @include mq(large_laptop) {
-                @include tri(down, 4px, 5px, $color_bright_two);
+                @include tri(
+                  down,
+                  4px,
+                  5px,
+                  $nav_menu_item_has_children_tri_color_hover
+                );
               }
               @include mq(small_monitor) {
-                @include tri(down, 5px, 6px, $color_bright_two);
+                @include tri(
+                  down,
+                  5px,
+                  6px,
+                  $nav_menu_item_has_children_tri_color_hover
+                );
               }
             }
           }
@@ -129,7 +159,7 @@ nav {
       }
       &.active {
         margin-bottom: 15px;
-        background: $color_light_one;
+        background: $nav_menu_item_has_children_active_bg_color;
         box-shadow: 0px 3px 10px #0000001a;
         @include mq(small_tablet) {
           margin-bottom: 8px;
@@ -142,10 +172,14 @@ nav {
       > a {
         position: relative;
         &.active {
-          color: $color_bright_two;
-
+          color: $nav_menu_item_has_children_active_link_color;
           &:after {
-            @include tri(down, 3px, 3px, $color_bright_two);
+            @include tri(
+              down,
+              3px,
+              3px,
+              $nav_menu_item_has_children_active_tri_color
+            );
           }
         }
         &:after {
@@ -153,7 +187,7 @@ nav {
           transition: all 200ms ease-in-out;
           @include contentdisplay(inline-block);
           @include abs(6px, -15px, null, null);
-          @include tri(down, 3px, 3px, $color_dark_three);
+          @include tri(down, 3px, 3px, $nav_menu_item_has_children_tri_color);
           @include mq(small_tablet) {
             @include abs(7px, -15px, null, null);
           }
@@ -162,24 +196,39 @@ nav {
           }
           @include mq(large_laptop) {
             right: -12px;
-            @include tri(down, 4px, 5px, $color_dark_three);
+            @include tri(down, 4px, 5px, $nav_menu_item_has_children_tri_color);
           }
           @include mq(small_monitor) {
             top: 7px;
             right: -15px;
-            @include tri(down, 5px, 6px, $color_dark_three);
+            @include tri(down, 5px, 6px, $nav_menu_item_has_children_tri_color);
           }
         }
         &:hover {
           &:after {
             @include mq(tablet) {
-              @include tri(down, 3px, 3px, $color_bright_two);
+              @include tri(
+                down,
+                3px,
+                3px,
+                $nav_menu_item_has_children_tri_color_hover
+              );
             }
             @include mq(large_laptop) {
-              @include tri(down, 4px, 5px, $color_bright_two);
+              @include tri(
+                down,
+                4px,
+                5px,
+                $nav_menu_item_has_children_tri_color_hover
+              );
             }
             @include mq(small_monitor) {
-              @include tri(down, 5px, 6px, $color_bright_two);
+              @include tri(
+                down,
+                5px,
+                6px,
+                $nav_menu_item_has_children_tri_color_hover
+              );
             }
           }
         }
@@ -187,22 +236,22 @@ nav {
     }
     li.current-menu-ancestor {
       > a {
-        color: $color_bright_two;
+        color: $nav_current_menu_ancestor_link_color;
         &:after {
-          @include tri(down, 3px, 3px, $color_bright_two);
+          @include tri(down, 3px, 3px, $nav_current_menu_ancestor_tri_color);
 
           @include mq(large_laptop) {
-            @include tri(down, 4px, 5px, $color_bright_two);
+            @include tri(down, 4px, 5px, $nav_current_menu_ancestor_tri_color);
           }
           @include mq(small_monitor) {
-            @include tri(down, 5px, 6px, $color_bright_two);
+            @include tri(down, 5px, 6px, $nav_current_menu_ancestor_tri_color);
           }
         }
       }
     }
     li.current-menu-item {
       > a {
-        color: $color_bright_two;
+        color: $nav_current_menu_item_link_color;
       }
     }
   }
@@ -228,7 +277,7 @@ nav {
     }
     @include mq(tablet) {
       display: block !important;
-      background: $color_light_one;
+      background: $nav_sub_menu_bg_color;
       width: 184px;
       box-shadow: 0px 3px 10px #0000001a;
       padding: 5px 17px 8px;
@@ -259,16 +308,32 @@ nav {
         )
       );
       @include mq(small_tablet) {
-        @include quick_type(14px, 16px, null);
+        @include quick_type(
+          $nav_sub_menu_size_small_tablet,
+          $nav_sub_menu_height_small_tablet,
+          null
+        );
       }
       @include mq(tablet) {
-        @include quick_type(10px, 13px, null);
+        @include quick_type(
+          $nav_sub_menu_size_tablet,
+          $nav_sub_menu_height_tablet,
+          null
+        );
       }
       @include mq(large_laptop) {
-        @include quick_type(12px, 14px, null);
+        @include quick_type(
+          $nav_sub_menu_size_large_laptop,
+          $nav_sub_menu_height_large_laptop,
+          null
+        );
       }
       @include mq(small_monitor) {
-        @include quick_type(15px, 18px, null);
+        @include quick_type(
+          $nav_sub_menu_size_small_monitor,
+          $nav_sub_menu_height_small_monitor,
+          null
+        );
       }
       &:last-of-type {
         a {
@@ -287,20 +352,20 @@ nav {
         }
         @include mq(tablet) {
           padding: 12px 10px;
-          border-bottom: 1px solid $color_dark_six;
+          border-bottom: 1px solid $nav_sub_menu_border_color;
         }
         @include mq(large_laptop) {
           padding: 12px 0px;
         }
         &:hover {
-          color: $color_bright_two;
+          color: $nav_sub_menu_link_color;
         }
         &:after {
           @include contentdisplay();
           width: 122px;
           height: 1px;
           margin: 15px auto 0;
-          background: $color_dark_four;
+          background: $nav_sub_menu_border_color;
           transition: all 150ms ease-in-out;
           @include mq(small_tablet) {
             width: 255px;
@@ -313,7 +378,7 @@ nav {
     }
     li.current-menu-item {
       a {
-        color: $color_bright_two;
+        color: $nav_sub_menu_current_menu_item_color;
       }
     }
   }

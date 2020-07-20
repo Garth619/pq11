@@ -19,14 +19,14 @@
     @include margin_lr;
     &:before,
     &:after {
-      background: $color_bright_one;
+      background: $about_double_line;
     }
   }
 }
 
 .about_title.banner_title {
-  color: $color_light_one;
-  font-weight: 400;
+  color: $about_banner_title_color;
+  font-weight: $about_banner_title_weight;
   margin-bottom: 22px;
 }
 
@@ -34,11 +34,11 @@
   margin-top: 20px;
   @include type(
     (
-      size: 15px,
-      spacing: 0.38px,
-      height: 28px,
-      color: $color_light_one,
-      weight: 600,
+      size: $about_intro_size,
+      spacing: $about_intro_spacing,
+      height: $about_intro_height,
+      color: $about_intro_color,
+      weight: $about_intro_weight,
     )
   );
   @include mq(small_tablet) {
@@ -51,7 +51,11 @@
   }
   @include mq(small_monitor) {
     max-width: 836px;
-    @include quick_type(19px, 35px, null);
+    @include quick_type(
+      $about_intro_size_small_monitor,
+      $about_intro_height_small_monitor,
+      null
+    );
   }
 }
 
@@ -99,22 +103,21 @@ img#about_banner_image {
     li {
       text-transform: uppercase;
       padding-left: 16px;
-      font-weight: 700;
+      font-weight: $about_video_list_item_weight;
       @include mq(small_tablet) {
-        font-size: 15px;
+        font-size: $about_video_list_item_size;
       }
       @include mq(small_monitor) {
         @include type(
           (
-            size: 16px,
-            spacing: 2.4px,
-            height: 26px,
-            weight: 700,
+            size: $about_video_list_item_size_small_monitor,
+            spacing: $about_video_list_item_spacing,
+            height: $about_video_list_item_height,
           )
         );
       }
       &:before {
-        background: $color_bright_two;
+        background: $about_video_list_item_bullet_bg_color;
         @include mq(small_monitor) {
           top: 12px;
         }
@@ -134,7 +137,7 @@ img#about_banner_image {
 }
 
 #about_video {
-  border: 7px solid $color_light_one;
+  border: 7px solid $about_video_border_bg_color;
   position: relative;
   box-shadow: 0px 3px 6px #0000007c;
   max-width: 294px;
@@ -146,7 +149,7 @@ img#about_banner_image {
     @include box(199px, 121px);
   }
   @include mq(small_monitor) {
-    border: 9px solid $color_light_one;
+    border: 9px solid $about_video_border_bg_color_small_monitor;
     @include box(271px, 164px);
   }
   img {
@@ -166,7 +169,7 @@ img#about_banner_image {
     }
     &:after {
       @include abs(32px, null, null, 37px);
-      @include tri(right, 11px, 15px, $color_bright_one);
+      @include tri(right, 11px, 15px, $about_play_button_tri_bg_color);
     }
   }
 }
@@ -207,7 +210,7 @@ img#about_banner_image {
     @include margin_lr;
     &:before,
     &:after {
-      background: $color_bright_one;
+      background: $about_double_line_bg_color;
     }
   }
 }
@@ -215,16 +218,16 @@ img#about_banner_image {
 span#about_bottom_title {
   @include type(
     (
-      size: 12px,
-      spacing: 1.1px,
-      height: 17px,
+      size: $about_bottom_title_size,
+      spacing: $about_bottom_title_spacing,
+      height: $about_bottom_title_height,
       family: $primaryfont,
-      color: $color_dark_three,
-      weight: 600,
+      color: $about_bottom_title_color,
+      weight: $about_bottom_title_weight,
       transform: uppercase,
     )
   );
   @include mq(large_laptop) {
-    font-size: 15px;
+    font-size: $about_bottom_title_size_large_laptop;
   }
 }

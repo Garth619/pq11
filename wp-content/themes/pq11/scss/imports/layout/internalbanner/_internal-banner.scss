@@ -52,11 +52,11 @@ img#internal_hero {
   text-align: center;
   @include type(
     (
-      size: 35px,
-      height: 35px,
-      weight: 500,
+      size: $banner_title_size,
+      height: $banner_title_height,
+      weight: $banner_title_weight,
       family: $secondaryfont,
-      color: $color_dark_three,
+      color: $banner_title_color,
     )
   );
   @include mq(small_tablet) {
@@ -65,21 +65,28 @@ img#internal_hero {
     margin: 0 auto 15px;
     @include type(
       (
-        size: 35px,
-        height: 35px,
+        size: $banner_title_size_small_tablet,
         family: $secondaryfont,
-        color: $color_light_one,
-        weight: 400,
+        color: $banner_title_color_small_tablet,
+        weight: $banner_title_weight_small_tablet,
       )
     );
   }
   @include mq(large_laptop) {
     max-width: 625px;
-    @include quick_type(55px, 55px, null);
+    @include quick_type(
+      $banner_title_size_large_laptop,
+      $banner_title_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
     max-width: 675px;
-    @include quick_type(60px, 70px, null);
+    @include quick_type(
+      $banner_title_size_small_monitor,
+      $banner_title_height_small_monitor,
+      null
+    );
   }
 }
 
@@ -91,13 +98,13 @@ img#internal_hero {
   }
   span {
     padding: 14px 28px;
-    font-size: 18px;
+    font-size: $internal_button_size;
     @include mq(large_laptop) {
-      font-size: 22px;
+      font-size: $internal_button_size_large_laptop;
       padding: 16px 28px;
     }
     @include mq(small_monitor) {
-      font-size: 24px;
+      font-size: $internal_button_size_small_monitor;
       padding: 18px 28px;
     }
   }

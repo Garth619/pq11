@@ -23,7 +23,7 @@
 					
 					<?php if ( $logos ) { ?>
 						
-						<img data-src="<?php echo $logos['url']; ?>" alt="<?php echo $logos['alt']; ?>" />
+						<img class="lazyload" data-src="<?php echo $logos['url']; ?>" alt="<?php echo $logos['alt']; ?>" />
 					
 					<?php } ?>
 				
