@@ -5,19 +5,19 @@
     position: relative;
   }
   @include mq(small_monitor) {
-    background: $color_dark_three;
+    background: $att_banner_bg_color;
     padding-bottom: 80px;
   }
   span.double_line {
     &:before,
     &:after {
-      background: $color_bright_one;
+      background: $att_double_line_bg_color;
     }
   }
 }
 
 #att_banner_inner {
-  background: $color_dark_three;
+  background: $att_banner_bg_color;
   padding-bottom: 180px;
   @include mq(small_tablet) {
     padding-left: 60px;
@@ -59,7 +59,7 @@
 }
 
 h1#internal_header.att_header {
-  color: $color_light_one;
+  color: $att_header_color;
   padding-bottom: 15px;
   @include mq(small_tablet) {
     text-align: left;
@@ -74,12 +74,12 @@ span#att_position {
   margin-top: 12px;
   @include type(
     (
-      size: 14px,
-      spacing: 1.4px,
-      height: 16px,
+      size: $att_position_size,
+      spacing: $att_position_spacing,
+      height: $att_position_height,
       family: $primaryfont,
-      color: $color_light_one,
-      weight: 400,
+      color: $att_position_color,
+      weight: $att_position_weight,
       transform: uppercase,
     )
   );
@@ -87,10 +87,18 @@ span#att_position {
     margin-top: 17px;
   }
   @include mq(large_laptop) {
-    @include quick_type(16px, 18px, null);
+    @include quick_type(
+      $att_position_size_large_laptop,
+      $att_position_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
-    @include quick_type(18px, 22px, null);
+    @include quick_type(
+      $att_position_size_small_monitor,
+      $att_position_height_small_monitor,
+      null
+    );
   }
 }
 
@@ -110,16 +118,16 @@ span#att_position {
     display: none;
   }
   img {
-    border-bottom: 7px solid $color_bright_two;
+    border-bottom: 7px solid $att_img_border_color;
     @include image();
     @include mq(small_tablet) {
-      border-bottom: 4px solid $color_bright_two;
+      border-bottom: 4px solid $att_img_border_color;
     }
     @include mq(small_laptop) {
-      border-bottom: 5px solid $color_bright_two;
+      border-bottom: 5px solid $att_img_border_color;
     }
     @include mq(small_monitor) {
-      border-bottom: 6px solid $color_bright_two;
+      border-bottom: 6px solid $att_img_border_color;
     }
   }
 }
@@ -233,20 +241,28 @@ span#att_position {
       padding-bottom: 9px;
       @include type(
         (
-          size: 11px,
-          spacing: 1.65px,
-          height: 15px,
+          size: $att_list_title_size,
+          spacing: $att_list_title_spacing,
+          height: $att_list_title_height,
           family: $primaryfont,
-          weight: 400,
+          weight: $att_list_title_weight,
           transform: uppercase,
         )
       );
       @include mq(large_laptop) {
-        @include quick_type(14px, 16px, null);
+        @include quick_type(
+          $att_list_title_size_large_laptop,
+          $att_list_title_height_large_laptop,
+          null
+        );
       }
       @include mq(small_monitor) {
         padding-bottom: 17px;
-        @include quick_type(15px, 17px, 2.25px);
+        @include quick_type(
+          $att_list_title_size_small_monitor,
+          $att_list_title_height_small_monitor,
+          $att_list_title_spacing_small_monitor
+        );
       }
     }
     &.double_line {
@@ -256,7 +272,7 @@ span#att_position {
       }
       &:before,
       &:after {
-        background: $color_bright_one;
+        background: $att_list_double_line_bg_color;
       }
     }
   }
@@ -279,19 +295,23 @@ span#att_position {
       position: relative;
       @include type(
         (
-          size: 12px,
-          spacing: 0.3px,
-          height: 18px,
+          size: $att_list_menu_size,
+          spacing: $att_list_menu_spacing,
+          height: $att_list_menu_height,
           family: $primaryfont,
-          weight: 600,
+          weight: $att_list_menu_weight,
         )
       );
       @include mq(large_laptop) {
-        @include quick_type(14px, 18px, null);
+        @include quick_type(
+          $att_list_menu_size_large_laptop,
+          $att_list_menu_height_large_laptop,
+          null
+        );
       }
-      &:after {
+      &:before {
         border-radius: 50%;
-        background: $color_bright_two;
+        background: $att_list_bullet_bg_color;
         @include abs(7px, null, null, 0);
         @include box(4px);
         @include contentdisplay();
@@ -304,7 +324,7 @@ span#att_position {
       margin-top: 10px;
     }
     li {
-      font-weight: 300;
+      font-weight: $att_list_sub_menu_weight;
     }
   }
 }
@@ -323,9 +343,9 @@ body.page-template-template-bio {
   }
   .placeholder {
     .placeholder_inner {
-      background: $color_dark_one;
+      background: $placeholder_bg_color;
       &:before {
-        color: $color_dark_three;
+        color: $placeholder_color;
       }
     }
   }
