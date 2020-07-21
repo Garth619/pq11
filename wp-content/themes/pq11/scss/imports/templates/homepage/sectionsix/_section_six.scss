@@ -24,7 +24,7 @@
     }
     &:before,
     &:after {
-      background: $color_bright_one;
+      background: $sec_six_double_line_bg_color;
     }
   }
 }
@@ -35,35 +35,39 @@
   margin: 0 auto 30px;
   @include type(
     (
-      size: 30px,
-      height: 30px,
+      size: $sec_six_title_size,
+      height: $sec_six_title_height,
       family: $secondaryfont,
-      weight: 500,
+      weight: $sec_six_title_weight,
     )
   );
   @include mq(small_tablet) {
     max-width: 447px;
     @include type(
       (
-        size: 35px,
-        height: 35px,
+        size: $sec_six_title_size_small_tablet,
+        height: $sec_six_title_height_small_tablet,
         family: $secondaryfont,
-        weight: 500,
+        weight: $sec_six_title_weight_small_tablet,
       )
     );
   }
   @include mq(small_laptop) {
     max-width: 100%;
     margin: 0 auto 24px;
-    @include quick_type(35px, 45px, null);
+    line-height: $sec_six_title_height_small_laptop;
   }
   @include mq(large_laptop) {
     margin: 0 auto 41px;
-    @include quick_type(45px, 45px, null);
+    font-size: $sec_six_title_size_small_laptop;
   }
   @include mq(small_monitor) {
     margin: 0 auto 46px;
-    @include quick_type(60px, 55px, null);
+    @include quick_type(
+      $sec_six_title_size_small_monitor,
+      $sec_six_title_height_small_monitor,
+      null
+    );
   }
 }
 
@@ -72,11 +76,11 @@
   max-width: 400px;
   @include type(
     (
-      size: 15px,
-      spacing: 0.38px,
-      height: 28px,
+      size: $sec_six_descrip_size,
+      spacing: $sec_six_descrip_spacing,
+      height: $sec_six_descrip_height,
       family: $primaryfont,
-      weight: 300,
+      weight: $sec_six_descrip_weight,
     )
   );
   @include mq(small_tablet) {
@@ -85,20 +89,22 @@
   @include mq(small_laptop) {
     max-width: 687px;
     margin: 28px auto 0;
-    @include quick_type(15px, 28px, null);
   }
   @include mq(large_laptop) {
     margin: 38px auto 0;
     max-width: 777px;
-    @include quick_type(17px, 35px, null);
+    @include quick_type(
+      $sec_six_descrip_size_large_laptop,
+      $sec_six_descrip_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
     max-width: 998px;
     margin: 42px auto 0;
-    @include quick_type(19px, 35px, null);
+    font-size: $sec_six_descrip_size_small_monitor;
   }
   p {
     margin-bottom: 10px;
   }
 }
-

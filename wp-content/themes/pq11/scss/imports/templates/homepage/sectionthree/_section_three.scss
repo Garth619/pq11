@@ -32,7 +32,7 @@
     }
     &:before,
     &:after {
-      background: $color_bright_one;
+      background: $sec_three_double_line_bg_color;
     }
   }
 }
@@ -41,30 +41,39 @@ h1#sec_three_header {
   margin-bottom: 25px;
   @include type(
     (
-      size: 30px,
-      height: 30px,
+      size: $sec_three_header_size,
+      height: $sec_three_header_height,
       family: $secondaryfont,
-      color: $color_dark_three,
-      weight: 500,
+      color: $sec_three_header_color,
+      weight: $sec_three_header_weight,
     )
   );
   @include mq(small_tablet) {
     text-align: center;
     max-width: 650px;
     margin: 0 auto 37px;
-    @include quick_type(48px, 48px, null);
-  }
-  @include mq(small_laptop) {
-    @include quick_type(48px, 48px, null);
+    @include quick_type(
+      $sec_three_header_size_small_tablet,
+      $sec_three_header_height_small_tablet,
+      null
+    );
   }
   @include mq(large_laptop) {
     max-width: 820px;
     margin-bottom: 43px;
-    @include quick_type(60px, 50px, null);
+    @include quick_type(
+      $sec_three_header_size_large_laptop,
+      $sec_three_header_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
     max-width: 950px;
-    @include quick_type(70px, 65px, null);
+    @include quick_type(
+      $sec_three_header_size_small_monitor,
+      $sec_three_header_height_small_monitor,
+      null
+    );
   }
 }
 
@@ -72,11 +81,11 @@ h1#sec_three_header {
   margin: 30px 0 0;
   @include type(
     (
-      size: 15px,
-      spacing: 0.38px,
-      height: 28px,
+      size: $sec_three_intro_size,
+      spacing: $sec_three_intro_spacing,
+      height: $sec_three_intro_height,
       family: $primaryfont,
-      weight: 700,
+      weight: $sec_three_intro_weight,
     )
   );
   @include mq(small_tablet) {
@@ -86,11 +95,19 @@ h1#sec_three_header {
   }
   @include mq(large_laptop) {
     max-width: 860px;
-    @include quick_type(17px, 30px, null);
+    @include quick_type(
+      $sec_three_intro_size_large_laptop,
+      $sec_three_intro_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
     max-width: 923px;
-    @include quick_type(19px, 35px, null);
+    @include quick_type(
+      $sec_three_intro_size_small_monitor,
+      $sec_three_intro_height_small_monitor,
+      null
+    );
   }
   p {
     margin-bottom: 30px;
@@ -115,7 +132,7 @@ h1#sec_three_header {
     ul {
       li {
         &:before {
-          background: $color_bright_two;
+          background: $sec_three_bullet_bg_color;
         }
       }
     }
