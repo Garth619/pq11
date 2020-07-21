@@ -33,7 +33,7 @@
     }
     .video_title_wrapper {
       span.video_title {
-        color: $color_bright_two;
+        color: $video_title_color;
       }
     }
   }
@@ -107,11 +107,11 @@
         &:after {
           top: 19px;
           left: 25px;
-          @include tri(right, 10px, 13px, $color_bright_one);
+          @include tri(right, 10px, 13px, $video_page_play_button_triangle);
           @include mq(small_laptop) {
             top: 26px;
             left: 32px;
-            @include tri(right, 11px, 15px, $color_bright_one);
+            @include tri(right, 11px, 15px, $video_page_play_button_triangle);
           }
           @include mq(small_monitor) {
             top: 29px;
@@ -125,7 +125,7 @@
 
 .video_title_wrapper {
   padding: 20px 20px;
-  background: $color_dark_six;
+  background: $video_title_wrapper_bg_color;
   text-align: center;
   @include mq(small_tablet) {
     padding: 30px 20px;
@@ -138,12 +138,12 @@
     transition: all 200ms ease-in-out;
     @include type(
       (
-        size: 14px,
-        spacing: 0.4px,
-        height: 17px,
+        size: $video_title_size,
+        spacing: $video_title_spacing,
+        height: $video_title_height,
         family: $primaryfont,
-        color: $color_dark_three,
-        weight: 600,
+        color: $video_title_color,
+        weight: $video_title_weight,
       )
     );
     @include mq(small_tablet) {
@@ -151,7 +151,11 @@
       @include margin_lr;
     }
     @include mq(large_laptop) {
-      @include quick_type(16px, 20px, null);
+      @include quick_type(
+        $video_title_size_large_laptop,
+        $video_title_height_large_laptop,
+        null
+      );
     }
     @include mq(small_monitor) {
       max-width: 305px;

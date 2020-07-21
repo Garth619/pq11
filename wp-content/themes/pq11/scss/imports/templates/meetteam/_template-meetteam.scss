@@ -29,7 +29,7 @@
 
 .single_att {
   margin-bottom: 49px;
-  background: $color_dark_six;
+  background: $single_att_bg_color;
   text-align: center;
   @include mq(small_tablet) {
     flex-basis: 47%;
@@ -44,7 +44,7 @@
     a {
       .single_att_title_wrapper {
         span.single_att_name {
-          color: $color_bright_two;
+          color: $single_att_color_hover;
         }
       }
       .single_att_img {
@@ -77,16 +77,16 @@
         @include abs(0, null, null, 0, 1);
         @include flex(center, center);
         &.placeholder_overlay {
-          background: $color_dark_three;
+          background: $placeholder_overlay_bg_color;
         }
         span.view_profile {
           @include type(
             (
-              size: 14px,
-              spacing: 0.7px,
+              size: $view_profile_size,
+              spacing: $view_profile_spacing,
               family: $primaryfont,
-              color: $color_light_one,
-              weight: 600,
+              color: $view_profile_color,
+              weight: $view_profile_weight,
               transform: uppercase,
             )
           );
@@ -94,7 +94,7 @@
       }
     }
     .single_att_title_wrapper {
-      border-top: 2px solid $color_bright_two;
+      border-top: 2px solid $single_att_title_wrapper_border_bg_color;
       padding: 25px;
       span {
         display: block;
@@ -103,35 +103,47 @@
         transition: all 200ms ease-in-out;
         @include type(
           (
-            size: 22px,
-            height: 22px,
+            size: $single_att_name_size,
+            height: $single_att_height,
             family: $secondaryfont,
-            color: $color_dark_three,
-            weight: 400,
+            color: $single_att_color,
+            weight: $single_att_weight,
           )
         );
         @include mq(small_tablet) {
-          @include quick_type(23px, 23px, null);
+          @include quick_type(
+            $single_att_name_size_small_tablet,
+            $single_att_height_small_tablet,
+            null
+          );
         }
         @include mq(large_laptop) {
-          @include quick_type(30px, 30px, null);
+          @include quick_type(
+            $single_att_name_size_large_laptop,
+            $single_att_height_large_laptop,
+            null
+          );
         }
       }
       span.single_att_position {
         margin-top: 5px;
         @include type(
           (
-            size: 13px,
-            spacing: 0.7px,
-            height: 15px,
+            size: $single_att_position_size,
+            spacing: $single_att_position_spacing,
+            height: $single_att_position_height,
             family: $primaryfont,
-            color: $color_bright_two,
-            weight: 700,
+            color: $single_att_position_color,
+            weight: $single_att_position_weight,
             transform: uppercase,
           )
         );
         @include mq(small_tablet) {
-          @include quick_type(15px, 17px, null);
+          @include quick_type(
+            $single_att_position_size_small_tablet,
+            $single_att_position_height_small_tablet,
+            null
+          );
         }
       }
     }
@@ -142,8 +154,8 @@
   position: relative;
   text-align: center;
   .placeholder_inner {
-    background: $color_dark_three;
-    color: $color_light_one;
+    background: $placeholder_bg_color;
+    color: $placeholder_color;
     padding: 0 25px;
     position: relative;
     @include abs(0, null, null, 0, 1);
@@ -151,11 +163,11 @@
     @include flex(center, center, column);
     @include type(
       (
-        size: 14px,
-        spacing: 0.7px,
+        size: $placeholder_size,
+        spacing: $placeholder_spacing,
         family: $primaryfont,
-        color: $color_light_one,
-        weight: 600,
+        color: $placeholder_color,
+        weight: $placeholder_weight,
         transform: uppercase,
       )
     );

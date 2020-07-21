@@ -18,7 +18,7 @@
   }
   .single_test {
     text-align: center;
-    border-bottom: 1px solid $color_dark_one;
+    border-bottom: 1px solid $single_test_bg_color;
     padding-bottom: 30px;
     margin-bottom: 30px;
     @include mq(large_laptop) {
@@ -37,7 +37,7 @@
     svg {
       width: 123px;
       path {
-        fill: $color_bright_two;
+        fill: $single_test_star_bg_color;
       }
     }
     span {
@@ -46,10 +46,10 @@
         margin-top: 10px;
         @include type(
           (
-            size: 21px,
-            height: 23px,
+            size: $single_test_descrip_size,
+            height: $single_test_descrip_height,
             family: $secondaryfont,
-            weight: 500,
+            weight: $single_test_descrip_weight,
           )
         );
         @include mq(small_laptop) {
@@ -58,12 +58,20 @@
         }
         @include mq(large_laptop) {
           max-width: 740px;
-          @include quick_type(26px, 30px, null);
+          @include quick_type(
+            $single_test_descrip_size_large_laptop,
+            $single_test_descrip_height_large_laptop,
+            null
+          );
         }
         @include mq(small_monitor) {
           margin-top: 16px;
           max-width: 849px;
-          @include quick_type(30px, 35px, null);
+          @include quick_type(
+            $single_test_descrip_size_small_monitor,
+            $single_test_descrip_height_small_monitor,
+            null
+          );
         }
       }
       &.double_line {
@@ -73,17 +81,21 @@
         margin-top: 15px;
         @include type(
           (
-            size: 13px,
-            spacing: 0.4px,
-            height: 15px,
+            size: $single_test_name_size,
+            spacing: $single_test_name_spacing,
+            height: $single_test_name_height,
             family: $primaryfont,
-            weight: 600,
+            weight: $single_test_name_weight,
             transform: uppercase,
           )
         );
         @include mq(large_laptop) {
           margin-top: 30px;
-          @include quick_type(16px, 19px, null);
+          @include quick_type(
+            $single_test_name_size_large_laptop,
+            $single_test_name_height_large_laptop,
+            null
+          );
         }
       }
     }

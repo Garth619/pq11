@@ -33,16 +33,6 @@
   ul.pa_directory_top_menu {
     > li {
       margin-bottom: 40px;
-      @include type(
-        (
-          size: 14px,
-          spacing: 1.8px,
-          height: 25px,
-          weight: 600,
-          family: $primaryfont,
-          transform: uppercase,
-        )
-      );
       > a {
         margin-bottom: 10px;
         @include mq(small_tablet) {
@@ -50,19 +40,27 @@
         }
         @include type(
           (
-            size: 14px,
-            spacing: 1.8px,
-            height: 25px,
-            weight: 600,
+            size: $pa_directory_top_menu_size,
+            spacing: $pa_directory_top_menu_spacing,
+            height: $pa_directory_top_menu_height,
+            weight: $pa_directory_top_menu_weight,
             family: $primaryfont,
             transform: uppercase,
           )
         );
         @include mq(small_tablet) {
-          @include quick_type(16px, 16px, null);
+          @include quick_type(
+            $pa_directory_top_menu_size_small_tablet,
+            $pa_directory_top_menu_height_small_tablet,
+            null
+          );
         }
         @include mq(small_monitor) {
-          @include quick_type(18px, 20px, null);
+          @include quick_type(
+            $pa_directory_top_menu_size_small_monitor,
+            $pa_directory_top_menu_height_small_monitor,
+            null
+          );
         }
       }
       div {
@@ -80,11 +78,11 @@
           li {
             @include type(
               (
-                size: 14px,
-                height: 16px,
-                spacing: 0,
+                size: $pa_directory_sub_menu_size,
+                height: $pa_directory_sub_menu_height,
+                spacing: $pa_directory_sub_menu_spacing,
                 family: $primaryfont,
-                weight: 600,
+                weight: $pa_directory_sub_menu_weight,
                 transform: none,
               )
             );
@@ -100,13 +98,13 @@
             }
             a {
               padding: 14px 0;
-              color: $color_dark_three;
+              color: $pa_directory_sub_menu_color;
               text-decoration: none;
-              border-bottom: 1px solid $color_dark_one;
+              border-bottom: 1px solid $pa_directory_sub_menu_border_bg_color;
               transition: all 200ms ease-in-out;
               @include flex(center, center);
               &:hover {
-                color: $color_bright_two;
+                color: $pa_directory_sub_menu_border_bg_color_hover;
               }
               @include mq(small_tablet) {
                 height: 60px;
