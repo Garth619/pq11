@@ -5,9 +5,9 @@
 
 <?php get_template_part('page-templates/includes/att_bio_template_parts/template','profile_image'); ?>
 
-	<div id='att_sidebar_lists'>
-
 	<?php if ( have_rows( 'attorney_accolades' ) ) : ?>
+
+		<div id='att_sidebar_lists'>
 
 		<?php while ( have_rows( 'attorney_accolades' ) ) : the_row(); ?>
 		
@@ -51,11 +51,11 @@
 
 		<?php endwhile; ?>
 
+		</div><!-- att_sidebar_lists -->
+
 	<?php endif; ?>
 	
-	</div><!-- att_sidebar_lists -->
-
-	</div><!-- att_sidebar_inner -->
+</div><!-- att_sidebar_inner -->
 
 </div><!-- att_sidebar_wrapper -->
 

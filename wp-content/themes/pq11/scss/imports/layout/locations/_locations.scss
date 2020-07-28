@@ -225,6 +225,7 @@ a.get_directions {
     }
     svg {
       height: 19px;
+      width: 18px;
       @include mq(small_tablet) {
         height: 16px;
       }
@@ -233,6 +234,7 @@ a.get_directions {
       }
       @include mq(small_monitor) {
         height: 23px;
+        width: 22px;
       }
       path {
         fill: $social_media_bg_color;

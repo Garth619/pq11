@@ -181,6 +181,22 @@ img#about_banner_image {
   }
 }
 
+html.webp {
+  #about_bottom_wrapper {
+    &:after {
+      background: url(#{$themepath}/images/bkg-pattern.webp) repeat;
+    }
+  }
+}
+
+html.no-webp {
+  #about_bottom_wrapper {
+    &:after {
+      background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
+    }
+  }
+}
+
 #about_bottom_wrapper {
   position: relative;
   padding-bottom: 20px;
@@ -188,7 +204,6 @@ img#about_banner_image {
     padding-bottom: 50px;
   }
   &:after {
-    background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
     opacity: 0.6;
     @include box(100%);
     @include abs(0, null, null, 0);

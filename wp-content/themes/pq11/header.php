@@ -37,7 +37,7 @@
 	@font-face {
   	font-family: '<?php the_sub_field( 'font_family','option'); ?>';
   	font-style: <?php the_sub_field( 'font_style','option'); ?>;
-  	font-weight: <?php the_sub_field( 'font_weight','300'); ?>;
+  	font-weight: <?php the_sub_field( 'font_weight','option'); ?>;
   	font-display: <?php the_sub_field( 'font_display','option'); ?>;
   	src: local('<?php the_sub_field( 'src: local','option'); ?>'), local('<?php the_sub_field( 'local','option'); ?>'),
        url('<?php the_sub_field( 'font_file_woff2','option'); ?>') format('woff2');

@@ -34,7 +34,7 @@
 
 			<div id='sec_five_left_content'>
 			
-				<span class="double_line"></span>
+				<span style="display:none" class="double_line"></span>
 
 				<span id='sec_five_intro'><?php the_field( 'section_five_quote' ); ?></span><!-- sec_five_intro -->
 

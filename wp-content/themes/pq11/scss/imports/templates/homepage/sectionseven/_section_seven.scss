@@ -1,3 +1,19 @@
+html.webp {
+  #section_seven {
+    &:after {
+      background: url(#{$themepath}/images/bkg-pattern.webp) repeat;
+    }
+  }
+}
+
+html.no-webp {
+  #section_seven {
+    &:after {
+      background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
+    }
+  }
+}
+
 #section_seven {
   position: relative;
   padding: 57px 40px;
@@ -14,7 +30,6 @@
     padding: 95px 40px 60px;
   }
   &:after {
-    background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
     background-size: 500px, 500px;
     opacity: 0.6;
     @include abs(0, null, null, 0);
@@ -120,6 +135,7 @@ span#sec_seven_title {
   @include mq(small_laptop) {
     margin-top: -4px;
     padding-left: 105px;
+    flex-grow: 1;
   }
   ul {
     list-style: none;

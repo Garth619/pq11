@@ -282,6 +282,13 @@ span#att_position {
       margin-bottom: 5px;
       @include mq(large_laptop) {
         margin-bottom: 10px;
+        a {
+          color: $color_bright_two;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
     }
   }
@@ -343,7 +350,7 @@ body.page-template-template-bio {
   }
   .placeholder {
     .placeholder_inner {
-      background: $placeholder_bg_color;
+      background: $color_dark_two;
       &:before {
         color: $placeholder_color;
       }

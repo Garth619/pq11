@@ -129,6 +129,14 @@ h1#sec_three_header {
     padding-top: 73px;
   }
   &.content {
+    h2 {
+      @include mq(small_tablet) {
+        padding-bottom: 15px;
+      }
+      @include mq(small_monitor) {
+        padding-bottom: 25px;
+      }
+    }
     ul {
       li {
         &:before {

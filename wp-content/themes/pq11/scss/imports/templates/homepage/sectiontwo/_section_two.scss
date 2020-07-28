@@ -1,7 +1,22 @@
+html.webp {
+  #section_two {
+    &:after {
+      background: url(#{$themepath}/images/bkg-pattern.webp) repeat;
+    }
+  }
+}
+
+html.no-webp {
+  #section_two {
+    &:after {
+      background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
+    }
+  }
+}
+
 #section_two {
   position: relative;
   &:after {
-    background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
     background-size: (500px, 500px);
     opacity: 0.53;
     @include abs(0, null, null, 0);

@@ -253,6 +253,9 @@ ul#sec_one_selling_points {
   @include mq(large_laptop) {
     flex-basis: 220px;
     flex-shrink: 0;
+    @include mq(small_monitor) {
+      flex-basis:250px;
+    }
   }
   #sec_one_video {
     display: none;
@@ -647,10 +650,6 @@ span#sec_one_form_title {
     );
   }
   @include mq(small_monitor) {
-    @include quick_type(
-      $sec_one_form_title_size_small_monitor,
-      $sec_one_form_title_height_small_monitor,
-      null
-    );
+    @include quick_type($sec_one_form_title_size_small_monitor, $sec_one_form_title_height_small_monitor, null);
   }
 }
