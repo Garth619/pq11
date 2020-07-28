@@ -91,6 +91,9 @@
   @include mq(small_monitor) {
     @include box(250px, 150px);
   }
+  a {
+    display: block;
+  }
   img {
     object-fit: cover;
     @include abs(0, null, null, 0);
@@ -254,7 +257,7 @@ ul#sec_one_selling_points {
     flex-basis: 220px;
     flex-shrink: 0;
     @include mq(small_monitor) {
-      flex-basis:250px;
+      flex-basis: 250px;
     }
   }
   #sec_one_video {
@@ -650,6 +653,10 @@ span#sec_one_form_title {
     );
   }
   @include mq(small_monitor) {
-    @include quick_type($sec_one_form_title_size_small_monitor, $sec_one_form_title_height_small_monitor, null);
+    @include quick_type(
+      $sec_one_form_title_size_small_monitor,
+      $sec_one_form_title_height_small_monitor,
+      null
+    );
   }
 }
