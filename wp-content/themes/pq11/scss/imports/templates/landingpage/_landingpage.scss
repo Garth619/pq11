@@ -5,6 +5,17 @@ body.single-landing_page {
       padding: 0 30px;
       width: calc(100% - 330px);
     }
+    @include mq(small_laptop) {
+      height: 79px;
+      width: 100%;
+      position: relative;
+    }
+    @include mq(large_laptop) {
+      padding: 0 40px;
+    }
+    @include mq(small_monitor) {
+      height: 89px;
+    }
   }
   #header_inner {
     @include mq(tablet) {
@@ -26,6 +37,9 @@ body.single-landing_page {
       @include mq(tablet) {
         width: 205px;
       }
+      @include mq(large_laptop) {
+        width: 250px;
+      }
     }
   }
   #header_right {
@@ -35,6 +49,12 @@ body.single-landing_page {
     }
     @include mq(tablet) {
       flex-grow: 1;
+    }
+    @include mq(small_laptop) {
+      height: 79px;
+    }
+    @include mq(small_monitor) {
+      height: 89px;
     }
   }
   .header_title_wrapper {
@@ -49,10 +69,25 @@ body.single-landing_page {
       }
     }
   }
+  span.header_title_sml {
+    @include mq(large_laptop) {
+      font-size: 12px;
+    }
+    @include mq(small_monitor) {
+      font-size: 13px;
+      margin-bottom: 0px;
+    }
+  }
   span.header_title_lrg {
     @include mq(small_tablet) {
       color: $color_bright_one;
       @include flex();
+    }
+    @include mq(large_laptop) {
+      font-size: 19px;
+    }
+    @include mq(small_monitor) {
+      font-size: 21px;
     }
     span {
       @include mq(small_tablet) {
@@ -67,6 +102,11 @@ body.single-landing_page {
   nav {
     @include mq(tablet) {
       display: none !important;
+    }
+  }
+  footer {
+    @include mq(tablet) {
+      background: $color_light_one;
     }
   }
 }
@@ -86,6 +126,7 @@ body.single-landing_page {
 
 #landing_page_content_wrapper {
   min-height: 3000px;
+  background: grey;
 }
 
 #landing_page_sidebar {
@@ -93,6 +134,13 @@ body.single-landing_page {
   @include mq(tablet) {
     display: block;
     width: 330px;
+    flex-shrink: 0;
     background: $color_dark_three;
+  }
+  @include mq(large_laptop) {
+    width: 400px;
+  }
+  @include mq(small_monitor) {
+    width: 470px;
   }
 }
