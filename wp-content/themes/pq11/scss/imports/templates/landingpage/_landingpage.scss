@@ -40,6 +40,9 @@ body.single-landing_page {
       @include mq(large_laptop) {
         width: 250px;
       }
+      img {
+        height: auto;
+      }
     }
   }
   #header_right {
@@ -96,7 +99,9 @@ body.single-landing_page {
       }
     }
     a {
-      color: $color_bright_one;
+      @include mq(small_tablet) {
+        color: $color_bright_one;
+      }
     }
   }
   nav {
@@ -125,8 +130,8 @@ body.single-landing_page {
 }
 
 #landing_page_content_wrapper {
-  min-height: 3000px;
   background: grey;
+  margin-top: 126px;
 }
 
 #landing_page_sidebar {
