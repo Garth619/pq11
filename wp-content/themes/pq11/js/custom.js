@@ -210,6 +210,28 @@ jQuery(document).ready(function ($) {
     ],
   });
 
+  $("#lp_sec_one_slider").slick({
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    mobileFirst: true,
+    arrows: false,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        },
+      },
+      {
+        breakpoint: 1170,
+        settings: "unslick",
+      },
+    ],
+  });
+
   /* Case Results Page
 --------------------------------------------------------------------------------------- */
 

@@ -4,7 +4,7 @@
   
     <?php if(get_field('lp_wistia_or_youtube_video') == "Wistia") { ?>
 
-      <div id='sec_one_video' class="video_hover_styles">
+      <div id='lp_sec_one_video' class="video_hover_styles">
 
         <div class='mywistia wistia_embed wistia_async_<?php the_field( 'lp_section_one_video_id_wistia' ); ?> popover=true popoverContent=html'></div><!-- mywistia -->
 
@@ -30,13 +30,13 @@
   
         </div><!-- video_overlay -->
 
-      </div><!-- sec_one_video -->
+      </div><!-- lp_sec_one_video -->
 
     <?php } ?>
 
     <?php if(get_field('lp_wistia_or_youtube_video') == "Youtube") { ?>
   
-      <div id='sec_one_video' class="video_hover_styles">
+      <div id='lp_sec_one_video' class="video_hover_styles">
   
         <a href="https://www.youtube.com/embed/<?php the_field( 'lp_section_one_video_id_youtube' ); ?>" data-lity>
   
@@ -117,10 +117,12 @@
         </div><!-- lp_sec_one_slider -->
         
       </div><!-- lp_sec_one_logos -->
+
+      </div><!-- lp_section_one_inner -->
       
       <picture>
   
-        <?php $section_one_image_laptop_webp = get_field( 'lp_section_one_image_laptop_webp' ); ?>
+        <?php $section_one_image_laptop_webp = get_field( 'lp_section_one_background_image_desktop_webp' ); ?>
   
           <?php if ( $section_one_image_laptop_webp ) { ?>
   
@@ -128,7 +130,7 @@
   
           <?php } ?>
   
-          <?php $section_one_image_laptop = get_field( 'lp_section_one_image_laptop' ); ?>
+          <?php $section_one_image_laptop = get_field( 'lp_section_one_background_image_desktop' ); ?>
   
           <?php if ( $section_one_image_laptop ) { ?>
   
@@ -136,7 +138,7 @@
   
           <?php } ?>
   
-          <?php $section_one_image_tablet_webp = get_field( 'lp_section_one_image_tablet_webp' ); ?>
+          <?php $section_one_image_tablet_webp = get_field( 'lp_section_one_background_image_tablet_webp' ); ?>
   
           <?php if ( $section_one_image_tablet_webp ) { ?>
   
@@ -144,7 +146,7 @@
       
           <?php } ?>
   
-          <?php $section_one_image_tablet = get_field( 'lp_section_one_image_tablet' ); ?>
+          <?php $section_one_image_tablet = get_field( 'lp_section_one_background_image_tablet' ); ?>
   
           <?php if ( $section_one_image_tablet ) { ?>
     
@@ -152,7 +154,7 @@
   
           <?php } ?>
   
-          <?php $section_one_image_mobile_webp = get_field( 'lp_section_one_image_mobile_webp' ); ?>
+          <?php $section_one_image_mobile_webp = get_field( 'lp_section_one_background_image_mobile_webp' ); ?>
       
           <?php if ( $section_one_image_mobile_webp ) { ?>
       
@@ -160,12 +162,12 @@
       
           <?php } ?>
       
-          <?php $section_one_image_mobile = get_field( 'lp_section_one_image_mobile' ); ?>
+          <?php $section_one_image_mobile = get_field( 'lp_section_one_background_image_mobile' ); ?>
       
-          <img id='hero' src="<?php echo $section_one_image_mobile['url']; ?>" alt="<?php echo $section_one_image_mobile['alt']; ?>" /><!-- hero -->
+          <img id='lp_hero' src="<?php echo $section_one_image_mobile['url']; ?>" alt="<?php echo $section_one_image_mobile['alt']; ?>" /><!-- hero -->
         
         </picture>
 
-      </div><!-- lp_section_one_inner -->
+      
 
     </section><!-- lp_section_one -->

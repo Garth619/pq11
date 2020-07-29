@@ -130,7 +130,6 @@ body.single-landing_page {
 }
 
 #landing_page_content_wrapper {
-  background: grey;
   margin-top: 126px;
 }
 
@@ -148,9 +147,4 @@ body.single-landing_page {
   @include mq(small_monitor) {
     width: 470px;
   }
-}
-
-#lp_section_one_inner {
-  position: relative;
-  z-index: 1;
 }
