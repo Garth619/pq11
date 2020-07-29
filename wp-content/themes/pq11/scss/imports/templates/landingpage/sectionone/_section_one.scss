@@ -1,6 +1,6 @@
 #lp_section_one {
   position: relative;
-  padding: 25px 0;
+  padding: 25px 0 45px;
   text-align: center;
 }
 
@@ -189,7 +189,7 @@ ul#lp_sec_one_selling_points {
 
 span#lp_sec_one_logo_title {
   display: inline-block;
-  background: $sec_one_logo_title_bg_color;
+  background: $color_bright_two;
   padding: 9px 25px;
   margin-top: 42px;
   @include type(
@@ -197,7 +197,7 @@ span#lp_sec_one_logo_title {
       size: $sec_one_logo_title_size,
       spacing: $sec_one_logo_title_spacing,
       family: $primaryfont,
-      color: $sec_one_logo_title_color,
+      color: $color_light_one,
       transform: uppercase,
     )
   );
@@ -219,7 +219,7 @@ span#lp_sec_one_logo_title {
 
 #lp_sec_one_slider {
   max-width: 245px;
-  margin: 40px auto 0px;
+  margin: 20px auto 0px;
   @include mq(small_tablet) {
     margin: 40px auto 0px;
     max-width: 630px;
@@ -230,6 +230,9 @@ span#lp_sec_one_logo_title {
   }
   @include mq(small_monitor) {
     margin: 48px 0 0px;
+  }
+  .slick-slide {
+    height: auto;
   }
 }
 
