@@ -2,6 +2,12 @@
   position: relative;
   padding: 25px 0 45px;
   text-align: center;
+  @include mq(small_tablet) {
+    padding: 35px 0 45px;
+  }
+  @include mq(large_laptop) {
+    padding: 41px 0 73px;
+  }
 }
 
 #lp_section_one_inner {
@@ -24,9 +30,6 @@ img#lp_hero {
   @include box(141px, 89px);
   @include mq(small_tablet) {
     @include box(195px, 121px);
-  }
-  @include mq(small_laptop) {
-    display: none;
   }
   @include mq(large_laptop) {
     @include box(199px, 121px);
@@ -65,35 +68,28 @@ span#lp_sec_one_title {
   );
   @include mq(small_tablet) {
     max-width: 496px;
-    margin: 33px auto 0;
+    margin: 25px auto 0;
     @include quick_type(
       $sec_one_title_size_small_tablet,
       $sec_one_title_height_small_tablet,
       null
     );
   }
+  @include mq(tablet) {
+    max-width: 600px;
+  }
   @include mq(small_laptop) {
     order: 2;
-    text-align: left;
-    margin: 0px 0 0 50px;
-    @include quick_type(
-      $sec_one_title_size_small_laptop,
-      $sec_one_title_height_small_laptop,
-      null
-    );
+    max-width: 660px;
+    margin: 25px auto 27px;
+    @include quick_type(60px, 60px, null);
   }
   @include mq(large_laptop) {
-    max-width: 425px;
-    margin: 0px 0 0 33px;
-    @include quick_type(
-      $sec_one_title_size_large_laptop,
-      $sec_one_title_height_large_laptop,
-      null
-    );
+    max-width: 865px;
+    margin: 26px auto 33px;
+    @include quick_type(80px, 80px, null);
   }
   @include mq(small_monitor) {
-    max-width: 470px;
-    margin: 0px 0 0 64px;
     @include quick_type(
       $sec_one_title_size_small_monitor,
       $sec_one_title_height_small_monitor,
@@ -101,7 +97,6 @@ span#lp_sec_one_title {
     );
   }
   @include mq(monitor) {
-    max-width: 645px;
     @include quick_type(
       $sec_one_title_size_monitor,
       $sec_one_title_height_monitor,
@@ -118,9 +113,11 @@ ul#lp_sec_one_selling_points {
   max-width: 310px;
   @include mq(small_tablet) {
     margin-top: 15px;
+    max-width: 580px;
   }
   @include mq(large_laptop) {
     margin-top: 27px;
+    max-width: 700px;
   }
   @include mq(small_monitor) {
     margin-top: 36px;
@@ -142,15 +139,11 @@ ul#lp_sec_one_selling_points {
     );
     @include mq(small_tablet) {
       display: inline-block;
-      padding-left: 15px;
-    }
-    @include mq(small_laptop) {
-      display: block;
-      margin-bottom: 8px;
+      font-size: 11px;
     }
     @include mq(large_laptop) {
       @include quick_type(
-        $sec_one_selling_points_size_large_laptop,
+        14px,
         null,
         $sec_one_selling_points_spacing_large_laptop
       );
@@ -163,11 +156,6 @@ ul#lp_sec_one_selling_points {
         null
       );
     }
-    &:first-of-type {
-      &:after {
-        display: inline-block;
-      }
-    }
     &:after {
       border-radius: 50%;
       vertical-align: top;
@@ -177,11 +165,18 @@ ul#lp_sec_one_selling_points {
       @include box(5px);
       @include contentdisplay(none);
       @include mq(small_tablet) {
-        margin-left: 4px;
+        margin: 9px 7px 0 12px;
+        display: inline-block;
       }
-      @include mq(small_laptop) {
-        padding-left: 0;
-        margin-left: 0;
+    }
+    &:first-of-type {
+      &:after {
+        display: inline-block;
+      }
+    }
+    &:last-of-type {
+      &:after {
+        display: none;
       }
     }
   }
@@ -202,7 +197,7 @@ span#lp_sec_one_logo_title {
     )
   );
   @include mq(small_tablet) {
-    margin-top: 66px;
+    margin-top: 40px;
   }
   @include mq(small_laptop) {
     margin-top: 45px;
@@ -225,11 +220,11 @@ span#lp_sec_one_logo_title {
     max-width: 630px;
   }
   @include mq(small_laptop) {
-    margin: 30px 0 0px;
-    @include flex();
+    margin: 30px auto 0px;
+    @include flex(center);
   }
   @include mq(small_monitor) {
-    margin: 48px 0 0px;
+    margin: 48px auto 0px;
   }
   .slick-slide {
     height: auto;
@@ -239,7 +234,10 @@ span#lp_sec_one_logo_title {
 .lp_sec_one_slide {
   height: 40px;
   @include mq(small_laptop) {
-    margin-right: 55px;
+    margin: 0 25px;
+  }
+  @include mq(large_laptop) {
+    margin: 0 30px;
   }
   &.three {
     .lp_sec_one_slide_inner {
