@@ -7,6 +7,7 @@
     <div id='landing_page_content_wrapper'>
     
      <?php get_template_part('page-templates/includes/landingpage/section','1'); ?>
+     <?php get_template_part('page-templates/includes/landingpage/section','2'); ?>
     
     </div><!-- landing_page_content_wrapper -->
 
@@ -35,8 +36,6 @@
   </div><!-- landing_page_sidebar -->
 
 </div><!-- landing_page_wrapper -->
-
-
 
 <?php wp_footer();?>
 

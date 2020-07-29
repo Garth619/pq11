@@ -48,8 +48,8 @@
       </ul>
 
       <a id='ilawyer' href="//ilawyermarketing.com" target="_blank" rel="noopener">
-    
-      <img src='<?php bloginfo('template_directory');?>/images/ilawyer.svg' />
+
+      <?php echo file_get_contents( get_template_directory() . '/images/ilawyer.svg' ); ?>
     
     </a><!-- ilawer-->
     

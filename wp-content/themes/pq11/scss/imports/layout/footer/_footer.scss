@@ -377,7 +377,8 @@ span#footer_from_title {
     @include mq(small_laptop) {
       margin-top: 3px;
     }
-    img {
+    img,
+    svg {
       width: 175px;
       @include mq(small_laptop) {
         width: 150px;
