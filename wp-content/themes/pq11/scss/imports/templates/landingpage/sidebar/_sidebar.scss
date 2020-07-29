@@ -32,8 +32,17 @@ body.single-landing_page {
   .sidebar_form {
     display: block;
     padding: 37px 33px 92px 33px;
+    @include mq(large_laptop) {
+      padding: 46px 33px 92px 33px;
+    }
   }
   span.sidebar_form_title {
     @include quick_type(25px, 28px, null);
+    @include mq(large_laptop) {
+      @include quick_type(30px, 35px, null);
+    }
+    @include mq(small_monitor) {
+      @include quick_type(35px, 42px, null);
+    }
   }
 }
