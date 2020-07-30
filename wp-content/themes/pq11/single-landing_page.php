@@ -13,6 +13,7 @@
      <?php get_template_part('page-templates/includes/landingpage/section','3'); ?>
      <?php get_template_part('page-templates/includes/landingpage/section','4'); ?>
      <?php get_template_part('page-templates/includes/landingpage/section','5'); ?>
+     <?php get_template_part('page-templates/includes/landingpage/section','6'); ?>
     
     </div><!-- landing_page_content_wrapper -->
 
