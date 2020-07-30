@@ -1,6 +1,6 @@
 <section id='lp_section_three'>
 
-  <div id='lp_sec_three_inner' class="content">
+  <div id='lp_sec_three_inner' class="content lp_content">
   
     <h1 id="lp_sec_three_header">Full Service Law Firm in Lansing & Surrounding Areas</h1>
 
@@ -33,7 +33,7 @@
 
         <div id='lp_sec_three_info_text'>
 
-         <div id='lp_sec_three_info_text_inner'>
+          <div id='lp_sec_three_info_text_inner'>
          
            <span id='lp_sec_three_info_title'>White Law, PllC</span><!-- lp_sec_three_info_title -->
  

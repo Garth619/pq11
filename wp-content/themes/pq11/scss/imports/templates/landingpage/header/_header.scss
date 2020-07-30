@@ -5,7 +5,7 @@ body.single-landing_page {
       padding: 0 30px;
       width: calc(100% - 330px);
     }
-    @include mq(small_laptop) {
+    @include mq(large_laptop) {
       height: 79px;
       width: 100%;
       position: relative;
@@ -53,7 +53,7 @@ body.single-landing_page {
     @include mq(tablet) {
       flex-grow: 1;
     }
-    @include mq(small_laptop) {
+    @include mq(large_laptop) {
       height: 79px;
     }
     @include mq(small_monitor) {

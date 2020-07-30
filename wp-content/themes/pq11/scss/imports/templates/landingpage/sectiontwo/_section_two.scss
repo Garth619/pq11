@@ -27,7 +27,7 @@ html.no-webp {
     padding: 50px 35px 40px;
   }
   @include mq(large_laptop) {
-    padding: 65px 35px 51px;
+    padding: 65px 105px 51px;
   }
   &:after {
     background-size: (500px, 500px);
@@ -55,7 +55,7 @@ html.no-webp {
     max-width: 770px;
   }
   @include mq(large_laptop) {
-    max-width: 980px;
+    max-width: 970px;
   }
   .slick-slide {
     margin: 0 24px;

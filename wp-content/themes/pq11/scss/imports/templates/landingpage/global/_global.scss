@@ -16,7 +16,27 @@
   @include mq(small_tablet) {
     margin-top: 65px;
   }
-  @include mq(small_laptop) {
+  @include mq(large_laptop) {
     margin-top: 0px;
+  }
+}
+
+.content.lp_content {
+  font-size: 14px;
+  line-height: 26px;
+  @include mq(small_laptop) {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  h2 {
+    line-height: 24px;
+    @include mq(small_tablet) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+    @include mq(small_laptop) {
+      font-size: 26px;
+      line-height: 34px;
+    }
   }
 }
