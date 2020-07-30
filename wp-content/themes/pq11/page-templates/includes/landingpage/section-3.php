@@ -32,18 +32,22 @@
         </div><!-- lp_sec_three_info_image -->
 
         <div id='lp_sec_three_info_text'>
-        
-          <span id='lp_sec_three_info_title'>White Law, PllC</span><!-- lp_sec_three_info_title -->
 
-          <span class='double_line'></span><!-- double_line -->
-          
-          <div id='lp_sec_three_info_caption'>
-
-            <p>Etiam at velit varius, molestie dui vel, pulvinar massa. Sed non ultricies nisi. Integer placerat varius pretium. Vivamus accumsan tincidunt.</p>
-            
-          </div><!-- lp_sec_three_info_caption -->
+         <div id='lp_sec_three_info_text_inner'>
+         
+           <span id='lp_sec_three_info_title'>White Law, PllC</span><!-- lp_sec_three_info_title -->
+ 
+           <span class='double_line'></span><!-- double_line -->
+ 
+           <div id='lp_sec_three_info_caption'>
+           
+             <p>Etiam at velit varius, molestie dui vel, pulvinar massa. Sed non ultricies nisi. Integer placerat varius pretium. Vivamus accumsan tincidunt.</p>
+             
+           </div><!-- lp_sec_three_info_caption -->
+         
+         </div><!-- lp_sec_three_info_text_inner -->
         
-        </div><!-- lp_sec_three_info_text -->
+       </div><!-- lp_sec_three_info_text -->
       
       </div><!-- lp_sec_three_info -->
 

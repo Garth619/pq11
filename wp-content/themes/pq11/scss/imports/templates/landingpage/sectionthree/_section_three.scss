@@ -1,7 +1,7 @@
 #lp_section_three {
   padding: 56px 24px 37px;
   @include mq(small_tablet) {
-    padding: 56px 60px 37px;
+    padding: 79px 60px 71px;
   }
 }
 
@@ -17,14 +17,9 @@ h1#lp_sec_three_header {
     )
   );
   @include mq(small_tablet) {
-    text-align: center;
     max-width: 650px;
-    margin: 0 auto 37px;
-    @include quick_type(
-      $sec_three_header_size_small_tablet,
-      $sec_three_header_height_small_tablet,
-      null
-    );
+    margin: 0 0 37px;
+    @include quick_type(40px, 40px, null);
   }
   @include mq(large_laptop) {
     max-width: 820px;
@@ -47,33 +42,74 @@ h1#lp_sec_three_header {
 
 #lp_sec_three_content {
   margin-top: 27px;
+  @include mq(small_tablet) {
+    margin-top: 47px;
+  }
 }
 
 #lp_sec_three_info {
   max-width: 260px;
   margin: 55px auto 50px;
   text-align: center;
+  @include mq(small_tablet) {
+    max-width: 775px;
+    @include flex();
+  }
   span.double_line {
     max-width: 73px;
     margin: 0 auto 15px;
     @include mq(small_tablet) {
       margin: 0 0 15px;
     }
-  }
-  @include mq(small_tablet) {
-    max-width: 100%;
-    @include flex();
+    &:before,
+    &:after {
+      background: $color_bright_one;
+    }
   }
 }
 
 #lp_sec_three_info_image {
   flex-shrink: 0;
-  flex-basis: 294px;
+  flex-basis: 311px;
+}
+
+html.webp {
+  #lp_sec_three_info_text {
+    &:after {
+      background: url(#{$themepath}/images/bkg-pattern.webp) repeat;
+    }
+  }
+}
+
+html.no-webp {
+  #lp_sec_three_info_text {
+    &:after {
+      background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
+    }
+  }
 }
 
 #lp_sec_three_info_text {
   flex-grow: 1;
   text-align: left;
+  position: relative;
+  @include mq(small_tablet) {
+    padding: 0 40px 10px;
+  }
+  &:after {
+    @include mq(small_tablet) {
+      background-size: (500px, 500px);
+      opacity: 0.53;
+      @include abs(0, null, null, 0);
+      @include box(100%, 100%);
+      @include contentdisplay();
+    }
+  }
+}
+
+#lp_sec_three_info_text_inner {
+  position: relative;
+  z-index: 1;
 }
 
 span#lp_sec_three_info_title {
