@@ -1,11 +1,19 @@
 body.single-landing_page {
   footer {
-    padding: 95px 0 10px;
+    @include mq(tablet) {
+      padding: 70px 0 10px;
+    }
+    @include mq(small_laptop) {
+      padding: 95px 0 10px;
+    }
   }
   #footer_form_wrapper {
     @include mq(tablet) {
       display: none;
     }
+  }
+  #locations {
+    max-width: 1210px;
   }
   span.loc_title {
     @include mq(tablet) {

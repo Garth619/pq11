@@ -1,0 +1,22 @@
+#landing_page_wrapper {
+  width: 100%;
+  @include mq(tablet) {
+    @include flex();
+  }
+}
+
+#landing_page_left {
+  @include mq(tablet) {
+    flex-grow: 1;
+  }
+}
+
+#landing_page_content_wrapper {
+  margin-top: 126px;
+  @include mq(small_tablet) {
+    margin-top: 65px;
+  }
+  @include mq(small_laptop) {
+    margin-top: 0px;
+  }
+}

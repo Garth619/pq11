@@ -1,8 +1,10 @@
+<?php get_header(); ?>
+
 <div id='landing_page_wrapper'>
 
   <div id='landing_page_left'>
 
-    <?php get_header(); ?>
+   <?php get_template_part('page-templates/includes/template','header'); ?>
 
     <div id='landing_page_content_wrapper'>
     
