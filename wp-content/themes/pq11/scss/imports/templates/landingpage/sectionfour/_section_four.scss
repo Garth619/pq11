@@ -1,0 +1,50 @@
+html.webp {
+  #lp_section_four {
+    &:after {
+      background: url(#{$themepath}/images/bkg-pattern.webp) repeat;
+    }
+  }
+}
+
+html.no-webp {
+  #lp_section_four {
+    &:after {
+      background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
+    }
+  }
+}
+
+#lp_section_four {
+  position: relative;
+  padding: 40px 0;
+  &:after {
+    background-size: (500px, 500px);
+    opacity: 0.53;
+    @include abs(0, null, null, 0);
+    @include box(100%, 100%);
+    @include contentdisplay();
+  }
+}
+
+#lp_sec_four_inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  span.double_line {
+    max-width: 130px;
+    margin: 10px auto 0;
+  }
+}
+
+span#lp_sec_four_title {
+  @include type(
+    (
+      size: 30px,
+      height: 45px,
+      spacing: 0,
+      family: $secondaryfont,
+      color: $color_dark_three,
+      weight: 500,
+    )
+  );
+}

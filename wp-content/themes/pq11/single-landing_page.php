@@ -11,6 +11,7 @@
      <?php get_template_part('page-templates/includes/landingpage/section','1'); ?>
      <?php get_template_part('page-templates/includes/landingpage/section','2'); ?>
      <?php get_template_part('page-templates/includes/landingpage/section','3'); ?>
+     <?php get_template_part('page-templates/includes/landingpage/section','4'); ?>
     
     </div><!-- landing_page_content_wrapper -->
 
