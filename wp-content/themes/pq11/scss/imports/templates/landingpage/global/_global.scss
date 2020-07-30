@@ -21,6 +21,38 @@
   }
 }
 
+.lp_sec_header {
+  display: block;
+  margin-bottom: 25px;
+  @include type(
+    (
+      size: $sec_three_header_size,
+      height: $sec_three_header_height,
+      family: $secondaryfont,
+      color: $sec_three_header_color,
+      weight: 400,
+    )
+  );
+  @include mq(small_tablet) {
+    max-width: 650px;
+    margin: 0 0 37px;
+    @include quick_type(50px, 50px, null);
+  }
+  @include mq(large_laptop) {
+    max-width: 820px;
+    margin-bottom: 43px;
+    @include quick_type(60px, 60px, null);
+  }
+  @include mq(small_monitor) {
+    max-width: 950px;
+    @include quick_type(
+      $sec_three_header_size_small_monitor,
+      $sec_three_header_height_small_monitor,
+      null
+    );
+  }
+}
+
 .content.lp_content {
   font-size: 14px;
   line-height: 26px;

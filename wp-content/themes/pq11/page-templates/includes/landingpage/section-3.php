@@ -2,7 +2,7 @@
 
   <div id='lp_sec_three_inner' class="content lp_content">
   
-    <h1 id="lp_sec_three_header">Full Service Law Firm in Lansing & Surrounding Areas</h1>
+    <h1 class="lp_sec_header">Full Service Law Firm in Lansing & Surrounding Areas</h1>
 
     <span class='double_line'></span><!-- double_line -->
 
