@@ -10,7 +10,7 @@
       
       <?php if ( $lp_section_six_image ) { ?>
 	      
-        <img src="<?php echo $lp_section_six_image['url']; ?>" alt="<?php echo $lp_section_six_image['alt']; ?>" />
+        <img class="lazyload" data-src="<?php echo $lp_section_six_image['url']; ?>" alt="<?php echo $lp_section_six_image['alt']; ?>" />
       
       <?php } ?>
 

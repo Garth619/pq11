@@ -8,7 +8,7 @@
 
       <div id='lp_sec_one_video' class="video_hover_styles">
 
-        <div class='mywistia wistia_embed wistia_async_<?php the_field( 'lp_section_one_video_id_wistia' ); ?> popover=true popoverContent=html'></div><!-- mywistia -->
+        <div class='mywistia wistia_embed wistia_async_<?php the_field( 'lp_section_one_video_id_wistia_new' ); ?> popover=true popoverContent=html'></div><!-- mywistia -->
 
         <picture>
   

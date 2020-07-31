@@ -22,7 +22,7 @@
       
         <div id='lp_sec_three_info_image'>
         
-          <img src='<?php bloginfo('template_directory');?>/images/img-white-01.jpg' /><!-- name -->
+          <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/img-white-01.jpg' /><!-- name -->
         
         </div><!-- lp_sec_three_info_image -->
 
