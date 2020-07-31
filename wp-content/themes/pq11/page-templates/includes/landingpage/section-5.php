@@ -1,3 +1,5 @@
+<?php if(get_field('enable_section_five') == "Yes") { ?>
+
 <section id='lp_section_five'>
 
   <div id='lp_sec_five_inner'>
@@ -8,91 +10,73 @@
 
     <div id='lp_sec_five_bullets'>
 
+    <?php if ( have_rows( 'section_five_bullets_col_one' ) ) : ?>
+
       <div class='lp_sec_five_col'>
-      
-        <div class='lp_sec_five_bullet'>
-      
-        <span class='lp_sec_five_bullet_number'>1</span><!-- lp_sec_five_bullet_number -->
-
-        <div class='lp_sec_five_bullet_content_wrapper'>
-        
-          <span class='lp_sec_five_bullet_title'>Suspendisse consectetur magna ut urna vulputate</span><!-- lp_sec_five_bullet_title -->
-
-          <div class='lp_sec_five_content content lp_content'>
+	    
+        <?php while ( have_rows( 'section_five_bullets_col_one' ) ) : the_row(); ?>
+  
+          <div class='lp_sec_five_bullet'>
           
-            <p>Donec id mi commodo lectus feugiat rhoncus at sed turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-          
-          </div><!-- lp_sec_five_content -->
-        
-        </div><!-- lp_sec_five_bullet_content -->
-      
-      </div><!-- lp_sec_five_bullet -->
-      
-      <div class='lp_sec_five_bullet'>
-      
-      <span class='lp_sec_five_bullet_number'>2</span><!-- lp_sec_five_bullet_number -->
-
-      <div class='lp_sec_five_bullet_content_wrapper'>
-      
-        <span class='lp_sec_five_bullet_title'>Suspendisse consectetur magna ut urna vulputate</span><!-- lp_sec_five_bullet_title -->
-
-        <div class='lp_sec_five_content content lp_content'>
-        
-          <p>Donec id mi commodo lectus feugiat rhoncus at sed turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-
-          <p>Donec id mi commodo lectus feugiat rhoncus at sed turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-        
-        </div><!-- lp_sec_five_content -->
-      
-      </div><!-- lp_sec_five_bullet_content -->
+            <span class='lp_sec_five_bullet_number'><?php the_sub_field( 'number' ); ?></span><!-- lp_sec_five_bullet_number -->
     
-    </div><!-- lp_sec_five_bullet -->
+            <div class='lp_sec_five_bullet_content_wrapper'>
 
-    </div><!-- lp_sec_five_col -->
+              <?php if(get_sub_field('title')) { ?>
+            
+                <span class='lp_sec_five_bullet_title'><?php the_sub_field( 'title' ); ?></span><!-- lp_sec_five_bullet_title -->
+
+              <?php } ?>
+    
+              <div class='lp_sec_five_content content lp_content'>
+              
+                <?php the_sub_field( 'description' ); ?>
+              
+              </div><!-- lp_sec_five_content -->
+            
+            </div><!-- lp_sec_five_bullet_content -->
+          
+          </div><!-- lp_sec_five_bullet -->
+  		
+  	    <?php endwhile; ?>
+
+      </div><!-- lp_sec_five_col -->
+    
+    <?php endif; ?>
+
+  <?php if ( have_rows( 'section_five_bullets_col_two' ) ) : ?>
 
     <div class='lp_sec_five_col'>
 
-    <div class='lp_sec_five_bullet'>
+      <?php while ( have_rows( 'section_five_bullets_col_two' ) ) : the_row(); ?>
       
-      <span class='lp_sec_five_bullet_number'>3</span><!-- lp_sec_five_bullet_number -->
-
-      <div class='lp_sec_five_bullet_content_wrapper'>
-      
-        <span class='lp_sec_five_bullet_title'>Suspendisse consectetur magna ut urna vulputate</span><!-- lp_sec_five_bullet_title -->
-
-        <div class='lp_sec_five_content content lp_content'>
+        <div class='lp_sec_five_bullet'>
         
-          <p>Donec id mi commodo lectus feugiat rhoncus at sed turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+          <span class='lp_sec_five_bullet_number'><?php the_sub_field( 'number' ); ?></span><!-- lp_sec_five_bullet_number -->
+      
+          <div class='lp_sec_five_bullet_content_wrapper'>
+          
+            <?php if(get_sub_field('title')) { ?>
+            
+              <span class='lp_sec_five_bullet_title'><?php the_sub_field( 'title' ); ?></span><!-- lp_sec_five_bullet_title -->
 
-          <p>Donec id mi commodo lectus estas.</p>
+            <?php } ?>
+      
+            <div class='lp_sec_five_content content lp_content'>
+            
+              <?php the_sub_field( 'description' ); ?>
+            
+            </div><!-- lp_sec_five_content -->
+          
+          </div><!-- lp_sec_five_bullet_content -->
         
-        </div><!-- lp_sec_five_content -->
+        </div><!-- lp_sec_five_bullet -->
       
-      </div><!-- lp_sec_five_bullet_content -->
-    
-    </div><!-- lp_sec_five_bullet -->
-
-    <div class='lp_sec_five_bullet'>
-      
-      <span class='lp_sec_five_bullet_number'>4</span><!-- lp_sec_five_bullet_number -->
-
-      <div class='lp_sec_five_bullet_content_wrapper'>
-      
-        <span class='lp_sec_five_bullet_title'>Suspendisse consectetur magna ut urna vulputate</span><!-- lp_sec_five_bullet_title -->
-
-        <div class='lp_sec_five_content content lp_content'>
-        
-          <p>Donec id mi commodo lectus feugiat rhoncus at sed turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-
-          <p>Donec id mi commodo lectus feugiat rhoncus at sed turpis. Vestibulum ante ipsum.</p>
-        
-        </div><!-- lp_sec_five_content -->
-      
-      </div><!-- lp_sec_five_bullet_content -->
-    
-    </div><!-- lp_sec_five_bullet -->
+      <?php endwhile; ?>
 
     </div><!-- lp_sec_five_col -->
+
+    <?php endif; ?>
     
     </div><!-- lp_sec_five_bullets -->
   
@@ -100,4 +84,4 @@
 
 </section><!-- lp_section_five -->
 
-
+<?php } ?>

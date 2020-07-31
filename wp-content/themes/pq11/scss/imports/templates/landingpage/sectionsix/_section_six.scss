@@ -39,6 +39,12 @@ html.no-webp {
     max-width: 960px;
     @include margin_lr;
   }
+  span.double_line {
+    &:before,
+    &:after {
+      background: $color_bright_one;
+    }
+  }
 }
 
 #lp_sec_six_img_wrapper {

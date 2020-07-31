@@ -45,7 +45,13 @@
 
 <?php wp_footer();?>
 
+<?php // local 
 
+the_field('footer_scripts'); ?>
+
+<?php // global in theme options
+
+get_field('footer_scripts','option');?>
 
 </body>
 </html>

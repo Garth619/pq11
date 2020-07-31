@@ -82,6 +82,14 @@
 
 <?php the_field('analytics_code', 'option'); ?>
 
+
+<?php if (is_singular( 'landing_page' ) ) { // local scripts for Landing Page templates
+
+	the_field('header_scripts');
+
+} ?>
+
+
 </head>
 
 <body <?php body_class(); ?>>

@@ -51,6 +51,10 @@ html.no-webp {
       max-width: 225px;
       margin: 44px auto 0;
     }
+    &:before,
+    &:after {
+      background: $color_bright_one;
+    }
   }
 }
 
@@ -208,6 +212,10 @@ span#lp_sec_four_title {
     &.double_line {
       max-width: 55px;
       @include margin_lr;
+      &:before,
+      &:after {
+        background: $color_bright_one;
+      }
     }
     &.type {
       margin: 10px auto 0;
