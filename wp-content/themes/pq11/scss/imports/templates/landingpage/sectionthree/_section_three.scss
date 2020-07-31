@@ -96,7 +96,7 @@ html.no-webp {
   text-align: center;
   position: relative;
   @include mq(small_tablet) {
-    padding: 0 40px 7px;
+    padding: 0 28px 7px;
     text-align: left;
   }
   @include mq(small_laptop) {

@@ -1,3 +1,5 @@
+<?php if(get_field('enable_section_one') == "Yes") { ?>
+
 <section id='lp_section_one'>
 
   <div id='lp_section_one_inner'>
@@ -68,7 +70,11 @@
   
     <?php } ?>
   
-    <span id="lp_sec_one_title"><?php the_field( 'lp_section_one_large_title' ); ?></span>
+    <?php if(get_field('lp_section_one_large_title')) { ?>
+
+      <span id="lp_sec_one_title"><?php the_field( 'lp_section_one_large_title' ); ?></span>
+
+    <?php } ?>
   
     <?php if ( have_rows( 'lp_section_one_selling_items' ) ) : ?>
             
@@ -83,6 +89,8 @@
       </ul>
   
     <?php endif; ?>
+
+    <?php if ( have_rows( 'lp_section_one_logo_slider' ) ) : ?>
           
     <div id='lp_sec_one_logos'>
         
@@ -90,9 +98,7 @@
   
         <div id='lp_sec_one_slider'>
   
-          <?php if ( have_rows( 'lp_section_one_logo_slider' ) ) : ?>
-          
-            <?php while ( have_rows( 'lp_section_one_logo_slider' ) ) : the_row(); ?>
+          <?php while ( have_rows( 'lp_section_one_logo_slider' ) ) : the_row(); ?>
   
               <div class='lp_sec_one_slide <?php the_sub_field('class');?>'>
   
@@ -112,11 +118,11 @@
         
             <?php endwhile; ?>
   
-          <?php endif; ?>
-          
-        </div><!-- lp_sec_one_slider -->
+          </div><!-- lp_sec_one_slider -->
         
-      </div><!-- lp_sec_one_logos -->
+        </div><!-- lp_sec_one_logos -->
+
+      <?php endif; ?>
 
       </div><!-- lp_section_one_inner -->
       
@@ -168,6 +174,6 @@
         
         </picture>
 
-      
-
     </section><!-- lp_section_one -->
+
+  <?php }?>

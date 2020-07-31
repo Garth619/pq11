@@ -4,7 +4,7 @@
     padding: 86px 60px 77px;
   }
   @include mq(small_laptop) {
-    padding: 86px 90px 77px;
+    padding: 86px 60px 77px;
   }
   @include mq(large_laptop) {
     padding: 112px 90px 77px;
@@ -18,7 +18,7 @@
 
 .lp_sec_five_header.lp_sec_header {
   text-align: center;
-  @include mq(small_laptop) {
+  @include mq(small_tablet) {
     text-align: left;
   }
 }
@@ -28,13 +28,15 @@
   @include mq(small_tablet) {
     margin-top: 38px;
   }
-  @include mq(small_laptop) {
+  @include mq(large_laptop) {
     @include flex(space-between);
   }
 }
 
 .lp_sec_five_col {
-  flex-basis: 47%;
+  @include mq(large_laptop) {
+    flex-basis: 47%;
+  }
 }
 
 .lp_sec_five_bullet {

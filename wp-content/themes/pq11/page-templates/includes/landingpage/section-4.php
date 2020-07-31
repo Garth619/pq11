@@ -1,63 +1,45 @@
+<?php if(get_field('enable_section_four') == "Yes") { ?>
+
 <section id='lp_section_four'>
 
   <div id='lp_sec_four_inner'>
   
-    <span id='lp_sec_four_title'>Case Results</span><!-- lp_sec_four_title -->
+    <span id='lp_sec_four_title'><?php the_field( 'lp_section_four_title' ); ?></span><!-- lp_sec_four_title -->
 
     <span class='double_line'></span><!-- doible_line -->
 
-    <div id='lp_sec_four_slider'>
+    <?php if ( have_rows( 'lp_section_four_case_results' ) ) : ?>
 
-      <div class='lp_sec_four_slide'>
+      <div id='lp_sec_four_slider'>
+	    
+      <?php while ( have_rows( 'lp_section_four_case_results' ) ) : the_row(); ?>
 
-        <img src="<?php bloginfo('template_directory');?>/images/result-heart.svg" alt="<?php echo $icon['alt']; ?>" />
+        <div class='lp_sec_four_slide'>
+
+          <?php $icon = get_sub_field( 'icon' ); ?>
+		      
+          <?php if ( $icon ) { ?>
+			      
+            <img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" />
+		      
+          <?php } ?>
+
+          <span class="amount"><?php the_sub_field( 'amount' ); ?></span>
+
+          <span class='double_line'></span><!-- double_line -->
+
+          <span class='type'><?php the_sub_field( 'description' ); ?></span><!-- type -->
+
+        </div><!-- sec_four_slide -->
+		
+	    <?php endwhile; ?>
+
+      </div><!-- sec_four_slider -->
     
-        <span class="amount">$20m</span>
-
-        <span class='double_line'></span><!-- double_line -->
-
-        <span class='type'>explosion wrongful death accident</span><!-- type -->
-
-      </div><!-- sec_four_slide -->
-
-      <div class='lp_sec_four_slide'>
-
-        <img src="<?php bloginfo('template_directory');?>/images/result-heart.svg" alt="<?php echo $icon['alt']; ?>" />
-    
-        <span class="amount">$20m</span>
-
-        <span class='double_line'></span><!-- double_line -->
-
-        <span class='type'>sfv sfv sfvsfv</span><!-- type -->
-
-      </div><!-- sec_four_slide -->
-
-      <div class='lp_sec_four_slide'>
-
-        <img src="<?php bloginfo('template_directory');?>/images/result-heart.svg" alt="<?php echo $icon['alt']; ?>" />
-    
-        <span class="amount">$20m</span>
-
-        <span class='double_line'></span><!-- double_line -->
-
-        <span class='type'>sfv sfv sfvsfv</span><!-- type -->
-
-      </div><!-- sec_four_slide -->
-
-      <div class='lp_sec_four_slide'>
-
-        <img src="<?php bloginfo('template_directory');?>/images/result-heart.svg" alt="<?php echo $icon['alt']; ?>" />
-    
-        <span class="amount">$20m</span>
-
-        <span class='double_line'></span><!-- double_line -->
-
-        <span class='type'>sfv sfv sfvsfv</span><!-- type -->
-
-      </div><!-- sec_four_slide -->
-    
-    </div><!-- sec_four_slider -->
+    <?php endif; ?>
 
   </div><!-- lp_sec_four_inner -->
 
 </section><!-- lp_section_four -->
+
+<?php } ?>
