@@ -4,7 +4,7 @@
 
   <div id='lp_sec_five_inner'>
   
-    <span class='lp_sec_five_header lp_sec_header'>Why Choose Us</span><!-- lp_sec_header -->
+    <span class='lp_sec_five_header lp_sec_header'><?php the_field( 'lp_section_five_title' ); ?></span><!-- lp_sec_header -->
 
     <span class='double_line'></span><!-- double_line -->
 

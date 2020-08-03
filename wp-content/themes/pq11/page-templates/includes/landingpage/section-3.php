@@ -21,8 +21,14 @@
       <div id='lp_sec_three_info'>
       
         <div id='lp_sec_three_info_image'>
-        
-          <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/img-white-01.jpg' /><!-- name -->
+
+          <?php $lp_section_three_blockquote_image = get_field( 'lp_section_three_blockquote_image' ); ?>
+          
+          <?php if ( $lp_section_three_blockquote_image ) { ?>
+	          
+            <img class="lazyload" data-src="<?php echo $lp_section_three_blockquote_image['url']; ?>" alt="<?php echo $lp_section_three_blockquote_image['alt']; ?>" />
+          
+          <?php } ?>
         
         </div><!-- lp_sec_three_info_image -->
 
@@ -30,13 +36,13 @@
 
           <div id='lp_sec_three_info_text_inner'>
          
-           <span id='lp_sec_three_info_title'>White Law, PllC</span><!-- lp_sec_three_info_title -->
+           <span id='lp_sec_three_info_title'><?php the_field( 'lp_section_three_blockquote_title' ); ?></span><!-- lp_sec_three_info_title -->
  
            <span class='double_line'></span><!-- double_line -->
  
            <div id='lp_sec_three_info_caption'>
            
-             <p>Etiam at velit varius, molestie dui vel, pulvinar massa. Sed non ultricies nisi. Integer placerat varius pretium. Vivamus accumsan tincidunt.</p>
+            <?php the_field( 'lp_section_three_blockqoute' ); ?>
              
            </div><!-- lp_sec_three_info_caption -->
          
