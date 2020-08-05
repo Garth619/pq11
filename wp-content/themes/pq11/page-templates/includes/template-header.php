@@ -25,8 +25,6 @@
 				<img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
 			
 			<?php } ?>
-				
-				<?php //echo file_get_contents( get_template_directory() . '/images/logo.svg' ); ?>
 
 			</a><!-- logo -->
 		

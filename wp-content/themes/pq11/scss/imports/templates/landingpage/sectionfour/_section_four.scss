@@ -146,7 +146,7 @@ span#lp_sec_four_title {
     padding: 36px 0 0px 0;
   }
   @include mq(small_laptop) {
-    flex-basis: 24%;
+    flex-basis: 32%;
     flex-shrink: 0;
     padding: 39px 0 0px 0;
     background: transparent;
@@ -198,14 +198,15 @@ span#lp_sec_four_title {
       }
       @include mq(small_laptop) {
         margin-top: 34px;
-        font-size: 50px;
+        font-size: 65px;
       }
       @include mq(large_laptop) {
-        //font-size: $sec_two_span_size_large_laptop;
-        //margin-top: 28px;
+        font-size: 75px;
+        margin-top: 52px;
       }
       @include mq(small_monitor) {
-        font-size: 75px;
+        font-size: 90px;
+        margin-top: 38px;
         margin-bottom: 24px;
       }
     }
@@ -235,18 +236,14 @@ span#lp_sec_four_title {
       }
       @include mq(small_laptop) {
         margin: 35px auto 0;
-        max-width: 138px;
+        max-width: 198px;
         padding-bottom: 35px;
-        //@include quick_type(16px, 23px, null);
+        @include quick_type(16px, 23px, null);
       }
       @include mq(large_laptop) {
-        margin: 17px auto 0;
-        max-width: 179px;
-        @include quick_type(
-          $sec_two_span_type_size_large_laptop,
-          $sec_two_span_type_height_large_laptop,
-          null
-        );
+        margin: 26px auto 0;
+        max-width: 209px;
+        @include quick_type(18px, 23px, null);
       }
       @include mq(small_monitor) {
         max-width: 201px;

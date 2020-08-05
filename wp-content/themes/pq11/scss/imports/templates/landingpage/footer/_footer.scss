@@ -14,6 +14,19 @@ body.single-landing_page {
   }
   #locations {
     max-width: 1210px;
+    @include mq(large_laptop) {
+      max-width: 100%;
+      padding-left: 90px;
+      padding-right: 90px;
+    }
+    @include mq(small_monitor) {
+      max-width: 960px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+  .loc_col:nth-of-type(1) {
+    margin-left: 52px;
   }
   span.loc_title {
     @include mq(tablet) {
