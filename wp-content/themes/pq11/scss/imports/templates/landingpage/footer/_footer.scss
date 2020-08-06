@@ -26,7 +26,9 @@ body.single-landing_page {
     }
   }
   .loc_col:nth-of-type(1) {
-    margin-left: 52px;
+    @include mq(small_laptop) {
+      margin-left: 52px;
+    }
   }
   span.loc_title {
     @include mq(tablet) {
