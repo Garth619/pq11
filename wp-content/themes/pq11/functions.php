@@ -137,7 +137,13 @@ function internal_css_print() {
 add_action( 'wp_head', 'internal_css_print' );
 
 
+/* Remove margin from admin bar
+-------------------------------------------------------------- */
 
+function ilaw_remove_html_admin_margin() {
+    remove_action('wp_head', '_admin_bar_bump_cb');
+}
+add_action('get_header', 'ilaw_remove_html_admin_margin');
 
  
  
