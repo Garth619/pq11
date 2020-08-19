@@ -332,6 +332,38 @@ span#sec_one_logo_title {
   @include mq(small_monitor) {
     margin: 48px 0 0px;
   }
+  .slick-dots {
+    position:static;
+    margin-top:20px;
+    li.slick-active {
+      button {
+        &:before {
+          color:$color_bright_one;
+        }
+      }
+    }
+    li:hover {
+      button {
+        &:before {
+          color:$color_bright_one;
+        }
+      }
+    }
+    li {
+      margin:0;
+      width:20px;
+      button {
+      width:20px;
+        &:before {
+          width:20px;
+          opacity:1;
+          color:$color_light_one;
+          font-size:25px;
+          transition: all 200ms ease-in-out;
+        }
+      }
+    }
+  }
 }
 
 .sec_one_slide {
