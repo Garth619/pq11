@@ -40,11 +40,11 @@
 
       <div id='sec_left_bottom'>
       
-        <div id='sec_one_logos'>
+        <div id='sec_one_logos' class="preload_section">
         
           <span id='sec_one_logo_title'><?php the_field( 'section_one_logos_title' ); ?></span><!-- sec_one_logo_title -->
 
-          <div id='sec_one_slider'>
+          <div id='sec_one_slider' class="preload_slider">
 
           <?php if ( have_rows( 'section_one_logo_slider' ) ) : ?>
 	        

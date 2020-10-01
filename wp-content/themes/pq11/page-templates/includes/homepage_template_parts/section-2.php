@@ -1,10 +1,10 @@
 <section id='section_two'>
 
-	<div id='sec_two_inner'>
+	<div id='sec_two_inner' class="preload_section">
 
 		<?php if ( have_rows( 'section_two_selling_points' ) ) : ?>
 
-			<div id='sec_two_slider'>
+			<div id='sec_two_slider' class="preload_slider">
 			
 			<?php while ( have_rows( 'section_two_selling_points' ) ) : the_row(); ?>
 			

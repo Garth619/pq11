@@ -120,6 +120,10 @@ jQuery(document).ready(function ($) {
   /* Slick Carousel ( http://kenwheeler.github.io/slick/ )
 --------------------------------------------------------------------------------------- */
 
+  $(".preload_slider").on("init", function (event, slick) {
+    $(".preload_section").addClass("load_after");
+  });
+
   $("#sec_one_slider").slick({
     infinite: true,
     slidesToShow: 2,
@@ -158,7 +162,7 @@ jQuery(document).ready(function ($) {
         },
       },
       {
-        breakpoint: 1170,
+        breakpoint: 1169,
         settings: "unslick",
       },
     ],

@@ -22,34 +22,9 @@ function load_my_styles_scripts() {
 
 		// custom js to fall uner jquery in footer
 		    
-    wp_register_script( 'jquery-addon', get_template_directory_uri() . '/js/custom-min.js','', 1);
-
-		
-		// Localized PHP Data that needs to be passed onto my custom-min.js file, this grabs the live chat script acf and applies to my lazyload "getScript" function
-
-			
-		$map_current_domain = get_bloginfo('url');
-		
-		
-		
-			// Localize the script with new data array 
-		
-			$translation_array = array(
-    		'mydomain' => $map_current_domain
-			);
-
-			wp_localize_script( 'jquery-addon', 'my_data', $translation_array );
-		
-		
-		
-		// carry on to enqueue script like normal, but now it contains my needed js variable with php data tied to it from above
-		
-
-        // Enqueue Script
-        
-        
-		    
-    wp_enqueue_script( 'jquery-addon', get_template_directory_uri() . '/js/custom-min.js', 'jquery', '', true );
+        if(!is_front_page()) {
+            wp_enqueue_script( 'jquery-custom', get_template_directory_uri() . '/js/custom-min.js', 'jquery', '', true );
+        }
     
 
     

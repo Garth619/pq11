@@ -1,3 +1,20 @@
+.preload_section {
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+
+.load_after {
+  opacity: 1;
+}
+
+.preload_slider {
+  display: none;
+}
+
+.slick-slider {
+  display: block;
+}
+
 #internal_main {
   margin-top: 127px;
   @include mq(small_tablet) {
